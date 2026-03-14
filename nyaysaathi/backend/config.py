@@ -5,6 +5,7 @@ from __future__ import annotations
 import os
 
 SUPPORTED_LANGUAGES = ["en", "hi", "mr"]
+DEFAULT_LANGUAGE = os.getenv("DEFAULT_LANGUAGE", "en")
 LANG_DETECT_MIN_CONFIDENCE = float(os.getenv("LANG_DETECT_MIN_CONFIDENCE", "0.70"))
 
 TRANSLATION_TIMEOUT = float(os.getenv("TRANSLATION_TIMEOUT", "10"))

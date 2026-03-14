@@ -8,8 +8,10 @@ from uuid import uuid4
 from typing import Any
 
 from django.conf import settings
+from config import DEFAULT_LANGUAGE
 from legal.ai_engine import understand_user_problem
 from legal_cases import services
+from services.workflow_service import get_workflow, localize_case_payload, resolve_category_id
 
 from .language_detector import SUPPORTED_LANGUAGES, detect_language
 from .preprocessing import preprocess_text
@@ -51,10 +53,14 @@ def generate_legal_guidance(user_input: str) -> dict[str, Any]:
             "detected_language": "en",
             "normalized_query": "",
             "data": [],
+            "category_id": "",
             "category": "",
             "subcategory": "",
             "workflow": [],
             "localized_workflow": [],
+            "documents_required": [],
+            "authorities": [],
+            "complaint_template": "",
             "translation_triggered": False,
             "total": 0,
             "message": "Please provide a legal query.",
@@ -116,14 +122,36 @@ def generate_legal_guidance(user_input: str) -> dict[str, Any]:
         if not matched_subcategory and results:
             matched_subcategory = str(results[0].get("subcategory") or "").strip()
 
-        workflow_steps = (results[0].get("workflow_steps") if results else []) or []
+        category_id = resolve_category_id(matched_subcategory, legal_category, normalized_query, query)
 
-        localized_workflow, translation_triggered, cache_hit = translate_workflow(
-            workflow_text=list(workflow_steps),
-            target_language=detected_language,
-            category=legal_category or matched_subcategory or "Unknown",
-            request_id=request_id,
-        )
+        localized_results = [localize_case_payload(case, detected_language) for case in results]
+
+        localized_primary = get_workflow(category_id, detected_language) if category_id else None
+        english_primary = get_workflow(category_id, DEFAULT_LANGUAGE) if category_id else None
+
+        if localized_primary:
+            localized_workflow = list(localized_primary.get("workflow_steps") or [])
+            workflow_steps = list((english_primary or {}).get("workflow_steps") or localized_workflow)
+            translation_triggered = False
+            cache_hit = False
+            response_language = str(localized_primary.get("language") or detected_language)
+            legal_category = str(localized_primary.get("category") or legal_category or "").strip()
+            matched_subcategory = str(localized_primary.get("subcategory") or matched_subcategory or "").strip()
+            documents_required = list(localized_primary.get("documents_required") or [])
+            authorities = list(localized_primary.get("authorities") or [])
+            complaint_template = str(localized_primary.get("complaint_template") or "")
+        else:
+            workflow_steps = (results[0].get("workflow_steps") if results else []) or []
+            localized_workflow, translation_triggered, cache_hit = translate_workflow(
+                workflow_text=list(workflow_steps),
+                target_language=detected_language,
+                category=legal_category or matched_subcategory or "Unknown",
+                request_id=request_id,
+            )
+            response_language = detected_language
+            documents_required = list((results[0].get("required_documents") if results else []) or [])
+            authorities = list((results[0].get("authorities") if results else []) or [])
+            complaint_template = str((results[0].get("complaint_template") if results else "") or "")
 
         logger.info(
             "Guidance generated | request_id=%s language=%s category=%s translation_triggered=%s cache_hit=%s",
@@ -143,7 +171,7 @@ def generate_legal_guidance(user_input: str) -> dict[str, Any]:
         return {
             "request_id": request_id,
             "query": query,
-            "language": detected_language,
+            "language": response_language,
             "detected_language": detected_language,
             "normalized_query": normalized_query,
             "nlp": {
@@ -155,12 +183,17 @@ def generate_legal_guidance(user_input: str) -> dict[str, Any]:
             },
             "ai_understanding": ai_result,
             "semantic_match": semantic_match,
-            "data": results,
+            "data": localized_results,
+            "category_id": category_id,
             "category": legal_category,
             "subcategory": matched_subcategory,
             "workflow": localized_workflow,
             "localized_workflow": localized_workflow,
             "workflow_english": workflow_steps,
+            "documents_required": documents_required,
+            "required_documents": documents_required,
+            "authorities": authorities,
+            "complaint_template": complaint_template,
             "translation_triggered": translation_triggered,
             "cache_hit": cache_hit,
             "total": len(results),
@@ -183,11 +216,16 @@ def generate_legal_guidance(user_input: str) -> dict[str, Any]:
             },
             "ai_understanding": {},
             "data": [],
+            "category_id": "",
             "category": "",
             "subcategory": "",
             "workflow": [],
             "localized_workflow": [],
             "workflow_english": [],
+            "documents_required": [],
+            "required_documents": [],
+            "authorities": [],
+            "complaint_template": "",
             "translation_triggered": False,
             "cache_hit": False,
             "total": 0,

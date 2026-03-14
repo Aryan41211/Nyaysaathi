@@ -18,6 +18,7 @@ from . import services
 from ai_engine.response_generator import generate_legal_guidance
 from ai_engine.translator import get_translation_health
 from legal.ai_engine import get_ai_monitoring_snapshot
+from services.workflow_service import localize_case_payload
 
 logger = logging.getLogger(__name__)
 
@@ -92,14 +93,20 @@ def search(request):
             request_id=guidance.get("request_id"),
             query=guidance.get("query", query),
             language=guidance.get("language", guidance.get("detected_language", "en")),
+            category_id=guidance.get("category_id", ""),
             nlp=guidance.get("nlp", {}),
             ai_understanding=guidance.get("ai_understanding", {}),
             semantic_match=guidance.get("semantic_match", {}),
             category=guidance.get("category", ""),
             subcategory=guidance.get("subcategory", ""),
             workflow=guidance.get("workflow", []),
+            workflow_steps=guidance.get("workflow", []),
             localized_workflow=guidance.get("localized_workflow", []),
             workflow_english=guidance.get("workflow_english", []),
+            documents_required=guidance.get("documents_required", []),
+            required_documents=guidance.get("required_documents", []),
+            authorities=guidance.get("authorities", []),
+            complaint_template=guidance.get("complaint_template", ""),
             detected_language=guidance.get("detected_language", "en"),
             normalized_query=guidance.get("normalized_query", query),
             translation_triggered=guidance.get("translation_triggered", False),
@@ -117,11 +124,13 @@ def search(request):
 def case_detail(request, subcategory):
     """GET /api/case/<subcategory>/"""
     try:
+        requested_language = request.query_params.get("language", "en")
         normalised = subcategory.replace("-", " ").replace("%20", " ")
         case = services.get_case_by_subcategory(normalised)
         if not case:
             return err(f"No case found for: '{subcategory}'", 404)
-        return Response(ok(case))
+        localized_case = localize_case_payload(case, requested_language)
+        return Response(ok(localized_case, language=requested_language))
     except Exception as e:
         logger.error("case_detail '%s': %s", subcategory, e)
         return err("Could not fetch case details.", 500)

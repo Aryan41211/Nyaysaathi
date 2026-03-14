@@ -18,6 +18,8 @@ _MARATHI_ROMAN_HINTS: Final[tuple[str, ...]] = (
     "majha",
     "majhi",
     "mala",
+    "milala",
+    "pagar",
     "paisa",
     "nahi",
     "karaycha",
@@ -27,13 +29,9 @@ _MARATHI_ROMAN_HINTS: Final[tuple[str, ...]] = (
 _HINDI_ROMAN_HINTS: Final[tuple[str, ...]] = (
     "mera",
     "meri",
-    "nahi",
     "kya",
     "mila",
-    "paisa",
-    "police",
     "shikayat",
-    "complaint",
     "kaise",
 )
 
@@ -43,8 +41,20 @@ _DEVANAGARI_RE = re.compile(r"[\u0900-\u097F]")
 def _detect_devanagari_variant(text: str) -> str:
     """Heuristic split between Hindi/Marathi when input is in Devanagari."""
     lowered = text.lower()
-    marathi_signals = ("à¤†à¤¹à¥‡", "à¤à¤¾à¤²à¥€", "à¤®à¤¾à¤", "à¤¨à¤¾à¤¹à¥€", "à¤˜à¤°à¤¾à¤¤")
-    hindi_signals = ("à¤¹à¥ˆ", "à¤¨à¤¹à¥€à¤‚", "à¤®à¥‡à¤°à¤¾", "à¤®à¥‡à¤°à¥€", "à¤•à¥ƒà¤ªà¤¯à¤¾")
+    marathi_signals = (
+        "\u0906\u0939\u0947",  # आहे
+        "\u091d\u093e\u0932\u0940",  # झाली
+        "\u092e\u093e\u091d",  # माझ
+        "\u0928\u093e\u0939\u0940",  # नाही
+        "\u0918\u0930\u093e\u0924",  # घरात
+    )
+    hindi_signals = (
+        "\u0939\u0948",  # है
+        "\u0928\u0939\u0940\u0902",  # नहीं
+        "\u092e\u0947\u0930\u093e",  # मेरा
+        "\u092e\u0947\u0930\u0940",  # मेरी
+        "\u0915\u0943\u092a\u092f\u093e",  # कृपया
+    )
 
     marathi_hits = sum(1 for token in marathi_signals if token in text or token in lowered)
     hindi_hits = sum(1 for token in hindi_signals if token in text or token in lowered)
@@ -61,9 +71,9 @@ def _detect_roman_variant(text: str) -> str:
     marathi_hits = sum(1 for token in _MARATHI_ROMAN_HINTS if token in lowered)
     hindi_hits = sum(1 for token in _HINDI_ROMAN_HINTS if token in lowered)
 
-    if marathi_hits > hindi_hits and marathi_hits >= 1:
+    if marathi_hits >= 1 and marathi_hits >= hindi_hits:
         return "mr"
-    if hindi_hits >= 1:
+    if hindi_hits > marathi_hits:
         return "hi"
     return "en"
 
@@ -97,10 +107,11 @@ def detect_language(user_input: str) -> str:
 
                 if top_prob < LANG_DETECT_MIN_CONFIDENCE:
                     logger.info(
-                        "Language confidence low (%.3f), fallback=en",
+                        "Language confidence low (%.3f), fallback=%s",
                         top_prob,
+                        roman_guess,
                     )
-                    return "en"
+                    return roman_guess
 
                 if top_lang in SUPPORTED_LANGUAGES:
                     if top_lang == "en" and roman_guess in {"hi", "mr"}:
