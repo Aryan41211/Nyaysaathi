@@ -1,7 +1,23 @@
 import axios from 'axios'
 
 const DEFAULT_PROD_API_URL = 'https://nyaysaathi-backend.onrender.com/api'
-const BASE_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? DEFAULT_PROD_API_URL : '/api')
+
+function normalizeApiBaseUrl(rawUrl) {
+  if (!rawUrl) return ''
+
+  const trimmed = rawUrl.trim().replace(/\/+$/, '')
+  if (trimmed.endsWith('/api')) return trimmed
+  return `${trimmed}/api`
+}
+
+function resolveApiBaseUrl() {
+  const envUrl = normalizeApiBaseUrl(import.meta.env.VITE_API_URL)
+  if (envUrl) return envUrl
+  if (import.meta.env.PROD) return DEFAULT_PROD_API_URL
+  return '/api'
+}
+
+const BASE_URL = resolveApiBaseUrl()
 
 const api = axios.create({
   baseURL: BASE_URL,
@@ -12,7 +28,9 @@ const api = axios.create({
 api.interceptors.response.use(
   r => r,
   err => {
-    if (!err.response) err.message = 'Cannot connect to server. Please check your connection.'
+    if (!err.response) {
+      err.message = `Cannot connect to backend (${BASE_URL}). Check VITE_API_URL and backend deployment status.`
+    }
     return Promise.reject(err)
   }
 )

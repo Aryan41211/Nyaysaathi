@@ -344,7 +344,7 @@ Health check endpoint.
 4. **Output Directory:** `dist`
 5. Add Environment Variable:
    ```
-   VITE_API_URL = https://nyaysaathi-backend.onrender.com/api
+  VITE_API_URL = https://nyaysaathi-backend.onrender.com
    ```
 6. Deploy → note your Vercel URL
 
@@ -355,6 +355,12 @@ Health check endpoint.
 On Render, add to Environment Variables:
 ```
 CORS_ALLOWED_ORIGINS = https://your-app.vercel.app
+CSRF_TRUSTED_ORIGINS = https://your-app.vercel.app
+```
+
+If your Vercel project uses multiple preview domains, you can also use:
+```
+CORS_ALLOWED_ORIGIN_REGEXES = https://.*\.vercel\.app
 ```
 
 Redeploy backend. Done! ✅
@@ -373,13 +379,16 @@ Redeploy backend. Done! ✅
 | `MONGODB_URI` | ✅ | MongoDB Atlas connection string |
 | `MONGODB_DB` | ✅ | Database name (default: `nyaysaathi`) |
 | `CORS_ALLOWED_ORIGINS` | ✅ | Comma-separated allowed frontend origins |
+| `CORS_ALLOWED_ORIGIN_REGEXES` | Optional | Regex allowlist for preview domains (e.g. `https://.*\.vercel\.app`) |
+| `CSRF_TRUSTED_ORIGINS` | Optional | Trusted origins for secure cross-origin requests |
 | `SEARCH_MODE` | ❌ | `keyword` (default) or `semantic` |
+| `OPENAI_API_KEY` | Optional | Enables AI understanding/translation/embeddings |
 
 ### Frontend (`frontend/.env`)
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `VITE_API_URL` | Production | Backend API URL |
+| `VITE_API_URL` | Production | Backend origin or API URL (e.g. `https://...onrender.com` or `https://...onrender.com/api`) |
 
 ---
 

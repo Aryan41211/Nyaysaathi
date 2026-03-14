@@ -83,6 +83,12 @@ _cors = os.getenv("CORS_ALLOWED_ORIGINS", "http://localhost:3000,http://localhos
 CORS_ALLOWED_ORIGINS = [o.strip() for o in _cors if o.strip()]
 CORS_ALLOW_ALL_ORIGINS = DEBUG
 
+_cors_regex = os.getenv("CORS_ALLOWED_ORIGIN_REGEXES", "").split(",")
+CORS_ALLOWED_ORIGIN_REGEXES = [r.strip() for r in _cors_regex if r.strip()]
+
+_csrf = os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",")
+CSRF_TRUSTED_ORIGINS = [o.strip() for o in _csrf if o.strip()]
+
 REST_FRAMEWORK = {
     "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
     "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny"],
