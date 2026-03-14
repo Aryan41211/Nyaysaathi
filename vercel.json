@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "installCommand": "cd nyaysaathi/frontend && npm install",
+  "buildCommand": "cd nyaysaathi/frontend && npm run build",
+  "outputDirectory": "nyaysaathi/frontend/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

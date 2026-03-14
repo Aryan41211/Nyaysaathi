@@ -326,7 +326,7 @@ Health check endpoint.
 4. Settings:
    - **Build Command:** `pip install -r requirements.txt && python manage.py migrate`
    - **Start Command:** `gunicorn nyaysaathi_project.wsgi:application`
-   - **Root Directory:** `backend`
+  - **Root Directory:** `nyaysaathi/backend`
 5. Add Environment Variables (see section below)
 6. Deploy → note your Render URL (e.g. `https://nyaysaathi-backend.onrender.com`)
 7. After deploy, import dataset via Render Shell:
@@ -339,7 +339,7 @@ Health check endpoint.
 ### Step 3: Frontend on Vercel
 
 1. Go to [vercel.com](https://vercel.com) → New Project → Import from GitHub
-2. **Root Directory:** `frontend`
+2. **Root Directory:** `nyaysaathi/frontend`
 3. **Build Command:** `npm run build`
 4. **Output Directory:** `dist`
 5. Add Environment Variable:
