@@ -30,6 +30,8 @@ api.interceptors.response.use(
   err => {
     if (!err.response) {
       err.message = `Cannot connect to backend (${BASE_URL}). Check VITE_API_URL and backend deployment status.`
+    } else if (import.meta.env.PROD && err.response.status === 404) {
+      err.message = `Backend endpoint not found at ${BASE_URL}. Ensure VITE_API_URL points to your deployed Django API host.`
     }
     return Promise.reject(err)
   }
