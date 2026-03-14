@@ -1,0 +1,736 @@
+[
+  {
+    "category": "Domestic Violence and Family Disputes",
+    "subcategory": "Forced Marriage / Child Marriage",
+    "problem_description": "A minor girl or woman is being forced into marriage against her will, or a marriage is being arranged for a child below 18 years (girl) or 21 years (boy) in violation of the Prohibition of Child Marriage Act.",
+    "workflow_steps": [
+      "Step 1 – Call the Childline helpline (1098) immediately if a child is at risk of being married.",
+      "Step 2 – Call the Women Helpline (1091) or Police Emergency (112) to prevent a forced marriage.",
+      "Step 3 – File a complaint with the local police station about the planned child or forced marriage.",
+      "Step 4 – Report to the Child Marriage Prohibition Officer (CMPO) in your district.",
+      "Step 5 – The CMPO or District Collector can issue an injunction to prevent the marriage from happening.",
+      "Step 6 – A child marriage already performed is voidable – the minor can apply to the court to void it.",
+      "Step 7 – Approach the District Legal Services Authority for legal representation."
+    ],
+    "required_documents": [
+      "Age proof of the minor (birth certificate, school certificate)",
+      "Identity proof of complainant",
+      "Information about when and where the marriage is planned",
+      "Witness statements"
+    ],
+    "authorities": [
+      {"name": "Childline (1098)", "level": "National"},
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Child Marriage Prohibition Officer", "level": "District"},
+      {"name": "District Collector / Magistrate", "level": "District"},
+      {"name": "Child Welfare Committee", "level": "District"}
+    ],
+    "escalation_path": [
+      "Childline (1098) → Police → Child Marriage Prohibition Officer → District Collector → Magistrate Court"
+    ],
+    "complaint_template": "To,\nThe Child Marriage Prohibition Officer,\n[District]\n\nSubject: Complaint regarding planned child/forced marriage\n\nRespected Sir/Madam,\n\nI wish to report that a girl/boy named [Name], aged approximately [Age] years, residing at [Address] is being forced into marriage on [Date]. This is in violation of the Prohibition of Child Marriage Act, 2006.\n\nI request your immediate intervention to prevent this marriage and protect the minor/person from this forced situation.\n\nYours faithfully,\n[Name / Anonymous]\n[Date]\n[Contact]",
+    "online_portals": [
+      "https://pgportal.gov.in",
+      "State Women and Child Development Portal"
+    ],
+    "helplines": [
+      "Childline: 1098",
+      "Women Helpline: 1091",
+      "Police Emergency: 112"
+    ]
+  },
+  {
+    "category": "Domestic Violence and Family Disputes",
+    "subcategory": "Stalking and Harassment by Family Member or Ex-Partner",
+    "problem_description": "A woman is being stalked, followed, threatened, or harassed by a family member, ex-partner, or spouse who repeatedly contacts her without consent.",
+    "workflow_steps": [
+      "Step 1 – Document all incidents of stalking with dates, locations, and evidence.",
+      "Step 2 – Save all harassing messages, calls, and digital evidence.",
+      "Step 3 – File a police complaint under Section 354D IPC (stalking) at the local police station.",
+      "Step 4 – Apply for a restraining order from the Magistrate Court.",
+      "Step 5 – File a complaint under the DV Act with the Protection Officer if the stalker is a domestic partner.",
+      "Step 6 – Contact the Women Helpline (1091) for immediate assistance and counselling.",
+      "Step 7 – Approach the State Women's Commission if police are unresponsive."
+    ],
+    "required_documents": [
+      "Identity proof",
+      "Evidence of stalking: screenshots, call records",
+      "Written account of incidents with dates",
+      "Witness statements"
+    ],
+    "authorities": [
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Magistrate Court", "level": "District"},
+      {"name": "Protection Officer (DV Act)", "level": "District"},
+      {"name": "State Women's Commission", "level": "State"}
+    ],
+    "escalation_path": [
+      "Police Station → Magistrate Court → Sessions Court → State Women's Commission"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\n[Police Station Name]\n\nSubject: Complaint regarding stalking and harassment\n\nRespected Sir/Madam,\n\nI, [Your Name], wish to file a complaint against [Stalker's Name] who has been stalking and harassing me since [Date]. The incidents include [describe briefly: following, repeated calls, messages, appearing at my residence/workplace].\n\nThis conduct is causing me fear and psychological distress. I request police action under Section 354D IPC and protection from further harassment.\n\nEnclosures: Screenshots of messages, call records, written incident account\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "State Police Online Complaint Portal",
+      "https://ncw.nic.in",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "Women Helpline: 1091",
+      "Police Emergency: 112",
+      "NCW: 7827-170-170"
+    ]
+  },
+  {
+    "category": "Domestic Violence and Family Disputes",
+    "subcategory": "Abandonment by Spouse / Desertion",
+    "problem_description": "A spouse has abandoned their partner and children without financial support, leaving the family in financial distress.",
+    "workflow_steps": [
+      "Step 1 – Document the date of abandonment and gather evidence of desertion.",
+      "Step 2 – File a petition for maintenance under Section 125 CrPC in Magistrate Court.",
+      "Step 3 – File a petition for divorce on grounds of desertion in Family Court if desired (2 years of desertion required under Hindu Marriage Act).",
+      "Step 4 – Apply for interim maintenance for yourself and children during pending proceedings.",
+      "Step 5 – Report to the local police if the desertion involved domestic violence or threats.",
+      "Step 6 – Approach DLSA for free legal aid and representation.",
+      "Step 7 – Contact One Stop Centre (181) for counselling and support services."
+    ],
+    "required_documents": [
+      "Marriage certificate",
+      "Identity proof",
+      "Children's birth certificates",
+      "Bank statements showing financial abandonment",
+      "Written communications showing desertion",
+      "Witness statements"
+    ],
+    "authorities": [
+      {"name": "Magistrate Court", "level": "District"},
+      {"name": "Family Court", "level": "District"},
+      {"name": "District Legal Services Authority", "level": "District"},
+      {"name": "One Stop Centre (Sakhi Centre)", "level": "District"}
+    ],
+    "escalation_path": [
+      "Magistrate Court (Maintenance) → Family Court (Divorce/Custody) → High Court"
+    ],
+    "complaint_template": "To,\nThe Judicial Magistrate,\n[District]\n\nSubject: Application for maintenance due to desertion by spouse\n\nRespected Sir/Madam,\n\nI, [Your Name], am the wife of [Husband's Name]. My husband abandoned me and our [Number] children on [Date] and has not provided any financial support since then. I am unable to maintain myself and my children without support.\n\nI request the court to direct my husband to pay monthly maintenance of Rs. [Amount] under Section 125 CrPC.\n\nEnclosures: Marriage certificate, identity proof, children's birth certificates\n\nYours faithfully,\n[Name]\n[Date]",
+    "online_portals": [
+      "https://ecourts.gov.in",
+      "https://nalsa.gov.in"
+    ],
+    "helplines": [
+      "One Stop Centre: 181",
+      "Women Helpline: 1091",
+      "DLSA: 15100"
+    ]
+  },
+  {
+    "category": "Cyber Fraud and Digital Scams",
+    "subcategory": "UPI / Online Payment Fraud",
+    "problem_description": "Money has been fraudulently debited from a citizen's bank account through a UPI payment made under deception, threat, or by a scammer posing as a bank or service provider.",
+    "workflow_steps": [
+      "Step 1 – Immediately block your UPI app and contact your bank to freeze any further transactions.",
+      "Step 2 – Take screenshots of the fraudulent transaction details.",
+      "Step 3 – Call the Cyber Fraud Helpline (1930) and report the fraud immediately.",
+      "Step 4 – File an online complaint on the National Cyber Crime Reporting Portal (cybercrime.gov.in).",
+      "Step 5 – Visit the nearest Cyber Crime Police Station or file an FIR at the local police station.",
+      "Step 6 – Provide all transaction IDs, phone numbers used by the fraudster, and screenshots.",
+      "Step 7 – Contact your bank to file a formal chargeback request for the fraudulent transaction.",
+      "Step 8 – If money is not recovered, approach the Banking Ombudsman for a banking complaint."
+    ],
+    "required_documents": [
+      "Screenshot of fraudulent transaction",
+      "Bank statement showing debit",
+      "Transaction reference number (UTR/UPI Transaction ID)",
+      "Phone number or UPI ID of fraudster",
+      "Identity proof",
+      "Copy of communication with fraudster (messages, calls)"
+    ],
+    "authorities": [
+      {"name": "Cyber Crime Helpline (1930)", "level": "National"},
+      {"name": "Cyber Crime Police Station", "level": "District"},
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Banking Ombudsman", "level": "Regional"},
+      {"name": "Reserve Bank of India (if banking issue)", "level": "National"}
+    ],
+    "escalation_path": [
+      "Cyber Fraud Helpline (1930) → Cyber Crime Portal → Cyber Crime Police → Banking Ombudsman → RBI"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\nCyber Crime Police Station / [Police Station Name]\n\nSubject: FIR complaint regarding UPI payment fraud\n\nRespected Sir/Madam,\n\nI, [Your Name], wish to report that on [Date] at approximately [Time], an amount of Rs. [Amount] was fraudulently transferred from my bank account (Account No. [Partial Account No.]) through UPI transaction ID [Transaction ID].\n\nThe fraud was committed by [describe how: fake customer care call / QR code scam / OTP sharing]. I was deceived into authorizing the payment.\n\nI request immediate investigation, freezing of the beneficiary account, and recovery of the fraudulent amount.\n\nEnclosures: Transaction screenshot, bank statement, identity proof\n\nYours faithfully,\n[Name]\n[Address]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://cybercrime.gov.in (National Cyber Crime Reporting Portal)",
+      "https://pgportal.gov.in",
+      "RBI Banking Ombudsman: https://cms.rbi.org.in"
+    ],
+    "helplines": [
+      "Cyber Fraud Helpline: 1930",
+      "Police Emergency: 112",
+      "RBI Ombudsman: 14448"
+    ]
+  },
+  {
+    "category": "Cyber Fraud and Digital Scams",
+    "subcategory": "OTP Scam / Vishing",
+    "problem_description": "A scammer called the victim posing as a bank representative or government official and obtained the One-Time Password (OTP), leading to unauthorized account access or money transfer.",
+    "workflow_steps": [
+      "Step 1 – Immediately call your bank to block your account and reverse unauthorized transactions.",
+      "Step 2 – Call the Cyber Fraud Helpline (1930) to report the fraud and attempt to freeze the beneficiary account.",
+      "Step 3 – Take note of the fraudster's phone number and all details of the conversation.",
+      "Step 4 – File a complaint on the National Cyber Crime Reporting Portal (cybercrime.gov.in).",
+      "Step 5 – Visit the Cyber Crime Police Station or local police station to file an FIR.",
+      "Step 6 – File a banking fraud complaint with your bank's branch manager and escalate to Banking Ombudsman.",
+      "Step 7 – File a complaint with TRAI (Telecom Regulatory Authority of India) about fraudulent SIM use."
+    ],
+    "required_documents": [
+      "Bank statement showing unauthorized debit",
+      "Fraudster's phone number",
+      "Call records / call duration logs from your phone",
+      "SMS showing OTP was sent",
+      "Identity proof"
+    ],
+    "authorities": [
+      {"name": "Cyber Crime Helpline (1930)", "level": "National"},
+      {"name": "Cyber Crime Police Station", "level": "District"},
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Banking Ombudsman", "level": "Regional"},
+      {"name": "TRAI (Telecom Regulatory Authority)", "level": "National"}
+    ],
+    "escalation_path": [
+      "Cyber Fraud Helpline → Cyber Crime Portal → Police FIR → Banking Ombudsman → RBI"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\nCyber Crime Police Station\n\nSubject: Complaint regarding OTP fraud and unauthorized bank transaction\n\nRespected Sir/Madam,\n\nI, [Your Name], received a phone call on [Date] from [Phone Number] from a person claiming to be a [bank/government] representative. The caller convinced me to share my OTP, following which Rs. [Amount] was debited from my account without my authorization.\n\nI request immediate investigation and recovery of the fraudulent amount.\n\nEnclosures: Bank statement, SMS screenshots, call record, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://cybercrime.gov.in",
+      "https://cms.rbi.org.in (RBI Banking Ombudsman)"
+    ],
+    "helplines": [
+      "Cyber Fraud Helpline: 1930",
+      "Bank Customer Care: (Your bank's number)",
+      "Police: 112"
+    ]
+  },
+  {
+    "category": "Cyber Fraud and Digital Scams",
+    "subcategory": "Online Shopping Fraud",
+    "problem_description": "A customer paid for goods through an online shopping platform or social media seller but never received the product, received a fake or damaged product, or the seller vanished after payment.",
+    "workflow_steps": [
+      "Step 1 – Collect all evidence: order confirmation, payment receipt, seller's profile, communication.",
+      "Step 2 – File a complaint with the online shopping platform's customer service and request a refund.",
+      "Step 3 – If the platform does not respond, file a complaint on the National Consumer Helpline (1915) or consumerhelpline.gov.in.",
+      "Step 4 – File a complaint on the National Cyber Crime Reporting Portal if it involves fraud.",
+      "Step 5 – File a case in the Consumer Disputes Redressal Commission for refund and compensation.",
+      "Step 6 – File an FIR at the police station if the amount is significant or fraud is deliberate.",
+      "Step 7 – Report the seller's social media account or listing for fraudulent activity."
+    ],
+    "required_documents": [
+      "Order confirmation screenshot",
+      "Payment receipt/transaction ID",
+      "Seller's profile or contact details",
+      "Communication with seller (messages, emails)",
+      "Bank statement showing payment",
+      "Identity proof"
+    ],
+    "authorities": [
+      {"name": "National Consumer Helpline (1915)", "level": "National"},
+      {"name": "Cyber Crime Portal", "level": "National"},
+      {"name": "Consumer Disputes Redressal Commission", "level": "District"},
+      {"name": "Local Police Station / Cyber Crime Police", "level": "Local/District"}
+    ],
+    "escalation_path": [
+      "Platform Customer Service → National Consumer Helpline → Consumer Commission → Police FIR → Cyber Crime Police"
+    ],
+    "complaint_template": "To,\nThe District Consumer Disputes Redressal Commission,\n[District]\n\nSubject: Consumer complaint regarding online shopping fraud\n\nRespected Sir/Madam,\n\nI, [Your Name], placed an order for [Product Name] on [Platform/Seller Name] on [Date] and paid Rs. [Amount] via [payment method]. Despite payment, I have not received the product / received a defective/fake product, and the seller is unresponsive.\n\nThis is a clear case of unfair trade practice and consumer fraud. I request the commission to direct the seller to refund Rs. [Amount] along with compensation and litigation costs.\n\nEnclosures: Order confirmation, payment receipt, communication records\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://consumerhelpline.gov.in",
+      "https://cybercrime.gov.in",
+      "https://edaakhil.nic.in (Consumer Forum e-Filing)"
+    ],
+    "helplines": [
+      "National Consumer Helpline: 1915",
+      "Cyber Fraud Helpline: 1930",
+      "Police: 112"
+    ]
+  },
+  {
+    "category": "Cyber Fraud and Digital Scams",
+    "subcategory": "Social Media Fraud / Impersonation",
+    "problem_description": "A fraudster has created a fake social media profile impersonating the victim, used it to cheat the victim's contacts, or a scammer is using a fake identity to defraud people.",
+    "workflow_steps": [
+      "Step 1 – Take screenshots of the fake profile and all fraudulent communications.",
+      "Step 2 – Report the fake profile directly to the social media platform.",
+      "Step 3 – File a complaint on the National Cyber Crime Reporting Portal (cybercrime.gov.in).",
+      "Step 4 – File an FIR at the Cyber Crime Police Station for identity theft and impersonation.",
+      "Step 5 – Inform your friends and family about the fake profile to prevent further fraud.",
+      "Step 6 – Request the platform to take down the fake account immediately.",
+      "Step 7 – Contact the Cyber Crime Police with the IP address request if known."
+    ],
+    "required_documents": [
+      "Screenshots of fake profile",
+      "Screenshots of fraudulent messages sent through fake profile",
+      "Identity proof",
+      "Evidence that the profile is fake (your own genuine profile)"
+    ],
+    "authorities": [
+      {"name": "Cyber Crime Police Station", "level": "District"},
+      {"name": "National Cyber Crime Reporting Portal", "level": "National"}
+    ],
+    "escalation_path": [
+      "Cyber Crime Portal → Cyber Crime Police Station → State Cyber Cell → CERT-In"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\nCyber Crime Police Station\n\nSubject: Complaint regarding social media impersonation/identity theft\n\nRespected Sir/Madam,\n\nI, [Your Name], wish to report that an unknown person has created a fake profile on [Platform Name] using my name, photographs, and personal information. This fake profile is being used to deceive my contacts and extract money.\n\nI request immediate investigation, removal of the fake profile, and legal action against the impersonator.\n\nEnclosures: Screenshots of fake profile, identity proof, screenshots of fraudulent messages\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://cybercrime.gov.in",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "Cyber Fraud Helpline: 1930",
+      "Police Emergency: 112"
+    ]
+  },
+  {
+    "category": "Cyber Fraud and Digital Scams",
+    "subcategory": "Job Offer Fraud / Fake Recruitment Scam",
+    "problem_description": "A person paid money to a fraudulent recruitment agency or individual promising a job that never materialized, or received a fake job offer letter demanding payment for placement.",
+    "workflow_steps": [
+      "Step 1 – Collect all evidence: fake job offer letter, payment receipts, communication with fraudster.",
+      "Step 2 – Verify whether the company mentioned in the offer actually exists.",
+      "Step 3 – File a complaint at the local police station.",
+      "Step 4 – File a complaint on the National Cyber Crime Reporting Portal if fraud occurred online.",
+      "Step 5 – Report to the Ministry of Labour about the fraudulent recruitment agency.",
+      "Step 6 – File a consumer complaint for recovery of fraudulent fee paid.",
+      "Step 7 – Report to the Labour Commissioner if a registered agency is involved."
+    ],
+    "required_documents": [
+      "Fake job offer letter",
+      "Payment receipt for placement fee",
+      "Communication with fraudster",
+      "Bank statement",
+      "Identity proof"
+    ],
+    "authorities": [
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Cyber Crime Police Station", "level": "District"},
+      {"name": "Labour Commissioner", "level": "District"},
+      {"name": "Consumer Disputes Redressal Commission", "level": "District"}
+    ],
+    "escalation_path": [
+      "Police FIR → Cyber Crime Portal → Labour Commissioner → Consumer Forum"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\n[Police Station Name]\n\nSubject: Complaint regarding job offer fraud\n\nRespected Sir/Madam,\n\nI, [Your Name], was approached by [Name/Agency] with a job offer from [Fake Company Name]. I paid Rs. [Amount] as placement/processing fee on [Date]. After payment, the agent became unreachable and no job was provided.\n\nThis is a clear fraud and I request an FIR to be registered and my money to be recovered.\n\nEnclosures: Fake offer letter, payment receipt, communication, bank statement\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://cybercrime.gov.in",
+      "https://consumerhelpline.gov.in",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "Cyber Fraud Helpline: 1930",
+      "Police: 112",
+      "National Consumer Helpline: 1915"
+    ]
+  },
+  {
+    "category": "Cyber Fraud and Digital Scams",
+    "subcategory": "Lottery / Prize Fraud",
+    "problem_description": "A citizen receives a fraudulent message claiming they have won a lottery, prize money, or lucky draw, and is asked to pay taxes or processing fees to claim the fake prize.",
+    "workflow_steps": [
+      "Step 1 – Do NOT pay any amount claimed as tax or processing fee.",
+      "Step 2 – Save all messages, emails, and communication from the fraudster.",
+      "Step 3 – Report the fraudulent message to Cyber Crime Helpline (1930).",
+      "Step 4 – File a complaint on the National Cyber Crime Reporting Portal.",
+      "Step 5 – File a police complaint if any money was already paid.",
+      "Step 6 – Warn family members and friends about the scam."
+    ],
+    "required_documents": [
+      "Fraudulent lottery message or email",
+      "Payment receipts if money was paid",
+      "Phone number or email of fraudster",
+      "Bank statement if debit occurred",
+      "Identity proof"
+    ],
+    "authorities": [
+      {"name": "Cyber Crime Helpline (1930)", "level": "National"},
+      {"name": "Cyber Crime Police Station", "level": "District"},
+      {"name": "Local Police Station", "level": "Local"}
+    ],
+    "escalation_path": [
+      "Cyber Fraud Helpline → Cyber Crime Portal → Police FIR"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\nCyber Crime Police Station\n\nSubject: Complaint regarding lottery/prize fraud\n\nRespected Sir/Madam,\n\nI, [Your Name], received a message/call on [Date] claiming I had won a lottery prize of Rs. [Amount]. I was asked to pay Rs. [Amount] as processing/tax fee. I paid Rs. [Amount] but no prize was delivered and the fraudster is now unreachable.\n\nI request investigation and recovery of my money.\n\nEnclosures: Messages/emails from fraudster, payment proof, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://cybercrime.gov.in",
+      "https://consumerhelpline.gov.in"
+    ],
+    "helplines": [
+      "Cyber Fraud Helpline: 1930",
+      "Police: 112"
+    ]
+  },
+  {
+    "category": "Cyber Fraud and Digital Scams",
+    "subcategory": "Aadhaar / KYC Fraud",
+    "problem_description": "A scammer has misused the victim's Aadhaar number, PAN, or KYC details to open fake bank accounts, take loans, or commit financial fraud in the victim's name.",
+    "workflow_steps": [
+      "Step 1 – Check your credit report (CIBIL) to identify any unauthorized loans or accounts.",
+      "Step 2 – Lock your Aadhaar biometric data on the UIDAI website (uidai.gov.in) or mAadhaar app.",
+      "Step 3 – File a complaint with UIDAI on the Aadhaar helpline (1947) or website.",
+      "Step 4 – File an FIR at the Cyber Crime Police Station.",
+      "Step 5 – File a complaint on the National Cyber Crime Reporting Portal.",
+      "Step 6 – Contact banks where fraudulent accounts were opened to report and close them.",
+      "Step 7 – File a complaint with the Banking Ombudsman if banks are unresponsive."
+    ],
+    "required_documents": [
+      "Aadhaar card copy",
+      "CIBIL / Credit report showing fraudulent accounts",
+      "Identity proof",
+      "Bank statements"
+    ],
+    "authorities": [
+      {"name": "UIDAI (Aadhaar Authority)", "level": "National"},
+      {"name": "Cyber Crime Police Station", "level": "District"},
+      {"name": "Banking Ombudsman", "level": "Regional"},
+      {"name": "Reserve Bank of India", "level": "National"}
+    ],
+    "escalation_path": [
+      "UIDAI Complaint → Cyber Crime Police → Banking Ombudsman → RBI"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\nCyber Crime Police Station\n\nSubject: Complaint regarding misuse of Aadhaar / KYC details\n\nRespected Sir/Madam,\n\nI, [Your Name], have discovered that my Aadhaar number [XXXX-XXXX-XXXX] and KYC documents have been misused to [open a bank account/take a loan/commit fraud] without my knowledge or consent.\n\nI request immediate investigation, cancellation of fraudulent accounts/loans, and legal action against the perpetrators.\n\nEnclosures: Aadhaar copy, CIBIL report, evidence of fraud\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://cybercrime.gov.in",
+      "https://uidai.gov.in (Aadhaar Grievance)",
+      "https://cms.rbi.org.in"
+    ],
+    "helplines": [
+      "UIDAI Helpline: 1947",
+      "Cyber Fraud Helpline: 1930",
+      "Police: 112"
+    ]
+  },
+  {
+    "category": "Consumer Complaints",
+    "subcategory": "Defective Product (Electronic / Appliance)",
+    "problem_description": "A consumer purchased an electronic appliance (TV, refrigerator, mobile phone, etc.) that turned out to be defective, and the seller or manufacturer refuses to repair, replace, or refund.",
+    "workflow_steps": [
+      "Step 1 – Keep all purchase documents: bill, warranty card, packaging.",
+      "Step 2 – Report the defect to the seller and manufacturer in writing within the warranty period.",
+      "Step 3 – Send a legal notice to the seller and manufacturer by registered post.",
+      "Step 4 – Call the National Consumer Helpline (1915) for guidance and mediation.",
+      "Step 5 – File an online consumer complaint at consumerhelpline.gov.in.",
+      "Step 6 – File a case in the District Consumer Disputes Redressal Commission (DCDRC) for claims up to Rs. 50 lakhs.",
+      "Step 7 – Appeal to the State Consumer Commission for claims between Rs. 50 lakhs and Rs. 2 crores.",
+      "Step 8 – Appeal to the National Consumer Commission for claims above Rs. 2 crores."
+    ],
+    "required_documents": [
+      "Purchase bill / invoice",
+      "Warranty card",
+      "Written complaint to seller/manufacturer",
+      "Service centre repair reports",
+      "Photographs of defect",
+      "Legal notice sent",
+      "Identity proof"
+    ],
+    "authorities": [
+      {"name": "National Consumer Helpline (1915)", "level": "National"},
+      {"name": "District Consumer Disputes Redressal Commission", "level": "District"},
+      {"name": "State Consumer Commission", "level": "State"},
+      {"name": "National Consumer Commission", "level": "National"}
+    ],
+    "escalation_path": [
+      "Seller/Manufacturer → National Consumer Helpline → DCDRC → State Commission → National Commission"
+    ],
+    "complaint_template": "To,\nThe President,\nDistrict Consumer Disputes Redressal Commission,\n[District]\n\nSubject: Consumer complaint regarding defective product\n\nRespected Sir/Madam,\n\nI, [Your Name], purchased a [Product Name / Brand] from [Seller Name], [Address] on [Date] for Rs. [Amount]. The product developed defects within the warranty period including [describe defects].\n\nDespite written complaints and service centre visits, the seller/manufacturer has refused to repair, replace, or refund the product.\n\nI request the commission to direct the opposite party to replace the product / refund Rs. [Amount] along with compensation of Rs. [Amount] for inconvenience.\n\nEnclosures: Purchase bill, warranty card, complaint letters, service reports\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://consumerhelpline.gov.in",
+      "https://edaakhil.nic.in",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "National Consumer Helpline: 1915",
+      "Police: 112 (if fraud involved)"
+    ]
+  },
+  {
+    "category": "Consumer Complaints",
+    "subcategory": "Defective Pharmaceutical / Medicine",
+    "problem_description": "A consumer received substandard, expired, or counterfeit medicines from a pharmacy, or suffered harm due to a defective pharmaceutical product.",
+    "workflow_steps": [
+      "Step 1 – Preserve the medicine packaging, batch number, and purchase receipt.",
+      "Step 2 – Report to the pharmacy and demand a replacement or refund.",
+      "Step 3 – File a complaint with the Drug Control Authority (Central or State).",
+      "Step 4 – Report to the Central Drugs Standard Control Organisation (CDSCO).",
+      "Step 5 – If physical harm occurred, seek medical treatment and preserve medical records.",
+      "Step 6 – File a complaint in the District Consumer Commission for compensation.",
+      "Step 7 – File an FIR if the medicines were deliberately counterfeit."
+    ],
+    "required_documents": [
+      "Medicine packaging with batch number",
+      "Purchase receipt",
+      "Doctor's prescription",
+      "Written complaint to pharmacy",
+      "Medical records if harm occurred",
+      "Identity proof"
+    ],
+    "authorities": [
+      {"name": "State Drug Control Authority", "level": "State"},
+      {"name": "Central Drugs Standard Control Organisation (CDSCO)", "level": "National"},
+      {"name": "District Consumer Commission", "level": "District"},
+      {"name": "Local Police Station", "level": "Local"}
+    ],
+    "escalation_path": [
+      "Pharmacy → State Drug Control → CDSCO → Consumer Commission → Police FIR"
+    ],
+    "complaint_template": "To,\nThe Drug Control Authority,\n[State]\n\nSubject: Complaint regarding defective/counterfeit medicine\n\nRespected Sir/Madam,\n\nI, [Your Name], purchased [Medicine Name] (Batch No. [Batch No.], expiry date [Date]) from [Pharmacy Name] on [Date]. The medicine was found to be [expired/defective/counterfeit/caused adverse reaction].\n\nI request your authority to investigate this matter, take action against the pharmacy, and arrange for testing of the batch.\n\nEnclosures: Medicine packaging, purchase receipt, medical reports\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://cdsco.gov.in",
+      "https://consumerhelpline.gov.in",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "National Consumer Helpline: 1915",
+      "CDSCO: 011-23236975"
+    ]
+  },
+  {
+    "category": "Consumer Complaints",
+    "subcategory": "Defective Agricultural Equipment / Seeds / Pesticides",
+    "problem_description": "A farmer purchased defective agricultural equipment (tractor parts, pumps), spurious seeds, or ineffective pesticides that resulted in crop failure or financial loss.",
+    "workflow_steps": [
+      "Step 1 – Keep purchase receipts, bills, and packaging for seeds, pesticides, or equipment.",
+      "Step 2 – Document the crop failure or equipment defect with photographs and expert assessment.",
+      "Step 3 – Report to the supplier and manufacturer in writing.",
+      "Step 4 – File a complaint with the District Agriculture Officer.",
+      "Step 5 – File a complaint with the State Agriculture Department's Quality Control Cell.",
+      "Step 6 – File a consumer case in the District Consumer Commission for compensation.",
+      "Step 7 – File an FIR if the products were fraudulently sold as genuine."
+    ],
+    "required_documents": [
+      "Purchase receipt for seeds/pesticides/equipment",
+      "Seed / pesticide packet with batch number",
+      "Photographs of crop failure or equipment defect",
+      "Agriculture officer's inspection report",
+      "Written complaint to supplier",
+      "Identity proof and land records"
+    ],
+    "authorities": [
+      {"name": "District Agriculture Officer", "level": "District"},
+      {"name": "State Agriculture Department", "level": "State"},
+      {"name": "District Consumer Commission", "level": "District"},
+      {"name": "Local Police Station", "level": "Local"}
+    ],
+    "escalation_path": [
+      "District Agriculture Officer → State Agriculture Department → Consumer Commission → Police FIR"
+    ],
+    "complaint_template": "To,\nThe District Agriculture Officer,\n[District]\n\nSubject: Complaint regarding defective seeds/pesticides/agricultural equipment\n\nRespected Sir/Madam,\n\nI, [Your Name], a farmer in village [Village Name], purchased [Product Name] from [Supplier Name] on [Date] for Rs. [Amount]. After using the product, my crop [describe damage / equipment failure]. I suspect the product was spurious/substandard.\n\nI request your office to inspect the matter, test the product quality, and take action against the supplier.\n\nEnclosures: Purchase bill, product packaging, photographs of crop damage\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://consumerhelpline.gov.in",
+      "State Agriculture Department Portal",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "Kisan Call Centre: 1800-180-1551",
+      "National Consumer Helpline: 1915",
+      "Agriculture Department: Local number"
+    ]
+  },
+  {
+    "category": "Consumer Complaints",
+    "subcategory": "Insurance Claim Rejected Unfairly",
+    "problem_description": "An insurance company has rejected a legitimate claim without valid reason, paid an insufficient amount, or delayed the claim settlement unreasonably.",
+    "workflow_steps": [
+      "Step 1 – Collect the rejection letter and all insurance policy documents.",
+      "Step 2 – Review the policy terms to confirm your entitlement.",
+      "Step 3 – Send a written complaint to the insurance company's Grievance Officer.",
+      "Step 4 – If unresolved within 30 days, file a complaint with the Insurance Ombudsman.",
+      "Step 5 – File a consumer case in the District Consumer Commission.",
+      "Step 6 – File a complaint with the Insurance Regulatory and Development Authority of India (IRDAI).",
+      "Step 7 – Approach Civil Court as a last resort."
+    ],
+    "required_documents": [
+      "Insurance policy document",
+      "Claim rejection letter",
+      "Medical reports (for health/life insurance)",
+      "Accident/loss documentation",
+      "Premium payment receipts",
+      "Written complaint to insurance company",
+      "Identity proof"
+    ],
+    "authorities": [
+      {"name": "Insurance Company Grievance Officer", "level": "Company"},
+      {"name": "Insurance Ombudsman", "level": "Regional"},
+      {"name": "IRDAI (Insurance Regulatory Authority)", "level": "National"},
+      {"name": "District Consumer Commission", "level": "District"}
+    ],
+    "escalation_path": [
+      "Insurance Company Grievance → Insurance Ombudsman → IRDAI → Consumer Commission → Civil Court"
+    ],
+    "complaint_template": "To,\nThe Insurance Ombudsman,\n[Region]\n\nSubject: Complaint regarding unfair rejection of insurance claim\n\nRespected Sir/Madam,\n\nI, [Your Name], hold Policy No. [Policy Number] with [Insurance Company Name]. I filed a claim on [Date] for [reason: health treatment / accident / property damage] of Rs. [Amount]. My claim was rejected on [Date] citing [rejection reason] which I believe is incorrect and against the policy terms.\n\nI request you to direct the insurance company to settle my legitimate claim of Rs. [Amount].\n\nEnclosures: Policy document, claim form, rejection letter, supporting documents\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://irdai.gov.in",
+      "https://consumerhelpline.gov.in",
+      "https://bimabharosa.irdai.gov.in (IRDAI Grievance Portal)"
+    ],
+    "helplines": [
+      "IRDAI Helpline: 155255 / 1800-4254-732",
+      "National Consumer Helpline: 1915"
+    ]
+  },
+  {
+    "category": "Consumer Complaints",
+    "subcategory": "Bank Service Deficiency / Unauthorized Bank Charges",
+    "problem_description": "A bank has levied unauthorized charges, failed to process a transaction correctly, frozen an account without reason, or provided deficient banking services causing financial loss.",
+    "workflow_steps": [
+      "Step 1 – Collect your bank statements showing unauthorized charges or incorrect transactions.",
+      "Step 2 – File a written complaint with the Bank Branch Manager.",
+      "Step 3 – If unresolved within 30 days, escalate to the bank's internal Grievance Redressal Officer.",
+      "Step 4 – File a complaint with the Banking Ombudsman if the bank does not respond within 30 days of the internal complaint.",
+      "Step 5 – File a consumer case in the District Consumer Commission.",
+      "Step 6 – File a complaint with RBI if systemic issues are involved.",
+      "Step 7 – Approach the Civil Court for larger monetary claims."
+    ],
+    "required_documents": [
+      "Bank statements",
+      "Written complaint to bank",
+      "Bank's response letter",
+      "Account opening documents",
+      "Identity proof"
+    ],
+    "authorities": [
+      {"name": "Bank Branch Manager", "level": "Local"},
+      {"name": "Banking Ombudsman", "level": "Regional"},
+      {"name": "Reserve Bank of India", "level": "National"},
+      {"name": "District Consumer Commission", "level": "District"}
+    ],
+    "escalation_path": [
+      "Bank Branch → Bank Grievance Officer → Banking Ombudsman → RBI → Consumer Commission"
+    ],
+    "complaint_template": "To,\nThe Banking Ombudsman,\n[Region]\n\nSubject: Complaint regarding unauthorized bank charges / deficient service\n\nRespected Sir/Madam,\n\nI, [Your Name], hold Account No. [Account Number] at [Bank Name], [Branch Name]. My bank has levied unauthorized charges of Rs. [Amount] on [Date(s)] / failed to process my transaction of Rs. [Amount] dated [Date] / frozen my account without reason.\n\nDespite a written complaint to the Branch Manager on [Date], the issue remains unresolved.\n\nI request you to direct the bank to refund the unauthorized charges / rectify the error.\n\nEnclosures: Bank statement, complaint to bank, bank's response, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://cms.rbi.org.in (RBI Complaint Portal)",
+      "https://consumerhelpline.gov.in",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "RBI Ombudsman: 14448",
+      "National Consumer Helpline: 1915"
+    ]
+  },
+  {
+    "category": "Consumer Complaints",
+    "subcategory": "Medical Negligence by Hospital or Doctor",
+    "problem_description": "A patient or their family member suffered harm due to negligent treatment, wrong diagnosis, incorrect surgery, or substandard care by a hospital or medical professional.",
+    "workflow_steps": [
+      "Step 1 – Collect all medical records, prescriptions, test reports, and bills.",
+      "Step 2 – Obtain an independent medical opinion on the negligence.",
+      "Step 3 – File a written complaint with the Hospital Administration.",
+      "Step 4 – File a complaint with the State Medical Council against the doctor.",
+      "Step 5 – File a consumer case in the District Consumer Commission (medical services are consumer services).",
+      "Step 6 – File a police complaint if criminal negligence is suspected.",
+      "Step 7 – Approach the National Human Rights Commission if fundamental rights are violated."
+    ],
+    "required_documents": [
+      "Medical records (case sheets, prescriptions, test reports)",
+      "Hospital bills",
+      "Independent medical opinion",
+      "Written complaint to hospital",
+      "Identity proof of patient",
+      "Post-mortem report (if death occurred)"
+    ],
+    "authorities": [
+      {"name": "Hospital Administration", "level": "Local"},
+      {"name": "State Medical Council", "level": "State"},
+      {"name": "District Consumer Commission", "level": "District"},
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "National Human Rights Commission", "level": "National"}
+    ],
+    "escalation_path": [
+      "Hospital Administration → State Medical Council → Consumer Commission → Police FIR → NHRC"
+    ],
+    "complaint_template": "To,\nThe President,\nDistrict Consumer Disputes Redressal Commission,\n[District]\n\nSubject: Consumer complaint regarding medical negligence\n\nRespected Sir/Madam,\n\nI, [Your Name], am filing this complaint on behalf of [Patient Name] who was treated at [Hospital Name] from [Date] to [Date]. Due to the negligence of Dr. [Doctor Name] in [describe negligence: wrong diagnosis / incorrect treatment / delayed care], the patient suffered [describe harm / death].\n\nThis constitutes deficiency in service under the Consumer Protection Act. I request compensation of Rs. [Amount] for medical expenses, suffering, and loss.\n\nEnclosures: Medical records, hospital bills, independent medical opinion\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://consumerhelpline.gov.in",
+      "https://edaakhil.nic.in",
+      "https://nhrc.nic.in"
+    ],
+    "helplines": [
+      "National Consumer Helpline: 1915",
+      "NHRC: 14433",
+      "Police: 112"
+    ]
+  },
+  {
+    "category": "Consumer Complaints",
+    "subcategory": "Electricity Bill Dispute / Overcharging",
+    "problem_description": "A consumer receives an excessively high electricity bill, is charged for units not consumed, or the electricity department refuses to correct a billing error.",
+    "workflow_steps": [
+      "Step 1 – Keep the disputed electricity bill and your meter reading records.",
+      "Step 2 – File a written complaint with the electricity department's local office.",
+      "Step 3 – Request a meter test (meter inspection) in writing.",
+      "Step 4 – If unresolved, approach the Consumer Grievance Redressal Forum (CGRF) of the electricity company.",
+      "Step 5 – File a complaint with the State Electricity Regulatory Commission (SERC).",
+      "Step 6 – File a consumer case in the District Consumer Commission.",
+      "Step 7 – Approach the Electricity Ombudsman for further appeal."
+    ],
+    "required_documents": [
+      "Disputed electricity bill",
+      "Previous electricity bills",
+      "Meter reading record",
+      "Written complaint to electricity department",
+      "Meter inspection report (if conducted)",
+      "Identity proof",
+      "Property ownership/tenancy document"
+    ],
+    "authorities": [
+      {"name": "Local Electricity Department Office", "level": "Local"},
+      {"name": "Consumer Grievance Redressal Forum (CGRF)", "level": "District/State"},
+      {"name": "State Electricity Regulatory Commission (SERC)", "level": "State"},
+      {"name": "Electricity Ombudsman", "level": "State"},
+      {"name": "District Consumer Commission", "level": "District"}
+    ],
+    "escalation_path": [
+      "Electricity Department → CGRF → Electricity Ombudsman → SERC → Consumer Commission"
+    ],
+    "complaint_template": "To,\nThe Consumer Grievance Redressal Forum,\n[Electricity Company Name]\n\nSubject: Complaint regarding inflated electricity bill\n\nRespected Sir/Madam,\n\nI, [Your Name], am a consumer with meter no. [Meter No.] at [Address]. My electricity bill for [Month] was Rs. [Amount], which is [X times] higher than my usual consumption. My actual meter reading on [Date] was [Reading Units].\n\nI believe this is a billing error. I request you to investigate, correct the bill, and refund the excess amount charged.\n\nEnclosures: Disputed bill, previous bills, meter reading record, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "State Electricity Company Portal",
+      "https://consumerhelpline.gov.in",
+      "State Electricity Regulatory Commission Portal"
+    ],
+    "helplines": [
+      "Electricity Department Helpline: (State specific – e.g., MSEDCL: 19122)",
+      "National Consumer Helpline: 1915"
+    ]
+  },
+  {
+    "category": "Consumer Complaints",
+    "subcategory": "Telecom / Mobile Service Deficiency",
+    "problem_description": "A mobile or internet service provider is providing poor network coverage, charging for services not availed, not resolving complaints, or disconnecting service unfairly.",
+    "workflow_steps": [
+      "Step 1 – File a complaint with your telecom operator's customer care.",
+      "Step 2 – If unresolved within 30 days, escalate to the telecom company's Nodal Officer.",
+      "Step 3 – If still unresolved within 90 days, file a complaint with the Telecom Regulatory Authority of India (TRAI).",
+      "Step 4 – File a complaint on the TRAI Consumer Complaint Portal.",
+      "Step 5 – File a consumer case in the District Consumer Commission.",
+      "Step 6 – Contact the Department of Telecommunications (DoT) for serious issues."
+    ],
+    "required_documents": [
+      "Mobile number / account details",
+      "Bills showing incorrect charges",
+      "Complaint number from operator",
+      "Written complaint to operator",
+      "Identity proof"
+    ],
+    "authorities": [
+      {"name": "Telecom Operator Customer Care", "level": "Company"},
+      {"name": "Telecom Operator Nodal Officer", "level": "Company"},
+      {"name": "TRAI (Telecom Regulatory Authority)", "level": "National"},
+      {"name": "District Consumer Commission", "level": "District"}
+    ],
+    "escalation_path": [
+      "Telecom Customer Care → Nodal Officer → TRAI → Consumer Commission"
+    ],
+    "complaint_template": "To,\nThe Nodal Officer,\n[Telecom Company Name]\n\nSubject: Complaint regarding deficient telecom service\n\nRespected Sir/Madam,\n\nI, [Your Name], am a subscriber of [Telecom Company] with mobile number [Mobile No.]. I have been experiencing [poor network / incorrect billing / unauthorized charges / service disconnection] since [Date].\n\nDespite calling customer care on [Complaint Reference No.] on [Date], the issue remains unresolved.\n\nI request immediate rectification and refund of Rs. [Amount] charged incorrectly.\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://pgportal.trai.gov.in (TRAI Complaint Portal)",
+      "https://consumerhelpline.gov.in"
+    ],
+    "helplines": [
+      "TRAI Helpline: 1800-110-420",
+      "National Consumer Helpline: 1915"
+    ]
+  }
+]

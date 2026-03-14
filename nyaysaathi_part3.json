@@ -1,0 +1,1045 @@
+[
+  {
+    "category": "Police Complaints and Local Crime",
+    "subcategory": "Theft Complaint",
+    "problem_description": "A citizen's property, vehicle, or valuables have been stolen and they wish to file a police complaint to recover property and pursue legal action against the thief.",
+    "workflow_steps": [
+      "Step 1 – Note all details about the stolen property: description, serial numbers, value, photographs if available.",
+      "Step 2 – Visit the local police station immediately and file an FIR under Section 379 IPC.",
+      "Step 3 – Provide all details of the theft including date, time, location, and any witnesses.",
+      "Step 4 – Obtain a copy of the FIR – this is your legal right.",
+      "Step 5 – If the police refuse to register the FIR, file a complaint with the Superintendent of Police (SP).",
+      "Step 6 – Use the FIR copy to file insurance claims for stolen property.",
+      "Step 7 – Follow up regularly with the investigating officer for updates on the case.",
+      "Step 8 – Approach the Magistrate Court if police are non-cooperative."
+    ],
+    "required_documents": [
+      "List of stolen property with descriptions and values",
+      "Photographs of stolen items (if available)",
+      "Identity proof",
+      "Vehicle registration documents (if vehicle stolen)",
+      "Bank account details for cash stolen from account",
+      "Witnesses' contact details"
+    ],
+    "authorities": [
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Superintendent of Police", "level": "District"},
+      {"name": "Magistrate Court (if FIR refused)", "level": "District"}
+    ],
+    "escalation_path": [
+      "Local Police Station → Superintendent of Police → Magistrate Court → High Court"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\n[Police Station Name]\n\nSubject: FIR complaint regarding theft\n\nRespected Sir/Madam,\n\nI, [Your Name], residing at [Address], wish to report that on [Date] at approximately [Time], property worth Rs. [Amount] was stolen from [Location]. The stolen items include [list items with descriptions and serial numbers].\n\nI request you to register an FIR and investigate the theft at the earliest.\n\nEnclosures: List of stolen items, photographs, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "State Police Online FIR Portal",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "Police Emergency: 112",
+      "Local Police Station: (Local Number)"
+    ]
+  },
+  {
+    "category": "Police Complaints and Local Crime",
+    "subcategory": "Physical Assault Complaint",
+    "problem_description": "A citizen has been physically assaulted, beaten, or attacked by another person and needs to file a criminal complaint and seek medical attention.",
+    "workflow_steps": [
+      "Step 1 – Seek immediate medical treatment and ensure a Medico-Legal Case (MLC) report is prepared by the doctor.",
+      "Step 2 – Visit the local police station and file an FIR under Section 351/352 IPC (assault) or Section 323/325 IPC (causing hurt).",
+      "Step 3 – Provide names of the assailant(s) and any witnesses.",
+      "Step 4 – Obtain a copy of the FIR.",
+      "Step 5 – If the assault was severe, also file a complaint under Section 307 IPC (attempt to murder) if life was threatened.",
+      "Step 6 – If the police are non-responsive, approach the Superintendent of Police or Magistrate.",
+      "Step 7 – Consult a lawyer about filing a private complaint in Magistrate Court if needed."
+    ],
+    "required_documents": [
+      "Medico-Legal Case (MLC) report",
+      "Photographs of injuries",
+      "Identity proof",
+      "Names and contact details of witnesses",
+      "Any medical bills"
+    ],
+    "authorities": [
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Superintendent of Police", "level": "District"},
+      {"name": "Magistrate Court", "level": "District"}
+    ],
+    "escalation_path": [
+      "Police Station → SP → Magistrate Court → Sessions Court"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\n[Police Station Name]\n\nSubject: FIR complaint regarding physical assault\n\nRespected Sir/Madam,\n\nI, [Your Name], residing at [Address], wish to report that on [Date] at approximately [Time], I was physically assaulted by [Assailant Name(s)] at [Location]. The assault caused me [describe injuries]. I have obtained medical treatment and an MLC report.\n\nI request you to register an FIR and take appropriate legal action against the assailant(s).\n\nEnclosures: MLC report, photographs, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "State Police Online Complaint Portal",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "Police Emergency: 112",
+      "Women Helpline (if woman assaulted): 1091"
+    ]
+  },
+  {
+    "category": "Police Complaints and Local Crime",
+    "subcategory": "Harassment by Neighbour / Local Person",
+    "problem_description": "A citizen is being continuously harassed, intimidated, or threatened by a neighbour or local person, disrupting their peaceful living.",
+    "workflow_steps": [
+      "Step 1 – Document all incidents of harassment with dates, times, and details.",
+      "Step 2 – Try to resolve the matter through local mediation (Gram Panchayat, neighbourhood committee) first.",
+      "Step 3 – File a written complaint with the local police station.",
+      "Step 4 – Request police to issue a warning or notice to the harassing party.",
+      "Step 5 – Apply to the Magistrate Court for a restraining order or peace bond if harassment continues.",
+      "Step 6 – If caste-based or communal harassment is involved, file under SC/ST Atrocities Act.",
+      "Step 7 – Approach the Superintendent of Police if local police are non-responsive."
+    ],
+    "required_documents": [
+      "Written account of harassment incidents with dates",
+      "Witness statements",
+      "Audio/video recordings if available",
+      "Identity proof",
+      "Previous complaints filed (if any)"
+    ],
+    "authorities": [
+      {"name": "Gram Panchayat / Local Mediation", "level": "Local"},
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Superintendent of Police", "level": "District"},
+      {"name": "Magistrate Court", "level": "District"}
+    ],
+    "escalation_path": [
+      "Gram Panchayat → Police Station → SP → Magistrate Court"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\n[Police Station Name]\n\nSubject: Complaint regarding persistent harassment by neighbour\n\nRespected Sir/Madam,\n\nI, [Your Name], residing at [Address], wish to report that my neighbour [Name] residing at [Address] has been continuously harassing me since [Date] by [describe harassment: verbal abuse / threats / property damage / obstruction].\n\nDespite requests to stop, the harassment continues. I request police intervention and appropriate action to ensure my peaceful living.\n\nEnclosures: Written incident log, witness statements, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "State Police Complaint Portal",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "Police Emergency: 112",
+      "SC/ST Helpline: 14566"
+    ]
+  },
+  {
+    "category": "Police Complaints and Local Crime",
+    "subcategory": "Missing Person Complaint",
+    "problem_description": "A family member or person known to the citizen has gone missing and the family needs to file a complaint for search and rescue.",
+    "workflow_steps": [
+      "Step 1 – File a missing person complaint at the local police station immediately. There is no waiting period required.",
+      "Step 2 – Provide a recent photograph, physical description, last known location, and clothing.",
+      "Step 3 – Request the police to register the case in the Crime and Criminal Tracking Network System (CCTNS).",
+      "Step 4 – If a child is missing, call the Childline (1098) and request an Amber Alert.",
+      "Step 5 – Contact the Missing Persons' Cell at the State Police Headquarters.",
+      "Step 6 – Check railway stations, bus stands, and hospitals with police assistance.",
+      "Step 7 – If trafficking is suspected, also file a complaint with the Anti-Human Trafficking Unit.",
+      "Step 8 – File a complaint with the National Crime Records Bureau (NCRB) for national-level search."
+    ],
+    "required_documents": [
+      "Recent photograph of missing person",
+      "Identity proof of missing person",
+      "Description of clothing on the day of disappearance",
+      "Contact details of people who last saw the person",
+      "Identity proof of complainant"
+    ],
+    "authorities": [
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Childline (1098) for minors", "level": "National"},
+      {"name": "State Missing Persons Cell", "level": "State"},
+      {"name": "Anti-Human Trafficking Unit", "level": "District/State"},
+      {"name": "National Crime Records Bureau", "level": "National"}
+    ],
+    "escalation_path": [
+      "Local Police → Missing Persons Cell → Anti-Trafficking Unit → State CID → NCRB"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\n[Police Station Name]\n\nSubject: Missing person complaint\n\nRespected Sir/Madam,\n\nI, [Your Name], am the [relation] of [Missing Person's Name], aged [Age], residing at [Address]. [He/She] was last seen on [Date] at [Location] wearing [clothing description].\n\nI am very concerned for [his/her] safety and request you to register a missing person complaint and initiate a search immediately.\n\nEnclosures: Recent photograph, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://trackthemissingchild.gov.in",
+      "State Police Missing Persons Portal"
+    ],
+    "helplines": [
+      "Police Emergency: 112",
+      "Childline (for missing minors): 1098",
+      "Women Helpline: 1091"
+    ]
+  },
+  {
+    "category": "Police Complaints and Local Crime",
+    "subcategory": "Police Refusing to File FIR (Non-Registration of Complaint)",
+    "problem_description": "A citizen has gone to the police station to file an FIR but the police are refusing to register the complaint, which is a violation of the citizen's rights.",
+    "workflow_steps": [
+      "Step 1 – Request the police officer to explain in writing why the FIR is being refused.",
+      "Step 2 – Send a written complaint about FIR refusal to the Superintendent of Police by registered post.",
+      "Step 3 – File a complaint with the State Police Complaints Authority.",
+      "Step 4 – File a complaint directly before the Magistrate Court under Section 156(3) CrPC – the magistrate can order the police to register the FIR.",
+      "Step 5 – File a writ petition in the High Court if all else fails.",
+      "Step 6 – Approach the National Human Rights Commission if rights are violated.",
+      "Step 7 – Contact the District Legal Services Authority for free legal assistance."
+    ],
+    "required_documents": [
+      "Written application submitted to police",
+      "Postal receipt if sent by registered post",
+      "Identity proof",
+      "Evidence related to the crime"
+    ],
+    "authorities": [
+      {"name": "Superintendent of Police", "level": "District"},
+      {"name": "State Police Complaints Authority", "level": "State"},
+      {"name": "Magistrate Court", "level": "District"},
+      {"name": "High Court", "level": "State"},
+      {"name": "National Human Rights Commission", "level": "National"}
+    ],
+    "escalation_path": [
+      "Local Police → SP → State Police Complaints Authority → Magistrate Court → High Court → NHRC"
+    ],
+    "complaint_template": "To,\nThe Superintendent of Police,\n[District]\n\nSubject: Complaint regarding refusal of police to register FIR\n\nRespected Sir/Madam,\n\nI, [Your Name], visited [Police Station Name] on [Date] to file an FIR regarding [brief description of crime]. The Station House Officer refused to register my FIR without giving a valid reason.\n\nRefusing to register an FIR is a violation of Section 154 CrPC. I request you to direct the concerned police station to immediately register my complaint and take action.\n\nEnclosures: Written application previously submitted to police, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "State Police Portal for Complaints against Police",
+      "https://nhrc.nic.in",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "Police Emergency: 112",
+      "NHRC: 14433",
+      "DLSA: 15100"
+    ]
+  },
+  {
+    "category": "Police Complaints and Local Crime",
+    "subcategory": "Extortion / Blackmail",
+    "problem_description": "A citizen is being extorted for money through threats, blackmail, or intimidation – either by an individual, criminal gang, or someone who obtained compromising information.",
+    "workflow_steps": [
+      "Step 1 – Do NOT pay the extortion demand.",
+      "Step 2 – Document all threats, messages, and demands with evidence.",
+      "Step 3 – File an FIR at the local police station under Section 383/384 IPC (extortion).",
+      "Step 4 – Report cyber blackmail to the Cyber Crime Helpline (1930) and Cyber Crime Portal.",
+      "Step 5 – Provide police with all contact details, messages, and evidence of the extortionist.",
+      "Step 6 – Request police to use technical surveillance to identify and catch the perpetrator.",
+      "Step 7 – Seek protection from the Magistrate Court if threats to life are involved."
+    ],
+    "required_documents": [
+      "Screenshots of threatening messages",
+      "Call records showing extortion calls",
+      "Identity proof",
+      "Witness statements",
+      "Evidence of payment if any was made under coercion"
+    ],
+    "authorities": [
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Cyber Crime Police (if digital)", "level": "District"},
+      {"name": "Superintendent of Police", "level": "District"},
+      {"name": "Magistrate Court", "level": "District"}
+    ],
+    "escalation_path": [
+      "Local Police → SP → State Crime Branch → Magistrate Court"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\n[Police Station Name]\n\nSubject: FIR complaint regarding extortion/blackmail\n\nRespected Sir/Madam,\n\nI, [Your Name], wish to report that I am being extorted by [Name/Unknown Person] who is demanding Rs. [Amount] under threat of [describe threat]. The threats were communicated through [phone/message/in person] on [Date(s)].\n\nI request immediate action to arrest the extortionist and protect me from further threats.\n\nEnclosures: Screenshots of messages, call records, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://cybercrime.gov.in (if cyber extortion)",
+      "State Police FIR Portal"
+    ],
+    "helplines": [
+      "Police Emergency: 112",
+      "Cyber Fraud Helpline: 1930"
+    ]
+  },
+  {
+    "category": "Government Scheme and Public Service Issues",
+    "subcategory": "Ration Card Issue / Denial of PDS Benefits",
+    "problem_description": "A citizen has been denied their entitlement of ration (food grains) under the Public Distribution System (PDS), or there are issues with their ration card (wrong name, wrong category, or ration shop refusing to provide goods).",
+    "workflow_steps": [
+      "Step 1 – Collect your ration card and check your entitlement (Above Poverty Line / Below Poverty Line / Antyodaya).",
+      "Step 2 – Visit the Fair Price Shop and note the refusal in writing or on the ePoS machine.",
+      "Step 3 – File a written complaint with the Circle Supply Inspector or District Supply Officer.",
+      "Step 4 – File a complaint on the State Food Department's grievance portal.",
+      "Step 5 – Contact the Gram Panchayat or local Ward Councillor for assistance.",
+      "Step 6 – File a complaint on the CPGRAMS portal if the district level is unresponsive.",
+      "Step 7 – Approach the Food and Civil Supplies Department at the state level.",
+      "Step 8 – File a Right to Information (RTI) application to obtain information about your ration entitlements."
+    ],
+    "required_documents": [
+      "Ration card",
+      "Identity proof (Aadhaar)",
+      "Written complaint to Supply Inspector",
+      "Details of dates when ration was denied",
+      "Witness statements from other beneficiaries"
+    ],
+    "authorities": [
+      {"name": "Fair Price Shop Dealer", "level": "Local"},
+      {"name": "Circle Supply Inspector", "level": "Local/Block"},
+      {"name": "District Supply Officer", "level": "District"},
+      {"name": "State Food and Civil Supplies Department", "level": "State"}
+    ],
+    "escalation_path": [
+      "Fair Price Shop → Circle Supply Inspector → District Supply Officer → State Food Department → CPGRAMS"
+    ],
+    "complaint_template": "To,\nThe District Supply Officer,\n[District]\n\nSubject: Complaint regarding denial of PDS ration entitlement\n\nRespected Sir/Madam,\n\nI, [Your Name], am a ration card holder (Card No. [Card No.], Category [APL/BPL/AAY]) residing at [Address]. The Fair Price Shop at [Location] has refused to provide my monthly ration entitlement for the months of [Months] without valid reason.\n\nI request your immediate intervention to ensure my food entitlement is provided and appropriate action is taken against the Fair Price Shop dealer.\n\nEnclosures: Ration card copy, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://pgportal.gov.in (CPGRAMS)",
+      "State Food Department Grievance Portal",
+      "https://nfsa.gov.in (National Food Security Portal)"
+    ],
+    "helplines": [
+      "Food Department Helpline: (State specific)",
+      "PDS Helpline: 1800-212-5512 (some states)",
+      "CPGRAMS: 1800-11-3366"
+    ]
+  },
+  {
+    "category": "Government Scheme and Public Service Issues",
+    "subcategory": "Pension Delay or Non-Payment (Old Age / Widow / Disability Pension)",
+    "problem_description": "An eligible beneficiary is not receiving their government pension (old age, widow, disability) despite being registered, or the pension has stopped without reason.",
+    "workflow_steps": [
+      "Step 1 – Verify your registration and status on the National Social Assistance Programme (NSAP) portal.",
+      "Step 2 – Check if your bank account and Aadhaar are linked correctly for Direct Benefit Transfer.",
+      "Step 3 – File a written complaint with the Gram Panchayat or Municipality.",
+      "Step 4 – Visit the Block Development Office or District Social Welfare Office.",
+      "Step 5 – File a complaint on the state social welfare portal or CPGRAMS.",
+      "Step 6 – Contact the Collector Office if the BDO is unresponsive.",
+      "Step 7 – File an RTI to know the status of your pension application.",
+      "Step 8 – Approach DLSA for legal aid if systemic denial is occurring."
+    ],
+    "required_documents": [
+      "Aadhaar card",
+      "Age proof (for old age pension) or death certificate of husband (widow pension)",
+      "Disability certificate (for disability pension)",
+      "Bank passbook",
+      "BPL card or income certificate",
+      "Pension registration acknowledgment"
+    ],
+    "authorities": [
+      {"name": "Gram Panchayat", "level": "Local"},
+      {"name": "Block Development Office", "level": "Block"},
+      {"name": "District Social Welfare Office", "level": "District"},
+      {"name": "District Collector", "level": "District"},
+      {"name": "State Social Welfare Department", "level": "State"}
+    ],
+    "escalation_path": [
+      "Gram Panchayat → Block Development Office → District Social Welfare → District Collector → State Department → CPGRAMS"
+    ],
+    "complaint_template": "To,\nThe District Social Welfare Officer,\n[District]\n\nSubject: Complaint regarding non-payment of [Old Age / Widow / Disability] Pension\n\nRespected Sir/Madam,\n\nI, [Your Name], am a registered beneficiary of [Pension Scheme Name] (Registration No. [Number]) residing at [Address]. Despite my eligibility and registration, I have not received my pension since [Month/Year].\n\nI request your office to investigate the delay and ensure regular payment of my pension immediately.\n\nEnclosures: Aadhaar card, age/disability/widow proof, bank passbook\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://nsap.nic.in (NSAP Beneficiary Portal)",
+      "https://pgportal.gov.in",
+      "State Social Welfare Portal"
+    ],
+    "helplines": [
+      "NSAP Helpline: 1800-111-555",
+      "State Social Welfare Helpline: (State specific)"
+    ]
+  },
+  {
+    "category": "Government Scheme and Public Service Issues",
+    "subcategory": "PM Awas Yojana / Housing Scheme Complaint",
+    "problem_description": "A beneficiary approved under PM Awas Yojana (rural or urban) has not received their housing grant, or a housing official is demanding a bribe for processing the application.",
+    "workflow_steps": [
+      "Step 1 – Verify your beneficiary status on the PM Awas Yojana portal (pmayg.nic.in or pmaymis.gov.in).",
+      "Step 2 – Check if your Aadhaar and bank account are correctly linked.",
+      "Step 3 – File a complaint with the Gram Panchayat or Municipal Office.",
+      "Step 4 – Escalate to the Block Development Officer or Urban Local Body.",
+      "Step 5 – File a complaint on the PMAY portal's grievance section.",
+      "Step 6 – File on CPGRAMS if the state-level response is inadequate.",
+      "Step 7 – Report bribery demands to the Anti-Corruption Bureau and Vigilance Department.",
+      "Step 8 – File an RTI to know the status of your application and fund release."
+    ],
+    "required_documents": [
+      "Aadhaar card",
+      "PMAY application/registration acknowledgment",
+      "Bank passbook",
+      "Income certificate",
+      "BPL card (if applicable)",
+      "Identity proof"
+    ],
+    "authorities": [
+      {"name": "Gram Panchayat / Municipal Office", "level": "Local"},
+      {"name": "Block Development Officer (Rural)", "level": "Block"},
+      {"name": "Urban Local Body (Urban)", "level": "City"},
+      {"name": "District Collector", "level": "District"},
+      {"name": "Ministry of Housing and Urban Affairs", "level": "National"}
+    ],
+    "escalation_path": [
+      "Gram Panchayat/ULB → BDO → District Collector → State Government → CPGRAMS → Ministry"
+    ],
+    "complaint_template": "To,\nThe Block Development Officer,\n[Block], [District]\n\nSubject: Complaint regarding non-release of PM Awas Yojana grant\n\nRespected Sir/Madam,\n\nI, [Your Name], was approved as a beneficiary under PM Awas Yojana (Gramin) (Beneficiary ID: [ID]) on [Date]. However, the housing grant has not been credited to my bank account despite [Time Period] having passed since approval.\n\nI request your intervention to expedite the release of my housing grant at the earliest.\n\nEnclosures: PMAY acknowledgment, Aadhaar card, bank passbook\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://pmayg.nic.in (PMAY Gramin Grievance)",
+      "https://pmaymis.gov.in (PMAY Urban)",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "PMAY Helpline: 1800-11-6446",
+      "CPGRAMS: 1800-11-3366"
+    ]
+  },
+  {
+    "category": "Government Scheme and Public Service Issues",
+    "subcategory": "Scholarship Non-Payment or Discrimination",
+    "problem_description": "A student belonging to SC/ST/OBC/Minority community or economically weaker section has not received their government scholarship despite eligibility, or their scholarship application was rejected unfairly.",
+    "workflow_steps": [
+      "Step 1 – Check your scholarship application status on the National Scholarship Portal (scholarships.gov.in).",
+      "Step 2 – Contact your institution's scholarship coordinator for status.",
+      "Step 3 – File a written complaint with the District Social Welfare Officer.",
+      "Step 4 – Escalate to the State Scholarship Authority or Social Welfare Department.",
+      "Step 5 – File a complaint on CPGRAMS.",
+      "Step 6 – Contact the National Commission for SC/ST if discrimination is involved.",
+      "Step 7 – File an RTI application to obtain information about your application status."
+    ],
+    "required_documents": [
+      "Scholarship application acknowledgment",
+      "Caste certificate (for SC/ST/OBC)",
+      "Income certificate",
+      "Bank account details",
+      "Aadhaar card",
+      "Student ID and admission letter"
+    ],
+    "authorities": [
+      {"name": "College / Institution Scholarship Coordinator", "level": "Institution"},
+      {"name": "District Social Welfare Officer", "level": "District"},
+      {"name": "State Social Welfare / Minority Affairs Department", "level": "State"},
+      {"name": "National Commission for SC/ST (if discrimination)", "level": "National"}
+    ],
+    "escalation_path": [
+      "Institution → District Social Welfare → State Department → CPGRAMS → Ministry → National Commission"
+    ],
+    "complaint_template": "To,\nThe District Social Welfare Officer,\n[District]\n\nSubject: Complaint regarding non-payment of government scholarship\n\nRespected Sir/Madam,\n\nI, [Your Name], am a student at [Institution Name] and applied for [Scholarship Name] for the academic year [Year] (Application ID: [ID]). Despite meeting all eligibility criteria, I have not received the scholarship amount.\n\nI request your office to investigate and ensure the scholarship amount is credited to my account at the earliest.\n\nEnclosures: Application acknowledgment, caste certificate, income certificate, Aadhaar\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://scholarships.gov.in (National Scholarship Portal)",
+      "https://pgportal.gov.in",
+      "State Social Welfare Portal"
+    ],
+    "helplines": [
+      "NSP Helpline: 0120-6619540",
+      "CPGRAMS: 1800-11-3366"
+    ]
+  },
+  {
+    "category": "Government Scheme and Public Service Issues",
+    "subcategory": "Caste Certificate Not Issued / Delayed",
+    "problem_description": "A citizen belonging to SC/ST/OBC is unable to obtain their caste certificate from government authorities despite being eligible, or the certificate is being unreasonably delayed.",
+    "workflow_steps": [
+      "Step 1 – Submit a formal application for a caste certificate at the Tehsildar or Revenue Office with all supporting documents.",
+      "Step 2 – Obtain the acknowledgment receipt of your application.",
+      "Step 3 – If no response within the stipulated time (usually 15-30 days), file a complaint with the Tehsildar.",
+      "Step 4 – Escalate to the Sub-Divisional Magistrate if Tehsildar is unresponsive.",
+      "Step 5 – File a complaint on CPGRAMS or the state's public grievance portal.",
+      "Step 6 – File an RTI application asking about the status of your certificate.",
+      "Step 7 – Approach the National Commission for SC or National Commission for Backward Classes."
+    ],
+    "required_documents": [
+      "Application for caste certificate",
+      "Father/mother's caste certificate or school records showing caste",
+      "Aadhaar card",
+      "Residence proof",
+      "Birth certificate"
+    ],
+    "authorities": [
+      {"name": "Tehsildar / Revenue Office", "level": "Taluka"},
+      {"name": "Sub-Divisional Magistrate", "level": "Sub-District"},
+      {"name": "District Collector", "level": "District"},
+      {"name": "National Commission for Scheduled Castes / Tribes", "level": "National"}
+    ],
+    "escalation_path": [
+      "Tehsildar → SDM → District Collector → CPGRAMS → National Commission for SC/ST"
+    ],
+    "complaint_template": "To,\nThe Tehsildar,\n[Taluka], [District]\n\nSubject: Application for caste certificate / complaint regarding delay\n\nRespected Sir/Madam,\n\nI, [Your Name], belonging to [Caste Name] community (SC/ST/OBC), submitted my application for a caste certificate on [Date] (Acknowledgment No. [Number]). Despite [Number] days having passed, I have not received my caste certificate.\n\nI request you to process and issue my caste certificate urgently as I require it for [educational/employment] purposes.\n\nEnclosures: Application acknowledgment, parents' caste document, Aadhaar, birth certificate\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://pgportal.gov.in",
+      "State e-District / Revenue Portal"
+    ],
+    "helplines": [
+      "SC Commission Helpline: 011-23384183",
+      "CPGRAMS: 1800-11-3366"
+    ]
+  },
+  {
+    "category": "Tenant–Landlord Disputes",
+    "subcategory": "Illegal Eviction by Landlord",
+    "problem_description": "A landlord is forcibly evicting a tenant without following legal eviction procedures, cutting off electricity/water, or threatening the tenant to vacate the premises.",
+    "workflow_steps": [
+      "Step 1 – Collect your rent agreement and all rent receipts.",
+      "Step 2 – Document the landlord's actions (threats, utility disconnection) with evidence.",
+      "Step 3 – Send a legal notice to the landlord through a lawyer stating your right to remain.",
+      "Step 4 – File a police complaint against the landlord for forcible eviction and property trespass.",
+      "Step 5 – File a complaint with the Rent Controller (in states with Rent Control Acts).",
+      "Step 6 – Approach the Civil Court for an injunction against the illegal eviction.",
+      "Step 7 – Contact DLSA for free legal aid."
+    ],
+    "required_documents": [
+      "Rent agreement",
+      "Rent receipts",
+      "Utility bills (showing payment by tenant)",
+      "Identity proof",
+      "Evidence of landlord's threats (messages, witnesses)",
+      "Photographs of utility disconnection"
+    ],
+    "authorities": [
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Rent Controller Office", "level": "District"},
+      {"name": "Civil Court", "level": "District"},
+      {"name": "District Legal Services Authority", "level": "District"}
+    ],
+    "escalation_path": [
+      "Police → Rent Controller → Civil Court → High Court"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\n[Police Station Name]\n\nSubject: Complaint regarding illegal forced eviction by landlord\n\nRespected Sir/Madam,\n\nI, [Your Name], am a tenant at [Address] under a valid rental agreement dated [Date] with my landlord [Landlord Name]. My landlord is illegally trying to evict me by [describe: threatening / disconnecting utilities / changing locks] without following the legal eviction process.\n\nI request police intervention to stop this illegal eviction and protect my legal right to continue occupancy.\n\nEnclosures: Rent agreement, rent receipts, evidence of landlord's actions\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "State Police Complaint Portal",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "Police Emergency: 112",
+      "DLSA: 15100"
+    ]
+  },
+  {
+    "category": "Tenant–Landlord Disputes",
+    "subcategory": "Landlord Refusing to Return Security Deposit",
+    "problem_description": "A landlord is refusing to return the security deposit paid by the tenant at the start of the tenancy, even after the tenant has vacated the property and fulfilled all obligations.",
+    "workflow_steps": [
+      "Step 1 – Collect your rent agreement, receipts for security deposit payment, and vacating confirmation.",
+      "Step 2 – Send a written legal notice to the landlord demanding return of the deposit within 30 days.",
+      "Step 3 – If the landlord does not respond, file a consumer complaint at the Consumer Commission.",
+      "Step 4 – Alternatively, file a civil suit for recovery of money in Small Causes Court or Civil Court.",
+      "Step 5 – In states with Rent Control Acts, file a complaint with the Rent Controller.",
+      "Step 6 – Approach DLSA for free legal representation."
+    ],
+    "required_documents": [
+      "Rent agreement",
+      "Receipt for security deposit payment",
+      "Legal notice sent to landlord",
+      "Vacating proof (keys returned, final rent receipts)",
+      "Identity proof"
+    ],
+    "authorities": [
+      {"name": "Rent Controller Office", "level": "District"},
+      {"name": "Civil Court / Small Causes Court", "level": "District"},
+      {"name": "Consumer Disputes Redressal Commission", "level": "District"},
+      {"name": "District Legal Services Authority", "level": "District"}
+    ],
+    "escalation_path": [
+      "Legal Notice → Rent Controller → Civil Court → Consumer Commission"
+    ],
+    "complaint_template": "To,\nThe Civil Judge / Small Causes Court,\n[District]\n\nSubject: Recovery suit for security deposit\n\nRespected Sir/Madam,\n\nI, [Your Name], was a tenant at [Address] under a rental agreement dated [Date] with landlord [Landlord Name]. I vacated the premises on [Date] and fulfilled all obligations. I paid a security deposit of Rs. [Amount] which the landlord has refused to return despite a legal notice dated [Date].\n\nI request the court to direct the landlord to return the security deposit of Rs. [Amount] with interest.\n\nEnclosures: Rent agreement, deposit receipt, legal notice, identity proof\n\nYours faithfully,\n[Name]\n[Date]",
+    "online_portals": [
+      "https://ecourts.gov.in",
+      "https://edaakhil.nic.in"
+    ],
+    "helplines": [
+      "DLSA: 15100",
+      "National Consumer Helpline: 1915"
+    ]
+  },
+  {
+    "category": "Tenant–Landlord Disputes",
+    "subcategory": "Tenant Not Paying Rent",
+    "problem_description": "A landlord is facing the problem of a tenant who refuses to pay rent for several months despite being provided with accommodation.",
+    "workflow_steps": [
+      "Step 1 – Send a written demand notice to the tenant for all overdue rent.",
+      "Step 2 – Issue a legal eviction notice under the applicable Rent Control Act or Transfer of Property Act.",
+      "Step 3 – File an eviction suit in the Rent Controller's Court or Civil Court for non-payment of rent.",
+      "Step 4 – Also file a suit for recovery of arrears of rent.",
+      "Step 5 – Obtain an eviction order from the court.",
+      "Step 6 – Execute the eviction order through the court with police assistance if tenant refuses to vacate.",
+      "Step 7 – Contact DLSA for free legal representation."
+    ],
+    "required_documents": [
+      "Rent agreement",
+      "Demand notice sent to tenant",
+      "Rent receipts showing last payment",
+      "Identity proof of landlord",
+      "Property ownership documents"
+    ],
+    "authorities": [
+      {"name": "Rent Controller Office", "level": "District"},
+      {"name": "Civil Court", "level": "District"},
+      {"name": "Local Police (for execution of court order)", "level": "Local"}
+    ],
+    "escalation_path": [
+      "Legal Notice → Rent Controller → Civil Court → High Court"
+    ],
+    "complaint_template": "To,\nThe Rent Controller / Civil Court,\n[District]\n\nSubject: Eviction petition for non-payment of rent\n\nRespected Sir/Madam,\n\nI, [Your Name], am the owner of property at [Address]. My tenant [Tenant Name] has not paid rent since [Date], accumulating arrears of Rs. [Amount]. Despite written demand notices on [Dates], the tenant has not paid.\n\nI request the court to pass an eviction order and direct recovery of arrears of rent.\n\nEnclosures: Rent agreement, demand notice, property documents\n\nYours faithfully,\n[Name]\n[Date]",
+    "online_portals": [
+      "https://ecourts.gov.in"
+    ],
+    "helplines": [
+      "DLSA: 15100",
+      "Police: 112 (for court order execution)"
+    ]
+  },
+  {
+    "category": "Tenant–Landlord Disputes",
+    "subcategory": "Landlord Entering Premises Without Permission",
+    "problem_description": "A landlord is repeatedly entering the tenant's rented premises without prior notice or consent, violating the tenant's right to peaceful enjoyment and privacy.",
+    "workflow_steps": [
+      "Step 1 – Document each incident of unauthorized entry with date, time, and witnesses.",
+      "Step 2 – Send a written notice to the landlord asserting your right to peaceful enjoyment.",
+      "Step 3 – File a police complaint for trespass if the landlord enters by force.",
+      "Step 4 – File a complaint with the Rent Controller citing breach of lease terms.",
+      "Step 5 – Approach the Civil Court for an injunction restraining the landlord.",
+      "Step 6 – Consult DLSA for free legal advice."
+    ],
+    "required_documents": [
+      "Rent agreement (citing peaceful enjoyment clause)",
+      "Written notice sent to landlord",
+      "Incident log with dates and witnesses",
+      "Identity proof"
+    ],
+    "authorities": [
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Rent Controller", "level": "District"},
+      {"name": "Civil Court", "level": "District"}
+    ],
+    "escalation_path": [
+      "Police Complaint → Rent Controller → Civil Court"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\n[Police Station Name]\n\nSubject: Complaint regarding unauthorized entry by landlord\n\nRespected Sir/Madam,\n\nI, [Your Name], am a tenant at [Address] under a valid rent agreement. My landlord [Landlord Name] has been entering my premises without prior notice or permission on [dates], violating my right to privacy and peaceful enjoyment.\n\nI request police intervention and appropriate action to stop this harassment.\n\nEnclosures: Rent agreement, incident log, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "State Police Complaint Portal",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "Police: 112",
+      "DLSA: 15100"
+    ]
+  },
+  {
+    "category": "Environmental and Public Nuisance Complaints",
+    "subcategory": "Illegal Construction Complaint",
+    "problem_description": "A citizen notices illegal or unauthorized construction in their area that violates building bye-laws, encroaches on public land, or poses a safety risk.",
+    "workflow_steps": [
+      "Step 1 – Note the details of the illegal construction including address, type of construction, and approximate start date.",
+      "Step 2 – Photograph the construction and any visible violations.",
+      "Step 3 – File a complaint with the local Municipal Corporation / Gram Panchayat.",
+      "Step 4 – If no action is taken within 30 days, escalate to the District Urban Development Department.",
+      "Step 5 – File a complaint with the Town Planning Authority.",
+      "Step 6 – File a complaint on CPGRAMS or the state grievance portal.",
+      "Step 7 – File a Public Interest Litigation (PIL) in High Court if the construction is widespread and authorities are non-responsive."
+    ],
+    "required_documents": [
+      "Photographs of illegal construction",
+      "Your own identity proof and address proof",
+      "Location details (survey number if known)",
+      "Written complaint to Municipal Corporation"
+    ],
+    "authorities": [
+      {"name": "Municipal Corporation / Gram Panchayat", "level": "Local"},
+      {"name": "Town Planning Department", "level": "District/State"},
+      {"name": "District Urban Development Department", "level": "District"},
+      {"name": "High Court (PIL)", "level": "State"}
+    ],
+    "escalation_path": [
+      "Municipal Corporation → Town Planning Authority → District Urban Development → State Government → High Court (PIL)"
+    ],
+    "complaint_template": "To,\nThe Building and Construction Department,\n[Municipal Corporation / Gram Panchayat Name]\n\nSubject: Complaint regarding illegal construction\n\nRespected Sir/Madam,\n\nI, [Your Name], residing at [Address], wish to report an illegal construction being carried out at [Location / Address of Construction]. The construction appears to be [unauthorized / in violation of setback rules / on public land / structurally unsafe].\n\nI request your authority to inspect the construction and take necessary action including stopping the illegal construction and demolishing unauthorized portions.\n\nEnclosures: Photographs, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "Municipal Corporation Complaint Portal",
+      "https://pgportal.gov.in",
+      "State Town Planning Authority Portal"
+    ],
+    "helplines": [
+      "Municipal Helpline: (City-specific)",
+      "CPGRAMS: 1800-11-3366"
+    ]
+  },
+  {
+    "category": "Environmental and Public Nuisance Complaints",
+    "subcategory": "Noise Pollution Complaint",
+    "problem_description": "A citizen is experiencing excessive noise from a factory, loudspeakers, construction site, vehicle horns, or public events, violating Noise Pollution (Regulation and Control) Rules, 2000.",
+    "workflow_steps": [
+      "Step 1 – Document the noise problem: note source, approximate decibel level, time of day, and frequency.",
+      "Step 2 – Approach the source of noise and request them to stop or reduce noise.",
+      "Step 3 – File a complaint with the local police station if noise is from events or loudspeakers.",
+      "Step 4 – File a complaint with the Pollution Control Board for industrial or commercial noise.",
+      "Step 5 – File a complaint with the Municipal Corporation for construction noise.",
+      "Step 6 – Approach the District Magistrate who has powers to regulate loudspeakers and noise.",
+      "Step 7 – File a complaint on the State Pollution Control Board's online portal."
+    ],
+    "required_documents": [
+      "Identity proof",
+      "Written complaint with description of noise source",
+      "Witnesses confirming the noise problem",
+      "Audio/video recordings if possible",
+      "Location of noise source"
+    ],
+    "authorities": [
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Municipal Corporation", "level": "Local"},
+      {"name": "State Pollution Control Board", "level": "State"},
+      {"name": "District Magistrate", "level": "District"}
+    ],
+    "escalation_path": [
+      "Police / Municipal → State Pollution Control Board → District Magistrate → High Court"
+    ],
+    "complaint_template": "To,\nThe Sub-Inspector / Station House Officer,\n[Police Station Name]\n\nSubject: Complaint regarding noise pollution\n\nRespected Sir/Madam,\n\nI, [Your Name], residing at [Address], wish to report that [Source of Noise: factory/event/vehicle/construction] at [Location] has been creating excessive noise [continuously / during late nights / during prohibited hours] since [Date].\n\nThis noise is causing health problems and disturbing our peaceful living in violation of the Noise Pollution Rules, 2000.\n\nI request immediate action to stop or control the noise.\n\nEnclosures: Identity proof, written complaint, recordings (if any)\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "State Pollution Control Board Portal",
+      "https://pgportal.gov.in",
+      "https://cpcb.nic.in (Central Pollution Control Board)"
+    ],
+    "helplines": [
+      "Police: 112",
+      "Pollution Control Board: (State specific)",
+      "CPCB: 011-43102030"
+    ]
+  },
+  {
+    "category": "Environmental and Public Nuisance Complaints",
+    "subcategory": "Water Pollution Complaint",
+    "problem_description": "Industrial effluents, sewage, or chemical waste is being discharged into rivers, ponds, or groundwater, affecting drinking water quality and public health.",
+    "workflow_steps": [
+      "Step 1 – Document the pollution: photograph effluent discharge, note the source, and record visible effects.",
+      "Step 2 – Collect water samples if possible and have them tested at a government lab.",
+      "Step 3 – File a complaint with the State Pollution Control Board.",
+      "Step 4 – File a complaint with the local Municipal Corporation or Gram Panchayat.",
+      "Step 5 – Report to the District Collector if it is causing a public health crisis.",
+      "Step 6 – File a complaint with the Central Pollution Control Board (CPCB) for serious violations.",
+      "Step 7 – File a PIL in the High Court for remedial action and compensation."
+    ],
+    "required_documents": [
+      "Photographs of pollution",
+      "Water test reports",
+      "Identity proof",
+      "Map or description of pollution source",
+      "Health impact evidence"
+    ],
+    "authorities": [
+      {"name": "Gram Panchayat / Municipal Corporation", "level": "Local"},
+      {"name": "State Pollution Control Board", "level": "State"},
+      {"name": "Central Pollution Control Board", "level": "National"},
+      {"name": "District Collector", "level": "District"},
+      {"name": "High Court (PIL)", "level": "State"}
+    ],
+    "escalation_path": [
+      "Gram Panchayat → State Pollution Control Board → CPCB → District Collector → High Court PIL"
+    ],
+    "complaint_template": "To,\nThe Regional Officer,\nState Pollution Control Board,\n[Region]\n\nSubject: Complaint regarding water pollution by industrial discharge\n\nRespected Sir/Madam,\n\nI, [Your Name], residing near [Location], wish to report that [Industry / Factory Name] at [Address] is discharging untreated effluents into [River / Pond / Groundwater] since [Date]. This is causing serious water contamination and health problems for our community.\n\nI request immediate inspection and action against the polluting unit.\n\nEnclosures: Photographs, water test report, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://cpcb.nic.in",
+      "State Pollution Control Board Portal",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "CPCB: 011-43102030",
+      "State PCB: (State specific)",
+      "Police: 112"
+    ]
+  },
+  {
+    "category": "Environmental and Public Nuisance Complaints",
+    "subcategory": "Illegal Sand Mining Complaint",
+    "problem_description": "Illegal extraction of sand from rivers, riverbeds, or public land is causing environmental damage, flooding risk, and destruction of natural resources.",
+    "workflow_steps": [
+      "Step 1 – Document the illegal sand mining activity with photographs and video.",
+      "Step 2 – Note the location, time of mining, vehicles involved (registration numbers), and persons involved.",
+      "Step 3 – File a complaint with the Tehsildar or District Mines Department.",
+      "Step 4 – File a complaint with the local police station.",
+      "Step 5 – Report to the District Collector who is the Mining Officer.",
+      "Step 6 – File a complaint with the State Pollution Control Board for environmental damage.",
+      "Step 7 – File a PIL in the High Court for judicial intervention if official machinery is non-responsive."
+    ],
+    "required_documents": [
+      "Photographs/videos of mining activity",
+      "Vehicle registration numbers of trucks",
+      "Identity proof",
+      "Map of mining location",
+      "Witness statements"
+    ],
+    "authorities": [
+      {"name": "Tehsildar Office", "level": "Taluka"},
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "District Collector / Mining Department", "level": "District"},
+      {"name": "State Pollution Control Board", "level": "State"},
+      {"name": "High Court (PIL)", "level": "State"}
+    ],
+    "escalation_path": [
+      "Tehsildar → District Collector (Mining) → State Mines Department → State PCB → High Court PIL"
+    ],
+    "complaint_template": "To,\nThe District Collector / District Mining Officer,\n[District]\n\nSubject: Complaint regarding illegal sand mining\n\nRespected Sir/Madam,\n\nI, [Your Name], wish to report that illegal sand mining is being carried out at [Location / River Name] in [Village/Area] by [persons/vehicles if known]. This is causing serious damage to the riverbed and environment.\n\nI request immediate action to stop the illegal mining and take legal action against those responsible.\n\nEnclosures: Photographs, identity proof, vehicle numbers if known\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://pgportal.gov.in",
+      "State Mines Department Portal",
+      "State Pollution Control Board Portal"
+    ],
+    "helplines": [
+      "Police: 112",
+      "District Collector Office: Local number",
+      "State Mines Department: (State specific)"
+    ]
+  },
+  {
+    "category": "Environmental and Public Nuisance Complaints",
+    "subcategory": "Open Defecation / Lack of Sanitation Complaint",
+    "problem_description": "A community is suffering due to lack of proper sanitation facilities, open defecation near residential areas, or non-functioning public toilets.",
+    "workflow_steps": [
+      "Step 1 – Document the problem with photographs and note the locations of open defecation or non-functional facilities.",
+      "Step 2 – File a complaint with the local Gram Panchayat or Municipal Corporation.",
+      "Step 3 – Report to the Block Development Officer for rural areas or Urban Local Body for cities.",
+      "Step 4 – File a complaint on the Swachh Bharat Mission portal.",
+      "Step 5 – File a complaint with the District Collector about sanitation failure.",
+      "Step 6 – File a complaint on CPGRAMS for central government attention."
+    ],
+    "required_documents": [
+      "Photographs of the problem",
+      "Location details",
+      "Identity proof",
+      "Written complaint to Gram Panchayat / Municipal Corporation"
+    ],
+    "authorities": [
+      {"name": "Gram Panchayat / Municipal Corporation", "level": "Local"},
+      {"name": "Block Development Officer", "level": "Block"},
+      {"name": "District Collector", "level": "District"},
+      {"name": "State Sanitation Department", "level": "State"}
+    ],
+    "escalation_path": [
+      "Gram Panchayat → BDO → District Collector → State Sanitation Mission → CPGRAMS"
+    ],
+    "complaint_template": "To,\nThe Sarpanch / Municipal Councillor,\n[Gram Panchayat / Ward Name]\n\nSubject: Complaint regarding lack of sanitation and open defecation\n\nRespected Sir/Madam,\n\nI, [Your Name], residing in [Village/Area], wish to report that the area near [Location] is being used for open defecation due to lack of proper sanitation facilities / non-functional public toilets. This is creating serious health and hygiene problems for our community.\n\nI request immediate action to provide adequate sanitation facilities and stop open defecation in our area.\n\nEnclosures: Photographs, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://swachhbharat.mygov.in",
+      "https://pgportal.gov.in",
+      "State Sanitation Mission Portal"
+    ],
+    "helplines": [
+      "Swachh Bharat Helpline: 1800-11-1565",
+      "CPGRAMS: 1800-11-3366"
+    ]
+  },
+  {
+    "category": "Senior Citizen Protection Issues",
+    "subcategory": "Senior Citizen Property Dispute with Children",
+    "problem_description": "An elderly parent is being deprived of their own property by their adult children or relatives who are pressuring them to transfer property or have illegally taken possession.",
+    "workflow_steps": [
+      "Step 1 – The senior citizen should approach the District Senior Citizen Protection Cell.",
+      "Step 2 – File a complaint under the Maintenance and Welfare of Parents and Senior Citizens Act, 2007.",
+      "Step 3 – The Maintenance Tribunal for Senior Citizens (usually at the SDM level) can be approached.",
+      "Step 4 – File a complaint with the local police if criminal intimidation or fraud is involved.",
+      "Step 5 – If property has been transferred through undue influence or fraud, file a civil suit for cancellation of transfer.",
+      "Step 6 – Approach DLSA for free legal aid.",
+      "Step 7 – Contact the Helpline for Senior Citizens (14567) for immediate assistance."
+    ],
+    "required_documents": [
+      "Property documents",
+      "Identity proof (Aadhaar, age proof)",
+      "Documents showing forced transfer (if any)",
+      "Evidence of intimidation or pressure (witnesses, messages)",
+      "Medical reports if physical harm occurred"
+    ],
+    "authorities": [
+      {"name": "Senior Citizen Protection Cell (Police)", "level": "District"},
+      {"name": "Maintenance Tribunal for Senior Citizens (SDM)", "level": "Sub-District"},
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Civil Court", "level": "District"},
+      {"name": "District Legal Services Authority", "level": "District"}
+    ],
+    "escalation_path": [
+      "Senior Citizen Helpline (14567) → Senior Citizen Protection Cell → Maintenance Tribunal → Civil Court → High Court"
+    ],
+    "complaint_template": "To,\nThe Sub-Divisional Magistrate (Maintenance Tribunal),\n[Sub-Division], [District]\n\nSubject: Complaint under Maintenance and Welfare of Parents and Senior Citizens Act, 2007 regarding property dispute\n\nRespected Sir/Madam,\n\nI, [Your Name], aged [Age] years, am the owner of property at [Address]. My [children/relatives] [Names] have been pressuring me to transfer my property and have [describe situation]. I am being deprived of my own property and am in distress.\n\nI request the Tribunal to intervene, protect my property rights, and take action against my [children/relatives] under the Senior Citizens Act.\n\nEnclosures: Property documents, identity/age proof, evidence of dispute\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://elderline.india.gov.in",
+      "https://pgportal.gov.in",
+      "State Women and Child Welfare Portal (Elders Section)"
+    ],
+    "helplines": [
+      "Senior Citizen Helpline (Elderline): 14567",
+      "Police Emergency: 112",
+      "DLSA: 15100"
+    ]
+  },
+  {
+    "category": "Senior Citizen Protection Issues",
+    "subcategory": "Financial Exploitation of Elderly",
+    "problem_description": "An elderly person is being financially exploited by family members, caretakers, or strangers who are misusing their savings, pension, or assets through fraud, undue influence, or theft.",
+    "workflow_steps": [
+      "Step 1 – The senior citizen or a concerned family member should call the Senior Citizen Helpline (14567).",
+      "Step 2 – Collect evidence of financial exploitation: bank statements, unauthorized transactions, witness accounts.",
+      "Step 3 – File a police complaint under relevant IPC sections (fraud, criminal breach of trust).",
+      "Step 4 – Inform the senior citizen's bank to block unauthorized access to accounts.",
+      "Step 5 – File a complaint with the Senior Citizen Protection Cell.",
+      "Step 6 – Approach the Maintenance Tribunal to protect the senior citizen's assets.",
+      "Step 7 – File a civil suit to recover misappropriated property or funds.",
+      "Step 8 – Seek a restraining order against the exploiting party."
+    ],
+    "required_documents": [
+      "Identity proof and age proof of senior citizen",
+      "Bank statements showing unauthorized transactions",
+      "Property documents",
+      "Evidence of exploitation (messages, witness statements)",
+      "Power of Attorney documents (if misused)"
+    ],
+    "authorities": [
+      {"name": "Senior Citizen Helpline (14567)", "level": "National"},
+      {"name": "Local Police Station / Senior Citizen Protection Cell", "level": "Local/District"},
+      {"name": "Maintenance Tribunal (SDM)", "level": "Sub-District"},
+      {"name": "Civil Court", "level": "District"},
+      {"name": "District Legal Services Authority", "level": "District"}
+    ],
+    "escalation_path": [
+      "Senior Citizen Helpline → Police → Maintenance Tribunal → Civil Court → High Court"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\n[Police Station Name]\n\nSubject: Complaint regarding financial exploitation of senior citizen\n\nRespected Sir/Madam,\n\nI, [Name of Complainant / Senior Citizen], am [Age] years old and wish to report that [Exploiting Person(s)] have been financially exploiting me by [describe: withdrawing from bank account / misusing Power of Attorney / pressuring to transfer property / stealing funds].\n\nI request immediate investigation and action to stop this exploitation and recover my funds/property.\n\nEnclosures: Bank statements, identity proof, evidence of exploitation\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://elderline.india.gov.in",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "Senior Citizen Helpline (Elderline): 14567",
+      "Police Emergency: 112",
+      "DLSA: 15100"
+    ]
+  },
+  {
+    "category": "Senior Citizen Protection Issues",
+    "subcategory": "Denial of Maintenance by Children",
+    "problem_description": "An elderly parent is being denied financial maintenance by their adult children despite having legal entitlement under the Maintenance and Welfare of Parents and Senior Citizens Act, 2007.",
+    "workflow_steps": [
+      "Step 1 – Call the Senior Citizen Helpline (14567) to register a complaint and receive guidance.",
+      "Step 2 – File a written application before the Maintenance Tribunal (SDM) under the Senior Citizens Act for maintenance.",
+      "Step 3 – The Tribunal will call the children for a hearing and can order up to Rs. 10,000 per month as maintenance.",
+      "Step 4 – If the children disobey the Tribunal order, they can face imprisonment of up to 3 months.",
+      "Step 5 – Also file under Section 125 CrPC in Magistrate Court for maintenance.",
+      "Step 6 – Contact DLSA for free legal representation.",
+      "Step 7 – Approach the State Appellate Tribunal if unsatisfied with Maintenance Tribunal order."
+    ],
+    "required_documents": [
+      "Identity proof and age proof",
+      "Proof of parenthood (birth certificates of children, school records)",
+      "Income documents of children (if available)",
+      "Evidence that children have refused maintenance",
+      "Medical expenses documentation"
+    ],
+    "authorities": [
+      {"name": "Senior Citizen Helpline (14567)", "level": "National"},
+      {"name": "Maintenance Tribunal (SDM)", "level": "Sub-District"},
+      {"name": "Magistrate Court", "level": "District"},
+      {"name": "District Legal Services Authority", "level": "District"},
+      {"name": "State Appellate Tribunal", "level": "State"}
+    ],
+    "escalation_path": [
+      "Senior Citizen Helpline → Maintenance Tribunal → Magistrate Court → State Appellate Tribunal"
+    ],
+    "complaint_template": "To,\nThe Maintenance Tribunal (Sub-Divisional Magistrate),\n[Sub-Division], [District]\n\nSubject: Application for maintenance under the Maintenance and Welfare of Parents and Senior Citizens Act, 2007\n\nRespected Sir/Madam,\n\nI, [Your Name], aged [Age] years, am the parent of [Children's Names] who are employed and financially capable but have refused to provide for my maintenance. I am unable to meet my daily expenses and medical needs without their support.\n\nI request the Tribunal to direct my children to pay monthly maintenance of Rs. [Amount] as per the Senior Citizens Act.\n\nEnclosures: Identity/age proof, proof of parenthood, evidence of refusal\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://elderline.india.gov.in",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "Senior Citizen Helpline (Elderline): 14567",
+      "DLSA: 15100"
+    ]
+  },
+  {
+    "category": "Senior Citizen Protection Issues",
+    "subcategory": "Elderly Abuse by Caretaker / Domestic Worker",
+    "problem_description": "An elderly person is being physically, emotionally, or financially abused by a hired caretaker, domestic worker, or paid helper.",
+    "workflow_steps": [
+      "Step 1 – Remove the senior citizen from the abusive situation immediately if safe to do so.",
+      "Step 2 – Seek medical attention and document injuries.",
+      "Step 3 – Call the Senior Citizen Helpline (14567) for immediate assistance.",
+      "Step 4 – File a police FIR against the abusive caretaker for assault, theft, or abuse.",
+      "Step 5 – File a complaint with the Senior Citizen Protection Cell.",
+      "Step 6 – Contact the District Collector if immediate protection is needed.",
+      "Step 7 – Arrange for alternative safe accommodation."
+    ],
+    "required_documents": [
+      "Medical report of injuries",
+      "Identity proof of senior citizen",
+      "Caretaker's employment documents",
+      "Evidence of abuse (witnesses, CCTV footage)",
+      "Financial records if theft occurred"
+    ],
+    "authorities": [
+      {"name": "Senior Citizen Helpline (14567)", "level": "National"},
+      {"name": "Local Police Station", "level": "Local"},
+      {"name": "Senior Citizen Protection Cell", "level": "District"},
+      {"name": "District Collector", "level": "District"}
+    ],
+    "escalation_path": [
+      "Senior Citizen Helpline → Police → Senior Citizen Protection Cell → District Collector"
+    ],
+    "complaint_template": "To,\nThe Station House Officer,\n[Police Station Name]\n\nSubject: FIR complaint regarding abuse of senior citizen by caretaker\n\nRespected Sir/Madam,\n\nI, [Your Name / Family Member], am writing to report that my [relation] [Senior Citizen's Name], aged [Age], has been physically/financially abused by their caretaker [Caretaker Name] who was employed at [Address].\n\nThe abuse includes [describe briefly]. I request immediate police action to arrest the abusive caretaker and protect the senior citizen.\n\nEnclosures: Medical report, identity proof, employment record of caretaker\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://elderline.india.gov.in",
+      "State Police Complaint Portal"
+    ],
+    "helplines": [
+      "Senior Citizen Helpline (Elderline): 14567",
+      "Police Emergency: 112",
+      "Women Helpline (if female senior): 1091"
+    ]
+  },
+  {
+    "category": "Senior Citizen Protection Issues",
+    "subcategory": "Senior Citizen Discrimination in Public Services",
+    "problem_description": "An elderly person is being denied priority services, reserved seating, pension, or other benefits they are legally entitled to in banks, hospitals, government offices, or public transport.",
+    "workflow_steps": [
+      "Step 1 – Note the specific denial and the institution/officer responsible.",
+      "Step 2 – File a written complaint with the head of the concerned institution.",
+      "Step 3 – Call the Senior Citizen Helpline (14567) and report the discrimination.",
+      "Step 4 – File a complaint with the District Social Welfare Officer.",
+      "Step 5 – File on CPGRAMS for government service failures.",
+      "Step 6 – Approach the State Vigilance Commissioner if corruption is involved.",
+      "Step 7 – File a complaint with the National Commission for Senior Citizens if established in your state."
+    ],
+    "required_documents": [
+      "Senior Citizen ID card / Aadhaar showing age",
+      "Written complaint to institution head",
+      "Evidence of denial (written refusal or witness account)"
+    ],
+    "authorities": [
+      {"name": "Concerned Institution Head", "level": "Local"},
+      {"name": "District Social Welfare Officer", "level": "District"},
+      {"name": "Senior Citizen Helpline (14567)", "level": "National"},
+      {"name": "CPGRAMS", "level": "National"}
+    ],
+    "escalation_path": [
+      "Institution Head → District Social Welfare → State Department → CPGRAMS → National Level"
+    ],
+    "complaint_template": "To,\nThe Head of Institution / District Social Welfare Officer,\n[Institution/District]\n\nSubject: Complaint regarding denial of senior citizen entitlements\n\nRespected Sir/Madam,\n\nI, [Your Name], aged [Age] years, wish to report that I was denied [priority service / reserved seating / pension / other entitlement] at [Institution Name] on [Date]. As a senior citizen, I am legally entitled to these benefits.\n\nI request immediate action to ensure I receive my entitled benefits and that staff is trained to respect senior citizens' rights.\n\nEnclosures: Senior Citizen ID, written complaint\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://elderline.india.gov.in",
+      "https://pgportal.gov.in"
+    ],
+    "helplines": [
+      "Senior Citizen Helpline (Elderline): 14567",
+      "CPGRAMS: 1800-11-3366"
+    ]
+  },
+  {
+    "category": "Senior Citizen Protection Issues",
+    "subcategory": "Senior Citizen Facing Medical Negligence / Denial of Treatment",
+    "problem_description": "An elderly person has been denied medical treatment, has faced medical negligence, or is unable to access government health entitlements like Ayushman Bharat.",
+    "workflow_steps": [
+      "Step 1 – Call the Senior Citizen Helpline (14567) for medical assistance guidance.",
+      "Step 2 – File a complaint with the Hospital Superintendent or Medical Director.",
+      "Step 3 – Contact the State Health Department if a government hospital is involved.",
+      "Step 4 – File a complaint with the State Medical Council for negligence by doctors.",
+      "Step 5 – File a consumer complaint in the District Consumer Commission.",
+      "Step 6 – File a complaint with Ayushman Bharat helpline if scheme benefits are denied.",
+      "Step 7 – Approach NHRC if the right to health/life is being violated."
+    ],
+    "required_documents": [
+      "Medical records",
+      "Ayushman Bharat card (if applicable)",
+      "Hospital's written refusal",
+      "Identity and age proof",
+      "Written complaint to hospital"
+    ],
+    "authorities": [
+      {"name": "Hospital Superintendent", "level": "Local"},
+      {"name": "State Medical Council", "level": "State"},
+      {"name": "State Health Department", "level": "State"},
+      {"name": "District Consumer Commission", "level": "District"},
+      {"name": "National Human Rights Commission", "level": "National"}
+    ],
+    "escalation_path": [
+      "Hospital Administration → State Health Department → State Medical Council → Consumer Commission → NHRC"
+    ],
+    "complaint_template": "To,\nThe Medical Superintendent,\n[Hospital Name]\n\nSubject: Complaint regarding denial of medical treatment to senior citizen\n\nRespected Sir/Madam,\n\nI, [Your Name / Relative's Name], aged [Age] years, was denied [medical treatment / emergency care / Ayushman Bharat scheme benefit] at your hospital on [Date]. The denial caused [describe impact].\n\nAs a senior citizen, I have the right to medical care and I request an immediate explanation and provision of necessary treatment.\n\nEnclosures: Medical records, Ayushman Bharat card, identity proof\n\nYours faithfully,\n[Name]\n[Date]\n[Mobile Number]",
+    "online_portals": [
+      "https://pmjay.gov.in (Ayushman Bharat Portal)",
+      "https://consumerhelpline.gov.in",
+      "https://nhrc.nic.in"
+    ],
+    "helplines": [
+      "Senior Citizen Helpline (Elderline): 14567",
+      "Ayushman Bharat Helpline: 14555",
+      "NHRC: 14433"
+    ]
+  }
+]

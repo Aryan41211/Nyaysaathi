@@ -1,0 +1,6 @@
+{
+  "fingerprint": "4c9651bb2da09135707282e1eafabc26207f4cf801ca28b5f2bd8f6b67128fcc",
+  "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "count": 201,
+  "vector_dim": 384
+}
