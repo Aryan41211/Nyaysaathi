@@ -262,22 +262,3 @@ def translate_workflow(
 
     logger.error("Workflow translation fallback used | category=%s language=%s error=%s", category, lang, last_error)
     return list(workflow_steps), False, False
-
-
-from ai_engine.openai_service import get_openai_client
-
-client = get_openai_client()
-
-def translate(text):
-
-    response = client.chat.completions.create(
-
-        model="gpt-4.1-mini",
-
-        messages=[
-        {"role":"user","content":text}
-        ]
-
-    )
-
-    return response.choices[0].message.content

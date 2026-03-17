@@ -12,3 +12,7 @@ faiss-cpu==1.8.0
 rapidfuzz==3.9.6
 openai==1.54.4
 langdetect==1.0.9
+fastapi==0.115.0
+uvicorn==0.30.6
+PyJWT==2.9.0
+email-validator==2.2.0

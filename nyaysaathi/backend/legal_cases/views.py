@@ -68,10 +68,11 @@ def cases_list(request):
         return err("Could not fetch cases.", 500)
 
 
-@api_view(["GET"])
+@api_view(["GET", "POST"])
 def search(request):
     """
     GET /api/search/?query=<text>
+    POST /api/search  {"query": "..."}
 
     Accepts any language / messy input.
 
@@ -82,7 +83,10 @@ def search(request):
       total         – number of results
       message       – human readable status
     """
-    query = request.query_params.get("query", "").strip()
+    if request.method == "POST":
+        query = str(request.data.get("query", "")).strip()
+    else:
+        query = request.query_params.get("query", "").strip()
     if not query:
         return err("Please provide a 'query' parameter.")
 

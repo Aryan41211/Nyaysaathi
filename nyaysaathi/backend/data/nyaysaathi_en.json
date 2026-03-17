@@ -62,6 +62,18 @@
       "Revenue Department Helpline: 1800-120-8040 (Maharashtra)",
       "District Collector Office: Contact local office",
       "DLSA Free Legal Aid: 15100"
+    ],
+    "descriptions": [
+      "my neighbour has encroached on my land",
+      "padosi ne meri zameen par kabja kar liya",
+      "boundary wall built on my property by neighbour",
+      "neighbour shifted the border stones of my field",
+      "meri khet ki seema badal di gayi hai",
+      "dispute over land boundary with adjacent owner",
+      "neighbour is claiming part of my plot as his",
+      "hamare khet ki had ko lekar jhagda ho raha hai",
+      "illegal construction on my side of boundary",
+      "surveyor map does not match actual land possession"
     ]
   },
   {
@@ -127,6 +139,18 @@
       "Police Emergency: 112",
       "Revenue Helpline: 1800-120-8040",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "someone has illegally occupied my land",
+      "meri zameen par kisne kabja kar liya",
+      "encroachment on my agricultural plot by outsider",
+      "person is sitting on my property without permission",
+      "meri zameen pe dusre ne ghar bana liya",
+      "illegal occupation of my plot by builder",
+      "someone is farming on my land without my consent",
+      "hamari zameen pe jabardasti dakhil ho gaye",
+      "squatter living on my property unlawfully",
+      "land occupied by powerful local person illegally"
     ]
   },
   {
@@ -185,6 +209,18 @@
     "helplines": [
       "Revenue Helpline: 1800-120-8040",
       "District Collectorate: Local contact number"
+    ],
+    "descriptions": [
+      "wrong name in 7/12 land record entry",
+      "satbara me mera naam galat hai",
+      "land record shows someone else as owner",
+      "error in property register at talathi office",
+      "meri zameen kisi aur ke naam par chadh gayi",
+      "mutation entry in land records is incorrect",
+      "my name was removed from land records without reason",
+      "bhulekh me survey number galat hai",
+      "wrong survey number in official land documents",
+      "talathi ne galat naam likha hai zameen ke kagaz mein"
     ]
   },
   {
@@ -249,6 +285,18 @@
       "Police Emergency: 112",
       "Anti-Corruption Helpline: 1064",
       "DLSA Free Legal Aid: 15100"
+    ],
+    "descriptions": [
+      "someone sold my property without my knowledge",
+      "meri zameen meri jaankari ke bina bech di",
+      "fake documents used to transfer my property",
+      "property transferred using forged signature",
+      "mera makan kisi ne dhoke se bech diya",
+      "fraudulent sale deed registered in another person's name",
+      "my land was sold by relatives without consent",
+      "property fraud by power of attorney misuse",
+      "zameen ka farzi bikri patra banaya gaya",
+      "land sold illegally while I was working outside"
     ]
   },
   {
@@ -303,6 +351,18 @@
     "helplines": [
       "DLSA Free Legal Aid: 15100",
       "Revenue Helpline: 1800-120-8040"
+    ],
+    "descriptions": [
+      "family dispute over ancestral property division",
+      "pitaji ke marne ke baad zameen ka jhagda",
+      "brothers not giving me my share of inherited land",
+      "succession certificate refused by family members",
+      "pita ki property mein mujhe hissa nahi de rahe",
+      "dispute over inheritance after father's death",
+      "relatives have taken over ancestral property",
+      "wirasat mein mujhe hissa nahi mila",
+      "mother's share in property denied by siblings",
+      "legal heir not getting share of family property"
     ]
   },
   {
@@ -360,6 +420,18 @@
     "helplines": [
       "Police Emergency: 112",
       "DLSA Free Legal Aid: 15100"
+    ],
+    "descriptions": [
+      "government demolished my house without notice",
+      "mera ghar bina notice ke tod diya",
+      "illegal demolition of my shop by municipality",
+      "house broken down by local authorities without warning",
+      "authority ne notice diye bina makan giraya",
+      "builder demolished my property without court order",
+      "my structure was destroyed unlawfully by officials",
+      "ghar ki illegal tod-fod ki gayi",
+      "property demolished without demolition notice",
+      "sudden demolition without rehabilitation offer"
     ]
   },
   {
@@ -416,6 +488,18 @@
     "helplines": [
       "Agriculture Helpline: 1551",
       "Kisan Call Centre: 1800-180-1551"
+    ],
+    "descriptions": [
+      "agricultural land converted to non-agricultural without permission",
+      "meri sheti zameen ka NA conversion bina permission ke hua",
+      "land use changed from farm to commercial illegally",
+      "government changed land classification without telling me",
+      "sheti zameen ka badlav niyamon ke khilaf kiya",
+      "my farming land was converted without my consent",
+      "NA zone classification dispute on my property",
+      "builder changed land use category illegally",
+      "revenue department changed land record zone wrongly",
+      "agricultural to residential conversion done fraudulently"
     ]
   },
   {
@@ -464,6 +548,18 @@
     "helplines": [
       "DLSA Free Legal Aid: 15100",
       "Women Helpline: 1091"
+    ],
+    "descriptions": [
+      "wife not giving me share of house after divorce",
+      "divorce ke baad ghar ka hissa nahi de rahi",
+      "matrimonial property dispute after separation",
+      "property bought together not being divided fairly",
+      "husband sold shared property during divorce proceedings",
+      "divorce ke baad property ka batwara nahi ho raha",
+      "wife claiming full house after separation",
+      "joint home ownership dispute post-divorce",
+      "property division unfair in divorce settlement",
+      "husband transferred property to avoid giving share in divorce"
     ]
   },
   {
@@ -517,6 +613,18 @@
     "helplines": [
       "DLSA Free Legal Aid: 15100",
       "Revenue Helpline: 1800-120-8040"
+    ],
+    "descriptions": [
+      "government took my land for road but did not pay compensation",
+      "sarkar ne meri zameen li par muavza nahi diya",
+      "inadequate compensation for land acquired by government",
+      "land acquired for highway without proper notice",
+      "mera khet road project ke liye le liya bina paisa diye",
+      "forced land acquisition at below-market rate",
+      "government acquisition notice not served properly",
+      "unfair compensation in land acquisition proceedings",
+      "sarkar ne zameen li aur muavza bahut kam diya",
+      "land taken for public project without rehabilitation"
     ]
   },
   {
@@ -584,6 +692,18 @@
       "Anti-Corruption Helpline: 1064",
       "Revenue Helpline: 1800-120-8040",
       "Police: 112"
+    ],
+    "descriptions": [
+      "someone changed land ownership record without my knowledge",
+      "meri zameen ka naam change ho gaya bina meri marzi ke",
+      "unauthorized mutation in land register at tehsil",
+      "property mutation done using fake documents",
+      "talathi ne meri zameen kisi aur ke naam kar di",
+      "wrong mutation entry filed by neighbour",
+      "revenue record changed fraudulently behind my back",
+      "meri property ka naam badal diya registry mein",
+      "illegal mutation of agricultural land record",
+      "dakhil khaarij mein galat naam chadha diya"
     ]
   },
   {
@@ -635,6 +755,18 @@
     "helplines": [
       "Labour Helpline: 1800-180-1961",
       "DLSA Free Legal Aid: 15100"
+    ],
+    "descriptions": [
+      "my company has not paid my salary for 3 months",
+      "company ne 3 mahine se salary nahi di",
+      "boss is not giving me my wages",
+      "employer is holding back my pay without reason",
+      "paisa nahi diya ab tak seth ne",
+      "salary pending since last quarter",
+      "maalik ne mazdoori rok li hai",
+      "wages not released despite completing work",
+      "company closed and salary not cleared",
+      "my payment is due for 2 months and employer is not responding"
     ]
   },
   {
@@ -690,6 +822,18 @@
     "helplines": [
       "Labour Helpline: 1800-180-1961",
       "DLSA Free Legal Aid: 15100"
+    ],
+    "descriptions": [
+      "company fired me without any reason or notice",
+      "bina kisi wajah ke naukri se nikal diya",
+      "dismissed from job without notice period",
+      "employer terminated me illegally",
+      "maine kuch galat nahi kiya phir bhi nikaala",
+      "retrenchment done without following proper law",
+      "job terminated without providing any cause",
+      "forced to resign without getting dues",
+      "mujhe achanak naukri se hataya gaya",
+      "wrongfully dismissed after years of service"
     ]
   },
   {
@@ -742,6 +886,18 @@
     "helplines": [
       "MNREGA Helpline: 1800-345-22-44",
       "Gram Panchayat: Local contact"
+    ],
+    "descriptions": [
+      "MGNREGA ka paisa 3 mahine se nahi aaya",
+      "NREGA work done but wages not paid",
+      "job card payment delayed by gram panchayat",
+      "mujhe job card pe kaam kiya par paise nahi mile",
+      "MNREGA mazdoori ruki hui hai",
+      "100 days work done but payment not received",
+      "gram rozgar sevak ne paisa nahi diya",
+      "NREGA payment stopped without explanation",
+      "MGNREGA wages due for months",
+      "job card activated but no payment in bank"
     ]
   },
   {
@@ -791,6 +947,18 @@
     "helplines": [
       "EPFO Helpline: 1800-118-005",
       "Labour Helpline: 1800-180-1961"
+    ],
+    "descriptions": [
+      "company not depositing my PF",
+      "employer not giving me PF after leaving job",
+      "PF account not created by employer",
+      "PF withdrawal request rejected without reason",
+      "mera PF nahi mila abhi tak",
+      "employer deducting PF from salary but not depositing",
+      "PF balance not reflecting contributions",
+      "EPFO claim rejected unfairly",
+      "company closed but PF not settled",
+      "PF nahi mila retirement ke baad bhi"
     ]
   },
   {
@@ -847,6 +1015,18 @@
       "Childline: 1098",
       "Police Emergency: 112",
       "Women and Child Development: 1091"
+    ],
+    "descriptions": [
+      "small child is being made to work in a shop nearby",
+      "paas ki dukaan mein ek chhota bachcha kaam karta hai",
+      "minor child employed in factory",
+      "child below 14 years working in hotel",
+      "bachche se mazdoori karwa rahe hain",
+      "young child working instead of going to school",
+      "domestic child labour seen in neighbour's home",
+      "child doing hazardous work at construction site",
+      "chhote bachche ke saath badhsalooki ho rahi kaam ke dauran",
+      "child labour in local tea stall"
     ]
   },
   {
@@ -901,6 +1081,18 @@
       "Labour Helpline: 1800-180-1961",
       "Women Helpline: 1091",
       "NCW Helpline: 7827-170-170"
+    ],
+    "descriptions": [
+      "company refused to give me maternity leave",
+      "pregnancy leave nahi di company ne",
+      "maternity benefit not paid by employer",
+      "salary stopped during maternity period",
+      "delivery ke baad bhi company ne paisa nahi diya",
+      "maternity leave application rejected",
+      "employer fired me after I became pregnant",
+      "maternity benefit act rights violated by employer",
+      "no paid leave given after childbirth",
+      "bachche ke janam ke baad job chali gayi"
     ]
   },
   {
@@ -959,6 +1151,18 @@
       "Women Helpline: 1091",
       "SHe-Box Portal: Online submission",
       "NCW Helpline: 7827-170-170"
+    ],
+    "descriptions": [
+      "my senior is harassing me sexually at workplace",
+      "office mein mujhse galat harkat ho rahi hai",
+      "male colleague is sending inappropriate messages",
+      "boss making uncomfortable sexual remarks",
+      "karyasthal par mujhe pareshan kiya ja raha hai",
+      "workplace harassment complaint not taken seriously by HR",
+      "ICC committee not formed in our company",
+      "sexual harassment by manager not addressed",
+      "female employee facing hostile work environment",
+      "POSH complaint filed but no action taken"
     ]
   },
   {
@@ -1012,6 +1216,18 @@
       "Police Emergency: 112",
       "Childline: 1098",
       "NHRC: 14433"
+    ],
+    "descriptions": [
+      "mujhe bandhua mazdoor banake rakha gaya hai",
+      "employer not letting me leave job after taking advance",
+      "forced to work without pay to repay debt",
+      "I am trapped working for a local landlord",
+      "pesha chhod nahi sakta kyunki advance liya tha",
+      "bonded labour in brick kiln",
+      "worker's documents kept by employer",
+      "forced to work in poor conditions to repay loans",
+      "bandhua mazdoori ki shikayat karni hai",
+      "worker not allowed to quit due to debt bondage"
     ]
   },
   {
@@ -1073,6 +1289,18 @@
       "Police Emergency: 112",
       "One Stop Centre: 181",
       "DLSA Free Legal Aid: 15100"
+    ],
+    "descriptions": [
+      "husband beats me regularly at home",
+      "pati mujhe roz maarta hai",
+      "physical violence by husband",
+      "spouse hitting me and my children",
+      "ghar mein maar-peet ho rahi hai",
+      "domestic violence complaint against husband",
+      "I am being beaten by my in-laws",
+      "husband abusing me physically and mentally",
+      "ghar mein meri pitai hoti hai",
+      "I need protection order against violent husband"
     ]
   },
   {
@@ -1138,6 +1366,18 @@
       "Police Emergency: 112",
       "NCW Helpline: 7827-170-170",
       "One Stop Centre: 181"
+    ],
+    "descriptions": [
+      "in-laws harassing me for more dowry",
+      "sasural wale dahej ke liye pareshan kar rahe hain",
+      "dowry demand after marriage causing harassment",
+      "husband and family torturing me for money",
+      "dahej nahi layi toh maar rahe hain",
+      "in-laws threatening to throw me out for dowry",
+      "constant demand for cash and gold after wedding",
+      "pati ke ghar mein dahej ke karan atyachar",
+      "dowry death threat from in-laws",
+      "sasuraal mein dahej ke liye takleef"
     ]
   },
   {
@@ -1187,6 +1427,18 @@
       "DLSA Free Legal Aid: 15100",
       "Childline: 1098",
       "Women Helpline: 1091"
+    ],
+    "descriptions": [
+      "husband not returning my children after divorce",
+      "pati ne bacche nahi diye",
+      "custody of children disputed after separation",
+      "my children kept away from me by ex-spouse",
+      "divorce ke baad bacche kiske paas rahenge",
+      "court custody order violated by spouse",
+      "child not allowed to meet me after separation",
+      "father denying mother access to children",
+      "bachon ko milne se rok rahe hain",
+      "international child custody dispute"
     ]
   },
   {
@@ -1235,6 +1487,18 @@
     "helplines": [
       "DLSA Free Legal Aid: 15100",
       "Women Helpline: 1091"
+    ],
+    "descriptions": [
+      "husband not paying maintenance after separation",
+      "pati guzaara bhatta nahi de raha",
+      "wife refusing to return child and not paying alimony",
+      "maintenance order passed by court but not followed",
+      "mujhe court se bhatta mila par pati de nahi raha",
+      "inadequate maintenance amount for wife and children",
+      "alimony calculation dispute",
+      "second wife maintenance claim",
+      "divorced mother not getting child support",
+      "Section 125 CrPC maintenance not paid"
     ]
   },
   {
@@ -1290,6 +1554,18 @@
       "Childline: 1098",
       "Women Helpline: 1091",
       "Police Emergency: 112"
+    ],
+    "descriptions": [
+      "I am being forced to marry someone I do not want",
+      "meri marzi ke bina shaadi karwa rahe hain",
+      "parents arranging marriage for minor girl",
+      "child below 18 being married forcibly",
+      "naabalig ladki ki shaadi ki jaa rahi hai",
+      "my family is threatening me to marry a person",
+      "girl forced into marriage by family pressure",
+      "forced marriage to settle property dispute",
+      "child marriage happening in the village",
+      "minor girl's marriage being arranged against her will"
     ]
   },
   {
@@ -1342,6 +1618,18 @@
       "Women Helpline: 1091",
       "Police Emergency: 112",
       "NCW: 7827-170-170"
+    ],
+    "descriptions": [
+      "my ex-boyfriend is following me everywhere",
+      "puraana dost mujhe pareshan kar raha hai",
+      "stalking by rejected suitor",
+      "ex-partner sending threatening messages",
+      "family member harassing me after breakup",
+      "mujhe door se follow kiya jaata hai",
+      "constant unwanted contact after I said no",
+      "stalker waiting outside my house",
+      "cyberstalking and harassment by ex",
+      "physical following and monitoring by family member"
     ]
   },
   {
@@ -1395,6 +1683,18 @@
       "One Stop Centre: 181",
       "Women Helpline: 1091",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "husband left me 2 years ago and is not responding",
+      "pati chhod gaya aur koi khabar nahi",
+      "wife deserted and not maintaining children",
+      "spouse abandoned family and went away",
+      "pati ne ghar chhodte waqt kuch nahi diya",
+      "deserted by husband without any support",
+      "wife went to parents and never returned",
+      "I have been alone for years, husband completely missing",
+      "abandoned spouse seeking maintenance",
+      "no contact from husband for over one year"
     ]
   },
   {
@@ -1454,6 +1754,18 @@
       "Cyber Fraud Helpline: 1930",
       "Police Emergency: 112",
       "RBI Ombudsman: 14448"
+    ],
+    "descriptions": [
+      "money transferred via UPI but I was cheated",
+      "UPI se paisa gaya par saamaan nahi mila",
+      "online payment fraud via PhonePe or GPay",
+      "money sent to wrong UPI ID and not returned",
+      "someone sent me payment request and I lost money",
+      "UPI fraud complaint",
+      "payment app fraud while buying online",
+      "merchant took UPI payment but did not deliver",
+      "mera paisa online fraud mein chala gaya",
+      "UPI transfer initiated by fraudster on my number"
     ]
   },
   {
@@ -1510,6 +1822,18 @@
       "Cyber Fraud Helpline: 1930",
       "Bank Customer Care: (Your bank's number)",
       "Police: 112"
+    ],
+    "descriptions": [
+      "someone called pretending to be bank and I gave OTP",
+      "bank officer bane aur OTP maanga",
+      "phone pe OTP share kiya aur account se paisa gaya",
+      "caller said my KYC will expire and took OTP",
+      "OTP dene ke baad khata khaali ho gaya",
+      "fake bank call fraud",
+      "impersonation of telecom company to steal OTP",
+      "someone called from a fake number pretending to be TRAI",
+      "vishing call OTP fraud complaint",
+      "account hacked after giving OTP on call"
     ]
   },
   {
@@ -1564,6 +1888,18 @@
       "National Consumer Helpline: 1915",
       "Cyber Fraud Helpline: 1930",
       "Police: 112"
+    ],
+    "descriptions": [
+      "I paid for product online but it was never delivered",
+      "online order ka paisa gaya par saamaan nahi aaya",
+      "fake shopping website cheated me",
+      "received wrong or damaged item, refund refused",
+      "Instagram seller took money and disappeared",
+      "online marketplace seller fraud",
+      "order cancelled by seller but refund not given",
+      "product very different from what was advertised",
+      "fake website stole card details",
+      "online shopping se thage jaakar shikayat karni hai"
     ]
   },
   {
@@ -1606,6 +1942,18 @@
     "helplines": [
       "Cyber Fraud Helpline: 1930",
       "Police Emergency: 112"
+    ],
+    "descriptions": [
+      "someone created fake account in my name",
+      "mera fake account bana ke log thage ja rahe hain",
+      "my photos used on fake social media profile",
+      "someone is posting abusive content using my identity",
+      "social media impersonation complaint",
+      "fake profile used to borrow money from my contacts",
+      "WhatsApp profile cloned and friends cheated",
+      "Instagram account hacked and misused",
+      "fake Facebook profile using my photos",
+      "social media fraud using my identity"
     ]
   },
   {
@@ -1659,6 +2007,18 @@
       "Cyber Fraud Helpline: 1930",
       "Police: 112",
       "National Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "paid money for job but it turned out to be fake",
+      "naukri dilane ke naam pe paisa liya aur bhag gaye",
+      "fake job offer letter received",
+      "recruitment agent took money and disappeared",
+      "company ke naam pe farzi interview le paisa liya",
+      "online job portal fraud",
+      "paid registration fee for job that did not exist",
+      "WhatsApp job offer turned out to be scam",
+      "placement agency took advance and gave no job",
+      "fraud job consultant ne paisa le ke naukri nahi di"
     ]
   },
   {
@@ -1705,6 +2065,18 @@
     "helplines": [
       "Cyber Fraud Helpline: 1930",
       "Police: 112"
+    ],
+    "descriptions": [
+      "received message that I won lottery and paid tax but got nothing",
+      "lottery jeeta hua message aaya aur paise maange",
+      "prize winner scam, paid fee but no prize",
+      "KBC lottery fraud call",
+      "mujhe kaha aapka ₹25 lakh ka inam nikla hai",
+      "fake lottery coupon used to extract money",
+      "WhatsApp message about prize money fraud",
+      "lottery agent collected money and is now unreachable",
+      "gold coin prize fraud",
+      "car prize winner scam via SMS"
     ]
   },
   {
@@ -1757,6 +2129,18 @@
       "UIDAI Helpline: 1947",
       "Cyber Fraud Helpline: 1930",
       "Police: 112"
+    ],
+    "descriptions": [
+      "someone used my Aadhaar to open a bank account",
+      "mera Aadhaar kisi ne misuse kiya",
+      "biometric data stolen and used for fraud",
+      "my Aadhaar linked to unknown mobile number",
+      "KYC ke naam pe Aadhaar copy le gaye",
+      "Aadhaar enabled payment made without my consent",
+      "someone took loan using my Aadhaar",
+      "identity stolen through Aadhaar misuse",
+      "aadhaar card copy misused for SIM fraud",
+      "mera Aadhaar number misuse ho raha hai"
     ]
   },
   {
@@ -1812,6 +2196,18 @@
     "helplines": [
       "National Consumer Helpline: 1915",
       "Police: 112 (if fraud involved)"
+    ],
+    "descriptions": [
+      "my new TV stopped working in 2 months",
+      "naya TV kharida aur 2 mahine mein kharab ho gaya",
+      "brand new washing machine not functioning",
+      "company refusing to replace defective product",
+      "refrigerator purchased online is not cooling",
+      "mobile phone heating up and crashing",
+      "company not honoring warranty for defective item",
+      "defective product complaint to consumer forum",
+      "after sales service not coming despite multiple calls",
+      "purchased appliance has manufacturing defect"
     ]
   },
   {
@@ -1865,6 +2261,18 @@
     "helplines": [
       "National Consumer Helpline: 1915",
       "CDSCO: 011-23236975"
+    ],
+    "descriptions": [
+      "medicine I bought made me more sick",
+      "dawai kharab nikli aur tabiyat bigad gayi",
+      "wrong medicine given at pharmacy",
+      "spurious drugs sold at local medical shop",
+      "expired medicine sold at chemist",
+      "medicine did not work as promised",
+      "doctor prescribed wrong dosage",
+      "hospital gave wrong injection",
+      "medical store gave substitute without telling me",
+      "adulterated medicine causing health issues"
     ]
   },
   {
@@ -1919,6 +2327,18 @@
       "Kisan Call Centre: 1800-180-1551",
       "National Consumer Helpline: 1915",
       "Agriculture Department: Local number"
+    ],
+    "descriptions": [
+      "seeds I bought did not grow",
+      "beej kharab nikle, fasal hi nahi hui",
+      "tractor purchased is breaking down repeatedly",
+      "pesticide did not work and crop damaged",
+      "agriculture company selling fake seeds",
+      "fertilizer turned out to be substandard",
+      "solar pump for irrigation not functioning",
+      "company not replacing defective farm equipment",
+      "khaad ke naam par mitti bech di",
+      "spurious agri-inputs complaint"
     ]
   },
   {
@@ -1973,6 +2393,18 @@
     "helplines": [
       "IRDAI Helpline: 155255 / 1800-4254-732",
       "National Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "my insurance claim was rejected without valid reason",
+      "insurance company ne claim nahi diya",
+      "accident claim rejected by vehicle insurer",
+      "health insurance company not paying hospitalisation bill",
+      "claim rejected citing pre-existing condition",
+      "life insurance claim refused to widow",
+      "insurance company delaying payment endlessly",
+      "crop insurance claim rejected",
+      "insurer not processing claim despite policy",
+      "insurance agent gave wrong policy, claim failed"
     ]
   },
   {
@@ -2025,6 +2457,18 @@
     "helplines": [
       "RBI Ombudsman: 14448",
       "National Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "bank is charging me fees I never agreed to",
+      "bank ne bina bataye account se paisa kata",
+      "minimum balance charge deducted unfairly",
+      "bank refusing to open my zero-balance account",
+      "ATM swallowed my card and bank not helping",
+      "bank statement showing wrong transactions",
+      "double deduction for same transaction",
+      "bank closed my account without any notice",
+      "EMI deducted twice in same month",
+      "bank not reversing unauthorized deduction"
     ]
   },
   {
@@ -2083,6 +2527,18 @@
       "National Consumer Helpline: 1915",
       "NHRC: 14433",
       "Police: 112"
+    ],
+    "descriptions": [
+      "doctor made a mistake in surgery and my condition got worse",
+      "operation mein galti hui aur haalat bigad gayi",
+      "wrong diagnosis given by hospital",
+      "doctor prescribed wrong medicine",
+      "patient died due to hospital negligence",
+      "hospital delayed treatment causing harm",
+      "wrong limb operated on",
+      "doctor refused to treat emergency patient",
+      "hospital overcharged and did unnecessary tests",
+      "medical negligence death complaint"
     ]
   },
   {
@@ -2141,6 +2597,18 @@
     "helplines": [
       "Electricity Department Helpline: (State specific – e.g., MSEDCL: 19122)",
       "National Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "electricity bill is too high without reason",
+      "bijli ka bill bahut zyada aa raha hai",
+      "I have been charged for units I did not consume",
+      "meter reading is wrong",
+      "bijli ka meter kharab hai par bill aa raha hai",
+      "electricity connection disconnected without notice",
+      "bill showing commercial rate for residential connection",
+      "old meter replaced but wrong reading carried forward",
+      "duplicate electricity bill from different periods",
+      "demand notice for electricity arrears I do not owe"
     ]
   },
   {
@@ -2191,6 +2659,18 @@
     "helplines": [
       "TRAI Helpline: 1800-110-420",
       "National Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "my mobile network is very poor and calls drop constantly",
+      "network nahi aata mera mobile band hi rehta hai",
+      "internet data not working despite recharge",
+      "wrong plan activated on my number",
+      "port request rejected by operator",
+      "mobile number ported without my consent",
+      "sim card not working after operator visit",
+      "excess charges on my postpaid bill",
+      "broadband connection speed very slow despite premium plan",
+      "telecom company not resolving complaint despite repeated calls"
     ]
   },
   {
@@ -2240,6 +2720,18 @@
     "helplines": [
       "Police Emergency: 112",
       "Local Police Station: (Local Number)"
+    ],
+    "descriptions": [
+      "my mobile phone was stolen on the road",
+      "mera mobile chori ho gaya",
+      "thief broke into my house and stole valuables",
+      "chain snatching in the market",
+      "bag stolen in crowded area",
+      "pickpocket on bus took my wallet",
+      "laptop stolen from my office",
+      "bicycle taken from outside my home",
+      "gold ornaments stolen from home",
+      "shop broken into at night"
     ]
   },
   {
@@ -2287,6 +2779,18 @@
     "helplines": [
       "Police Emergency: 112",
       "Women Helpline (if woman assaulted): 1091"
+    ],
+    "descriptions": [
+      "I was beaten up by a group of men",
+      "kuch logo ne mujhe maara",
+      "neighbour assaulted me",
+      "attacked on the road",
+      "someone hit me with a weapon",
+      "physical attack by local goon",
+      "beaten badly and hospitalized",
+      "gang attacked me for personal rivalry",
+      "assault complaint against known person",
+      "mujhe maara aur police ne kuch nahi kiya"
     ]
   },
   {
@@ -2338,6 +2842,18 @@
     "helplines": [
       "Police Emergency: 112",
       "SC/ST Helpline: 14566"
+    ],
+    "descriptions": [
+      "my neighbour is constantly disturbing me",
+      "padosi roz pareshan karta hai",
+      "local goonda threatening me",
+      "neighbour abusing my family members",
+      "constant harassment over parking space",
+      "neighbour blocking my water supply",
+      "area goonda demanding money from shop",
+      "neighbour making my life miserable",
+      "nuisance created by neighbour daily",
+      "local person threatening me over petty issue"
     ]
   },
   {
@@ -2395,6 +2911,18 @@
       "Police Emergency: 112",
       "Childline (for missing minors): 1098",
       "Women Helpline: 1091"
+    ],
+    "descriptions": [
+      "my child did not come home from school",
+      "mera bachcha ghar nahi aaya",
+      "my elderly mother is missing since yesterday",
+      "husband left home and has not returned",
+      "woman went missing after argument with family",
+      "teenager went missing and family worried",
+      "mentally ill family member wandered away",
+      "missing person complaint not being taken seriously",
+      "boy missing from hostel",
+      "wife not returning after visiting parents"
     ]
   },
   {
@@ -2451,6 +2979,18 @@
       "Police Emergency: 112",
       "NHRC: 14433",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "police is not writing my complaint",
+      "police ne FIR likhne se mana kar diya",
+      "went to police station but officer sent me away",
+      "police saying it is civil matter and refusing FIR",
+      "complainant turned away without registering case",
+      "police not listening to woman's complaint",
+      "FIR not filed due to political pressure",
+      "police asking for bribe before writing complaint",
+      "officer saying go settle it yourself",
+      "meri shikayat police ne nahi suni"
     ]
   },
   {
@@ -2502,6 +3042,18 @@
     "helplines": [
       "Police Emergency: 112",
       "Cyber Fraud Helpline: 1930"
+    ],
+    "descriptions": [
+      "someone is threatening me and demanding money",
+      "koi mujhse dhama kake paise maang raha hai",
+      "blackmailer threatening to share my private photos",
+      "local muscleman demanding monthly hafta",
+      "person threatening to harm family unless paid",
+      "extortion call demanding money for safety",
+      "protection money demanded from my shop",
+      "threatening messages asking for large amount",
+      "blackmail using old personal information",
+      "online extortion complaint"
     ]
   },
   {
@@ -2556,6 +3108,18 @@
       "Food Department Helpline: (State specific)",
       "PDS Helpline: 1800-212-5512 (some states)",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "my ration card was not made despite applying",
+      "ration card ke liye apply kiya par nahi mila",
+      "ration shop dealer not giving full quota",
+      "my name removed from ration list",
+      "BPL ration card denied despite eligibility",
+      "ration dealer selling quota in black market",
+      "ration card not updated after moving to new address",
+      "fair price shop closed without notice",
+      "my ration card is in another state",
+      "rice and wheat not given from ration shop"
     ]
   },
   {
@@ -2614,6 +3178,18 @@
     "helplines": [
       "NSAP Helpline: 1800-111-555",
       "State Social Welfare Helpline: (State specific)"
+    ],
+    "descriptions": [
+      "my old age pension has stopped coming",
+      "meri pension aana band ho gayi",
+      "widow pension not received for 4 months",
+      "disability pension application rejected",
+      "budhape ki pension mein bahut der ho rahi hai",
+      "pension amount reduced without reason",
+      "I applied for pension 6 months ago and no response",
+      "pension beneficiary list name missing",
+      "divyang pension nahi aa rahi",
+      "pension account dormant and payment stopped"
     ]
   },
   {
@@ -2672,6 +3248,18 @@
     "helplines": [
       "PMAY Helpline: 1800-11-6446",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "I am eligible for PM Awas Yojana but house not given",
+      "PMAY ka ghar nahi mila abhi tak",
+      "my name in PM Awas list but money not released",
+      "PMAY money given to wrong person",
+      "sarpanch gave housing scheme benefit to relatives",
+      "gramin awas application rejected unfairly",
+      "PM Awas installment not coming to my account",
+      "housing scheme house incomplete after first installment",
+      "PMAY-G list se naam kat gaya",
+      "indira awas ya PM awas mein mera haq maar liya"
     ]
   },
   {
@@ -2725,6 +3313,18 @@
     "helplines": [
       "NSP Helpline: 0120-6619540",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "my scholarship money did not come this year",
+      "scholarship ka paisa nahi aaya",
+      "SC/ST scholarship rejected without reason",
+      "minority scholarship delayed",
+      "scholarship amount less than sanctioned",
+      "college not forwarding scholarship application",
+      "merit scholarship denied despite eligibility",
+      "post-matric scholarship not received",
+      "scholarship portal showing error and college not helping",
+      "NSP scholarship application stuck"
     ]
   },
   {
@@ -2776,6 +3376,18 @@
     "helplines": [
       "SC Commission Helpline: 011-23384183",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "my caste certificate application is pending for months",
+      "jaati praman patra nahi ban raha",
+      "SC/ST certificate not given by tehsil",
+      "officer asking for bribe for caste certificate",
+      "caste certificate rejected for wrong reason",
+      "OBC certificate application not processed",
+      "college needs caste certificate but tehsil not giving",
+      "certificate delay costing me scholarship and admission",
+      "SDM office not issuing domicile or caste certificate",
+      "meri jaati praman patra ki file ghoom rahi hai"
     ]
   },
   {
@@ -2828,6 +3440,18 @@
     "helplines": [
       "Police Emergency: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "landlord threw me out of my rented house forcefully",
+      "maalik ne mujhe ghar se nikal diya",
+      "evicted without notice or court order",
+      "landlord changed locks while I was out",
+      "landlord threatening to throw my things on street",
+      "illegal eviction without giving notice period",
+      "forced to leave rented house by landlord",
+      "landlord evicting me to sell property",
+      "tenant eviction without rent court order",
+      "mujhe kirayedar ke roop mein nikaala gaya bina reason ke"
     ]
   },
   {
@@ -2878,6 +3502,18 @@
     "helplines": [
       "DLSA: 15100",
       "National Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "landlord not returning my security deposit after I moved out",
+      "maalik ne security deposit wapas nahi kiya",
+      "deposit withheld without any valid reason",
+      "security money not returned even after 3 months",
+      "landlord claiming damages to deduct deposit",
+      "advance rent refund not given after vacating",
+      "meri deposit rok li hai maalik ne",
+      "tenant security refund being delayed",
+      "landlord making false deductions from deposit",
+      "rental security deposit dispute"
     ]
   },
   {
@@ -2924,6 +3560,18 @@
     "helplines": [
       "DLSA: 15100",
       "Police: 112 (for court order execution)"
+    ],
+    "descriptions": [
+      "my tenant has not paid rent for 4 months",
+      "kiraya nahi de raha hai 4 mahine se",
+      "tenant refusing to pay and not vacating",
+      "monthly rent pending and tenant not responding",
+      "tenant locked property and disappeared",
+      "commercial tenant stopped paying rent",
+      "tenant paying partial rent without explanation",
+      "PG occupant not paying monthly fee",
+      "sublessee not paying rent to original tenant",
+      "tenant claiming rent was already paid"
     ]
   },
   {
@@ -2969,6 +3617,18 @@
     "helplines": [
       "Police: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "landlord enters my house without knocking",
+      "maalik bina bataaye ghar mein aata hai",
+      "landlord using spare key to enter flat",
+      "unauthorized entry by owner into rented premises",
+      "landlord snooping on tenant's activities",
+      "landlord inspecting rooms without consent",
+      "maalik ne bina permission ghar mein ghus kar saamaan dekha",
+      "landlord entering when female tenant is alone",
+      "tenant privacy violated by landlord",
+      "repeated unannounced visits by property owner"
     ]
   },
   {
@@ -3020,6 +3680,18 @@
     "helplines": [
       "Municipal Helpline: (City-specific)",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "neighbour is building illegally on government land",
+      "padosi bina permission ke ghar bana raha hai",
+      "unauthorized construction violating building plan",
+      "construction without approved map in residential area",
+      "builder constructing more floors than permitted",
+      "illegal structure blocking road",
+      "municipality not stopping illegal construction",
+      "commercial construction in residential zone",
+      "setback rules violated in new building",
+      "panchayat approved construction bina permission ki manzuri ke"
     ]
   },
   {
@@ -3073,6 +3745,18 @@
       "Police: 112",
       "Pollution Control Board: (State specific)",
       "CPCB: 011-43102030"
+    ],
+    "descriptions": [
+      "factory near my home is making loud noise at night",
+      "factory ke shor se raat ko neend nahi aati",
+      "DJ system running late at night in neighbourhood",
+      "construction work at night causing noise",
+      "loudspeaker at all hours disturbing residents",
+      "neighbour's business creating constant noise",
+      "sound system in wedding hall causing nuisance",
+      "noise from religious gathering disturbing residents",
+      "noise pollution complaint to municipality",
+      "vehicle workshop creating unbearable noise"
     ]
   },
   {
@@ -3130,6 +3814,18 @@
       "CPCB: 011-43102030",
       "State PCB: (State specific)",
       "Police: 112"
+    ],
+    "descriptions": [
+      "factory waste is being dumped into the river",
+      "factory ka kachra nadi mein gir raha hai",
+      "industrial effluent polluting our water source",
+      "river water turned black due to factory discharge",
+      "sewage being pumped into lake",
+      "chemical factory waste entering groundwater",
+      "water pollution causing illness in village",
+      "CPCB complaint for river pollution",
+      "naale mein factory ka zeher ghol rahe hain",
+      "water body polluted by dyeing industry"
     ]
   },
   {
@@ -3187,6 +3883,18 @@
       "Police: 112",
       "District Collector Office: Local number",
       "State Mines Department: (State specific)"
+    ],
+    "descriptions": [
+      "sand mafia is mining in the river at night",
+      "raat ko nadi se baallu nikaal ke le jaate hain",
+      "illegal sand extraction from river bed",
+      "tractor carrying sand without permit",
+      "river bank eroding due to illegal sand mining",
+      "corrupt officials protecting sand mining",
+      "environmental damage due to illegal extraction",
+      "complaint against illegal sand mining",
+      "river is being destroyed by sand mafia",
+      "illegal sand mining near my village"
     ]
   },
   {
@@ -3237,6 +3945,18 @@
     "helplines": [
       "Swachh Bharat Helpline: 1800-11-1565",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "people are defecating openly near our homes",
+      "khule mein soch ke karan ganda ho raha hai",
+      "no toilet in my area and municipality not acting",
+      "open toilet near children's school",
+      "sanitation complaint to panchayat",
+      "Swachh Bharat mission work not done in our village",
+      "public toilet not built despite funds released",
+      "open sewage in our locality",
+      "filth near drinking water source",
+      "sanitation conditions very poor in my ward"
     ]
   },
   {
@@ -3294,6 +4014,18 @@
       "Senior Citizen Helpline (Elderline): 14567",
       "Police Emergency: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "my children took my property and now refuse to support me",
+      "bachon ne meri zameen le li aur ab dekh nahi rahe",
+      "property transferred to son and he is not providing maintenance",
+      "elderly parent evicted from own home by children",
+      "son not giving maintenance after inheriting property",
+      "senior citizen property dispute complaint",
+      "parents thrown out after gifting property to children",
+      "elderly person cheated by own children",
+      "bujurg maa baap ko ghar se nikal diya unke hi bachon ne",
+      "senior citizen maintenance tribunal complaint"
     ]
   },
   {
@@ -3351,6 +4083,18 @@
       "Senior Citizen Helpline (Elderline): 14567",
       "Police Emergency: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "my son is taking all my pension money",
+      "beta meri pension le leta hai har mahine",
+      "elderly person's bank account being misused by family",
+      "caretaker stealing money from old person",
+      "old person being pressured to give money",
+      "financial abuse of elderly relative",
+      "senior citizen's savings exhausted by family",
+      "old person's fixed deposit broken without consent",
+      "someone using power of attorney to drain elderly's account",
+      "elderly person financially exploited"
     ]
   },
   {
@@ -3406,6 +4150,18 @@
     "helplines": [
       "Senior Citizen Helpline (Elderline): 14567",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "my children are not taking care of me in old age",
+      "mere bete ne chhod diya hai budhape mein",
+      "elderly parent denied food and shelter by children",
+      "Section 125 maintenance not given to old parents",
+      "senior citizen maintenance application",
+      "Maintenance and Welfare of Parents Act complaint",
+      "son and daughter-in-law not providing for elderly mother",
+      "aged father thrown out of house by son",
+      "children not fulfilling legal duty to maintain parents",
+      "tribunal complaint for maintenance by elderly parent"
     ]
   },
   {
@@ -3458,6 +4214,18 @@
       "Senior Citizen Helpline (Elderline): 14567",
       "Police Emergency: 112",
       "Women Helpline (if female senior): 1091"
+    ],
+    "descriptions": [
+      "maid is ill-treating the old person at home",
+      "ghar ki kaamwaali ne bujurg ko maara",
+      "caretaker stealing from elderly person",
+      "domestic worker abusing old retired person",
+      "senior citizen mistreated in absence of family",
+      "old person left without food by caretaker",
+      "caretaker threatening elderly resident",
+      "hired nurse misusing elderly patient",
+      "abuse of bedridden old person",
+      "maid hamaare bujurg ko tang karti hai"
     ]
   },
   {
@@ -3507,6 +4275,18 @@
     "helplines": [
       "Senior Citizen Helpline (Elderline): 14567",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "bank staff behaving rudely with old person",
+      "bank wale budhon se theek se baat nahi karte",
+      "elderly person denied priority service at hospital",
+      "senior citizen not given priority queue",
+      "government office not accommodating old person",
+      "discrimination against old age in service",
+      "hospital staff ignoring elderly patient",
+      "railway reservation counter not helping senior citizen",
+      "rude treatment of elderly in public office",
+      "senior citizen rights at service counters not followed"
     ]
   },
   {
@@ -3564,6 +4344,18 @@
       "Senior Citizen Helpline (Elderline): 14567",
       "Ayushman Bharat Helpline: 14555",
       "NHRC: 14433"
+    ],
+    "descriptions": [
+      "hospital refused to treat my elderly parent",
+      "hospital ne bujurg ka ilaaj karne se mana kar diya",
+      "doctor neglected old patient",
+      "emergency treatment not given to elderly",
+      "private hospital demanding cash upfront before treating old person",
+      "elderly patient left unattended in ward",
+      "poor treatment due to age discrimination",
+      "senior citizen medically neglected complaint",
+      "nursing home ignoring bedridden senior patient",
+      "meri maa ka sahi se ilaaj nahi hua"
     ]
   },
   {
@@ -3612,6 +4404,18 @@
     "helplines": [
       "DLSA: 15100",
       "Revenue Helpline: 1800-120-8040"
+    ],
+    "descriptions": [
+      "neighbour blocked my access road to my own land",
+      "padosi ne meri zameen tak jaane wala rasta band kar diya",
+      "right of way to my house denied by neighbour",
+      "passage to my field being blocked illegally",
+      "mera rasta rok diya hai padosi ne",
+      "common pathway closed by neighbour without authority",
+      "easement right being violated by adjacent landowner",
+      "way to my house blocked by construction",
+      "hamara raasta rokne wale ke khilaf shikayat",
+      "access to agricultural land cut off by neighbour"
     ]
   },
   {
@@ -3663,6 +4467,18 @@
     "helplines": [
       "Kisan Call Centre: 1800-180-1551",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "neighbour blocked my irrigation water channel",
+      "padosi ne mere khet ka pani rok liya",
+      "dispute over water share in common canal",
+      "water supply to my farm cut off by neighbour",
+      "naher ka paani mujhe nahi milta",
+      "irrigation water diverted by adjacent farmer",
+      "my share of canal water being taken by others",
+      "pani ka batwara theek se nahi ho raha",
+      "water channel dispute in agricultural village",
+      "neighbour constructed wall blocking water to my field"
     ]
   },
   {
@@ -3715,6 +4531,18 @@
       "DLSA: 15100",
       "NHRC: 14433",
       "Revenue Helpline: 1800-120-8040"
+    ],
+    "descriptions": [
+      "government seized my land and gave no compensation",
+      "sarkar ne mera khet le liya aur kuch nahi diya",
+      "land seized for public project without payment",
+      "my property taken by authorities without legal process",
+      "bina muavza ke zameen chheen li gayi",
+      "government grabbed my land citing development",
+      "forceful possession of my land by state officials",
+      "land seized under wrong legal authority",
+      "no compensation after government took my agricultural land",
+      "meri zameen sarkari kabze mein chali gayi"
     ]
   },
   {
@@ -3771,6 +4599,18 @@
       "Police: 112",
       "DLSA: 15100",
       "Anti-Corruption: 1064"
+    ],
+    "descriptions": [
+      "builder has taken over my land illegally",
+      "builder ne meri plot par kabja kar liya",
+      "developer is constructing on my property without permission",
+      "my land grabbed by builder using false documents",
+      "construction company ne meri zameen hatyar kar li",
+      "builder using goons to occupy my property",
+      "developer registered my land under his name fraudulently",
+      "builder ne farzi kagaz banakar mera plot liya",
+      "real estate developer encroaching on my land",
+      "land mafia has occupied my plot"
     ]
   },
   {
@@ -3821,6 +4661,18 @@
     "helplines": [
       "Revenue Helpline: 1800-120-8040",
       "Police: 112"
+    ],
+    "descriptions": [
+      "private person has occupied village common land",
+      "sarkari zameen par kabza kar liya kisi ne",
+      "gairan land being used by private individual",
+      "common grazing land encroached by neighbour",
+      "gram sabha ki zameen par kabza ho gaya",
+      "government waste land occupied by builder",
+      "encroachment on public land by local strongman",
+      "village common land being sold illegally",
+      "government land occupied near railway line",
+      "forest land encroached by farmer"
     ]
   },
   {
@@ -3877,6 +4729,18 @@
       "Police: 112",
       "RBI Ombudsman: 14448",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "someone mortgaged my property without my knowledge",
+      "meri zameen bina bataye girvee rakh di",
+      "relative used my house as loan collateral without consent",
+      "bank loan taken against my property without permission",
+      "mera ghar kisi ne chhupa ke girvee kar diya",
+      "property pledged to moneylender fraudulently",
+      "my land used as security for someone else's loan",
+      "zameen girvee rakh kar loan liya bina meri jaankari ke",
+      "mortgage registered on my property using fake signature",
+      "property documents misused to raise loan"
     ]
   },
   {
@@ -3929,6 +4793,18 @@
     "helplines": [
       "National Consumer Helpline: 1915",
       "State RERA: (State specific)"
+    ],
+    "descriptions": [
+      "housing society not giving me possession of my plot",
+      "society ne mera plot nahi diya paisa lene ke baad",
+      "builder sold same plot to two different people",
+      "registered plot allotted to someone else by society",
+      "maine plot book kiya par kisi aur ko de diya",
+      "layout plot boundary dispute in housing scheme",
+      "society chairman changed plot allotment without notice",
+      "approved layout plot possession denied",
+      "my purchased plot occupied by another member",
+      "society is not giving registry of my plot"
     ]
   },
   {
@@ -3976,6 +4852,18 @@
     ],
     "helplines": [
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "father verbally promised me land but did not write will",
+      "pitaji ne bola tha par likha kuch nahi",
+      "oral gift of property being denied by family",
+      "property promised orally by grandfather now disputed",
+      "dada ne zameen dene ka wada kiya tha par deed nahi bani",
+      "verbal inheritance promise not honored after death",
+      "dispute over property promised through word of mouth",
+      "no written will but father always said this land is mine",
+      "zubani wada kiya par ab makar se nahi de rahe",
+      "family denying orally gifted property"
     ]
   },
   {
@@ -4022,6 +4910,18 @@
     "helplines": [
       "DLSA: 15100",
       "Police: 112"
+    ],
+    "descriptions": [
+      "seller not coming to register property after taking money",
+      "paisa le liya par registry nahi ki",
+      "seller refusing to complete property registration",
+      "sale deed not registered after payment of full amount",
+      "ghar ka paisa diya par registry baaki hai",
+      "property purchase incomplete due to registration delay",
+      "stamp duty paid but registration not done",
+      "seller absconding after receiving property payment",
+      "agreement to sell made but no registry done",
+      "property not registered even after 2 years of payment"
     ]
   },
   {
@@ -4073,6 +4973,18 @@
     "helplines": [
       "Revenue Helpline: 1800-120-8040",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "landlord trying to evict long-term agricultural tenant",
+      "zamindaar ne kheti se nikaalne ki dhamki di",
+      "permanent tenant rights being violated",
+      "tenant farming land for generations but now being removed",
+      "khandani bataidedar ko zameen se hataya ja raha hai",
+      "agricultural tenancy rights denied by landowner",
+      "hereditary tenant evicted without legal process",
+      "batai farmer not getting legal protections",
+      "mera parivaar saalo se yahan khet karta hai par maalik nikal raha hai",
+      "tenant farmer rights violated under land reform laws"
     ]
   },
   {
@@ -4121,6 +5033,18 @@
     "helplines": [
       "Labour Helpline: 1800-180-1961",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "company not paying gratuity after 5 years of service",
+      "5 saal kaam kiya par gratuity nahi mili",
+      "gratuity rejected by employer without reason",
+      "employer calculating gratuity incorrectly",
+      "naukri chhaudi par gratuity ka paisa nahi diya",
+      "gratuity pending for 2 years after retirement",
+      "company closed and gratuity not paid",
+      "gratuity claim ignored by HR department",
+      "Payment of Gratuity Act rights denied",
+      "gratuity amount much less than entitlement"
     ]
   },
   {
@@ -4171,6 +5095,18 @@
     "helplines": [
       "Labour Helpline: 1800-180-1961",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "daily wage work done but mazdoori nahi mili",
+      "thekedar ne din ka paisa nahi diya",
+      "construction worker not paid for days worked",
+      "daily labourer rights not given by contractor",
+      "rozana kaam kiya par paise nahi mile",
+      "daily worker not given minimum wage",
+      "contractor exploiting daily workers",
+      "labor not paid for harvest season work",
+      "casual worker denied any job benefits",
+      "mazdoor ka haq maar ke chale gaye"
     ]
   },
   {
@@ -4216,6 +5152,18 @@
     ],
     "helplines": [
       "Labour Helpline: 1800-180-1961"
+    ],
+    "descriptions": [
+      "I worked extra hours but overtime not paid",
+      "overtime kiya par paise nahi mile",
+      "extra work done beyond 8 hours but no extra pay",
+      "night shift overtime wages withheld by employer",
+      "company deducting overtime from salary",
+      "Sunday work done but no additional wages",
+      "overtime pay demanded by employee but refused",
+      "wages only for regular hours, overtime ignored",
+      "factory overtime rights violated",
+      "employer claiming overtime is included in salary"
     ]
   },
   {
@@ -4258,6 +5206,18 @@
     "helplines": [
       "Labour Helpline: 1800-180-1961",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "boss deducted money from salary without explanation",
+      "salary mein se paisa kaat liya bina bataaye",
+      "unauthorised deductions from monthly pay",
+      "employer deducting fine from wages illegally",
+      "salary kam di aur koi reason nahi bataya",
+      "PF deducted but not deposited",
+      "wage slip not given and deductions unexplained",
+      "company cutting salary for late coming without policy",
+      "meri salary kaat li gyi bina kisi notice ke",
+      "salary reduced without written intimation"
     ]
   },
   {
@@ -4302,6 +5262,18 @@
     "helplines": [
       "Labour Helpline: 1800-180-1961",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "I was injured at work and company is not paying compensation",
+      "kaam ke dauran chot lagi par muavza nahi mila",
+      "factory accident and employer not covering medical expenses",
+      "work injury compensation refused by employer",
+      "haadse ke baad company ne paisa nahi diya",
+      "workmen compensation act claim denied",
+      "accident at construction site, no support from contractor",
+      "permanent disability from workplace injury, no relief",
+      "company claiming accident was worker's own fault",
+      "ESI hospital benefit not given after job injury"
     ]
   },
   {
@@ -4348,6 +5320,18 @@
     "helplines": [
       "Labour Helpline: 1800-180-1961",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "employer threatening workers for joining union",
+      "union mein shamil hone par dhamki di gayi",
+      "workers dismissed for participating in trade union",
+      "management harassing union members",
+      "union activity banned by company illegally",
+      "workers not allowed to form union",
+      "collective bargaining rights denied",
+      "union leader fired for organizing workers",
+      "management interfering in union election",
+      "trade union recognition denied by employer"
     ]
   },
   {
@@ -4394,6 +5378,18 @@
     "helplines": [
       "Labour Helpline: 1800-180-1961",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "contractor not paying promised wages",
+      "thekedar ne poora paisa nahi diya",
+      "contract workers denied minimum wage",
+      "contractor not providing legal facilities to workers",
+      "thekedar se kaam karwa ke seedha nahi kiya",
+      "principal employer hiding behind contractor to deny rights",
+      "contract workers doing same work but no benefits",
+      "contractor running away after completing project without paying",
+      "contract labour rights violated on construction site",
+      "agency workers not getting ESI and PF"
     ]
   },
   {
@@ -4436,6 +5432,18 @@
     ],
     "helplines": [
       "Labour Helpline: 1800-180-1961"
+    ],
+    "descriptions": [
+      "company not giving me my earned leave",
+      "company ne chutti nahi di",
+      "annual leave balance not credited",
+      "employer refusing to encash leave",
+      "meri earned leave ka paisa nahi diya",
+      "sick leave application rejected unfairly",
+      "leave denied during emergency medical situation",
+      "casual leave being cancelled repeatedly",
+      "forced to work on public holidays",
+      "maternity or paternity leave request declined"
     ]
   },
   {
@@ -4484,6 +5492,18 @@
       "Childline: 1098",
       "NHRC: 14433",
       "Labour Helpline: 1800-180-1961"
+    ],
+    "descriptions": [
+      "brought from my village with false job promise",
+      "naukri ka laalach dekar dusre sheher le aaye",
+      "agent took money and disappeared after bringing me here",
+      "migrant worker not paid and kept in poor conditions",
+      "bahar se laaye mazdoor ke saath bura bartav",
+      "promised construction work but given different job",
+      "worker passport held by employer",
+      "illegal trafficking under guise of employment",
+      "labor recruiter cheated me and I am stranded",
+      "agent ne jhooth bol ke yahan kaam par lagaya"
     ]
   },
   {
@@ -4542,6 +5562,18 @@
       "Cyber Fraud Helpline: 1930",
       "SEBI: 1800-266-7575",
       "Police: 112"
+    ],
+    "descriptions": [
+      "I invested money in a scheme and lost everything",
+      "share market mein invest kiya aur paisa doob gaya",
+      "fake investment app took all my savings",
+      "chit fund fraud where company disappeared",
+      "advisor ne investment ke naam pe paisa le liya",
+      "Ponzi scheme fraud complaint",
+      "SEBI registered company fraud",
+      "multi-level marketing scheme cheated me",
+      "fake mutual fund agent took my money",
+      "online trading app fraud"
     ]
   },
   {
@@ -4595,6 +5627,18 @@
       "Cyber Fraud Helpline: 1930",
       "CERT-In: 1800-11-4949",
       "RBI Ombudsman: 14448"
+    ],
+    "descriptions": [
+      "I received a fake email from bank and clicked link",
+      "bank ka email aaya aur password diya, paisa gaya",
+      "clicked on link and account hacked",
+      "fake government website collected my details",
+      "phishing email impersonating IRCTC or income tax",
+      "email fraud resulting in financial loss",
+      "email attachment download caused data theft",
+      "form filled on fake bank website and details stolen",
+      "received official-looking email asking for OTP",
+      "fake notification email led to account compromise"
     ]
   },
   {
@@ -4653,6 +5697,18 @@
       "Cyber Fraud Helpline: 1930",
       "TRAI: 1800-110-420",
       "RBI: 14448"
+    ],
+    "descriptions": [
+      "new SIM was issued on my number without my knowledge",
+      "mera number kisi ne apne paas karwa liya",
+      "SIM swap and all bank OTPs diverted",
+      "mobile number ported without my consent",
+      "SIM blocked suddenly and fraud happened on account",
+      "telecom company issued duplicate SIM fraudulently",
+      "mujhe pata hi nahi tha mera SIM band ho gaya",
+      "bank OTP stopped coming and account emptied",
+      "new SIM issued on fraudulent documents",
+      "mobile number hijacked through SIM swap"
     ]
   },
   {
@@ -4696,6 +5752,18 @@
       "CERT-In: 1800-11-4949",
       "Cyber Fraud Helpline: 1930",
       "Police: 112"
+    ],
+    "descriptions": [
+      "my computer screen locked and money demanded",
+      "laptop mein virus aaya aur paisa maanga",
+      "all my files are encrypted by ransomware",
+      "unknown software installed on phone stole data",
+      "malware on my business computer",
+      "mobile phone hacked and personal data stolen",
+      "clicking on link infected my device",
+      "laptop locked, hacker asking for bitcoin",
+      "personal photos stolen through malware",
+      "spyware detected on my phone"
     ]
   },
   {
@@ -4744,6 +5812,18 @@
       "Cyber Fraud Helpline: 1930",
       "Police: 112",
       "NCW: 7827-170-170"
+    ],
+    "descriptions": [
+      "matrimonial website contact cheated me of money",
+      "shaadi.com se milne wale ne dhoka diya",
+      "man married using fake profile on matrimonial site",
+      "fake profile on marriage app, relationship was fraud",
+      "person from matrimonial site took money and disappeared",
+      "online matrimonial fraud complaint",
+      "fake widower online romance leading to money transfer",
+      "NRI groom fraud via matrimonial portal",
+      "catfishing on marriage app",
+      "matrimonial site se jhooth bolke shaadi ki"
     ]
   },
   {
@@ -4788,6 +5868,18 @@
       "Cyber Fraud Helpline: 1930",
       "CERT-In: 1800-11-4949",
       "Police: 112"
+    ],
+    "descriptions": [
+      "paid on a fake government website for passport service",
+      "fake sarkaari website par paisa diya",
+      "charged by fraud website claiming to be RTO",
+      "fake driving licence renewal portal",
+      "fake Aadhaar update website took my data",
+      "government service fraud through unofficial website",
+      "paid fee on fake income tax filing website",
+      "fake ration card portal collected money",
+      "fraud e-seva center charged and gave nothing",
+      "my PAN card applied through fake portal"
     ]
   },
   {
@@ -4839,6 +5931,18 @@
       "CERT-In: 1800-11-4949",
       "Cyber Fraud: 1930",
       "UIDAI: 1947"
+    ],
+    "descriptions": [
+      "my personal data was leaked by a company",
+      "meri personal jaankari online leak ho gayi",
+      "bank shared my data with third parties",
+      "my phone number sold to telemarketers by app",
+      "private photos leaked online without my consent",
+      "Aadhaar data breach complaint",
+      "medical records shared without permission",
+      "app collected my data and shared without consent",
+      "data privacy violation by service provider",
+      "company sold my personal information"
     ]
   },
   {
@@ -4885,6 +5989,18 @@
     "helplines": [
       "National Consumer Helpline: 1915",
       "Cyber Fraud: 1930"
+    ],
+    "descriptions": [
+      "paid real money in game but prizes never given",
+      "online game ne paisa liya aur reward nahi diya",
+      "fantasy sports app fraud",
+      "rummy app rigged, lost all money",
+      "gaming withdrawal blocked after winning",
+      "app-based fraud targeting gamers",
+      "mobile game in-app purchase fraud",
+      "dream11 type app fraud complaint",
+      "sports betting app took money and disappeared",
+      "real money gaming platform fraud"
     ]
   },
   {
@@ -4937,6 +6053,18 @@
     ],
     "helplines": [
       "National Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "new car has engine problem since day one",
+      "naya car liya aur pahle din se problem hai",
+      "two-wheeler purchased with major manufacturing defect",
+      "showroom refusing to replace defective vehicle",
+      "car warranty claimed but dealer not cooperating",
+      "accident happened due to vehicle defect",
+      "steering problem in newly bought car",
+      "vehicle fitness certification refused due to defects",
+      "motorcycle not starting, manufacturer defect",
+      "car dealer not registering vehicle after full payment"
     ]
   },
   {
@@ -4990,6 +6118,18 @@
       "IOCL: 1800-233-3555",
       "HPCL: 1800-233-3555",
       "National Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "LPG cylinder not delivered despite booking",
+      "gas cylinder book kiya par aaya nahi",
+      "black market cylinder price being charged",
+      "gas agency demanding extra money for cylinder",
+      "subsidy not being credited to my bank account",
+      "Ujjwala scheme cylinder not being delivered",
+      "gas connection given but cylinder not supplied",
+      "LPG distributor demanding bribe",
+      "gas agency selling to black market instead of customer",
+      "new gas connection applied but not issued"
     ]
   },
   {
@@ -5043,6 +6183,18 @@
       "FSSAI: 1800-11-2100",
       "National Consumer Helpline: 1915",
       "Police: 112"
+    ],
+    "descriptions": [
+      "milk I bought was adulterated with water",
+      "doodh mein paani mila hua tha",
+      "food at restaurant made me sick",
+      "expired food sold at shop",
+      "ghee sold at market was fake",
+      "adulterated spices found at grocery store",
+      "foreign object found in packaged food",
+      "restaurant not following hygiene standards",
+      "FSSAI violation by local food vendor",
+      "mujhe kharab khaana diya aur food poisoning ho gayi"
     ]
   },
   {
@@ -5096,6 +6248,18 @@
       "Municipal Helpline: (City-specific)",
       "CPGRAMS: 1800-11-3366",
       "Police: 112 (emergency)"
+    ],
+    "descriptions": [
+      "dirty water coming from tap at my house",
+      "pani mein gandagi aa rahi hai nal se",
+      "piped water supply stopped for many days",
+      "municipal water pipeline broken and no action",
+      "water supply contaminated with sewage",
+      "water pressure too low for daily use",
+      "corporation water not reaching my area",
+      "paid water tax but supply is irregular",
+      "safe drinking water not available in my village",
+      "jal jeevan mission connection applied but not given"
     ]
   },
   {
@@ -5144,6 +6308,18 @@
     "helplines": [
       "National Consumer Helpline: 1915",
       "Cyber Fraud Helpline: 1930"
+    ],
+    "descriptions": [
+      "paid for online course but access was revoked",
+      "online course ka paisa diya par course band kar diya",
+      "coaching institute closed and money not refunded",
+      "ed-tech platform not refunding after cancellation",
+      "fake online skill course with certificate",
+      "online tuition fee paid but teacher stopped attending",
+      "subscription cancelled but no refund",
+      "online university degree fraud",
+      "digital course platform disappeared after payment",
+      "refund denied despite valid cancellation request"
     ]
   },
   {
@@ -5190,6 +6366,18 @@
     ],
     "helplines": [
       "National Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "my parcel was lost by courier company",
+      "courier wale ne mera parcel kho diya",
+      "package delivered damaged",
+      "courier not delivering despite showing delivered",
+      "mera saamaan aaya nahi par status delivered dikhata hai",
+      "important documents lost in transit",
+      "parcel opened and items stolen by courier",
+      "courier company not responding to complaint",
+      "delivery attempted but I was not informed",
+      "expensive item damaged during courier delivery"
     ]
   },
   {
@@ -5232,6 +6420,18 @@
     ],
     "helplines": [
       "Police Emergency: 112"
+    ],
+    "descriptions": [
+      "thieves broke into my home at night",
+      "raat ko chor ghar mein ghus gaye",
+      "house burglary while we were away",
+      "lock broken and valuables stolen",
+      "robbers entered through back door",
+      "cash and jewellery stolen from home",
+      "house ransacked by unknown persons",
+      "serial thefts happening in our colony",
+      "flat robbed while neighbours watched",
+      "break-in complaint for stolen gold"
     ]
   },
   {
@@ -5275,6 +6475,18 @@
     ],
     "helplines": [
       "Police Emergency: 112"
+    ],
+    "descriptions": [
+      "my bike was stolen from outside my house",
+      "meri gaadi chori ho gayi",
+      "car stolen from parking lot",
+      "two-wheeler stolen from market",
+      "auto-rickshaw stolen from stand",
+      "vehicle keys snatched and car taken",
+      "tractors stolen from field",
+      "vehicle theft despite lock and alarm",
+      "number plate changed after theft",
+      "cycle stolen from school"
     ]
   },
   {
@@ -5333,6 +6545,18 @@
       "Police Emergency: 112",
       "NHRC: 14433",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "my brother was killed and police is not acting",
+      "mera bhai maar diya gaya aur police kuch nahi kar rahi",
+      "suspicious death of family member",
+      "death after fight being called accident",
+      "I suspect my relative was murdered",
+      "body found and family demanding investigation",
+      "case being covered up by local influence",
+      "death in police custody suspected murder",
+      "dowry death complaint",
+      "honour killing of my child, need justice"
     ]
   },
   {
@@ -5378,6 +6602,18 @@
     "helplines": [
       "Police Emergency: 112",
       "SP Office: Local number"
+    ],
+    "descriptions": [
+      "my neighbour has an illegal gun",
+      "padosi ke paas aaadhi topi hai",
+      "local goon carrying unlicensed weapon",
+      "illegal firearms being sold in my area",
+      "threat made with illegal weapon",
+      "knife used in attack, complaint needed",
+      "weapons seen at a local gathering",
+      "country-made pistol seen with local youth",
+      "arms being stored illegally in warehouse",
+      "firearms without license spotted"
     ]
   },
   {
@@ -5428,6 +6664,18 @@
       "Police: 112",
       "NCB: 1800-180-4949",
       "Excise: (State specific)"
+    ],
+    "descriptions": [
+      "alcohol being sold illegally near my home",
+      "ghar ke paas sharab ki adda chal rahi hai",
+      "drugs being sold outside school",
+      "country liquor sold at home brewery",
+      "narcotics found being sold by known person",
+      "teenagers buying drugs in my area",
+      "illegal alcohol making factory spotted",
+      "bootlegging near my shop",
+      "illegal drug peddler operating openly",
+      "my child exposed to drug activity in neighbourhood"
     ]
   },
   {
@@ -5480,6 +6728,18 @@
       "Police Emergency: 112",
       "Childline: 1098",
       "Women Helpline: 1091"
+    ],
+    "descriptions": [
+      "my son was taken forcefully from the street",
+      "mera beta pakad ke le gaye",
+      "woman abducted by unknown people",
+      "child not returned after visiting relative",
+      "person taken hostage for ransom",
+      "wife taken away by her family forcibly",
+      "student missing after abduction threat received",
+      "abduction complaint not being investigated",
+      "businessman kidnapped for ransom",
+      "young girl abducted from village"
     ]
   },
   {
@@ -5532,6 +6792,18 @@
       "Women Helpline: 1091",
       "Police Emergency: 112",
       "NCW: 7827-170-170"
+    ],
+    "descriptions": [
+      "men are troubling women on the street near my area",
+      "ladki ko raaste mein chedh rahe hain",
+      "molestation in public transport",
+      "workplace harassment of sexual nature",
+      "stalker following girl home from college",
+      "indecent act against woman in public place",
+      "bus conductor misbehaved with woman passenger",
+      "eve-teasing outside school and college",
+      "public indecency complaint",
+      "woman harassed in market"
     ]
   },
   {
@@ -5571,6 +6843,18 @@
     ],
     "helplines": [
       "Police: 112"
+    ],
+    "descriptions": [
+      "illegal gambling adda is running in my area",
+      "cricket betting chal rahi hai paas mein",
+      "card gambling near children's school",
+      "betting den operating behind closed doors",
+      "satta bazaar complaint",
+      "police protected gambling den in locality",
+      "illegal lottery ticket selling",
+      "online gambling fraud complaint",
+      "sports betting money lost and operator ran away",
+      "gambling causing social harm in my area"
     ]
   },
   {
@@ -5618,6 +6902,18 @@
     "helplines": [
       "RBI Ombudsman: 14448",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "bank refused to open Jan Dhan account",
+      "Jan Dhan khata nahi khol rahe bank mein",
+      "bank asking for too many documents for basic account",
+      "zero balance account application rejected",
+      "bank staff behaving rudely with poor customer",
+      "Aadhaar and ration card given but bank still refused",
+      "PMJDY account not opened despite eligibility",
+      "account opening under RBI basic savings account denied",
+      "bank not opening no-frills account",
+      "bank refusing because I have no income proof"
     ]
   },
   {
@@ -5669,6 +6965,18 @@
     "helplines": [
       "PM-KISAN Helpline: 155261 / 1800-115-526",
       "Kisan Call Centre: 1800-180-1551"
+    ],
+    "descriptions": [
+      "PM-KISAN ka ₹2000 nahi aaya",
+      "PM Kisan installment not credited",
+      "my name in PM Kisan list but payment missing",
+      "bank account linked but no PM Kisan payment",
+      "farmer scheme payment rejected due to mismatch",
+      "PM Kisan e-KYC done but payment stuck",
+      "lekhpal ne wrong account number diya",
+      "PM Kisan beneficiary but installment stopped",
+      "land records mismatch causing PM Kisan failure",
+      "Kisan Credit Card related PM Kisan complaint"
     ]
   },
   {
@@ -5724,6 +7032,18 @@
     "helplines": [
       "Disability Helpline: 1800-11-4515",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "disability certificate not given despite my condition",
+      "divyang praman patra nahi mila",
+      "my disability percentage shown as less than actual",
+      "UDID card application rejected",
+      "district hospital not issuing disability certificate",
+      "wrong disability category entered in certificate",
+      "my application for handicapped certificate stuck",
+      "disability certificate required for job but not issued",
+      "PWD certificate delay causing me to lose benefits",
+      "reassessment of disability percentage demanded"
     ]
   },
   {
@@ -5771,6 +7091,18 @@
     "helplines": [
       "CPGRAMS: 1800-11-3366",
       "Revenue Helpline: 1800-120-8040"
+    ],
+    "descriptions": [
+      "income certificate not made despite repeated visits",
+      "aay praman patra nahi ban raha",
+      "EWS income certificate for admission not given",
+      "tehsildar office not issuing income proof",
+      "income certificate needed for scholarship but delayed",
+      "officer saying come back tomorrow repeatedly",
+      "income certificate application rejected wrongly",
+      "financial hardship but certificate office demanding fees",
+      "domicile and income certificate both pending",
+      "meri aay ka praman nahi de rahe adhikari"
     ]
   },
   {
@@ -5819,6 +7151,18 @@
     "helplines": [
       "Anti-Corruption Helpline: 1064",
       "CVC: 011-24600200"
+    ],
+    "descriptions": [
+      "government officer demanded bribe for my work",
+      "sarkari babu ne rishwat maangi",
+      "official not doing work without payment",
+      "clerk at government office asking for extra money",
+      "bribe demanded for issuing certificate",
+      "sarpanch taking cut from scheme payments",
+      "police demanding hafta",
+      "government officer threatening to delay work",
+      "corruption complaint against block level officer",
+      "I want to report bribery at government office"
     ]
   },
   {
@@ -5871,6 +7215,18 @@
     "helplines": [
       "ECI Helpline: 1950",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "my name is not in the voter list",
+      "voter list mein mera naam nahi hai",
+      "voter ID card applied but not received",
+      "name deleted from electoral roll without reason",
+      "my address is wrong on voter ID",
+      "photo mismatch on voter ID card",
+      "voter ID not updated after address change",
+      "election card number wrong",
+      "new voter registration rejected",
+      "EPIC card not issued despite form submission"
     ]
   },
   {
@@ -5923,6 +7279,18 @@
       "NCPCR: 1800-121-2830",
       "Childline: 1098",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "anganwadi centre not giving food to children",
+      "anganwadi mein khana nahi milta",
+      "mid-day meal quality is very poor",
+      "anganwadi worker not coming to centre",
+      "children not getting nutrition supplements",
+      "anganwadi centre closed without notice",
+      "mid-day meal scheme money being pocketed",
+      "pregnant women not getting anganwadi benefits",
+      "poshan abhiyan mein ghotala ho raha hai",
+      "anganwadi centre mein sab theek nahi hai"
     ]
   },
   {
@@ -5975,6 +7343,18 @@
       "IOCL: 1800-233-3555",
       "HPCL: 1800-233-3555",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "Ujjwala Yojana ke liye apply kiya par gas nahi mila",
+      "BPL family eligible for free gas connection but denied",
+      "Ujjwala connection pending for 6 months",
+      "gas agency not giving Ujjwala connection",
+      "Ujjwala application rejected without valid reason",
+      "free LPG connection for poor family not given",
+      "documents submitted but no response from gas agency",
+      "distributor giving priority to paid customers",
+      "PM Ujjwala Yojana me naam hai par connection nahi mila",
+      "poor woman denied free cooking gas"
     ]
   },
   {
@@ -6022,6 +7402,18 @@
     "helplines": [
       "Municipal Helpline: (City-specific)",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "rented house has no proper roof and water leaks",
+      "ghar mein chhat tutee hui hai",
+      "landlord not repairing broken toilet and water supply",
+      "mold and dampness making rented house unliveable",
+      "electrical wiring dangerous but landlord not fixing",
+      "no proper ventilation in rented room",
+      "drainage blocked for months and landlord not acting",
+      "rented accommodation not fit for living",
+      "landlord deducting rent but not maintaining property",
+      "poor sanitation in rented house"
     ]
   },
   {
@@ -6069,6 +7461,18 @@
     "helplines": [
       "Police: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "shop owner is evicting me without valid reason",
+      "dukaan se bina wajah nikaala ja raha hai",
+      "commercial lease terminated illegally",
+      "rent control protection denied for commercial tenant",
+      "landlord trying to evict long-running business tenant",
+      "shopkeeper eviction during lease period",
+      "commercial eviction without court order",
+      "restaurant evicted by landlord midway through lease",
+      "office space owner terminating contract illegally",
+      "godown eviction without proper notice"
     ]
   },
   {
@@ -6109,6 +7513,18 @@
     ],
     "helplines": [
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "tenant has given my flat to another person without permission",
+      "kirayedaar ne mera ghar kisi aur ko de diya",
+      "sub-letting without landlord's consent",
+      "unauthorized person living in my property",
+      "tenant running PG in my flat illegally",
+      "tenant sharing flat with strangers",
+      "landlord unaware tenant had sub-let premises",
+      "paying guest arrangement in rented flat without permission",
+      "tenant converted residential flat into commercial space",
+      "unauthorized transfer of tenancy rights"
     ]
   },
   {
@@ -6159,6 +7575,18 @@
     "helplines": [
       "Police: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "landlord has cut electricity to force me to leave",
+      "maalik ne bijli band kar di mujhe nikaalne ke liye",
+      "water supply stopped by landlord to harass tenant",
+      "gas connection disconnected by landlord illegally",
+      "essential services cut as eviction pressure tactic",
+      "landlord sabotaging utilities to vacate tenant",
+      "internet and electricity stopped by owner",
+      "lift access denied by landlord",
+      "common area access blocked by landlord",
+      "mujhe pareshan karne ke liye maalik ne paani band kar diya"
     ]
   },
   {
@@ -6199,6 +7627,18 @@
     ],
     "helplines": [
       "Income Tax: 1800-103-0025"
+    ],
+    "descriptions": [
+      "landlord refusing to give rent receipt for HRA",
+      "maalik rent receipt nahi de raha",
+      "rent agreement not given by landlord",
+      "landlord unwilling to show rental income in documents",
+      "tenant not getting proper rent receipts for tax",
+      "stamp paper rent agreement not made",
+      "landlord avoiding giving official receipt",
+      "HRA claim rejected due to missing rent proof",
+      "landlord asking cash but not giving acknowledgment",
+      "tax department questioning rent receipts"
     ]
   },
   {
@@ -6241,6 +7681,18 @@
     "helplines": [
       "DLSA: 15100",
       "Police: 112"
+    ],
+    "descriptions": [
+      "my tenant left without paying last month rent",
+      "kirayedaar bina bataye bhaag gaya",
+      "tenant fled with pending bills unpaid",
+      "abandoned tenant left property damaged",
+      "notice not served before vacating by tenant",
+      "tenant gone without returning keys",
+      "rent agreement broken by tenant abruptly",
+      "tenant left electricity and water bills unpaid",
+      "commercial tenant abandoned premises mid-lease",
+      "PG occupant left without notice or dues payment"
     ]
   },
   {
@@ -6293,6 +7745,18 @@
       "NDMA: 1078",
       "NGT: 011-23072990",
       "Police: 112"
+    ],
+    "descriptions": [
+      "someone has built on river bed land",
+      "nadi ki zameen par ghar bana liya",
+      "construction on floodplain endangering residents",
+      "riverbed being encroached for farming",
+      "government allowed construction in flood zone",
+      "illegal settlement on river bank",
+      "embankment occupied by private persons",
+      "flood damage due to riverbed encroachment",
+      "complaint about construction near dam",
+      "nadi ka baadhit ilaqa occupied kar liya"
     ]
   },
   {
@@ -6345,6 +7809,18 @@
       "NGT: 011-23072990",
       "Forest Helpline: (State specific)",
       "Police: 112"
+    ],
+    "descriptions": [
+      "builder cut trees on my road without permission",
+      "bina permission ke ped kaat diye",
+      "illegal tree felling for construction",
+      "trees cut in forest area by contractor",
+      "protected trees removed without authority",
+      "urban trees cut in night by municipality",
+      "deforestation in reserved area",
+      "forest officer not stopping illegal cutting",
+      "trees in protected zone being removed",
+      "complaint about unauthorized felling of trees"
     ]
   },
   {
@@ -6398,6 +7874,18 @@
       "CPCB: 011-43102030",
       "NGT: 011-23072990",
       "State PCB: (State specific)"
+    ],
+    "descriptions": [
+      "factory is dumping waste near our homes",
+      "factory wale hamare paas kachra phenk rahe hain",
+      "industrial effluent flowing into open drain",
+      "chemical waste dump near school",
+      "hazardous waste disposal without license",
+      "air pollution from factory smoke",
+      "factory waste burning at night",
+      "groundwater contaminated by factory waste",
+      "plastic factory dumping illegally",
+      "PCPCB complaint for industrial waste"
     ]
   },
   {
@@ -6449,6 +7937,18 @@
       "Municipal Helpline: (City-specific)",
       "Police: 112 (for accidents)",
       "Animal Welfare Board: (State specific)"
+    ],
+    "descriptions": [
+      "stray dogs are biting children in my area",
+      "awara kutte logon ko kaat rahe hain",
+      "cattle on main road causing accidents",
+      "municipality not catching stray dogs",
+      "loose cattle destroying crops",
+      "wild animal menace in village",
+      "stray pigs in residential area",
+      "stray cattle sitting on highway",
+      "dogs attacked my child, need action",
+      "awara pashu ki shikayat"
     ]
   },
   {
@@ -6502,6 +8002,18 @@
       "NGT: 011-23072990",
       "Police: 112",
       "State Mines Dept: (State specific)"
+    ],
+    "descriptions": [
+      "illegal stone quarrying happening in my village",
+      "bina permission ke pathar ki khudai ho rahi hai",
+      "mining blast damaging our houses",
+      "unauthorized quarry polluting the area",
+      "mining without environment clearance",
+      "illegal quarrying complaint",
+      "dust from quarry causing respiratory issues",
+      "vibration from blasting cracking our walls",
+      "mining in prohibited zone",
+      "stone crusher operating without license near homes"
     ]
   },
   {
@@ -6554,6 +8066,18 @@
       "CPCB: 011-43102030",
       "Kisan Call Centre: 1800-180-1551",
       "Police: 112"
+    ],
+    "descriptions": [
+      "farmer is burning crop waste near our village",
+      "kisan parali jala raha hai aur dhuan aa raha hai",
+      "stubble burning causing air pollution",
+      "open burning near residential area",
+      "fire from burning waste threatening homes",
+      "garbage being burnt on road",
+      "industrial open burning complaint",
+      "village burning crop residue despite ban",
+      "smoke from burning choking residents",
+      "NGT complaint about open burning"
     ]
   },
   {
@@ -6600,6 +8124,18 @@
       "Municipal Helpline: (City-specific)",
       "CPGRAMS: 1800-11-3366",
       "Police: 112 (for accidents)"
+    ],
+    "descriptions": [
+      "street lights in my area have not worked for months",
+      "hamare mohalle mein street lights kharab hain",
+      "road potholes causing accidents",
+      "broken footpath not repaired for years",
+      "public toilet in bad condition",
+      "drainage system overflowing",
+      "municipality not maintaining public park",
+      "overhead bridge dangerous and needs repair",
+      "public water tap broken",
+      "sarkari suvidhaayein kharab hain"
     ]
   },
   {
@@ -6654,6 +8190,18 @@
       "Senior Citizen Helpline: 14567",
       "Pension Department: 1800-11-1960",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "retired after 30 years but pension not started",
+      "retirement ke baad pension nahi aayi",
+      "pension papers submitted but no payment",
+      "provident fund and pension both stuck",
+      "pension account not opened after retirement",
+      "CPF/GPF not settled after retirement",
+      "pension calculation done wrong",
+      "state government pension delayed",
+      "pension not given to widow after husband's death",
+      "EPS pension from EPFO not started"
     ]
   },
   {
@@ -6700,6 +8248,18 @@
       "Senior Citizen Helpline: 14567",
       "Police: 112",
       "Childline: 1098"
+    ],
+    "descriptions": [
+      "my old father is lost and cannot find way back",
+      "mera bujurg baap rasta bhool gaye hain",
+      "senior citizen stranded at railway station",
+      "dementia patient wandered away from home",
+      "elderly person lost in city, needs help",
+      "old lady stranded without money or phone",
+      "mentally ill elderly person found on street",
+      "senior citizen needs rescue and transport home",
+      "stranded elderly person at hospital",
+      "bujurg ko ghar pahunchane mein madad chahiye"
     ]
   },
   {
@@ -6757,6 +8317,18 @@
       "Senior Citizen Helpline: 14567",
       "NHRC: 14433",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "my parents are being kept locked in a room by relatives",
+      "maa baap ko relatives ne band kar rakha hai",
+      "elderly person confined by family against will",
+      "senior citizen not allowed to leave home",
+      "old person being held to control property",
+      "family locking up elderly to take their assets",
+      "wrongful confinement of senior citizen",
+      "old person saying please help me get out",
+      "bujurg ko qaidi banake rakha gaya hai",
+      "habeas corpus needed for senior citizen trapped at home"
     ]
   },
   {
@@ -6811,6 +8383,18 @@
       "Senior Citizen Helpline: 14567",
       "Police: 112",
       "National Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "old age home is not treating residents well",
+      "wridhaashram mein budhon ke saath bura bartav ho raha hai",
+      "nursing home overcharging for poor services",
+      "elderly resident being abused in care facility",
+      "old age home promising care but not delivering",
+      "private nursing home fraud complaint",
+      "senior citizen home conditions very unhygienic",
+      "facility not providing medication to residents",
+      "complaint against old age home staff",
+      "nursing home refusing to allow family visits"
     ]
   },
   {
@@ -6863,6 +8447,18 @@
       "Senior Citizen Helpline: 14567",
       "Police: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "a religious group is taking money from my old parents",
+      "mandir ke naam par bujurg se paisa le rahe hain",
+      "fake baba taking advantage of elderly person",
+      "godman cheating senior citizen",
+      "charity fraud targeting old people",
+      "religious trust cheating elderly devotees",
+      "fake ashram exploiting senior citizen",
+      "bujurg ne aashram mein sab kuch de diya dhoka khaake",
+      "senior citizen donating life savings to fraud charity",
+      "religious fraud complaint"
     ]
   },
   {
@@ -6911,6 +8507,18 @@
       "Senior Citizen Helpline: 14567",
       "Labour Helpline: 1800-180-1961",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "I was asked to retire early due to age",
+      "umer ki wajah se naukri se hataya ja raha hoon",
+      "senior employee denied promotion due to age",
+      "company has informal age bar for older employees",
+      "terminated after being replaced by younger person",
+      "age discrimination at workplace complaint",
+      "old employee denied training due to age",
+      "performance targets set to ease out older worker",
+      "retirement age being enforced before legal age",
+      "employee harassed to resign because of age"
     ]
   },
   {
@@ -6964,6 +8572,18 @@
       "Senior Citizen: 14567",
       "TRAI: 1800-110-420",
       "Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "unknown person called my parents and took money",
+      "phone pe aake mere bujurg baap se paisa le gaye",
+      "telemarketer selling fake health product to elderly",
+      "my old mother gave her bank details on a call",
+      "scam call promising prize to elderly person",
+      "insurance sold by phone to old person under false terms",
+      "fake medicine offer call to senior citizen",
+      "elderly person cheated by telemarketing fraud",
+      "old person pressured into buying useless scheme",
+      "bujurg ko phone pe thag liya"
     ]
   },
   {
@@ -7022,6 +8642,18 @@
       "Women Helpline: 1091",
       "NCW: 7827-170-170",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "my family is threatening to kill me for marrying by choice",
+      "apni marzi se shaadi ki aur ghar wale maar denge keh rahe hain",
+      "inter-caste marriage and family threatening violence",
+      "honour killing threat after love marriage",
+      "meri jan ko khatra hai ghar walo se",
+      "girl threatened with death for refusing family's marriage choice",
+      "couple fearing attack from girl's family",
+      "khap panchayat threatening couple for inter-caste marriage",
+      "I have left home fearing my family will harm me",
+      "threat to life due to inter-religious relationship"
     ]
   },
   {
@@ -7080,6 +8712,18 @@
       "Police: 112",
       "DLSA: 15100",
       "One Stop Centre: 181"
+    ],
+    "descriptions": [
+      "in-laws not returning my jewellery",
+      "sasuraal wale mera zewar nahi de rahe",
+      "stridhan taken by husband's family and not returned",
+      "gold ornaments brought at marriage kept by in-laws",
+      "mera dahej ka saman wapas nahi kar rahe",
+      "jewellery gifted at wedding not returned after separation",
+      "in-laws sold my jewellery without consent",
+      "stridhan recovery complaint after divorce",
+      "maa baap ne jo diya tha wo sasuraal walo ne rakh liya",
+      "wife's personal property retained by husband's family"
     ]
   },
   {
@@ -7139,6 +8783,18 @@
       "Childline: 1098",
       "MEA: 1800-11-8797",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "ex-husband took children abroad without my permission",
+      "pati bacche leke videsh chala gaya",
+      "child taken by spouse to another country illegally",
+      "parent abducted child and went to another state",
+      "meri beti ko dusre desh le gaya aur wapas nahi laa raha",
+      "international parental child abduction",
+      "spouse left India with children violating custody order",
+      "child kidnapped by father and taken out of state",
+      "custody order violated by father who went abroad",
+      "mother not allowing father to see child"
     ]
   },
   {
@@ -7199,6 +8855,18 @@
       "Women Helpline: 1091",
       "DLSA: 15100",
       "NCW: 7827-170-170"
+    ],
+    "descriptions": [
+      "husband constantly insults me and my family",
+      "pati roz gaaliyan deta hai",
+      "mental harassment by spouse causing depression",
+      "constant verbal abuse and humiliation at home",
+      "mujhe crazy bolta hai, sabke saamne insult karta hai",
+      "psychological torture by husband making life miserable",
+      "emotional abuse from spouse without physical violence",
+      "wife making false allegations and harassing mentally",
+      "husband denying me food and basic needs",
+      "mental cruelty grounds for divorce"
     ]
   },
   {
@@ -7245,6 +8913,18 @@
     ],
     "helplines": [
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "brothers not giving me my share of inherited shop",
+      "pitaji ki dukaan mein hissa nahi de rahe bhai",
+      "commercial property not divided after parent's death",
+      "inherited shop being run by one sibling without sharing profits",
+      "dukaan mein mera hissa maang raha hoon par dete nahi",
+      "commercial property succession dispute",
+      "sibling running family business without sharing income",
+      "shop owned by late father being claimed by all children",
+      "inherited godown dispute between family members",
+      "family shop succession conflict after owner's death"
     ]
   },
   {
@@ -7291,6 +8971,18 @@
     "helplines": [
       "Police: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "someone used forged power of attorney to sell my land",
+      "meri zameen farzi power of attorney se bech di",
+      "property sold using fake PoA document",
+      "forged signature on power of attorney for property sale",
+      "meri jaankari ke bina farzi PoA banaya aur property bech di",
+      "fraudulent power of attorney used for land transfer",
+      "relative misused genuine PoA to sell property",
+      "PoA holder sold property beyond authorized scope",
+      "zameen ka farzi ikaraarnama banaya",
+      "power of attorney cancelled but property still sold"
     ]
   },
   {
@@ -7337,6 +9029,18 @@
     "helplines": [
       "Municipal Helpline: (City-specific)",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "neighbour built high wall blocking sunlight to my home",
+      "padosi ne aisi building banai ki mujhe roshni nahi aati",
+      "illegal construction reducing air and light to my house",
+      "neighbour's construction violating building bylaws",
+      "mera ghar andhera ho gaya padosi ke construction se",
+      "building constructed too close blocking ventilation",
+      "setback rules violated in neighbour's construction",
+      "FSI norms broken by neighbour's illegal structure",
+      "window blocked by neighbour's illegal extension",
+      "insufficient gap left between buildings causing dispute"
     ]
   },
   {
@@ -7382,6 +9086,18 @@
     ],
     "helplines": [
       "Revenue Helpline: 1800-120-8040"
+    ],
+    "descriptions": [
+      "two villages fighting over boundary land",
+      "do gaon ke beech zameen ka jhagda",
+      "gram panchayat boundary dispute with neighbouring panchayat",
+      "common land between two villages being contested",
+      "village boundary not clearly demarcated causing conflict",
+      "gaon ki seema ko lekar talathi se shikayat",
+      "inter-village land dispute pending for years",
+      "revenue record conflict between two village maps",
+      "do panchayaton ke beech zameen ka vivad",
+      "two village panchayats claiming same agricultural land"
     ]
   },
   {
@@ -7421,6 +9137,18 @@
     ],
     "helplines": [
       "Revenue Helpline: 1800-120-8040"
+    ],
+    "descriptions": [
+      "person holding land more than legal urban ceiling limit",
+      "sheher mein kisi ke paas tay seema se zyada zameen hai",
+      "urban land ceiling act violation by builder",
+      "excess urban land not surrendered to government",
+      "city property being held beyond allowed limit",
+      "ULCA violation complaint against landowner",
+      "surplus land not deposited with government",
+      "illegal land holding exceeding urban ceiling norms",
+      "builder holding excess plots in city against law",
+      "large urban landholding in violation of ceiling law"
     ]
   },
   {
@@ -7470,6 +9198,18 @@
     "helplines": [
       "Revenue Helpline: 1800-120-8040",
       "National Minority Commission: 011-23388925"
+    ],
+    "descriptions": [
+      "our community graveyard land is being grabbed",
+      "qabristan ki zameen par kabza ho raha hai",
+      "burial ground encroached by private builder",
+      "graveyard land transferred to private party illegally",
+      "smashan bhoomi par kabza hai",
+      "cemetery land sold without community consent",
+      "access to graveyard blocked by neighbour",
+      "qabristan tak jaane ka rasta rok diya",
+      "burial ground land record changed",
+      "community cremation ground encroached by outsider"
     ]
   },
   {
@@ -7511,6 +9251,18 @@
     "helplines": [
       "Income Tax: 1800-103-0025",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "company deducting TDS from salary but not depositing with government",
+      "Form 16 nahi mila company se",
+      "employer not giving TDS certificate",
+      "salary TDS deducted but not shown in income tax records",
+      "meri salary se tax kaat ke company ne sarkar ko nahi diya",
+      "income tax return problem due to employer not depositing TDS",
+      "Form 26AS does not show my salary TDS",
+      "company not filing TDS returns",
+      "I got tax demand notice due to employer's TDS default",
+      "employer nahi de raha Form 16"
     ]
   },
   {
@@ -7552,6 +9304,18 @@
     ],
     "helplines": [
       "Labour Helpline: 1800-180-1961"
+    ],
+    "descriptions": [
+      "company refused to give me paternity leave after baby's birth",
+      "bacha hua par paternity leave nahi di company ne",
+      "government employee paternity leave application rejected",
+      "Central service rules paternity leave denied",
+      "naye baap ko chutti nahi mili",
+      "paternity leave benefit denied citing company policy",
+      "paternity leave not counted in CCS leave rules",
+      "male employee denied leave for newborn care",
+      "HR not aware of paternity leave entitlement",
+      "employee forced to take earned leave instead of paternity leave"
     ]
   },
   {
@@ -7594,6 +9358,18 @@
     "helplines": [
       "Labour Helpline: 1800-180-1961",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "suddenly told not to come to office from tomorrow",
+      "achanak naukri band kar di",
+      "retrenched without giving one month notice",
+      "no retrenchment compensation paid",
+      "company ke band hone par hum logo ko kuch nahi mila",
+      "laid off without following Industrial Disputes Act",
+      "closure of factory without notifying workers",
+      "mass termination without compensation",
+      "retrenched after 10 years, not given gratuity or settlement",
+      "factory shutting down, workers getting nothing"
     ]
   },
   {
@@ -7644,6 +9420,18 @@
       "Childline: 1098",
       "Police: 112",
       "NCPCR: 1800-121-2830"
+    ],
+    "descriptions": [
+      "I saw a child working in a factory near me",
+      "paas ki factory mein ek bachcha kaam karta tha",
+      "minor working in chemical industry",
+      "child under 14 employed as domestic servant",
+      "local workshop mein chhota bachcha dekhaa kaam karte",
+      "child labour complaint against hotel or dhaba",
+      "minor found working in crackers factory",
+      "child made to do heavy work at construction site",
+      "small children doing stitching work at home",
+      "child found working in dangerous conditions"
     ]
   },
   {
@@ -7685,6 +9473,18 @@
     "helplines": [
       "Labour Helpline: 1800-180-1961",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "I do stitching at home and contractor does not pay properly",
+      "ghar pe beads ka kaam karta hoon par paise kam milte hain",
+      "piece-rate work done but payment incomplete",
+      "home-based worker not paid minimum wage",
+      "contractor reducing piece rate without informing",
+      "agarbatti/bidi workers not getting minimum wages",
+      "piecework rate cut without any notice",
+      "home worker wages less than agreed amount",
+      "subcontractor not paying agreed rate per piece",
+      "ghar se kaam karne wali mahila ko puri mazdoori nahi mili"
     ]
   },
   {
@@ -7731,6 +9531,18 @@
       "Cyber Fraud: 1930",
       "Police: 112",
       "NCW: 7827-170-170"
+    ],
+    "descriptions": [
+      "someone made fake video of me and is threatening to post it",
+      "meri photo use karke fake video banaya",
+      "morphed image being used to blackmail me",
+      "AI generated fake intimate video demand for money",
+      "deepfake photo shared to defame me",
+      "blackmailer using my photos with fake backgrounds",
+      "someone using AI to create fake content of me",
+      "fake video sent to my family to embarrass me",
+      "morphed image blackmail complaint",
+      "deepfake content used for online extortion"
     ]
   },
   {
@@ -7776,6 +9588,18 @@
       "Cyber Fraud: 1930",
       "RBI: 14448",
       "Police: 112"
+    ],
+    "descriptions": [
+      "scanned QR code and money was deducted from account",
+      "QR code scan kiya aur account se paisa gaya",
+      "fake QR code given for payment collection",
+      "merchant replaced original QR code with fraud one",
+      "sent QR code to receive money but money got deducted",
+      "QR code scan fraud complaint",
+      "scan to pay fraud at market",
+      "WhatsApp QR code scan led to account compromise",
+      "QR code payment fraud at petrol pump",
+      "someone pasted fake QR on original payment code"
     ]
   },
   {
@@ -7823,6 +9647,18 @@
       "CERT-In: 1800-11-4949",
       "Cyber Fraud: 1930",
       "UIDAI: 1947"
+    ],
+    "descriptions": [
+      "my bank account details are being sold on dark web",
+      "mera data dark web par bech diya gaya",
+      "personal information found on dark web",
+      "credit card details stolen and listed for sale",
+      "data breach resulted in identity theft",
+      "my email and password found in dark web leak",
+      "health data sold on dark web",
+      "corporate data breach exposing customer information",
+      "Aadhaar number found on suspicious website",
+      "data sold by insider to dark web"
     ]
   },
   {
@@ -7862,6 +9698,18 @@
     "helplines": [
       "Cyber Fraud: 1930",
       "Police: 112"
+    ],
+    "descriptions": [
+      "someone using my friend's WhatsApp photo sent me message asking for money",
+      "WhatsApp par dost ban ke paisa maanga",
+      "fake WhatsApp account of senior officer asking for gift cards",
+      "Telegram group fraud with fake admin",
+      "WhatsApp impersonation complaint",
+      "someone cloned my WhatsApp and messaged my contacts",
+      "group admin impersonation on Telegram for investment fraud",
+      "WhatsApp message from fake police officer",
+      "fake army officer account on WhatsApp asking for money",
+      "impersonation of family member on messaging app"
     ]
   },
   {
@@ -7904,6 +9752,18 @@
     "helplines": [
       "Cyber Fraud: 1930",
       "Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "paid advance rent for flat that did not exist",
+      "kiraya diya online par ghar khali tha hi nahi",
+      "fake property listing on housing portal",
+      "I was cheated by an online flat listing agent",
+      "advance liya aur property dekhne hi nahi diya",
+      "online rental fraud complaint",
+      "property shown on app did not match real flat",
+      "fake landlord on OLX took security deposit",
+      "PG accommodation scam",
+      "ghar kiraaye ke naam pe online thagi"
     ]
   },
   {
@@ -7941,6 +9801,18 @@
     ],
     "helplines": [
       "National Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "gym closed down and did not refund my annual membership",
+      "gym band ho gayi aur paisa wapas nahi diya",
+      "gym taking money monthly but services not given",
+      "personal trainer fees paid but trainer not available",
+      "gym owner refusing to cancel membership",
+      "yoga center refund refused after closure",
+      "sports club advance payment not refunded",
+      "fitness app subscription cancelled but money not returned",
+      "gym charging for months after I asked to stop",
+      "gym membership fraud complaint"
     ]
   },
   {
@@ -7989,6 +9861,18 @@
     "helplines": [
       "National Consumer Helpline: 1915",
       "NHA: 14555"
+    ],
+    "descriptions": [
+      "hospital charged much more than estimate",
+      "hospital ne bahut zyada bill diya",
+      "overcharged by private hospital for simple treatment",
+      "insurance covered treatment but hospital asking cash",
+      "duplicate charges in hospital bill",
+      "hospital charging for medicines not given",
+      "ICU charges inflated in final bill",
+      "hospital holding patient for more payment",
+      "hospital not following CGHS rates",
+      "ayushman bharat card not accepted by empanelled hospital"
     ]
   },
   {
@@ -8031,6 +9915,18 @@
     ],
     "helplines": [
       "National Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "builder took money but did not build swimming pool as promised",
+      "builder ne flat mein jo suvidhaayein batai thi wo nahi di",
+      "flat delivered without club house",
+      "parking space not given despite paying extra",
+      "gym and park promised but not built",
+      "flat possession delayed and amenities incomplete",
+      "RERA complaint against builder",
+      "construction quality very poor compared to brochure",
+      "builder selling same flat twice",
+      "builder not providing occupancy certificate"
     ]
   },
   {
@@ -8075,6 +9971,18 @@
     "helplines": [
       "Police: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "local moneylender is charging 5% interest per month",
+      "sahukar bahut zyada byaaj le raha hai",
+      "microfinance company charging illegal rates",
+      "moneylender taking 60% annual interest",
+      "loan taken from local person and interest keeps increasing",
+      "borrowed money but being forced to pay triple",
+      "sahukar ne zameen ki registry maang li byaaj mein",
+      "moneylender harassing family for repayment",
+      "usurious interest rate from village moneylender",
+      "informal loan shark complaint"
     ]
   },
   {
@@ -8122,6 +10030,18 @@
       "IRCTC: 14646",
       "DGCA: 1800-11-1327",
       "Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "flight cancelled by airline but refund not given",
+      "flight cancel hua par paisa wapas nahi aaya",
+      "train ticket refund not credited",
+      "IRCTC refund not received after cancellation",
+      "airline refund pending for 3 months",
+      "flight delayed and I cancelled but no refund",
+      "airline not accepting refund request",
+      "bus ticket refund denied",
+      "travel agency took money for ticket that was never issued",
+      "refund amount deducted more than policy allows"
     ]
   },
   {
@@ -8166,6 +10086,18 @@
     "helplines": [
       "Police Emergency: 112",
       "Traffic Police: 1095"
+    ],
+    "descriptions": [
+      "driver attacked me after a minor car accident",
+      "accident ke baad gaadiwaale ne mujhe maara",
+      "aggressive driver blocked my vehicle on highway",
+      "I was beaten by another driver on the road",
+      "road rage attack by motorcyclist",
+      "threatening behaviour after vehicle collision",
+      "man attacked me with rod after road dispute",
+      "traffic altercation turned violent",
+      "driver damaged my car and fled",
+      "highway road rage complaint"
     ]
   },
   {
@@ -8220,6 +10152,18 @@
       "NCSC: 011-23386649",
       "Police: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "upper caste people are harassing our SC community",
+      "humein hamare jaati ke karan pareshan kiya ja raha hai",
+      "SC/ST Atrocities Act complaint needed",
+      "Dalit family attacked over caste issue",
+      "untouchability being practiced in village",
+      "caste discrimination in public place",
+      "temple entry denied to lower caste people",
+      "SC family denied water from village well",
+      "land grabbed from Dalit family by upper caste",
+      "casteist slurs and violence against scheduled caste"
     ]
   },
   {
@@ -8267,6 +10211,18 @@
       "Childline: 1098",
       "Anti-Trafficking: 1800-419-8588",
       "NCW: 7827-170-170"
+    ],
+    "descriptions": [
+      "girls from my village have been taken away for work and not returned",
+      "gaon ki ladkiyan le gaaye kaam dilane ke naam par",
+      "suspect person is trafficking children",
+      "minor taken with promise of city job",
+      "woman forced into domestic service against her will",
+      "victim rescued from trafficking needs help",
+      "child sold by family to trafficker",
+      "human trafficking complaint against agent",
+      "rescue operation needed for trafficked person",
+      "suspected trafficking happening in my area"
     ]
   },
   {
@@ -8312,6 +10268,18 @@
     "helplines": [
       "Police: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "someone is spreading lies about me in the village",
+      "mujhare baare mein jhoothi baat failaai jaa rahi hai",
+      "false accusation being circulated on WhatsApp",
+      "my character is being maligned publicly",
+      "person spreading false rumour affecting my reputation",
+      "defamatory social media post complaint",
+      "false news published about my family",
+      "false complaint filed against me to harass",
+      "reputation damaged by false public statements",
+      "neighbour spreading lies to damage my standing"
     ]
   },
   {
@@ -8360,6 +10328,18 @@
     "helplines": [
       "NCPCR: 1800-121-2830",
       "Childline: 1098"
+    ],
+    "descriptions": [
+      "private school refusing free RTE seat",
+      "RTE ke tahat admission nahi de raha school",
+      "school rejecting admission of poor child",
+      "25% free seats in private school not being given",
+      "RTE application submitted but no allotment",
+      "bache ka naam RTE mein hai par school ne mana kar diya",
+      "private school asking for donation despite RTE",
+      "Right to Education free admission not honored",
+      "my child is eligible under EWS but school refusing",
+      "RTE admission lottery result not implemented"
     ]
   },
   {
@@ -8407,6 +10387,18 @@
     "helplines": [
       "CPGRAMS: 1800-11-3366",
       "NCSC: 011-23386649"
+    ],
+    "descriptions": [
+      "SC certificate not issued despite submitting all documents",
+      "anusuchit jaati praman patra mein der ho rahi hai",
+      "ST certificate required for tribal benefit but not given",
+      "SDM office pending my certificate for months",
+      "tribal certificate rejected on technical grounds",
+      "scheduled tribe certificate required for forest rights",
+      "officer sending me back for new documents repeatedly",
+      "government job admission SC certificate not given in time",
+      "welfare scheme benefit blocked due to certificate delay",
+      "jaati aur janamsthan praman patra nahi ban raha"
     ]
   },
   {
@@ -8456,6 +10448,18 @@
     "helplines": [
       "MGNREGA Helpline: 1800-345-22-44",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "I asked for MGNREGA work but no work given",
+      "MGNREGA mein kaam maanga par nahi diya",
+      "job card active but gram panchayat not giving work",
+      "I am entitled to 100 days work but no employment",
+      "NREGA kaam nahi mila 15 din ke andar",
+      "rozgar sevak ne kaam dene se mana kiya",
+      "MGNREGA application submitted but pending",
+      "demand for work under NREGA ignored",
+      "gram panchayat showing work done but no wages paid",
+      "fake muster roll complaint in MGNREGA"
     ]
   },
   {
@@ -8503,6 +10507,18 @@
     "helplines": [
       "Passport: 1800-258-1800",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "my passport application is pending for 4 months",
+      "passport nahi bana 4 mahine ho gaye",
+      "passport office not scheduling appointment",
+      "police verification done but passport not issued",
+      "passport rejected citing wrong reason",
+      "tatkal passport fee paid but delayed",
+      "minor's passport not issued",
+      "address mismatch causing passport delay",
+      "passport office staff asking for bribe",
+      "passport not received despite all documents submitted"
     ]
   },
   {
@@ -8548,6 +10564,18 @@
     "helplines": [
       "PNGRB: 1800-180-6174",
       "Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "PNG gas connection applied but pipeline not connected",
+      "PNG connection ke liye apply kiya par nahi aaya",
+      "society has PNG facility but my flat not connected",
+      "piped gas connection fee paid but no service",
+      "gas company not connecting even after scheme launch",
+      "city gas distribution company ignoring application",
+      "PNG consumer complaint against local distribution company",
+      "meter installed but gas not flowing",
+      "PNG connection refused without reason",
+      "application for domestic piped gas stuck"
     ]
   },
   {
@@ -8593,6 +10621,18 @@
     "helplines": [
       "Police: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "landlord not returning my original documents kept as security",
+      "maalik ne mere documents rok liye hain",
+      "original sale deed kept by landlord as deposit",
+      "educational certificates held by employer or landlord",
+      "meri degree certificate rok ke rakhi hai maalik ne",
+      "property documents given at time of rent agreement not returned",
+      "original papers stuck with landlord",
+      "landlord using documents as leverage",
+      "cannot get new loan as original documents are missing",
+      "my agreements and certificates withheld"
     ]
   },
   {
@@ -8638,6 +10678,18 @@
     "helplines": [
       "Consumer Helpline: 1915",
       "Police: 112"
+    ],
+    "descriptions": [
+      "PG owner charging more than agreed",
+      "PG wale zyada paisa maang rahe hain",
+      "flatmate not paying their share of rent",
+      "PG owner not providing meals as promised",
+      "shared accommodation dispute with flatmate",
+      "PG facility very poor compared to what was shown",
+      "security deposit not returned by PG",
+      "PG owner misbehaving with female residents",
+      "flatmate damage to property dispute",
+      "kicked out of PG without notice"
     ]
   },
   {
@@ -8677,6 +10729,18 @@
     ],
     "helplines": [
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "landlord suddenly increased rent by 50 percent",
+      "maalik ne kiraya bahut badha diya",
+      "rent hike beyond what law allows",
+      "rent control act violated by landlord",
+      "forced to pay extra rent under threat of eviction",
+      "annual rent increase far exceeds agreed amount",
+      "landlord revising rent during lease period",
+      "excessive rent demanded for small room",
+      "maalik ne agreement se zyada rent maanga",
+      "rent increase dispute"
     ]
   },
   {
@@ -8728,6 +10792,18 @@
     "helplines": [
       "Police: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "landlord sent musclemen to threaten me",
+      "maalik ke aadmi aake dhamki de gaye",
+      "physical intimidation by landlord's associates",
+      "goons entering premises to scare tenant",
+      "landlord using criminals to evict me",
+      "tenant afraid to live due to landlord's threats",
+      "hired men creating nuisance to force vacating",
+      "mujhe nikaalne ke liye log bheje hain maalik ne",
+      "illegal eviction attempt through muscle power",
+      "tenant harassment by rowdies sent by owner"
     ]
   },
   {
@@ -8772,6 +10848,18 @@
     "helplines": [
       "Municipal Helpline: (City-specific)",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "landlord has not paid property tax and municipality is troubling me",
+      "maalik ne property tax nahi bhara aur mujhe tang kar rahe hain",
+      "eviction notice to tenant due to landlord's default in property tax",
+      "electricity cut because landlord did not pay dues",
+      "my address flagged for landlord's property tax arrears",
+      "municipality demanding tax from tenant unfairly",
+      "property tax default causing legal problem to tenant",
+      "I am facing legal trouble for landlord's dues",
+      "landlord not paying nagar palika dues",
+      "tenant facing eviction for landlord's outstanding dues"
     ]
   },
   {
@@ -8818,6 +10906,18 @@
     "helplines": [
       "Municipal Helpline: (City-specific)",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "dengue mosquitoes breeding in stagnant water near my home",
+      "hamare naaley mein macchar paida ho rahe hain",
+      "municipality not spraying for mosquitoes",
+      "rat menace in my locality",
+      "cockroach infestation due to open drain",
+      "municipal body failing to control pest problem",
+      "malaria due to municipality negligence",
+      "fogging not done in my ward",
+      "pest control complaint to nagar palika",
+      "rats spreading disease in residential area"
     ]
   },
   {
@@ -8866,6 +10966,18 @@
     "helplines": [
       "CPCB: 011-43102030",
       "NGT: 011-23072990"
+    ],
+    "descriptions": [
+      "electronic waste being dumped near our area",
+      "computer parts ki galat tarike se nikasi ho rahi hai",
+      "e-waste burning creating toxic smoke",
+      "old electronics dumped in open ground",
+      "hazardous e-waste not being processed legally",
+      "mobile phone waste dumping complaint",
+      "e-waste dump creating health hazard",
+      "unauthorised e-waste recycling site",
+      "CPCB complaint about e-waste",
+      "circuit boards being burnt openly"
     ]
   },
   {
@@ -8911,6 +11023,18 @@
     "helplines": [
       "NGT: 011-23072990",
       "Municipal Helpline: (City-specific)"
+    ],
+    "descriptions": [
+      "cremation smoke affecting our neighbourhood",
+      "shamshaan bhoomi se dhuaan aata hai ghar mein",
+      "burial ground near school causing health issue",
+      "improperly managed crematorium",
+      "cremation ground water contamination",
+      "open cremation violating environmental rules",
+      "burial site near water source",
+      "complaints about smoke from funeral pyre",
+      "municipality not managing cremation ground",
+      "funeral ground odour complaint"
     ]
   },
   {
@@ -8956,6 +11080,18 @@
     "helplines": [
       "Municipal Helpline: (City-specific)",
       "Police: 112"
+    ],
+    "descriptions": [
+      "a pig farm near my home is creating terrible smell",
+      "suwar ke baadey se badbu aati hai",
+      "poultry farm in residential area causing disease",
+      "animal waste flowing into our lane",
+      "illegal pig rearing inside city limits",
+      "hens and roosters causing noise pollution",
+      "livestock near homes complaint to panchayat",
+      "dairy farm waste causing sanitation problem",
+      "nagar palika complaint about illegal animal farm",
+      "animal farm licence expired but still operating"
     ]
   },
   {
@@ -9007,6 +11143,18 @@
     "helplines": [
       "NGT: 011-23072990",
       "MoEF: 1800-11-3003"
+    ],
+    "descriptions": [
+      "local lake is being filled up for construction",
+      "lake ko bhara ja raha hai ghar banane ke liye",
+      "wetland being encroached by builder",
+      "pond destroyed by real estate developer",
+      "municipality filling up lake for parking lot",
+      "water body encroachment complaint",
+      "fish farmers losing livelihood due to lake destruction",
+      "flood risk increasing due to lake filling",
+      "illegal structure on lake bank",
+      "NGT complaint about lake encroachment"
     ]
   },
   {
@@ -9052,6 +11200,18 @@
     "helplines": [
       "Senior Citizen Helpline: 14567",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "my siblings are not giving me my share of parental property",
+      "bhai ne mujhe pita ki sampatti mein hissa nahi diya",
+      "elderly sibling excluded from property distribution",
+      "senior citizen denied inheritance by family",
+      "old parent's property taken by one child",
+      "grandmother excluded from property by grandchildren",
+      "elderly widower not getting share",
+      "relatives forged will to exclude elderly person",
+      "property distributed unfairly excluding old relative",
+      "family property hissa nahi mila bujurg ko"
     ]
   },
   {
@@ -9094,6 +11254,18 @@
       "Senior Citizen Helpline: 14567",
       "Consumer Helpline: 1915",
       "Railway: 139"
+    ],
+    "descriptions": [
+      "railway not giving me senior citizen ticket concession",
+      "bujurg ticket discount nahi mila railway mein",
+      "airline ticket concession for senior denied",
+      "bus pass for elderly not issued",
+      "electricity concession for senior citizen not applied",
+      "government utilities not giving senior discount",
+      "telephone company not applying senior rate",
+      "bank not giving higher interest on senior citizen FD",
+      "property tax senior citizen exemption not given",
+      "senior citizen benefit not applied despite age proof"
     ]
   },
   {
@@ -9142,6 +11314,18 @@
       "Senior Citizen Helpline: 14567",
       "Police: 112",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "son using medical power of attorney to make decisions I don't want",
+      "mere bete ne medical PoA ka galat istemaal kiya",
+      "medical PoA used to deny elderly person's own choices",
+      "family overriding elderly person's medical wishes",
+      "medical decisions being taken against elderly person's will",
+      "PoA holder refusing to revoke authority",
+      "caretaker using medical PoA for financial decisions",
+      "elderly person not being consulted on own treatment",
+      "misuse of advance medical directive",
+      "medical PoA complaint against family member"
     ]
   },
   {
@@ -9195,6 +11379,18 @@
       "Ambulance: 108",
       "NHRC: 14433",
       "Senior Citizen: 14567"
+    ],
+    "descriptions": [
+      "hospital refused to treat my old mother in emergency",
+      "emergency mein hospital ne bujurg ko nahi liya",
+      "doctor said beds full and turned away old patient",
+      "ICU denied to elderly due to age",
+      "private hospital refusing emergency treatment without deposit",
+      "ambulance not reaching elderly patient in time",
+      "elderly person died due to hospital denial",
+      "government hospital rejecting senior citizen",
+      "old person denied ventilator support",
+      "emergency ward refused my father entry"
     ]
   },
   {
@@ -9242,6 +11438,18 @@
       "Police: 112",
       "Women Helpline: 1091",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "husband married another woman without divorcing me",
+      "pati ne mujhse talaq liye bina doosri shaadi kar li",
+      "wife married someone else while I was away",
+      "second marriage while first spouse still alive",
+      "pati ki doosri biwi ka pata chala",
+      "bigamy complaint against husband",
+      "husband hiding second marriage",
+      "man married twice and both families don't know",
+      "first wife not given divorce but husband remarried",
+      "IPC Section 494 bigamy complaint"
     ]
   },
   {
@@ -9288,6 +11496,18 @@
     "helplines": [
       "Childline: 1098",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "I am unmarried mother and father not acknowledging child",
+      "baap bachche ko nahi maanta",
+      "unmarried couple separating and fighting over child custody",
+      "father of child denying guardianship responsibility",
+      "who will be legal guardian of child born outside marriage",
+      "father not supporting child of unwed mother",
+      "illegitimate child custody and maintenance issue",
+      "unmarried father seeking custody rights",
+      "child's guardianship dispute between live-in partners",
+      "father of child not giving name or support"
     ]
   },
   {
@@ -9340,6 +11560,18 @@
       "Women Helpline: 1091",
       "Minority Commission: 011-23388925",
       "DLSA: 15100"
+    ],
+    "descriptions": [
+      "husband forcing me to convert to his religion",
+      "shaadi ke baad dharm badalne ka dabav hai",
+      "religious conversion being forced without consent",
+      "in-laws pressuring me to change religion",
+      "mujhe apna dharm chhod ne ko keh rahe hain",
+      "forced conversion to marry",
+      "family threatening violence unless I convert",
+      "conversion under pressure or deception",
+      "spouse threatening divorce if I don't convert",
+      "religious identity being changed by force"
     ]
   },
   {
@@ -9382,6 +11614,18 @@
     "helplines": [
       "DLSA: 15100",
       "One Stop Centre: 181"
+    ],
+    "descriptions": [
+      "divorce ke baad mera ghar ka hissa nahi diya",
+      "wife took full house in divorce leaving me nothing",
+      "matrimonial home ownership dispute in family court",
+      "husband transferred property before divorce to hide assets",
+      "jointly purchased flat disputed in divorce settlement",
+      "spouse not cooperating in property division after separation",
+      "court ordered property division not implemented",
+      "husband refusing to pay share of property value in divorce",
+      "divorce mein meri property nahi di gayi",
+      "marriage home sold without my consent during divorce"
     ]
   },
   {
@@ -9430,6 +11674,18 @@
       "NCM: 011-23237244",
       "NCSC: 011-23386649",
       "Labour: 1800-180-1961"
+    ],
+    "descriptions": [
+      "I was not promoted because I belong to lower caste",
+      "mere caste ke karan mujhe promotion nahi mila",
+      "company favoring upper caste employees",
+      "promotion denied due to religious discrimination",
+      "mujhe promotion isliye nahi diya kyunki main SC hoon",
+      "workplace casteism in promotion decisions",
+      "Muslim employee not promoted despite good performance",
+      "bias in performance appraisal based on caste",
+      "workplace discrimination based on religion in private company",
+      "scheduled caste employee discriminated against in workplace"
     ]
   },
   {
@@ -9471,6 +11727,18 @@
     "helplines": [
       "Consumer Helpline: 1915",
       "Police: 112"
+    ],
+    "descriptions": [
+      "used car I bought had its odometer rolled back",
+      "second hand car mein meter peeche kar diya tha",
+      "dealer sold old car as low mileage",
+      "used vehicle with hidden major damage",
+      "second-hand bike dealer gave false service history",
+      "mileage of used car was misrepresented",
+      "engine condition very poor, dealer lied",
+      "dealer tampered with car history to increase price",
+      "second hand vehicle fraud complaint",
+      "used car sold with hidden accident history"
     ]
   },
   {
@@ -9523,6 +11791,18 @@
       "Anti-Corruption: 1064",
       "Police: 112",
       "Lokayukta: (State specific)"
+    ],
+    "descriptions": [
+      "sarpanch is taking money from government schemes for himself",
+      "sarpanch ne scheme ka paisa khud le liya",
+      "local MLA's man threatening people",
+      "government official demanding bribe for work",
+      "ward councillor doing corruption in public work",
+      "panchayat head misusing position",
+      "official favoring relatives in scheme benefits",
+      "local politician's goonda threatening voters",
+      "elected representative abusing power",
+      "sarkari adhikari ne apna kaam nahi kiya"
     ]
   },
   {
@@ -9568,6 +11848,18 @@
     "helplines": [
       "UIDAI: 1947",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "Aadhaar update centre refusing to update my address",
+      "Aadhaar address update nahi ho raha",
+      "Aadhaar enrolment denied despite documents",
+      "biometric update rejected at Aadhaar centre",
+      "mobile number not getting linked to Aadhaar",
+      "Aadhaar card name spelling wrong and centre not correcting",
+      "operator at Aadhaar centre asking for bribe",
+      "child Aadhaar not being made",
+      "UIDAI complaint for Aadhaar update failure",
+      "Aadhaar locked and not being unlocked"
     ]
   },
   {
@@ -9615,6 +11907,18 @@
     "helplines": [
       "UGC: 011-23604446",
       "Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "university hostel not giving me room despite admission",
+      "hostel room nahi diya university ne",
+      "hostel room allotted to someone else",
+      "paid hostel fees but evicted",
+      "hostel authorities creating problems without reason",
+      "hostel room in bad condition and warden not responding",
+      "hostel food quality very poor",
+      "female student harassed in hostel",
+      "security deposit not returned by hostel",
+      "hostel mess not providing food on weekends"
     ]
   },
   {
@@ -9661,6 +11965,18 @@
     "helplines": [
       "CPCB: 011-43102030",
       "NGT: 011-23072990"
+    ],
+    "descriptions": [
+      "our bore well water has turned brown and smells bad",
+      "hamare boring ka paani kharab ho gaya hai",
+      "groundwater contaminated by factory leakage",
+      "chemicals in drinking water from nearby industry",
+      "farmers' wells polluted due to agricultural chemicals",
+      "bore well water testing showing pollution",
+      "underground water black due to factory waste",
+      "children falling sick from contaminated water",
+      "water source polluted by industrial discharge",
+      "groundwater complaint to CPCB or SPCB"
     ]
   },
   {
@@ -9708,6 +12024,18 @@
       "Senior Citizen Helpline: 14567",
       "Cyber Fraud: 1930",
       "Police: 112"
+    ],
+    "descriptions": [
+      "my old mother received a call saying she won a car",
+      "bujurg maa ko car jeetne ka call aaya",
+      "elderly person lost money to fake lottery",
+      "prize claim agent took processing fee from senior",
+      "old person sent money for prize tax and got nothing",
+      "senior citizen cheated by lottery scam",
+      "fake KBC call targeting elderly person",
+      "SMS lottery scam victimizing old people",
+      "bujurg ne lottery ka paisa diya aur thage gaye",
+      "prize fraud specifically targeting elderly victims"
     ]
   },
   {
@@ -9757,6 +12085,18 @@
       "Childline: 1098",
       "Police: 112",
       "NCPCR: 1800-121-2830"
+    ],
+    "descriptions": [
+      "someone in my village is conducting a child marriage",
+      "paas ke gaon mein chhoti bachchi ki shaadi ho rahi hai",
+      "minor girl being married off by parents",
+      "child marriage being arranged, need to stop it",
+      "hamare mohalle mein 15 saal ki ladki ki shaadi hai",
+      "underage marriage about to happen",
+      "parents marrying off daughter before 18",
+      "boy below 21 being married illegally",
+      "need help to stop child marriage in my area",
+      "PCMA violation, child marriage being planned"
     ]
   },
   {
@@ -9798,6 +12138,18 @@
     ],
     "helplines": [
       "Consumer Helpline: 1915"
+    ],
+    "descriptions": [
+      "hair treatment at salon damaged my hair badly",
+      "salon ne mera bal kharab kar diya",
+      "chemical burn from salon treatment",
+      "paid for facial and got skin rash",
+      "salon overcharged for service not agreed",
+      "spa service was unhygienic and caused infection",
+      "hair colour gone completely wrong",
+      "parlour cut more than what I asked",
+      "refund denied after bad salon service",
+      "beauty parlour used substandard products"
     ]
   },
   {
@@ -9850,6 +12202,18 @@
       "NHRC: 14433",
       "DLSA: 15100",
       "Police: 112 (for emergency)"
+    ],
+    "descriptions": [
+      "police beat my son in custody",
+      "police ne mere bete ko thane mein maara",
+      "custodial death of my family member",
+      "arrested without reason and tortured",
+      "police third degree on innocent person",
+      "fake case registered after torture",
+      "police extorting money under threat",
+      "illegal detention without arrest memo",
+      "human rights violation by police officer",
+      "encounter killing complaint"
     ]
   },
   {
@@ -9901,6 +12265,18 @@
     "helplines": [
       "Food Department Helpline: (State specific)",
       "CPGRAMS: 1800-11-3366"
+    ],
+    "descriptions": [
+      "NFSA entitlement not given by ration shop",
+      "NFSA ke tahat ration nahi mila",
+      "entitled to 5 kg rice per person but not given",
+      "ration dealer giving less than due quantity",
+      "NFSA beneficiary but card not functioning",
+      "one nation one ration card not working",
+      "portability of ration card not being accepted",
+      "mujhe apne haqqe ka anaaj nahi mila",
+      "NFSA list mein naam hai par ration nahi de rahe",
+      "ration shop mein mera naam hai par anaj nahi milta"
     ]
   },
   {
@@ -9946,6 +12322,18 @@
     "helplines": [
       "Police: 112",
       "Municipal Helpline: (City-specific)"
+    ],
+    "descriptions": [
+      "construction work going on till midnight near my home",
+      "raat ko bhi construction ka shor hota hai",
+      "builder not following permitted construction hours",
+      "noise pollution from construction beyond allowed time",
+      "drilling at night disturbing sleep",
+      "construction machinery running after 10pm",
+      "municipality permit for daytime only but night work continues",
+      "heavy machinery sound at odd hours",
+      "sleep disturbed by construction noise every night",
+      "complaint about illegal night construction"
     ]
   },
   {
@@ -9986,6 +12374,18 @@
     "helplines": [
       "Cyber Fraud: 1930",
       "Police: 112"
+    ],
+    "descriptions": [
+      "donated money online to flood victims but it was fake",
+      "online donation fraud ke baare mein shikayat",
+      "fake NGO collecting money on social media",
+      "charity campaign online collected money and disappeared",
+      "WhatsApp fundraiser for sick child was fake",
+      "COVID relief fund fraud complaint",
+      "fake donation drive on Instagram",
+      "religion-based fraud charity",
+      "fake temple or mosque fund collection online",
+      "I donated to a fake cancer patient fundraiser"
     ]
   },
   {
@@ -10033,6 +12433,18 @@
       "Senior Citizen Helpline: 14567",
       "RBI Ombudsman: 14448",
       "Police: 112"
+    ],
+    "descriptions": [
+      "my children are withdrawing money from my bank account",
+      "mere bachche mera bank account use kar rahe hain bina pooche",
+      "unauthorized withdrawals from elderly person's account",
+      "son operates bank account using elderly parent's biometric",
+      "elderly person's savings account being emptied by relative",
+      "bank not stopping unauthorized transactions on elderly account",
+      "caretaker made unauthorized transfer from old person's account",
+      "ATM card misused by family member",
+      "bujurg ka account khali kar diya rishtedaaron ne",
+      "senior citizen bank fraud by family"
     ]
   }
 ]

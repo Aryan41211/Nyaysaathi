@@ -36,9 +36,14 @@ TEST_CASES = [
         "expected_language": "mr",
     },
     {
-        "name": "Unknown input -> English fallback",
-        "query": "lorem ipsum random legal help",
-        "expected_language": "en",
+        "name": "Roman Hindi input -> Hindi output",
+        "query": "mera paisa nahi mila, kya karu",
+        "expected_language": "hi",
+    },
+    {
+        "name": "Roman Marathi input -> Marathi output",
+        "query": "gharath chori zali, takrar kuthe karaychi",
+        "expected_language": "mr",
     },
 ]
 

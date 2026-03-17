@@ -3,5 +3,11 @@
 from .embedding_generator import generate_and_store_embeddings
 from .semantic_search import find_best_category
 from .response_generator import generate_legal_guidance
+from .ai_processor import generate_legal_guidance as generate_ai_legal_guidance
 
-__all__ = ["find_best_category", "generate_and_store_embeddings", "generate_legal_guidance"]
+__all__ = [
+	"find_best_category",
+	"generate_and_store_embeddings",
+	"generate_legal_guidance",
+	"generate_ai_legal_guidance",
+]

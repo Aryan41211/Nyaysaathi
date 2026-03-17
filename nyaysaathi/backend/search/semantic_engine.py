@@ -274,11 +274,15 @@ class SemanticSearchEngine:
         keywords = case.get("keywords") or []
         if isinstance(keywords, str):
             keywords = [keywords]
+        descriptions = case.get("descriptions") or []
+        if isinstance(descriptions, str):
+            descriptions = [descriptions]
 
         parts = [
             str(case.get("category", "")),
             str(title),
             str(case.get("problem_description", "")),
+            " ".join(str(d) for d in descriptions if d),
             " ".join(str(k) for k in keywords if k),
         ]
         return " ".join(parts).strip().lower()
@@ -306,6 +310,7 @@ class SemanticSearchEngine:
                 "subcategory": case.get("subcategory", ""),
                 "title": case.get("title", ""),
                 "problem_description": case.get("problem_description", ""),
+                "descriptions": case.get("descriptions", []),
                 "keywords": case.get("keywords", []),
             }
             hasher.update(json.dumps(payload, sort_keys=True, ensure_ascii=False).encode("utf-8"))

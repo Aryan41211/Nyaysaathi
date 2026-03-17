@@ -19,7 +19,12 @@ dist/
 
 # Local runtime data
 .mongo/
+mongo-data/
+.vite/
 *.log
+
+# Environment files
+.env
 
 # OS/editor
 .DS_Store

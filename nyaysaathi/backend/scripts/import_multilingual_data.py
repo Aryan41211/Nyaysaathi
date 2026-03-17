@@ -87,10 +87,12 @@ def _normalized_documents(record: dict[str, Any]) -> list[str]:
 
 
 def _normalize_translation(record: dict[str, Any]) -> dict[str, Any]:
+    descriptions = list(record.get("descriptions") or [])
     return {
         "category": str(record.get("category") or "").strip(),
         "subcategory": str(record.get("subcategory") or "").strip(),
         "problem_description": str(record.get("problem_description") or "").strip(),
+        "descriptions": descriptions,
         "workflow_steps": list(record.get("workflow_steps") or []),
         "documents_required": _normalized_documents(record),
         "required_documents": _normalized_documents(record),
@@ -118,9 +120,9 @@ def _build_document(index: int, en_row: dict[str, Any], hi_row: dict[str, Any], 
     mr_t = _normalize_translation(mr_row)
 
     search_aliases = {
-        "en": [en_t["category"], en_t["subcategory"]],
-        "hi": [hi_t["category"], hi_t["subcategory"]],
-        "mr": [mr_t["category"], mr_t["subcategory"]],
+        "en": [en_t["category"], en_t["subcategory"], *en_t.get("descriptions", [])],
+        "hi": [hi_t["category"], hi_t["subcategory"], *hi_t.get("descriptions", [])],
+        "mr": [mr_t["category"], mr_t["subcategory"], *mr_t.get("descriptions", [])],
     }
 
     return {
