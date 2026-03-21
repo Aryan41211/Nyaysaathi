@@ -5,6 +5,10 @@
   "outputDirectory": "nyaysaathi/frontend/dist",
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination": "https://nyaysaathi-backend.onrender.com/api/$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

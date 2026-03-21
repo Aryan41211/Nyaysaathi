@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const DEFAULT_PROD_API_URL = 'https://nyaysaathi-backend.onrender.com/api'
+const DEFAULT_PROD_API_URL = '/api'
 
 function normalizeApiBaseUrl(rawUrl) {
   if (!rawUrl) return ''
