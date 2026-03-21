@@ -79,7 +79,7 @@ export default function ResultsPage() {
         setSearched(true)
       })
       .catch(e => {
-        setError(e?.response?.data?.error || 'Could not connect to the server. Please try again.')
+        setError(e?.response?.data?.error || e?.message || 'Could not connect to the server. Please try again.')
       })
       .finally(() => setLoading(false))
   }, [query])

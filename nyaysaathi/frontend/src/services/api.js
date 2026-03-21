@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 const DEFAULT_PROD_API_URL = '/api'
+const DEFAULT_FALLBACK_API_URL = 'https://nyaysaathi-backend.onrender.com/api'
 
 function normalizeApiBaseUrl(rawUrl) {
   if (!rawUrl) return ''
@@ -18,10 +19,17 @@ function resolveApiBaseUrl() {
 }
 
 const BASE_URL = resolveApiBaseUrl()
+const FALLBACK_BASE_URL = normalizeApiBaseUrl(import.meta.env.VITE_FALLBACK_API_URL) || DEFAULT_FALLBACK_API_URL
 
 const api = axios.create({
   baseURL: BASE_URL,
   // First search request can be slow on cold start (model warm-up + fallback path).
+  timeout: 90000,
+  headers: { 'Content-Type': 'application/json' },
+})
+
+const fallbackApi = axios.create({
+  baseURL: FALLBACK_BASE_URL,
   timeout: 90000,
   headers: { 'Content-Type': 'application/json' },
 })
@@ -42,7 +50,25 @@ api.interceptors.response.use(
   }
 )
 
-export const searchCases   = (query)    => api.get('/search/',   { params: { query } }).then(r => r.data)
-export const getCategories = ()          => api.get('/categories/').then(r => r.data)
-export const getCases      = (category) => api.get('/cases/', { params: category ? { category } : {} }).then(r => r.data)
-export const getCaseDetail = (sub)       => api.get(`/case/${encodeURIComponent(sub)}/`).then(r => r.data)
+function shouldRetryOnFallback(err) {
+  if (!import.meta.env.PROD) return false
+  if (!err) return false
+  if (!err.response) return true
+  return err.response.status === 404 || err.response.status >= 500
+}
+
+async function getWithFallback(path, config = {}) {
+  try {
+    const response = await api.get(path, config)
+    return response.data
+  } catch (err) {
+    if (!shouldRetryOnFallback(err)) throw err
+    const fallbackResponse = await fallbackApi.get(path, config)
+    return fallbackResponse.data
+  }
+}
+
+export const searchCases   = (query)    => getWithFallback('/search/',   { params: { query } })
+export const getCategories = ()          => getWithFallback('/categories/')
+export const getCases      = (category) => getWithFallback('/cases/', { params: category ? { category } : {} })
+export const getCaseDetail = (sub)       => getWithFallback(`/case/${encodeURIComponent(sub)}/`)
