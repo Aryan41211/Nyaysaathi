@@ -17,7 +17,9 @@ from rest_framework import status
 from . import services
 from ai_engine.response_generator import generate_legal_guidance
 from ai_engine.translator import get_translation_health
-from legal.ai_engine import get_ai_monitoring_snapshot
+from legal.ai_engine import get_ai_monitoring_snapshot, understand_user_problem
+from legal.admin_analytics import get_admin_queries, get_category_stats
+from legal.query_logger import get_user_history, log_query
 from services.workflow_service import localize_case_payload
 
 logger = logging.getLogger(__name__)
@@ -121,7 +123,51 @@ def search(request):
 
     except Exception as e:
         logger.error("search '%s': %s", query, e)
-        return err("Search failed. Please try again.", 500)
+
+        # Fallback to local semantic search so UI remains functional
+        # even when upstream AI guidance dependencies are unavailable.
+        try:
+            results, nlp_meta = services.search_cases(query, top_k=5)
+            normalized_results = []
+            for row in results:
+                workflow = row.get("workflow_steps") or row.get("workflow") or []
+                normalized_results.append(
+                    {
+                        **row,
+                        "workflow": workflow,
+                        "workflow_steps": workflow,
+                    }
+                )
+
+            return Response(
+                ok(
+                    normalized_results,
+                    query=query,
+                    language=nlp_meta.get("detected_language", "en"),
+                    detected_language=nlp_meta.get("detected_language", "en"),
+                    normalized_query=nlp_meta.get("normalized_query", query),
+                    nlp=nlp_meta,
+                    ai_understanding={},
+                    semantic_match={"source": "services.search_cases"},
+                    category="",
+                    subcategory="",
+                    workflow=[],
+                    workflow_steps=[],
+                    localized_workflow=[],
+                    workflow_english=[],
+                    documents_required=[],
+                    required_documents=[],
+                    authorities=[],
+                    complaint_template="",
+                    translation_triggered=False,
+                    cache_hit=False,
+                    total=len(normalized_results),
+                    message="Search completed using fallback semantic engine.",
+                )
+            )
+        except Exception as fallback_exc:
+            logger.error("search fallback '%s': %s", query, fallback_exc)
+            return err("Search failed. Please try again.", 500)
 
 
 @api_view(["GET"])
@@ -133,7 +179,14 @@ def case_detail(request, subcategory):
         case = services.get_case_by_subcategory(normalised)
         if not case:
             return err(f"No case found for: '{subcategory}'", 404)
-        localized_case = localize_case_payload(case, requested_language)
+        try:
+            localized_case = localize_case_payload(case, requested_language)
+        except Exception as localization_exc:
+            logger.warning("case_detail localization fallback for '%s': %s", subcategory, localization_exc)
+            localized_case = dict(case)
+            docs = localized_case.get("required_documents") or localized_case.get("documents_required") or []
+            localized_case["required_documents"] = list(docs)
+            localized_case["documents_required"] = list(docs)
         return Response(ok(localized_case, language=requested_language))
     except Exception as e:
         logger.error("case_detail '%s': %s", subcategory, e)
@@ -167,3 +220,71 @@ def ai_health(request):
             },
             status=status.HTTP_200_OK,
         )
+
+
+@api_view(["POST"])
+def classify(request):
+    """POST /api/classify - classify user query and return workflow guidance payload."""
+    user_input = str(request.data.get("user_input", "")).strip()
+    user_id = str(request.data.get("user_id", "anonymous")).strip() or "anonymous"
+
+    if not user_input:
+        return err("Please provide 'user_input' in request body.")
+
+    try:
+        output = understand_user_problem(user_input)
+        category = str(output.get("category", "Unknown"))
+        confidence = str(output.get("confidence", "Low"))
+        log_query(user_id=user_id, query=user_input, category=category, confidence=confidence)
+
+        response_payload = {
+            "problem_summary": output.get("problem_summary", output.get("matched_text", "")),
+            "intent": output.get("intent", "guidance"),
+            "category": category,
+            "confidence": confidence,
+            "similarity_score": output.get("similarity_score", 0.0),
+            "matched_text": output.get("matched_text", ""),
+            "workflow_steps": output.get("workflow_steps", ["Please describe problem more clearly"]),
+            "explanation": output.get("explanation", ""),
+            "clarification_questions": output.get("clarification_questions", []),
+            "source": output.get("source", "fallback"),
+        }
+        return Response(ok(response_payload))
+    except Exception as exc:
+        logger.error("classify failed: %s", exc)
+        return err("Classification failed. Please try again.", 500)
+
+
+@api_view(["GET"])
+def user_history(request):
+    """GET /api/user/history?user_id=<id> - return query history for a user."""
+    user_id = str(request.query_params.get("user_id", "anonymous")).strip() or "anonymous"
+    try:
+        history = get_user_history(user_id=user_id)
+        return Response(ok(history, user_id=user_id, total=len(history)))
+    except Exception as exc:
+        logger.error("user_history failed: %s", exc)
+        return err("Could not fetch user history.", 500)
+
+
+@api_view(["GET"])
+def admin_query_stats(request):
+    """GET /api/admin/query-stats - return category frequency stats."""
+    try:
+        stats = get_category_stats()
+        return Response(ok(stats))
+    except Exception as exc:
+        logger.error("admin_query_stats failed: %s", exc)
+        return err("Could not fetch query statistics.", 500)
+
+
+@api_view(["GET"])
+def admin_queries(request):
+    """GET /api/admin/queries - return recent query logs."""
+    limit = request.query_params.get("limit", "100")
+    try:
+        rows = get_admin_queries(limit=int(limit))
+        return Response(ok(rows, total=len(rows)))
+    except Exception as exc:
+        logger.error("admin_queries failed: %s", exc)
+        return err("Could not fetch admin queries.", 500)

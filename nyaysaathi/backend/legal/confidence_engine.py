@@ -12,7 +12,7 @@ class ConfidenceEngine:
     def calibrate(result: dict[str, Any], user_input: str) -> float:
         """Calibrate model confidence using deterministic business rules."""
         try:
-            score = float(result.get("confidence", 0.25))
+            score = float(result.get("confidence_score", result.get("confidence", 0.25)))
         except (TypeError, ValueError):
             score = 0.25
 

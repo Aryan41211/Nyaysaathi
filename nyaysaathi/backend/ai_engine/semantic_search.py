@@ -1,47 +1,35 @@
-"""OpenAI embedding based semantic category search with hybrid fallback."""
+"""Local embedding based semantic category search with keyword backup."""
+
 from __future__ import annotations
 
-import hashlib
-import json
 import logging
-import math
-import os
 import threading
 import time
 from typing import Any
 
 import numpy as np
+from sentence_transformers import SentenceTransformer
 
 from config import EMBEDDING_CACHE_TTL_SECONDS, EMBEDDING_MODEL, SEMANTIC_MATCH_THRESHOLD
 from legal_cases.db_connection import get_collection
-from openai import OpenAI
 
 logger = logging.getLogger(__name__)
 
 _EMBED_COLL = "category_embeddings"
 _CACHE_LOCK = threading.Lock()
 _EMBED_CACHE: dict[str, Any] = {"expires": 0.0, "rows": []}
-_OPENAI_DISABLED_UNTIL = 0.0
+_MODEL: SentenceTransformer | None = None
+_MODEL_LOCK = threading.Lock()
 
 
-def _openai_temporarily_disabled() -> bool:
-    return time.time() < _OPENAI_DISABLED_UNTIL
-
-
-def _mark_quota_exhausted(cooldown_seconds: float = 900.0) -> None:
-    global _OPENAI_DISABLED_UNTIL
-    _OPENAI_DISABLED_UNTIL = time.time() + max(60.0, cooldown_seconds)
-
-
-def _openai_available() -> bool:
-    return bool(os.getenv("OPENAI_API_KEY", "")) and not _openai_temporarily_disabled()
-
-
-def _client() -> OpenAI:
-    api_key = os.getenv("OPENAI_API_KEY", "")
-    if not api_key:
-        raise RuntimeError("OPENAI_API_KEY not configured")
-    return OpenAI(api_key=api_key)
+def _model() -> SentenceTransformer:
+    global _MODEL
+    if _MODEL is not None:
+        return _MODEL
+    with _MODEL_LOCK:
+        if _MODEL is None:
+            _MODEL = SentenceTransformer(EMBEDDING_MODEL)
+    return _MODEL
 
 
 def _cosine_similarity(a: np.ndarray, b: np.ndarray) -> float:
@@ -67,38 +55,8 @@ def _load_embeddings() -> list[dict[str, Any]]:
 
 
 def _embed_query(query: str) -> np.ndarray:
-    response = _client().embeddings.create(model=EMBEDDING_MODEL, input=[query])
-    return np.array(response.data[0].embedding, dtype=np.float32)
-
-
-def _ai_fallback_category(query: str, category_options: list[str]) -> str:
-    """LLM classification fallback when similarity is unclear."""
-    if not _openai_available() or not category_options:
-        return ""
-
-    system_prompt = (
-        "You classify legal user issues into one category from provided options. "
-        "Return strict JSON with key category only."
-    )
-    user_prompt = json.dumps({"query": query, "categories": category_options}, ensure_ascii=True)
-
-    try:
-        response = _client().chat.completions.create(
-            model="gpt-4.1-mini",
-            temperature=0.1,
-            response_format={"type": "json_object"},
-            timeout=8,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-            ],
-        )
-        payload = json.loads((response.choices[0].message.content or "").strip().replace("```json", "").replace("```", ""))
-        category = str(payload.get("category", "")).strip()
-        return category if category in category_options else ""
-    except Exception as exc:
-        logger.warning("AI fallback classification failed: %s", exc)
-        return ""
+    matrix = _model().encode([query], normalize_embeddings=True, convert_to_numpy=True)
+    return np.asarray(matrix[0], dtype=np.float32)
 
 
 def keyword_backup_category(query: str, categories: list[str]) -> str:
@@ -116,17 +74,7 @@ def keyword_backup_category(query: str, categories: list[str]) -> str:
 
 
 def find_best_category(user_input: str) -> dict[str, Any]:
-    """
-    Semantic-first category matcher using OpenAI embeddings.
-
-    Returns:
-      {
-        category: str,
-        similarity: float,
-        status: "ok"|"unknown",
-        source: "semantic"|"ai_fallback"|"keyword_backup"|"none"
-      }
-    """
+    """Semantic-first category matcher using local embeddings."""
     query = (user_input or "").strip()
     if not query:
         return {"category": "", "similarity": 0.0, "status": "unknown", "source": "none"}
@@ -137,25 +85,9 @@ def find_best_category(user_input: str) -> dict[str, Any]:
 
     categories = [str(item.get("category", "")) for item in rows if str(item.get("category", ""))]
 
-    if not _openai_available():
-        kb = keyword_backup_category(query, categories)
-        return {
-            "category": kb,
-            "similarity": 0.0,
-            "status": "ok" if kb else "unknown",
-            "source": "keyword_backup" if kb else "none",
-        }
-
     try:
         query_vec = _embed_query(query)
-    except Exception as exc:
-        lowered = str(exc).lower()
-        if (
-            "insufficient_quota" in lowered
-            or "insufficient quota" in lowered
-            or "error code: 429" in lowered
-        ):
-            _mark_quota_exhausted()
+    except Exception as exc:  # noqa: BLE001
         logger.warning("Semantic embedding generation failed: %s", exc)
         kb = keyword_backup_category(query, categories)
         return {
@@ -168,13 +100,29 @@ def find_best_category(user_input: str) -> dict[str, Any]:
     best_category = ""
     best_score = -1.0
     for row in rows:
+        embeddings = row.get("embeddings")
         emb = row.get("embedding")
         category = str(row.get("category", "")).strip()
-        if not emb or not category:
+        if not category:
             continue
-        score = _cosine_similarity(query_vec, np.array(emb, dtype=np.float32))
-        if score > best_score:
-            best_score = score
+
+        category_score = -1.0
+
+        # Preferred path: multiple example embeddings per category.
+        if isinstance(embeddings, list) and embeddings:
+            for candidate in embeddings:
+                if not candidate:
+                    continue
+                score = _cosine_similarity(query_vec, np.array(candidate, dtype=np.float32))
+                if score > category_score:
+                    category_score = score
+
+        # Backward-compatible path: single centroid embedding.
+        if category_score < 0 and emb:
+            category_score = _cosine_similarity(query_vec, np.array(emb, dtype=np.float32))
+
+        if category_score > best_score:
+            best_score = category_score
             best_category = category
 
     if best_score >= SEMANTIC_MATCH_THRESHOLD and best_category:
@@ -183,16 +131,6 @@ def find_best_category(user_input: str) -> dict[str, Any]:
             "similarity": round(float(best_score), 4),
             "status": "ok",
             "source": "semantic",
-        }
-
-    # AI fallback for unclear similarity.
-    ai_cat = _ai_fallback_category(query, categories)
-    if ai_cat:
-        return {
-            "category": ai_cat,
-            "similarity": round(float(max(best_score, 0.0)), 4),
-            "status": "ok",
-            "source": "ai_fallback",
         }
 
     kb = keyword_backup_category(query, categories)

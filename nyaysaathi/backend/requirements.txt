@@ -10,7 +10,6 @@ whitenoise==6.7.0
 sentence-transformers==2.7.0
 faiss-cpu==1.8.0
 rapidfuzz==3.9.6
-openai==1.54.4
 langdetect==1.0.9
 fastapi==0.115.0
 uvicorn==0.30.6

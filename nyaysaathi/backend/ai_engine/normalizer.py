@@ -2,13 +2,10 @@
 
 from __future__ import annotations
 
-import json
 import logging
 import re
-from typing import Any
 
 from .language_detector import detect_language
-from .openai_service import get_openai_client
 
 logger = logging.getLogger(__name__)
 
@@ -42,47 +39,12 @@ def normalize_user_input(
         return "", "en", False
 
     detected = (preferred_language or "").strip().lower() or detect_language(source_text)
-    if not allow_ai or not _needs_ai_normalization(source_text, detected):
-        return source_text, detected, False
+    if _needs_ai_normalization(source_text, detected):
+        logger.debug("Using local normalization path for potentially noisy roman text")
 
-    try:
-        client = get_openai_client()
-        response = client.chat.completions.create(
-            model="gpt-4.1-mini",
-            temperature=0.0,
-            response_format={"type": "json_object"},
-            timeout=8,
-            messages=[
-                {
-                    "role": "system",
-                    "content": (
-                        "You normalize multilingual legal queries. "
-                        "Detect language (en/hi/mr), convert Roman Hindi/Marathi to native script, "
-                        "fix obvious spelling noise, and keep legal meaning unchanged. "
-                        "Return strict JSON with keys language and normalized_text only."
-                    ),
-                },
-                {
-                    "role": "user",
-                    "content": json.dumps(
-                        {
-                            "text": source_text,
-                            "hint_language": detected,
-                        },
-                        ensure_ascii=True,
-                    ),
-                },
-            ],
-        )
-        payload = json.loads((response.choices[0].message.content or "").strip())
-        normalized_text = str(payload.get("normalized_text", source_text)).strip() or source_text
-        lang = str(payload.get("language", detected)).strip().lower()
-        if lang not in {"en", "hi", "mr"}:
-            lang = detected
-        return normalized_text, lang, True
-    except Exception as exc:
-        logger.warning("normalize_user_input fallback used: %s", exc)
-        return source_text, detected, False
+    # Local deterministic cleanup only; no remote model dependency.
+    normalized_text = " ".join(source_text.split())
+    return normalized_text, detected, False
 
 
 def normalize(text: str) -> str:

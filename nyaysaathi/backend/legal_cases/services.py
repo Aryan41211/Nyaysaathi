@@ -6,8 +6,10 @@ via search.semantic_engine while keeping the same public API used by views.
 
 from __future__ import annotations
 
+import json
 import logging
 from collections import defaultdict
+from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 from services.search import reset_engine, semantic_search
@@ -17,14 +19,47 @@ from .db_connection import get_collection
 logger = logging.getLogger(__name__)
 
 _cases_cache: List[Dict] = []
+_mongo_unavailable = False
+
+_LOCAL_DATA_CANDIDATES = [
+    Path(__file__).resolve().parents[1] / "data" / "nyaysaathi_en.json",
+    Path(__file__).resolve().parents[2] / "nyaysaathi_200plus.json",
+]
+
+
+def _load_cases_from_local_file() -> List[Dict]:
+    for candidate in _LOCAL_DATA_CANDIDATES:
+        if not candidate.exists():
+            continue
+        try:
+            with candidate.open("r", encoding="utf-8") as f:
+                raw = json.load(f)
+            if isinstance(raw, list):
+                logger.warning(
+                    "Using local dataset fallback from %s (%d records)",
+                    candidate,
+                    len(raw),
+                )
+                return raw
+        except Exception as exc:
+            logger.exception("Failed loading local fallback dataset %s: %s", candidate, exc)
+    return []
 
 
 def _load_cases() -> List[Dict]:
     global _cases_cache
+    global _mongo_unavailable
     if not _cases_cache:
-        col = get_collection("legal_cases")
-        _cases_cache = list(col.find({}, {"_id": 0}))
-        logger.info("Loaded %d cases from MongoDB", len(_cases_cache))
+        if not _mongo_unavailable:
+            try:
+                col = get_collection("legal_cases")
+                _cases_cache = list(col.find({}, {"_id": 0}))
+                logger.info("Loaded %d cases from MongoDB", len(_cases_cache))
+            except Exception as exc:
+                _mongo_unavailable = True
+                logger.warning("Mongo unavailable, switching to local dataset fallback: %s", exc)
+        if not _cases_cache:
+            _cases_cache = _load_cases_from_local_file()
     return _cases_cache
 
 
@@ -34,7 +69,9 @@ def invalidate_cache() -> None:
     Called after dataset import/update.
     """
     global _cases_cache
+    global _mongo_unavailable
     _cases_cache = []
+    _mongo_unavailable = False
     reset_engine()
     logger.info("Search cache invalidated")
 
