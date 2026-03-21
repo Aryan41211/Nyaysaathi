@@ -21,13 +21,18 @@ const BASE_URL = resolveApiBaseUrl()
 
 const api = axios.create({
   baseURL: BASE_URL,
-  timeout: 20000,
+  // First search request can be slow on cold start (model warm-up + fallback path).
+  timeout: 90000,
   headers: { 'Content-Type': 'application/json' },
 })
 
 api.interceptors.response.use(
   r => r,
   err => {
+    if (err.code === 'ECONNABORTED') {
+      err.message = 'Request timed out. Please try once more.'
+      return Promise.reject(err)
+    }
     if (!err.response) {
       err.message = `Cannot connect to backend (${BASE_URL}). Check VITE_API_URL and backend deployment status.`
     } else if (import.meta.env.PROD && err.response.status === 404) {

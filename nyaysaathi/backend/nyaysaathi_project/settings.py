@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "drf_spectacular",
     "corsheaders",
     "legal_cases",
 ]
@@ -28,7 +29,10 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    "legal_cases.middleware.ApiExceptionMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "legal_cases.middleware.ApiInputValidationMiddleware",
+    "legal_cases.middleware.ApiRequestLogMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -93,8 +97,28 @@ REST_FRAMEWORK = {
     "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
     "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny"],
     "DEFAULT_THROTTLE_CLASSES": ["rest_framework.throttling.AnonRateThrottle"],
-    "DEFAULT_THROTTLE_RATES": {"anon": "300/day"},
+    "DEFAULT_THROTTLE_RATES": {
+        "anon": os.getenv("THROTTLE_ANON_RATE", "300/day"),
+        "classify": os.getenv("THROTTLE_CLASSIFY_RATE", "20/min"),
+    },
+    "EXCEPTION_HANDLER": "legal_cases.exceptions.custom_exception_handler",
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "NyaySaathi API",
+    "DESCRIPTION": "Production API for NyaySaathi legal guidance system",
+    "VERSION": "1.0.0",
+}
+
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+X_FRAME_OPTIONS = "DENY"
+REFERRER_POLICY = "same-origin"
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SECURE = not DEBUG
 
 CACHES = {
     "default": {
@@ -138,3 +162,8 @@ TRANSLATION_CB_THRESHOLD = int(os.getenv("TRANSLATION_CB_THRESHOLD", "4"))
 TRANSLATION_CB_COOLDOWN = float(os.getenv("TRANSLATION_CB_COOLDOWN", "45"))
 ROMAN_NORMALIZER_TIMEOUT = float(os.getenv("ROMAN_NORMALIZER_TIMEOUT", "8"))
 ROMAN_NORMALIZER_RETRIES = int(os.getenv("ROMAN_NORMALIZER_RETRIES", "1"))
+
+# Auth/JWT runtime settings
+JWT_SECRET = os.getenv("JWT_SECRET", SECRET_KEY)
+JWT_ALGORITHM = os.getenv("JWT_ALGORITHM", "HS256")
+JWT_EXP_HOURS = int(os.getenv("JWT_EXP_HOURS", "24"))

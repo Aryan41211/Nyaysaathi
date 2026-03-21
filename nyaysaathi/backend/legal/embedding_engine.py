@@ -9,8 +9,9 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 
 from .preprocessing import clean_text
+from .settings import EMBEDDING_MODEL_NAME
 
-MODEL_NAME = "all-MiniLM-L6-v2"
+MODEL_NAME = EMBEDDING_MODEL_NAME
 
 # Multi-example category representation for robust phrasing coverage.
 LEGAL_DATASET: dict[str, list[str]] = {
@@ -67,6 +68,16 @@ def load_model() -> SentenceTransformer:
     return _MODEL
 
 
+def get_embedding_model() -> SentenceTransformer:
+    """Serverless-safe model singleton accessor."""
+    return load_model()
+
+
+def is_model_loaded() -> bool:
+    """Return whether embedding model is already warm in this instance."""
+    return _MODEL is not None
+
+
 def _flatten_dataset() -> tuple[list[str], list[str]]:
     """Flatten category -> phrase list into aligned arrays."""
     dataset_texts: list[str] = []
@@ -117,6 +128,6 @@ def get_embedding_store() -> EmbeddingStore:
 def get_user_embedding(text: str) -> np.ndarray:
     """Generate one user embedding after normalization."""
     normalized = clean_text(text)
-    model = load_model()
+    model = get_embedding_model()
     matrix = model.encode([normalized], normalize_embeddings=True, convert_to_numpy=True)
     return np.asarray(matrix[0], dtype=np.float32)

@@ -9,6 +9,7 @@ from .fallback_engine import FallbackEngine, attach_legacy_aliases
 from .intent_engine import IntentEngine
 from .monitoring import AIMonitor
 from .preprocessing import clean_text
+from .settings import FALLBACK_SIMILARITY_THRESHOLD, HIGH_CONFIDENCE_THRESHOLD, MEDIUM_CONFIDENCE_THRESHOLD
 from .similarity_engine import find_best_match
 from .workflow_mapper import build_explanation, get_clarification_questions, get_workflow
 
@@ -16,11 +17,11 @@ _AI_MONITOR = AIMonitor(snapshot_every=25)
 
 
 def _confidence_from_similarity(similarity: float) -> str:
-    if similarity >= 0.80:
+    if similarity >= HIGH_CONFIDENCE_THRESHOLD:
         return "High"
-    if similarity >= 0.65:
+    if similarity >= MEDIUM_CONFIDENCE_THRESHOLD:
         return "Medium"
-    if similarity >= 0.50:
+    if similarity >= FALLBACK_SIMILARITY_THRESHOLD:
         return "Low"
     return "Low"
 
@@ -79,7 +80,7 @@ def understand_user_problem(user_input: str) -> dict[str, Any]:
         match = find_best_match(user_embedding, store)
 
         similarity = float(match.get("similarity", 0.0))
-        if similarity < 0.50:
+        if similarity < FALLBACK_SIMILARITY_THRESHOLD:
             fallback = FallbackEngine.classify(normalized)
             fallback["intent"] = IntentEngine.detect_intent(normalized)
             fallback["matched_problem"] = fallback.get("matched_text", "")

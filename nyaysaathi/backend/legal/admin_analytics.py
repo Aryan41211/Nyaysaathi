@@ -26,9 +26,9 @@ def get_category_stats() -> dict[str, int]:
         return {}
 
 
-def get_admin_queries(limit: int = 100) -> list[dict[str, Any]]:
+def get_admin_queries(limit: int = 100, offset: int = 0) -> list[dict[str, Any]]:
     """Return recent query rows with fields needed by admin UI."""
-    rows = get_recent_queries(limit=limit)
+    rows = get_recent_queries(limit=limit, offset=offset)
     slim: list[dict[str, Any]] = []
     for row in rows:
         slim.append(
@@ -36,7 +36,7 @@ def get_admin_queries(limit: int = 100) -> list[dict[str, Any]]:
                 "query": row.get("query_text", ""),
                 "category": row.get("category", "Unknown"),
                 "confidence": row.get("confidence", "Low"),
-                "timestamp": row.get("timestamp"),
+                "timestamp": row.get("created_at") or row.get("timestamp"),
                 "user_id": row.get("user_id", "anonymous"),
             }
         )
