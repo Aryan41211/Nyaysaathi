@@ -11,7 +11,7 @@ services:
       - key: DEBUG
         value: "False"
       - key: ALLOWED_HOSTS
-        value: ".onrender.com"
+        value: ".onrender.com,.vercel.app"
       - key: MONGODB_URI
         sync: false
       - key: MONGODB_DB
@@ -19,8 +19,8 @@ services:
       - key: SEARCH_MODE
         value: keyword
       - key: CORS_ALLOWED_ORIGINS
-        sync: false
+        value: "https://nyaysaathiiii.vercel.app"
       - key: CSRF_TRUSTED_ORIGINS
-        sync: false
+        value: "https://nyaysaathiiii.vercel.app"
       - key: OPENAI_API_KEY
         sync: false
