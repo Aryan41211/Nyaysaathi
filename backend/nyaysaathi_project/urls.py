@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 def api_health(request):
     logger.info("health_check path=/api/health")
-    return JsonResponse({"status": "ok", "service": "nyaysaathi"})
+    return JsonResponse({"status": "ok"})
 
 
 def health(request):

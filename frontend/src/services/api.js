@@ -174,24 +174,21 @@ API FUNCTIONS
 */
 
 export const searchCases = (query) =>
-
   getWithFallback(
-    "/search",
-    {
-      params: { q: query }
-    }
+    "/search/",
+    { params: { query: query } }
   )
 
 
 export const getCategories = () =>
 
-  getWithFallback("/categories")
+  getWithFallback("/categories/")
 
 
 export const getCases = (category) =>
 
   getWithFallback(
-    "/cases",
+    "/cases/",
     {
       params:
         category
@@ -213,4 +210,4 @@ Health check (recommended)
 */
 export const healthCheck = () =>
 
-  getWithFallback("/health")
+  getWithFallback("/health/")

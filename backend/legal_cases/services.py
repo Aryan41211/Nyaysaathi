@@ -22,28 +22,31 @@ _cases_cache: List[Dict] = []
 _mongo_unavailable = False
 
 _LOCAL_DATA_CANDIDATES = [
-    Path(__file__).resolve().parents[1] / "data" / "nyaysaathi_en.json",
-    Path(__file__).resolve().parents[2] / "nyaysaathi_200plus.json",
+    Path(__file__).resolve().parents[2] / "nyaysaathi_part1.json",
+    Path(__file__).resolve().parents[2] / "nyaysaathi_part2.json",
+    Path(__file__).resolve().parents[2] / "nyaysaathi_part3.json",
+    Path(__file__).resolve().parents[2] / "nyaysaathi_hindi.json",
+    Path(__file__).resolve().parents[2] / "nyaysaathi_marathi.json",
 ]
 
 
 def _load_cases_from_local_file() -> List[Dict]:
+    merged: List[Dict] = []
     for candidate in _LOCAL_DATA_CANDIDATES:
         if not candidate.exists():
+            logger.warning("Local fallback not found: %s", candidate)
             continue
         try:
             with candidate.open("r", encoding="utf-8") as f:
                 raw = json.load(f)
             if isinstance(raw, list):
-                logger.warning(
-                    "Using local dataset fallback from %s (%d records)",
-                    candidate,
-                    len(raw),
-                )
-                return raw
+                merged.extend(raw)
+                logger.warning("Loaded %d records from local fallback: %s", len(raw), candidate)
         except Exception as exc:
-            logger.exception("Failed loading local fallback dataset %s: %s", candidate, exc)
-    return []
+            logger.exception("Failed loading local fallback %s: %s", candidate, exc)
+    if merged:
+        logger.warning("Total local fallback records: %d", len(merged))
+    return merged
 
 
 def _load_cases() -> List[Dict]:

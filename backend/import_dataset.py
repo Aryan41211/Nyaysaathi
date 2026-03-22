@@ -31,7 +31,7 @@ from legal_cases.services import invalidate_cache
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
-DEFAULT_DATASET = Path(__file__).resolve().parent.parent / "dataset" / "legal_cases.json"
+DEFAULT_DATASET = Path(__file__).resolve().parent.parent / "nyaysaathi_part1.json"
 
 
 def import_dataset(filepath: Path, wipe: bool = False):

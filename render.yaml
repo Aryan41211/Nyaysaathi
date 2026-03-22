@@ -3,13 +3,28 @@ services:
     name: nyaysaathi-backend
     runtime: python
     rootDir: backend
-    buildCommand: "pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput"
-    startCommand: "python manage.py startup_check && gunicorn nyaysaathi_project.wsgi:application --bind 0.0.0.0:$PORT --config gunicorn.conf.py"
+    buildCommand: >
+      pip install -r requirements.txt &&
+      python manage.py migrate &&
+      python manage.py collectstatic --noinput &&
+      python import_dataset.py --file ../nyaysaathi_part1.json &&
+      python import_dataset.py --file ../nyaysaathi_part2.json &&
+      python import_dataset.py --file ../nyaysaathi_part3.json &&
+      python import_dataset.py --file ../nyaysaathi_hindi.json &&
+      python import_dataset.py --file ../nyaysaathi_marathi.json &&
+      python generate_embeddings.py
+    startCommand: >
+      gunicorn nyaysaathi_project.wsgi:application
+      --bind 0.0.0.0:$PORT
+      --config gunicorn_conf.py
+      --timeout 120
+      --workers 1
+      --threads 2
     envVars:
       - key: DJANGO_SECRET_KEY
         generateValue: true
       - key: DJANGO_SETTINGS_MODULE
-        value: nyaysaathi_project.settings_production
+        value: nyaysaathi_project.settings
       - key: DEBUG
         value: "False"
       - key: ALLOWED_HOSTS
@@ -19,7 +34,7 @@ services:
       - key: MONGODB_DB
         value: nyaysaathi
       - key: SEARCH_MODE
-        value: keyword
+        value: semantic
       - key: CORS_ALLOWED_ORIGINS
         value: "https://nyaysaathiiii.vercel.app"
       - key: CSRF_TRUSTED_ORIGINS

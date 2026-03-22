@@ -13,17 +13,13 @@ The NLP metadata is returned to the frontend so it can display:
 import logging
 import time
 
+from django.http import JsonResponse
 from rest_framework.decorators import api_view, throttle_classes
 
 from auth.auth_middleware import require_admin, require_user
 from . import services
-from ai_engine.response_generator import generate_legal_guidance
-from ai_engine.translator import get_translation_health
-from legal.embedding_engine import is_model_loaded
-from legal.ai_engine import get_ai_monitoring_snapshot, understand_user_problem
 from legal.admin_analytics import get_admin_queries, get_category_stats
 from legal.query_logger import get_user_history, log_query
-from legal_cases.db_connection import mongo_health_status
 from services.workflow_service import localize_case_payload
 from .rate_limit import is_rate_limited
 from .response_utils import error_response, success_response
@@ -48,11 +44,7 @@ def _format_steps(steps: list[str]) -> list[str]:
 
 @api_view(["GET"])
 def health(request):
-    return success_response({
-        "status": "ok",
-        "mongo": mongo_health_status(),
-        "ai": "loaded" if is_model_loaded() else "not_loaded",
-    })
+    return JsonResponse({"status": "ok"})
 
 
 @api_view(["GET"])
@@ -110,6 +102,8 @@ def search(request):
         return error_response("invalid_query", validation_error, 400)
 
     try:
+        from ai_engine.response_generator import generate_legal_guidance
+
         guidance = generate_legal_guidance(query)
         return success_response(
             guidance.get("data", []),
@@ -212,6 +206,9 @@ def case_detail(request, subcategory):
 def ai_health(request):
     """GET /api/health/ai/ - AI subsystem health for monitoring dashboards."""
     try:
+        from ai_engine.translator import get_translation_health
+        from legal.ai_engine import get_ai_monitoring_snapshot
+
         translation = get_translation_health()
         ai_snapshot = get_ai_monitoring_snapshot()
         return success_response(
@@ -250,6 +247,8 @@ def classify(request):
         return error_response("invalid_user_input", validation_error, 400)
 
     try:
+        from legal.ai_engine import understand_user_problem
+
         started = time.perf_counter()
         output = understand_user_problem(user_input)
         category = str(output.get("category", "Unknown"))

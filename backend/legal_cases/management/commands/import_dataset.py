@@ -16,7 +16,7 @@ from legal_cases.services import invalidate_cache
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_PATH = Path(__file__).resolve().parents[5] / "dataset" / "legal_cases.json"
+DEFAULT_PATH = Path(__file__).resolve().parents[5] / "nyaysaathi_part1.json"
 
 
 class Command(BaseCommand):
