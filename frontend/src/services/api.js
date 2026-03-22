@@ -1,74 +1,216 @@
-import axios from 'axios'
+import axios from "axios"
 
-const DEFAULT_PROD_API_URL = '/api'
-const DEFAULT_FALLBACK_API_URL = 'https://nyaysaathi-backend.onrender.com/api'
+/*
+PRODUCTION ARCHITECTURE
+
+Frontend (Vercel)
+↓
+Backend (Render Django)
+↓
+MongoDB Atlas
+
+This file ensures stable connection between frontend and backend.
+*/
+
+const DEFAULT_PROD_API_URL = "https://nyaysaathi.onrender.com/api"
+const DEFAULT_FALLBACK_API_URL = "https://nyaysaathi.onrender.com/api"
 
 function normalizeApiBaseUrl(rawUrl) {
-  if (!rawUrl) return ''
+  if (!rawUrl) return ""
 
-  const trimmed = rawUrl.trim().replace(/\/+$/, '')
-  if (trimmed.endsWith('/api')) return trimmed
+  const trimmed = rawUrl.trim().replace(/\/+$/, "")
+
+  if (trimmed.endsWith("/api")) return trimmed
+
   return `${trimmed}/api`
 }
 
 function resolveApiBaseUrl() {
-  const envUrl = normalizeApiBaseUrl(import.meta.env.VITE_API_URL)
+
+  const envUrl = normalizeApiBaseUrl(
+    import.meta.env.VITE_API_URL
+  )
+
   if (envUrl) return envUrl
-  if (import.meta.env.PROD) return DEFAULT_PROD_API_URL
-  return '/api'
+
+  return DEFAULT_PROD_API_URL
 }
 
 const BASE_URL = resolveApiBaseUrl()
-const FALLBACK_BASE_URL = normalizeApiBaseUrl(import.meta.env.VITE_FALLBACK_API_URL) || DEFAULT_FALLBACK_API_URL
 
+const FALLBACK_BASE_URL =
+  normalizeApiBaseUrl(
+    import.meta.env.VITE_FALLBACK_API_URL
+  ) || DEFAULT_FALLBACK_API_URL
+
+
+/*
+Main API client
+*/
 const api = axios.create({
+
   baseURL: BASE_URL,
-  // First search request can be slow on cold start (model warm-up + fallback path).
-  timeout: 90000,
-  headers: { 'Content-Type': 'application/json' },
-})
 
-const fallbackApi = axios.create({
-  baseURL: FALLBACK_BASE_URL,
+  // Long timeout for AI model cold start
   timeout: 90000,
-  headers: { 'Content-Type': 'application/json' },
-})
 
-api.interceptors.response.use(
-  r => r,
-  err => {
-    if (err.code === 'ECONNABORTED') {
-      err.message = 'Request timed out. Please try once more.'
-      return Promise.reject(err)
-    }
-    if (!err.response) {
-      err.message = `Cannot connect to backend (${BASE_URL}). Check VITE_API_URL and backend deployment status.`
-    } else if (import.meta.env.PROD && err.response.status === 404) {
-      err.message = `Backend endpoint not found at ${BASE_URL}. Ensure VITE_API_URL points to your deployed Django API host.`
-    }
-    return Promise.reject(err)
+  headers: {
+    "Content-Type": "application/json"
   }
+
+})
+
+
+/*
+Fallback API client
+*/
+const fallbackApi = axios.create({
+
+  baseURL: FALLBACK_BASE_URL,
+
+  timeout: 90000,
+
+  headers: {
+    "Content-Type": "application/json"
+  }
+
+})
+
+
+/*
+Error handling interceptor
+*/
+api.interceptors.response.use(
+
+  response => response,
+
+  error => {
+
+    if (error.code === "ECONNABORTED") {
+
+      error.message =
+        "Server is waking up (cold start). Please retry once."
+
+      return Promise.reject(error)
+    }
+
+    if (!error.response) {
+
+      error.message =
+        "Cannot reach backend server. Check deployment."
+
+    }
+    else if (error.response.status === 404) {
+
+      error.message =
+        "API endpoint not found. Check backend routes."
+
+    }
+    else if (error.response.status >= 500) {
+
+      error.message =
+        "Backend error. Please retry."
+
+    }
+
+    return Promise.reject(error)
+  }
+
 )
 
-function shouldRetryOnFallback(err) {
+
+/*
+Fallback retry logic
+*/
+function shouldRetryOnFallback(error){
+
   if (!import.meta.env.PROD) return false
-  if (!err) return false
-  if (!err.response) return true
-  return err.response.status === 404 || err.response.status >= 500
+
+  if (!error) return false
+
+  if (!error.response) return true
+
+  return (
+    error.response.status === 404 ||
+    error.response.status >= 500
+  )
+
 }
 
-async function getWithFallback(path, config = {}) {
-  try {
-    const response = await api.get(path, config)
+
+/*
+Generic GET with fallback
+*/
+async function getWithFallback(
+  path,
+  config = {}
+){
+
+  try{
+
+    const response =
+      await api.get(path, config)
+
     return response.data
-  } catch (err) {
-    if (!shouldRetryOnFallback(err)) throw err
-    const fallbackResponse = await fallbackApi.get(path, config)
-    return fallbackResponse.data
+
   }
+  catch(error){
+
+    if(!shouldRetryOnFallback(error))
+      throw error
+
+    const fallbackResponse =
+      await fallbackApi.get(path, config)
+
+    return fallbackResponse.data
+
+  }
+
 }
 
-export const searchCases   = (query)    => getWithFallback('/search/',   { params: { query } })
-export const getCategories = ()          => getWithFallback('/categories/')
-export const getCases      = (category) => getWithFallback('/cases/', { params: category ? { category } : {} })
-export const getCaseDetail = (sub)       => getWithFallback(`/case/${encodeURIComponent(sub)}/`)
+
+/*
+API FUNCTIONS
+*/
+
+export const searchCases = (query) =>
+
+  getWithFallback(
+    "/search",
+    {
+      params: { q: query }
+    }
+  )
+
+
+export const getCategories = () =>
+
+  getWithFallback("/categories")
+
+
+export const getCases = (category) =>
+
+  getWithFallback(
+    "/cases",
+    {
+      params:
+        category
+        ? { category }
+        : {}
+    }
+  )
+
+
+export const getCaseDetail = (sub) =>
+
+  getWithFallback(
+    `/case/${encodeURIComponent(sub)}`
+  )
+
+
+/*
+Health check (recommended)
+*/
+export const healthCheck = () =>
+
+  getWithFallback("/health")
