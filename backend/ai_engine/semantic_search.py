@@ -8,27 +8,28 @@ import time
 from typing import Any
 
 import numpy as np
-from sentence_transformers import SentenceTransformer
 
 from config import EMBEDDING_CACHE_TTL_SECONDS, EMBEDDING_MODEL, SEMANTIC_MATCH_THRESHOLD
 from legal_cases.db_connection import get_collection
+from utils.ai_runtime import load_sentence_transformer
 
 logger = logging.getLogger(__name__)
 
 _EMBED_COLL = "category_embeddings"
 _CACHE_LOCK = threading.Lock()
 _EMBED_CACHE: dict[str, Any] = {"expires": 0.0, "rows": []}
-_MODEL: SentenceTransformer | None = None
+_MODEL: Any | None = None
 _MODEL_LOCK = threading.Lock()
 
 
-def _model() -> SentenceTransformer:
+def _model():
     global _MODEL
     if _MODEL is not None:
         return _MODEL
     with _MODEL_LOCK:
         if _MODEL is None:
-            _MODEL = SentenceTransformer(EMBEDDING_MODEL)
+            _MODEL = load_sentence_transformer(EMBEDDING_MODEL)
+            logger.info("Loaded semantic model lazily: %s", EMBEDDING_MODEL)
     return _MODEL
 
 

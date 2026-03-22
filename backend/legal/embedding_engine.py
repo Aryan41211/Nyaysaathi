@@ -4,9 +4,10 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from threading import Lock
+from typing import Any
 
 import numpy as np
-from sentence_transformers import SentenceTransformer
+from utils.ai_runtime import load_sentence_transformer
 
 from .preprocessing import clean_text
 from .settings import EMBEDDING_MODEL_NAME
@@ -41,7 +42,7 @@ LEGAL_DATASET: dict[str, list[str]] = {
     ],
 }
 
-_MODEL: SentenceTransformer | None = None
+_MODEL: Any | None = None
 _MODEL_LOCK = Lock()
 _STORE: EmbeddingStore | None = None
 _STORE_LOCK = Lock()
@@ -56,7 +57,7 @@ class EmbeddingStore:
     dataset_embeddings: np.ndarray
 
 
-def load_model() -> SentenceTransformer:
+def load_model():
     """Load sentence transformer once per process."""
     global _MODEL
     if _MODEL is not None:
@@ -64,11 +65,11 @@ def load_model() -> SentenceTransformer:
 
     with _MODEL_LOCK:
         if _MODEL is None:
-            _MODEL = SentenceTransformer(MODEL_NAME)
+            _MODEL = load_sentence_transformer(MODEL_NAME)
     return _MODEL
 
 
-def get_embedding_model() -> SentenceTransformer:
+def get_embedding_model():
     """Serverless-safe model singleton accessor."""
     return load_model()
 

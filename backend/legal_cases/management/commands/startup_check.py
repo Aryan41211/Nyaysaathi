@@ -20,13 +20,13 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument(
-            "--non-strict",
+            "--strict",
             action="store_true",
-            help="Do not fail command on warnings (useful for local dev).",
+            help="Fail command on critical readiness checks.",
         )
 
     def handle(self, *args, **options):
-        strict = not options.get("non_strict", False)
+        strict = bool(options.get("strict", False))
 
         logger.info("startup_check: starting")
         self.stdout.write("[startup] Running environment validation...")
@@ -47,7 +47,10 @@ class Command(BaseCommand):
 
         self.stdout.write("[startup] Checking MongoDB reachability...")
         try:
-            get_client().admin.command("ping")
+            client = get_client(raise_on_error=strict, quick=not strict)
+            if client is None:
+                raise RuntimeError("MongoDB unavailable in quick-check mode")
+            client.admin.command("ping")
         except Exception as exc:  # noqa: BLE001
             msg = f"MongoDB unreachable: {exc}"
             if strict:

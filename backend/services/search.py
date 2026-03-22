@@ -8,21 +8,21 @@ from __future__ import annotations
 
 import logging
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Any, Dict, List, Tuple
 
 from django.conf import settings
 
-from search.semantic_engine import SemanticSearchEngine
-
 logger = logging.getLogger(__name__)
 
-_engine: SemanticSearchEngine | None = None
+_engine: Any | None = None
 
 
-def get_engine() -> SemanticSearchEngine:
+def get_engine():
     """Return singleton semantic engine instance."""
     global _engine
     if _engine is None:
+        from search.semantic_engine import SemanticSearchEngine
+
         cache_dir = Path(getattr(settings, "SEARCH_CACHE_DIR", settings.BASE_DIR / "search_cache"))
         _engine = SemanticSearchEngine(cache_dir=cache_dir)
     return _engine

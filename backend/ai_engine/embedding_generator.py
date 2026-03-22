@@ -8,15 +8,24 @@ from collections import defaultdict
 from typing import Any
 
 import numpy as np
-from sentence_transformers import SentenceTransformer
 
 from config import EMBEDDING_BATCH_SIZE, EMBEDDING_MODEL
 from legal_cases.db_connection import get_collection
+from utils.ai_runtime import load_sentence_transformer
 
 logger = logging.getLogger(__name__)
 
 _EMBED_COLL = "category_embeddings"
 _CASES_COLL = "legal_cases"
+_MODEL = None
+
+
+def _get_model():
+    global _MODEL
+    if _MODEL is None:
+        _MODEL = load_sentence_transformer(EMBEDDING_MODEL)
+        logger.info("Loaded embedding generator model lazily: %s", EMBEDDING_MODEL)
+    return _MODEL
 
 
 def _build_category_documents() -> list[dict[str, str]]:
@@ -82,7 +91,7 @@ def _build_category_documents() -> list[dict[str, str]]:
 
 
 def _embed_texts(texts: list[str]) -> list[list[float]]:
-    model = SentenceTransformer(EMBEDDING_MODEL)
+    model = _get_model()
     vectors: list[list[float]] = []
 
     for idx in range(0, len(texts), EMBEDDING_BATCH_SIZE):

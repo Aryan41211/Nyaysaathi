@@ -22,7 +22,7 @@ from typing import Any, Dict, Iterable, List, Protocol, Tuple
 import faiss
 import numpy as np
 from rapidfuzz import fuzz
-from sentence_transformers import SentenceTransformer
+from utils.ai_runtime import load_sentence_transformer
 
 from .intent_extractor import extract_intent
 from .query_processor import process_query
@@ -90,7 +90,7 @@ class SemanticSearchEngine:
         self.cache_dir.mkdir(parents=True, exist_ok=True)
 
         self.model_name = model_name
-        self.model: SentenceTransformer | None = None
+        self.model = None
 
         self._cases: List[Dict[str, Any]] = []
         self._embeddings: np.ndarray | None = None
@@ -100,10 +100,10 @@ class SemanticSearchEngine:
         self._emb_path = self.cache_dir / "semantic_embeddings.npy"
         self._faiss_path = self.cache_dir / "semantic_index.faiss"
 
-    def load_model(self) -> SentenceTransformer:
+    def load_model(self):
         """Load embedding model once per process."""
         if self.model is None:
-            self.model = SentenceTransformer(self.model_name)
+            self.model = load_sentence_transformer(self.model_name)
             logger.info("Semantic model loaded: %s", self.model_name)
         return self.model
 
