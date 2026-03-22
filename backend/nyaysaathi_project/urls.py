@@ -2,10 +2,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.http import JsonResponse
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def api_health(request):
-    return JsonResponse({"status": "ok"})
+    logger.info("health_check path=/api/health")
+    return JsonResponse({"status": "ok", "service": "nyaysaathi"})
 
 
 def health(request):
