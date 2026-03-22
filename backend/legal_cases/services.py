@@ -12,9 +12,10 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
+from django.conf import settings
 from services.search import reset_engine, semantic_search
 
-from .db_connection import get_collection
+from .db_connection import get_client
 
 logger = logging.getLogger(__name__)
 
@@ -55,7 +56,11 @@ def _load_cases() -> List[Dict]:
     if not _cases_cache:
         if not _mongo_unavailable:
             try:
-                col = get_collection("legal_cases")
+                # Outage-safe path: use a quick probe so search doesn't block on long Mongo retries.
+                client = get_client(raise_on_error=False, quick=True)
+                if client is None:
+                    raise RuntimeError("Mongo unavailable (quick mode)")
+                col = client[settings.MONGODB_DB]["legal_cases"]
                 _cases_cache = list(col.find({}, {"_id": 0}))
                 logger.info("Loaded %d cases from MongoDB", len(_cases_cache))
             except Exception as exc:
@@ -79,6 +84,58 @@ def invalidate_cache() -> None:
     logger.info("Search cache invalidated")
 
 
+def _keyword_fallback_search(cases: List[Dict], query: str, top_k: int) -> Tuple[List[Dict], Dict]:
+    tokens = [t for t in query.lower().split() if len(t) > 1]
+    if not tokens:
+        return [], {
+            "detected_language": "Unknown",
+            "normalized_query": query,
+            "search_ready_query": query,
+            "keywords": [],
+            "problem_domain": "Unknown",
+            "problem_type": "General",
+            "likely_authority": "District Legal Services Authority",
+            "confidence": "Low",
+            "nlp_source": "keyword_fallback",
+        }
+
+    ranked: List[Dict] = []
+    for case in cases:
+        haystack_parts = [
+            str(case.get("category", "")),
+            str(case.get("subcategory", "")),
+            str(case.get("problem_description", "")),
+            " ".join(case.get("keywords", []) or []),
+        ]
+        haystack = " ".join(haystack_parts).lower()
+        score = sum(1 for token in tokens if token in haystack)
+        if score <= 0:
+            continue
+
+        out = dict(case)
+        norm_score = min(1.0, score / max(1, len(tokens)))
+        out["similarity_score"] = round(float(norm_score), 4)
+        out["score"] = round(float(norm_score), 4)
+        out["confidence"] = "High" if norm_score >= 0.8 else ("Medium" if norm_score >= 0.5 else "Low")
+        out["match_type"] = "keyword_fallback"
+        ranked.append(out)
+
+    ranked.sort(key=lambda row: float(row.get("similarity_score", 0.0)), reverse=True)
+    limited = ranked[:top_k]
+    confidence = limited[0].get("confidence", "Low") if limited else "Low"
+    return limited, {
+        "detected_language": "Unknown",
+        "normalized_query": query,
+        "search_ready_query": query,
+        "keywords": tokens,
+        "problem_domain": "Unknown",
+        "problem_type": "General",
+        "likely_authority": "District Legal Services Authority",
+        "confidence": confidence,
+        "nlp_source": "keyword_fallback",
+    }
+
+
 def search_cases(query: str, top_k: int = 5) -> Tuple[List[Dict], Dict]:
     """Main semantic search entrypoint.
 
@@ -93,22 +150,20 @@ def search_cases(query: str, top_k: int = 5) -> Tuple[List[Dict], Dict]:
         logger.error("No legal cases found in MongoDB")
         return [], {}
 
+    # Outage mode: if Mongo is unavailable, skip semantic model loading entirely
+    # and return fast keyword fallback to keep search responsive.
+    if _mongo_unavailable:
+        return _keyword_fallback_search(cases, query, top_k)
+
     try:
         results, nlp_meta = semantic_search(cases=cases, query=query, top_k=top_k)
-        return results, nlp_meta
+        if results:
+            return results, nlp_meta
+        logger.warning("Semantic search returned no results; using keyword fallback")
+        return _keyword_fallback_search(cases, query, top_k)
     except Exception as exc:
         logger.exception("Semantic search failed for query %r: %s", query, exc)
-        return [], {
-            "detected_language": "Unknown",
-            "normalized_query": query,
-            "search_ready_query": query,
-            "keywords": [],
-            "problem_domain": "Unknown",
-            "problem_type": "General",
-            "likely_authority": "District Legal Services Authority",
-            "confidence": "Low",
-            "nlp_source": "semantic_error",
-        }
+        return _keyword_fallback_search(cases, query, top_k)
 
 
 def get_all_categories() -> List[Dict]:

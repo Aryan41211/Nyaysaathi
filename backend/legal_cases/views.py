@@ -42,6 +42,46 @@ def _format_steps(steps: list[str]) -> list[str]:
     return formatted
 
 
+def _build_fallback_search_response(query: str):
+    """Return local semantic/keyword fallback response payload."""
+    results, nlp_meta = services.search_cases(query, top_k=5)
+    normalized_results = []
+    for row in results:
+        workflow = row.get("workflow_steps") or row.get("workflow") or []
+        normalized_results.append(
+            {
+                **row,
+                "workflow": workflow,
+                "workflow_steps": workflow,
+            }
+        )
+
+    return success_response(
+        normalized_results,
+        query=query,
+        language=nlp_meta.get("detected_language", "en"),
+        detected_language=nlp_meta.get("detected_language", "en"),
+        normalized_query=nlp_meta.get("normalized_query", query),
+        nlp=nlp_meta,
+        ai_understanding={},
+        semantic_match={"source": "services.search_cases"},
+        category="",
+        subcategory="",
+        workflow=[],
+        workflow_steps=[],
+        localized_workflow=[],
+        workflow_english=[],
+        documents_required=[],
+        required_documents=[],
+        authorities=[],
+        complaint_template="",
+        translation_triggered=False,
+        cache_hit=False,
+        total=len(normalized_results),
+        message="Search completed using fallback semantic engine.",
+    )
+
+
 @api_view(["GET"])
 def health(request):
     return JsonResponse({"status": "ok"})
@@ -101,6 +141,18 @@ def search(request):
     if not ok_input:
         return error_response("invalid_query", validation_error, 400)
 
+    # Incident-safe guardrail: when Mongo is unavailable, skip expensive AI path
+    # and serve local search fallback immediately.
+    try:
+        from legal_cases.db_connection import get_client
+
+        if get_client(raise_on_error=False, quick=True) is None:
+            logger.warning("Skipping AI guidance because Mongo quick probe failed")
+            return _build_fallback_search_response(query)
+    except Exception as quick_probe_exc:
+        logger.warning("Quick Mongo probe failed in search; using fallback: %s", quick_probe_exc)
+        return _build_fallback_search_response(query)
+
     try:
         from ai_engine.response_generator import generate_legal_guidance
 
@@ -138,42 +190,7 @@ def search(request):
         # Fallback to local semantic search so UI remains functional
         # even when upstream AI guidance dependencies are unavailable.
         try:
-            results, nlp_meta = services.search_cases(query, top_k=5)
-            normalized_results = []
-            for row in results:
-                workflow = row.get("workflow_steps") or row.get("workflow") or []
-                normalized_results.append(
-                    {
-                        **row,
-                        "workflow": workflow,
-                        "workflow_steps": workflow,
-                    }
-                )
-
-            return success_response(
-                normalized_results,
-                query=query,
-                language=nlp_meta.get("detected_language", "en"),
-                detected_language=nlp_meta.get("detected_language", "en"),
-                normalized_query=nlp_meta.get("normalized_query", query),
-                nlp=nlp_meta,
-                ai_understanding={},
-                semantic_match={"source": "services.search_cases"},
-                category="",
-                subcategory="",
-                workflow=[],
-                workflow_steps=[],
-                localized_workflow=[],
-                workflow_english=[],
-                documents_required=[],
-                required_documents=[],
-                authorities=[],
-                complaint_template="",
-                translation_triggered=False,
-                cache_hit=False,
-                total=len(normalized_results),
-                message="Search completed using fallback semantic engine.",
-            )
+            return _build_fallback_search_response(query)
         except Exception as fallback_exc:
             logger.error("search fallback '%s': %s", query, fallback_exc)
             return error_response("search_failed", "Search failed. Please try again.", 500)
