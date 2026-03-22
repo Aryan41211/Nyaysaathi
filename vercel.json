@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "installCommand": "cd nyaysaathi/frontend && npm install",
-  "buildCommand": "cd nyaysaathi/frontend && npm run build",
-  "outputDirectory": "nyaysaathi/frontend/dist",
+  "installCommand": "cd frontend && npm install",
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/dist",
   "rewrites": [
     {
       "source": "/api/(.*)",

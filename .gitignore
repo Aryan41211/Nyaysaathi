@@ -1,5 +1,6 @@
 # Python
 __pycache__/
+**/__pycache__/
 *.py[cod]
 *.pyo
 *.pyd
@@ -22,9 +23,17 @@ dist/
 mongo-data/
 .vite/
 *.log
+*.sqlite3
+backend/staticfiles/
+backend/db.sqlite3
+backend/search_cache/
+frontend/dist/
+frontend/node_modules/
 
 # Environment files
 .env
+backend/.env
+frontend/.env
 
 # OS/editor
 .DS_Store

@@ -1,49 +1,146 @@
 # NyaySaathi
 
-NyaySaathi is an AI legal guidance platform for India that turns plain-language complaints into actionable legal next steps.
+NyaySaathi is a multilingual AI legal guidance platform that converts user legal problems into procedural next steps, required documents, escalation paths, and authority guidance.
 
-Users describe a problem in Hindi, English, or Hinglish. NyaySaathi returns:
-- likely legal category and subcategory
-- what to do next (step-by-step)
-- required documents
-- who to contact
-- laws, portals, helplines, and complaint templates where available
+## Project Overview
 
-## Why it stands out
+- Backend: Django REST API with modular AI pipeline and MongoDB-backed legal workflow retrieval.
+- Frontend: React + Vite app deployed on Vercel.
+- AI: Language detection, normalization, intent routing, semantic embeddings, reranking, and response generation.
+- Deployment: Render for backend, Vercel for frontend.
 
-- Hinglish-aware intent understanding (real-world, mixed language input)
-- FastAPI + MongoDB production API
-- JWT auth with role-based admin access
-- Admin dashboard for users, queries, and workflow management
-- Confidence-aware responses with clarification prompts
-- Caching + feedback loop for better speed and quality over time
+## Repository Structure
 
-## Tech stack
+```text
+NyaySaathi/
+|-- backend/
+|   |-- manage.py
+|   |-- requirements.txt
+|   |-- requirements.lock.txt
+|   |-- runtime.txt
+|   |-- .env.example
+|   |-- nyaysaathi_project/
+|   |-- legal_cases/
+|   |-- ai_engine/
+|   |-- auth/
+|   |-- api/
+|   |-- middleware/
+|   |-- models/
+|   |-- services/
+|   |-- utils/
+|   |-- search/
+|   `-- data/
+|-- frontend/
+|   |-- src/
+|   |-- package.json
+|   |-- vite.config.js
+|   `-- .env.example
+|-- dataset/
+|-- docs/
+|   |-- architecture.md
+|   |-- api.md
+|   `-- deployment.md
+|-- scripts/
+|   |-- import_dataset.py
+|   `-- generate_embeddings.py
+|-- render.yaml
+`-- vercel.json
+```
 
-- Backend: Python, FastAPI, MongoDB, PyMongo
-- AI: sentence-transformers, fallback-safe classification pipeline
-- Frontend: React, TypeScript, Vite
+## Architecture Diagram
 
-## Quick start
+```mermaid
+flowchart LR
+	U[User Query] --> P[Preprocessing]
+	P --> N[Language Normalization]
+	N --> I[Intent Classification]
+	I --> E[Embedding Search]
+	E --> R[Reranking]
+	R --> G[Response Generation]
+	G --> API[API Response]
+```
 
-1. Install backend dependencies from `nyaysaathi/backend/requirements.txt`.
-2. Start API (`api.main`) on port `8010`.
-3. Start frontend from `nyaysaathi/nyaysathi-frontend-main`.
-4. Verify API health at `/health`.
+## Local Setup
 
-## Core APIs
+### Backend
 
-- Auth: `POST /auth/signup`, `POST /auth/login`
-- Classify: `POST /api/classify` (and `POST /classify`)
-- Admin: `GET /admin/users`, `GET /admin/queries`, `POST|PUT|DELETE /admin/workflows`
-- Feedback: `POST /api/feedback`
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+copy .env.example .env
+python manage.py migrate
+python manage.py runserver
+```
 
-## Project structure
+### Frontend
 
-- AI and API modules at root: `ai_engine`, `api`, `auth`, `admin`, `routes`, `models`, `middleware`, `data`
-- Platform workspace: `nyaysaathi/backend`, `nyaysaathi/frontend`, `nyaysaathi/nyaysathi-frontend-main`
+```bash
+cd frontend
+npm install
+copy .env.example .env
+npm run dev
+```
 
-## Legal disclaimer
+## Environment Variables
 
-NyaySaathi provides procedural guidance only, not formal legal advice.
-For legal advice, consult a qualified advocate.
+See `backend/.env.example` and `frontend/.env.example`.
+
+Minimum required backend values:
+
+- `MONGODB_URI`
+- `MONGODB_DB`
+- `DJANGO_SECRET_KEY`
+- `DEBUG`
+- `ALLOWED_HOSTS`
+- `CORS_ALLOWED_ORIGINS`
+- `OPENAI_API_KEY` (optional unless OpenAI-backed modules are enabled)
+
+Frontend value:
+
+- `VITE_API_URL`
+
+## API Routes
+
+- `GET /api/health` -> `{ "status": "ok" }`
+- `GET /api/categories/`
+- `GET /api/cases/`
+- `GET|POST /api/search/`
+- `POST /api/classify`
+- `GET /api/case/<subcategory>/`
+- `GET /api/health/ai/`
+- `POST /api/auth/signup`
+- `POST /api/auth/login`
+
+## Deployment
+
+### Render (Backend)
+
+- Root directory: `backend`
+- Build command:
+
+```bash
+pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput
+```
+
+- Start command:
+
+```bash
+gunicorn nyaysaathi_project.wsgi:application --bind 0.0.0.0:$PORT
+```
+
+### Vercel (Frontend)
+
+- Uses root `vercel.json` with build output `frontend/dist`.
+- Ensure `VITE_API_URL` points to the Render backend host.
+
+## Operational Notes
+
+- Structured logging and request middleware are enabled in Django settings.
+- Throttling and rate-limit preparation are active for anonymous and classify paths.
+- Mongo client uses retry/backoff and bounded pool settings for deployment resilience.
+
+## Legal Disclaimer
+
+NyaySaathi provides procedural guidance and does not replace formal legal advice.
