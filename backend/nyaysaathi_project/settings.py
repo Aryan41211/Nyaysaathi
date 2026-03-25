@@ -146,6 +146,10 @@ SEARCH_MODE = os.getenv("SEARCH_MODE", "semantic")
 SEARCH_CACHE_DIR = BASE_DIR / "search_cache"
 FAISS_INDEX_PATH = SEARCH_CACHE_DIR / "semantic_index.faiss"
 EMBEDDINGS_CACHE_PATH = SEARCH_CACHE_DIR / "semantic_embeddings.npy"
+SEMANTIC_MODEL_NAME = os.getenv(
+    "SEMANTIC_MODEL_NAME",
+    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+)
 
 # Local semantic understanding layer
 UNDERSTANDING_CACHE_TTL_SECONDS = int(os.getenv("UNDERSTANDING_CACHE_TTL_SECONDS", "300"))

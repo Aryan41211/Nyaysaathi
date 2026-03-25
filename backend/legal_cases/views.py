@@ -180,6 +180,9 @@ def search(request):
             normalized_query=guidance.get("normalized_query", query),
             translation_triggered=guidance.get("translation_triggered", False),
             cache_hit=guidance.get("cache_hit", False),
+            clarification_required=guidance.get("clarification_required", False),
+            clarification_message=guidance.get("clarification_message", ""),
+            clarification_questions=guidance.get("clarification_questions", []),
             total=guidance.get("total", 0),
             message=guidance.get("message", "Search completed."),
         )

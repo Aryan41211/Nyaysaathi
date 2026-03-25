@@ -85,7 +85,11 @@ class QueryMeta:
 class SemanticSearchEngine:
     """Singleton-friendly semantic search engine."""
 
-    def __init__(self, cache_dir: Path, model_name: str = "sentence-transformers/all-MiniLM-L6-v2") -> None:
+    def __init__(
+        self,
+        cache_dir: Path,
+        model_name: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    ) -> None:
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
 

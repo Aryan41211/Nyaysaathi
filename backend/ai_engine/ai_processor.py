@@ -8,6 +8,7 @@ from uuid import uuid4
 
 from config import DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES
 from legal_cases import services
+from legal_cases.nlp_processor import build_enhanced_search_string, process_query as process_nlp_query
 from services.workflow_service import get_workflow, localize_case_payload, resolve_category_id
 
 from .classifier import classify_legal_problem
@@ -19,6 +20,7 @@ logger = logging.getLogger(__name__)
 
 
 MAX_AI_CALLS_PER_REQUEST = 2
+LOW_CONFIDENCE_LABELS = {"low", "unknown", ""}
 
 
 def _legacy_classifier(query: str) -> str:
@@ -31,6 +33,70 @@ def _legacy_classifier(query: str) -> str:
         str(top.get("category", "")),
         query,
     )
+
+
+def _build_understanding(raw_query: str) -> tuple[str, dict[str, Any], bool]:
+    """Build search-ready query understanding with AI-first fallback semantics.
+
+    Returns:
+        (classification_query, nlp_meta, used_ai_understanding)
+    """
+    nlp_meta = process_nlp_query(raw_query)
+    search_ready = str(nlp_meta.get("search_ready_query", "")).strip()
+    if search_ready:
+        query_for_classification = build_enhanced_search_string(nlp_meta, raw_query)
+    else:
+        query_for_classification = raw_query
+    used_ai = str(nlp_meta.get("nlp_source", "")).strip().lower() == "claude"
+    return query_for_classification, nlp_meta, used_ai
+
+
+def _is_low_confidence(nlp_meta: dict[str, Any]) -> bool:
+    confidence = str(nlp_meta.get("confidence", "")).strip().lower()
+    return confidence in LOW_CONFIDENCE_LABELS
+
+
+def _build_clarification_questions(nlp_meta: dict[str, Any]) -> list[str]:
+    text = " ".join(
+        [
+            str(nlp_meta.get("search_ready_query", "")),
+            " ".join(str(k) for k in nlp_meta.get("keywords", []) if k),
+        ]
+    ).lower()
+
+    if any(t in text for t in ["salary", "wage", "employer", "labour"]):
+        return [
+            "Is this a salary delay, partial salary payment, or complete non-payment?",
+            "Are you employed in private job, contract work, or daily wage work?",
+            "For how many months is payment pending and do you have salary proof (slips/bank statement)?",
+        ]
+
+    if any(t in text for t in ["landlord", "tenant", "deposit", "rent", "house"]):
+        return [
+            "Is the issue about rent, eviction, or refund of security deposit?",
+            "Do you have rent agreement and payment receipts?",
+            "How long has this dispute been pending?",
+        ]
+
+    if any(t in text for t in ["fraud", "upi", "scam", "cyber", "bank"]):
+        return [
+            "Was this UPI fraud, card fraud, or social media/OTP scam?",
+            "When did the transaction happen and what amount was involved?",
+            "Do you have transaction ID, screenshots, and complaint reference number?",
+        ]
+
+    if any(t in text for t in ["police", "fir", "complaint"]):
+        return [
+            "Is the issue about FIR not being registered, delayed action, or harassment?",
+            "Which police station did you approach and on what date?",
+            "Do you have written complaint copy or acknowledgment?",
+        ]
+
+    return [
+        "What is the main legal issue in one line?",
+        "Who is the opposite party (employer, landlord, police, bank, neighbor, etc.)?",
+        "What action have you already taken and when?",
+    ]
 
 
 def generate_legal_guidance(user_input: str) -> dict[str, Any]:
@@ -58,12 +124,16 @@ def generate_legal_guidance(user_input: str) -> dict[str, Any]:
         }
 
     ai_calls = 0
+    understood_query, nlp_meta, used_ai_understanding = _build_understanding(query)
+    if used_ai_understanding:
+        ai_calls += 1
+
     detected_language = detect_language(query)
     if detected_language not in SUPPORTED_LANGUAGES:
         detected_language = DEFAULT_LANGUAGE
 
     normalized_query, normalized_language, used_ai_normalizer = normalize_user_input(
-        query,
+        understood_query,
         preferred_language=detected_language,
         allow_ai=True,
     )
@@ -82,6 +152,9 @@ def generate_legal_guidance(user_input: str) -> dict[str, Any]:
     if class_meta.get("used_ai"):
         ai_calls += 1
 
+    low_confidence = _is_low_confidence(nlp_meta)
+    clarification_questions = _build_clarification_questions(nlp_meta) if low_confidence else []
+
     if not category_id:
         return {
             "request_id": request_id,
@@ -99,8 +172,19 @@ def generate_legal_guidance(user_input: str) -> dict[str, Any]:
             "translation_triggered": False,
             "cache_hit": False,
             "total": 0,
-            "message": "No matching workflow found. Please provide more details.",
+            "message": "Low confidence understanding. Please answer clarification questions to improve the match.",
             "classification": class_meta,
+            "nlp": nlp_meta,
+            "clarification_required": True,
+            "clarification_message": "We need a few details before showing accurate legal workflow guidance.",
+            "clarification_questions": clarification_questions,
+            "ai_understanding": {
+                "source": nlp_meta.get("nlp_source", "fallback"),
+                "understood_as": nlp_meta.get("search_ready_query", normalized_query),
+                "keywords": nlp_meta.get("keywords", []),
+                "confidence": nlp_meta.get("confidence", "Low"),
+                "detected_language": nlp_meta.get("detected_language", detected_language),
+            },
             "data": [],
         }
 
@@ -182,6 +266,26 @@ def generate_legal_guidance(user_input: str) -> dict[str, Any]:
         "translation_triggered": translation_triggered,
         "cache_hit": cache_hit,
         "classification": class_meta,
+        "nlp": nlp_meta,
+        "clarification_required": low_confidence,
+        "clarification_message": (
+            "Best match shown with low confidence. Please answer clarification questions for a more precise workflow."
+            if low_confidence
+            else ""
+        ),
+        "clarification_questions": clarification_questions,
+        "ai_understanding": {
+            "source": nlp_meta.get("nlp_source", "fallback"),
+            "understood_as": nlp_meta.get("search_ready_query", normalized_query),
+            "keywords": nlp_meta.get("keywords", []),
+            "confidence": nlp_meta.get("confidence", "Low"),
+            "detected_language": nlp_meta.get("detected_language", detected_language),
+        },
+        "semantic_match": {
+            "grounded": True,
+            "grounding_source": "database_only",
+            "category_id": category_id,
+        },
         "total": 1,
         "message": "Guidance generated successfully.",
         "data": [localized_case],

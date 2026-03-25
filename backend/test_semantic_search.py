@@ -16,6 +16,8 @@ from ai_engine.semantic_search import find_best_category  # noqa: E402
 TESTS = [
     "My employer not paying salary",
     "mere paise nahi mile",
+    "मेरे नियोक्ता ने 2 महीने से वेतन नहीं दिया",
+    "mere niyokta ne 2 mahine se vetan nahi diya",
     "online fraud hua",
 ]
 

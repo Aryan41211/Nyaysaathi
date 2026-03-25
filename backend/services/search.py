@@ -24,7 +24,12 @@ def get_engine():
         from search.semantic_engine import SemanticSearchEngine
 
         cache_dir = Path(getattr(settings, "SEARCH_CACHE_DIR", settings.BASE_DIR / "search_cache"))
-        _engine = SemanticSearchEngine(cache_dir=cache_dir)
+        model_name = getattr(
+            settings,
+            "SEMANTIC_MODEL_NAME",
+            "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        )
+        _engine = SemanticSearchEngine(cache_dir=cache_dir, model_name=model_name)
     return _engine
 
 
