@@ -13,12 +13,12 @@ from .auth_service import login_user, signup_user
 def signup(request):
     email = str(request.data.get("email", "")).strip().lower()
     password = str(request.data.get("password", ""))
-    role = str(request.data.get("role", "user")).strip().lower() or "user"
+    role = "user"
 
     result = signup_user(email=email, password=password, role=role)
     if not result.get("ok"):
         message = str(result.get("error", "Signup failed"))
-        status_code = 503 if "temporarily unavailable" in message.lower() else 400
+        status_code = int(result.get("status_code") or (503 if "temporarily unavailable" in message.lower() else 400))
         return error_response(message, status_code=status_code)
     return success_response(result.get("data", {}), status_code=201)
 
@@ -31,6 +31,6 @@ def login(request):
     result = login_user(email=email, password=password)
     if not result.get("ok"):
         message = str(result.get("error", "Login failed"))
-        status_code = 503 if "temporarily unavailable" in message.lower() else 401
+        status_code = int(result.get("status_code") or (503 if "temporarily unavailable" in message.lower() else 401))
         return error_response(message, status_code=status_code)
     return success_response(result.get("data", {}), status_code=200)

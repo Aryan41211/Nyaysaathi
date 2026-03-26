@@ -72,6 +72,7 @@ class QueryMeta:
             "detected_language": self.detected_language,
             "normalized_query": self.normalized_query,
             "search_ready_query": self.search_ready_query,
+            "understood_as": self.search_ready_query,
             "keywords": self.keywords,
             "problem_domain": self.problem_domain,
             "problem_type": self.problem_type,

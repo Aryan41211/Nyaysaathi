@@ -61,6 +61,9 @@ export default function ResultsPage() {
   const query      = params.get('query') || ''
   const [results,  setResults]  = useState([])
   const [nlp,      setNlp]      = useState(null)
+  const [clarificationRequired, setClarificationRequired] = useState(false)
+  const [clarificationMessage, setClarificationMessage] = useState('')
+  const [clarificationQuestions, setClarificationQuestions] = useState([])
   const [loading,  setLoading]  = useState(false)
   const [error,    setError]    = useState(null)
   const [searched, setSearched] = useState(false)
@@ -71,11 +74,17 @@ export default function ResultsPage() {
     setError(null)
     setSearched(false)
     setNlp(null)
+    setClarificationRequired(false)
+    setClarificationMessage('')
+    setClarificationQuestions([])
 
     searchCases(query)
       .then(r => {
         setResults(r.data || [])
         setNlp(r.nlp || null)
+        setClarificationRequired(Boolean(r.clarification_required))
+        setClarificationMessage(r.clarification_message || '')
+        setClarificationQuestions(r.clarification_questions || [])
         setSearched(true)
       })
       .catch(e => {
@@ -95,6 +104,21 @@ export default function ResultsPage() {
 
         {/* NLP insight bar */}
         {searched && nlp && <NLPInsightBar nlp={nlp} t={t} />}
+
+        {/* Clarification follow-up for low-confidence understanding */}
+        {searched && !loading && clarificationRequired && (
+          <div style={S.clarifyBox} className="anim-fade-up">
+            <div style={S.clarifyTitle}>Need a few details for higher accuracy</div>
+            {clarificationMessage && <div style={S.clarifyMsg}>{clarificationMessage}</div>}
+            {clarificationQuestions.length > 0 && (
+              <ul style={S.clarifyList}>
+                {clarificationQuestions.map((q, i) => (
+                  <li key={`${i}-${q}`} style={S.clarifyItem}>{q}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
 
         {/* Results header */}
         {searched && !loading && (
@@ -161,6 +185,39 @@ const S = {
   langBadge: { padding: '3px 10px', background: 'var(--parchment)', border: '1px solid var(--border)', borderRadius: '100px', fontSize: '0.75rem', fontWeight: 600, color: 'var(--ink-light)' },
   confBadge: { padding: '3px 10px', borderRadius: '100px', fontSize: '0.75rem', fontWeight: 600 },
   aiBadge:  { padding: '3px 10px', background: '#EDE7F6', color: '#4527A0', borderRadius: '100px', fontSize: '0.73rem', fontWeight: 600 },
+
+  clarifyBox: {
+    background: '#FFF8E1',
+    border: '1px solid #F0D79A',
+    borderLeft: '3px solid #E0A800',
+    borderRadius: 'var(--r-md)',
+    padding: '12px 16px',
+    marginBottom: '1rem',
+  },
+  clarifyTitle: {
+    fontSize: '0.9rem',
+    fontWeight: 700,
+    color: '#7A5A00',
+    marginBottom: '6px',
+  },
+  clarifyMsg: {
+    fontSize: '0.84rem',
+    color: '#7A5A00',
+    marginBottom: '6px',
+    lineHeight: 1.5,
+  },
+  clarifyList: {
+    margin: 0,
+    paddingLeft: '1.1rem',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '4px',
+  },
+  clarifyItem: {
+    fontSize: '0.82rem',
+    color: '#7A5A00',
+    lineHeight: 1.5,
+  },
 
   header: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', marginBottom: '1.5rem', paddingBottom: '1rem', borderBottom: '1px solid var(--border)' },
   queryTag: { background: 'var(--parchment)', border: '1px solid var(--border)', borderRadius: 'var(--r-sm)', padding: '6px 14px', fontSize: '0.9rem', color: 'var(--ink-light)' },

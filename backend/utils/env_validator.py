@@ -21,7 +21,7 @@ def validate_environment() -> EnvValidationResult:
 
     required = ["MONGODB_URI", "MONGODB_DB"]
     if not debug:
-        required.extend(["DJANGO_SECRET_KEY", "ALLOWED_HOSTS"])
+        required.extend(["DJANGO_SECRET_KEY", "ALLOWED_HOSTS", "JWT_SECRET"])
 
     optional = [
         "CORS_ALLOWED_ORIGINS",

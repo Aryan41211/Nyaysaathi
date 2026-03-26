@@ -51,6 +51,17 @@ def _build_understanding(raw_query: str) -> tuple[str, dict[str, Any], bool]:
     return query_for_classification, nlp_meta, used_ai
 
 
+def _normalize_nlp_meta(nlp_meta: dict[str, Any], fallback_query: str) -> dict[str, Any]:
+    """Normalize NLP metadata shape consumed by frontend and API clients."""
+    payload = dict(nlp_meta or {})
+    understood = str(payload.get("search_ready_query", "")).strip() or str(fallback_query or "").strip()
+    payload["understood_as"] = understood
+
+    confidence = str(payload.get("confidence", "Low")).strip().lower()
+    payload["confidence"] = confidence.capitalize() if confidence else "Low"
+    return payload
+
+
 def _is_low_confidence(nlp_meta: dict[str, Any]) -> bool:
     confidence = str(nlp_meta.get("confidence", "")).strip().lower()
     return confidence in LOW_CONFIDENCE_LABELS
@@ -125,6 +136,7 @@ def generate_legal_guidance(user_input: str) -> dict[str, Any]:
 
     ai_calls = 0
     understood_query, nlp_meta, used_ai_understanding = _build_understanding(query)
+    nlp_meta = _normalize_nlp_meta(nlp_meta, fallback_query=understood_query)
     if used_ai_understanding:
         ai_calls += 1
 

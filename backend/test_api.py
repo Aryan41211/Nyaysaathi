@@ -60,7 +60,7 @@ def test_auth_signup_login_shape():
         "/api/auth/signup",
         {"email": email, "password": password, "role": "user"},
     )
-    assert signup_resp.status_code in {201, 400, 503}
+    assert signup_resp.status_code in {201, 409, 503}
 
     login_resp = _call_json(
         client,
