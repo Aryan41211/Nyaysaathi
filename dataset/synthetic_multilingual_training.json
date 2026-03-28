@@ -1,0 +1,734 @@
+{
+  "schema_version": "1.0",
+  "generated_count": 52,
+  "records": [
+    {
+      "id": "synthetic-salary-non-payment-1",
+      "language": "hinglish",
+      "query": "meri sallary 3 mahine se nai aayi employer ignore kar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-2",
+      "language": "hinglish",
+      "query": "meri sallery 3 mahine se nahee aayi employer ignore kar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-3",
+      "language": "hinglish",
+      "query": "meri salery 3 mahine se nhi aayi employer ignore kar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-4",
+      "language": "hinglish",
+      "query": "meri salary 3 mahine se nai aayi employer bhaav nahi de raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-5",
+      "language": "hinglish",
+      "query": "meri salary 3 mahine se nahee aayi employer response hi nahi",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-6",
+      "language": "hinglish",
+      "query": "meri salary 3 mahine se nai aayi employer response hi nahi",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-7",
+      "language": "hinglish",
+      "query": "meri salary 3 mahine se nai aayi employer ignore kar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-8",
+      "language": "hinglish",
+      "query": "meri sallery 3 mahine se nai aayi employer ignore kar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-9",
+      "language": "hinglish",
+      "query": "meri sallary 3 mahine se nahi aayi employer ignore kar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-10",
+      "language": "hinglish",
+      "query": "meri salary 3 mahine se nai aayi employer ignore maar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-11",
+      "language": "hinglish",
+      "query": "meri salary 3 mahine se nahi aayi employer ignore kar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-12",
+      "language": "hinglish",
+      "query": "meri salary 3 mahine se nahee aayi employer ignore maar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-13",
+      "language": "hinglish",
+      "query": "meri sallery 3 mahine se nhi aayi employer ignore kar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-14",
+      "language": "hinglish",
+      "query": "meri sallary 3 mahine se nahi aayi employer ignore maar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-15",
+      "language": "hinglish",
+      "query": "meri sallary 3 mahine se nhi aayi employer ignore kar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-16",
+      "language": "hinglish",
+      "query": "meri salery 3 mahine se nai aayi employer ignore kar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-17",
+      "language": "hinglish",
+      "query": "meri sallary 3 mahine se nahi aayi employer response hi nahi",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-18",
+      "language": "hinglish",
+      "query": "meri salary 3 mahine se nahee aayi employer bhaav nahi de raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-19",
+      "language": "hinglish",
+      "query": "meri salery 3 mahine se nahi aayi employer ignore kar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-20",
+      "language": "hinglish",
+      "query": "meri salary 3 mahine se nhi aayi employer ignore maar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-21",
+      "language": "hinglish",
+      "query": "meri salry 3 mahine se nahi aayi employer ignore kar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-22",
+      "language": "hinglish",
+      "query": "meri salry 3 mahine se nahi aayi employer ignore maar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-23",
+      "language": "hinglish",
+      "query": "meri salary 3 mahine se nhi aayi employer bhaav nahi de raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-salary-non-payment-24",
+      "language": "hinglish",
+      "query": "meri salary 3 mahine se nahi aayi employer ignore maar raha",
+      "intent_label": "Salary Non-Payment",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-police-fir-refusal-1",
+      "language": "hi",
+      "query": "police fir nahee likh rahi hai kya karu",
+      "intent_label": "Police FIR Refusal",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-police-fir-refusal-2",
+      "language": "hi",
+      "query": "police fir nahi likh rahi hai kya karu",
+      "intent_label": "Police FIR Refusal",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-police-fir-refusal-3",
+      "language": "hi",
+      "query": "police fir nai likh rahi hai kya karu",
+      "intent_label": "Police FIR Refusal",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-police-fir-refusal-4",
+      "language": "hi",
+      "query": "cop fir nahi likh rahi hai kya karu",
+      "intent_label": "Police FIR Refusal",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-police-fir-refusal-5",
+      "language": "hi",
+      "query": "polis fir nahi likh rahi hai kya karu",
+      "intent_label": "Police FIR Refusal",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-police-fir-refusal-6",
+      "language": "hi",
+      "query": "thana fir nahi likh rahi hai kya karu",
+      "intent_label": "Police FIR Refusal",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-police-fir-refusal-7",
+      "language": "hi",
+      "query": "police fir nhi likh rahi hai kya karu",
+      "intent_label": "Police FIR Refusal",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-1",
+      "language": "mr",
+      "query": "majha landlord deposit parat det nahee",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-2",
+      "language": "mr",
+      "query": "majha landlord deposite parat det nahi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-3",
+      "language": "mr",
+      "query": "majha owner deposit parat det nahi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-4",
+      "language": "mr",
+      "query": "majha landlord depojit parat det nahi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-5",
+      "language": "mr",
+      "query": "majha landlord deposit parat det nhi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-6",
+      "language": "mr",
+      "query": "majha landlord depojit parat det nahee",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-7",
+      "language": "mr",
+      "query": "majha makaan malik deposit parat det nahi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-8",
+      "language": "mr",
+      "query": "majha landlord deposite parat det nai",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-9",
+      "language": "mr",
+      "query": "majha landlord depojit parat det nai",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-10",
+      "language": "mr",
+      "query": "majha makaan malik depojit parat det nahi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-11",
+      "language": "mr",
+      "query": "majha land lord deposite parat det nahi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-12",
+      "language": "mr",
+      "query": "majha landlord deposit parat det nahi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-13",
+      "language": "mr",
+      "query": "majha landlord depojit parat det nhi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-14",
+      "language": "mr",
+      "query": "majha makaan malik deposite parat det nahi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-15",
+      "language": "mr",
+      "query": "majha land lord deposit parat det nahi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-16",
+      "language": "mr",
+      "query": "majha landlord deposite parat det nhi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-17",
+      "language": "mr",
+      "query": "majha landlord deposite parat det nahee",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-18",
+      "language": "mr",
+      "query": "majha landlord deposit parat det nai",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-19",
+      "language": "mr",
+      "query": "majha owner depojit parat det nahi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-20",
+      "language": "mr",
+      "query": "majha land lord depojit parat det nahi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    },
+    {
+      "id": "synthetic-tenant-landlord-deposit-dispute-21",
+      "language": "mr",
+      "query": "majha owner deposite parat det nahi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "synthetic",
+        "generator": "variation_rules_v1"
+      }
+    }
+  ]
+}

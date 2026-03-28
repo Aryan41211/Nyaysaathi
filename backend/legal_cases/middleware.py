@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import time
+from uuid import uuid4
 
 from django.http import JsonResponse
 
@@ -19,18 +20,72 @@ class ApiRequestLogMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
+        request_id = request.headers.get("X-Request-ID") or str(uuid4())
+        request.request_id = request_id
         start = time.perf_counter()
         response = self.get_response(request)
         elapsed_ms = round((time.perf_counter() - start) * 1000.0, 2)
 
         if request.path.startswith("/api/"):
-            logger.info(
-                "api_request method=%s path=%s status=%s duration_ms=%s",
-                request.method,
-                request.path,
-                getattr(response, "status_code", "unknown"),
-                elapsed_ms,
-            )
+            payload = {
+                "event": "api_request",
+                "request_id": request_id,
+                "method": request.method,
+                "path": request.path,
+                "status": getattr(response, "status_code", "unknown"),
+                "duration_ms": elapsed_ms,
+            }
+
+            try:
+                data = getattr(response, "data", None)
+                if isinstance(data, dict):
+                    payload_data = data.get("data") if isinstance(data.get("data"), dict) else data
+                    nlp = data.get("nlp") or {}
+                    pipeline = data.get("pipeline") or {}
+                    if not pipeline and isinstance(payload_data.get("pipeline"), dict):
+                        pipeline = payload_data.get("pipeline")
+                    if not nlp and isinstance(payload_data.get("nlp"), dict):
+                        nlp = payload_data.get("nlp")
+
+                    payload["query"] = str(data.get("query") or payload_data.get("query") or "")
+                    payload["normalized_query"] = str(
+                        data.get("normalized_query")
+                        or payload_data.get("normalized_query")
+                        or nlp.get("search_ready_query")
+                        or nlp.get("normalized_query")
+                        or ""
+                    )
+                    payload["intent"] = str(
+                        payload_data.get("intent")
+                        or pipeline.get("intent")
+                        or nlp.get("matched_intent")
+                        or ""
+                    )
+                    payload["confidence"] = str(
+                        data.get("confidence")
+                        or payload_data.get("confidence")
+                        or pipeline.get("confidence")
+                        or nlp.get("confidence")
+                        or ""
+                    )
+                    decision = "answer"
+                    clarification = pipeline.get("clarification") or {}
+                    if (
+                        bool(data.get("clarification_required", False))
+                        or bool(payload_data.get("clarification_required", False))
+                        or bool(clarification.get("required", False))
+                    ):
+                        decision = "fallback"
+                    payload["final_decision"] = decision
+            except Exception:
+                pass
+
+            logger.info(json.dumps(payload, ensure_ascii=True))
+
+        try:
+            response["X-Request-ID"] = request_id
+        except Exception:
+            pass
         return response
 
 

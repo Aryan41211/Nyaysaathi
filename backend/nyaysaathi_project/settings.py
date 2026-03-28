@@ -9,6 +9,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = os.getenv("DEBUG", "True") == "True"
+LOG_JSON = str(os.getenv("LOG_JSON", "false")).strip().lower() in {"1", "true", "yes"}
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY") or ("unsafe-dev-key-change-before-deploy" if DEBUG else "")
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1,.vercel.app,.onrender.com").split(",")
 
@@ -100,6 +101,7 @@ REST_FRAMEWORK = {
     "DEFAULT_THROTTLE_RATES": {
         "anon": os.getenv("THROTTLE_ANON_RATE", "300/day"),
         "classify": os.getenv("THROTTLE_CLASSIFY_RATE", "20/min"),
+        "search": os.getenv("THROTTLE_SEARCH_RATE", "120/min"),
     },
     "EXCEPTION_HANDLER": "legal_cases.exceptions.custom_exception_handler",
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
@@ -131,8 +133,16 @@ CACHES = {
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
-    "formatters": {"verbose": {"format": "[{asctime}] {levelname} {name}: {message}", "style": "{"}},
-    "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "verbose"}},
+    "formatters": {
+        "verbose": {"format": "[{asctime}] {levelname} {name}: {message}", "style": "{"},
+        "json": {"()": "utils.json_log_formatter.JsonLogFormatter"},
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "json" if LOG_JSON else "verbose",
+        }
+    },
     "root": {"handlers": ["console"], "level": "INFO"},
     "loggers": {
         "ai_engine": {"handlers": ["console"], "level": "INFO", "propagate": False},

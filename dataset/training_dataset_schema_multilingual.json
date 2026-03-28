@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "description": "NyaySaathi multilingual supervised dataset schema for continual intent and retrieval improvement.",
+  "record_fields": {
+    "id": "string",
+    "language": "enum: [hinglish, hi, mr, en]",
+    "query": "string",
+    "normalized_query": "string",
+    "intent_label": "string",
+    "intent_confidence_expected": "enum: [high, medium, low]",
+    "expected_output": {
+      "decision": "enum: [answer, answer_with_disclaimer, clarification]",
+      "category": "string",
+      "subcategory": "string",
+      "workflow_steps": "array[string]",
+      "required_documents": "array[string]",
+      "where_to_go": "array[string]",
+      "disclaimer_required": "boolean"
+    },
+    "metadata": {
+      "source": "enum: [seed, synthetic, production_feedback]",
+      "tags": "array[string]",
+      "created_at": "iso_datetime"
+    }
+  },
+  "examples": [
+    {
+      "id": "seed-001",
+      "language": "hinglish",
+      "query": "meri salary 3 mahine se nahi aayi employer ignore kar raha",
+      "normalized_query": "meri salary teen mahine se nahi aayi employer ignore kar raha",
+      "intent_label": "Salary Non-Payment",
+      "intent_confidence_expected": "high",
+      "expected_output": {
+        "decision": "answer",
+        "category": "Labour and Wage Issues",
+        "subcategory": "Salary Non-Payment",
+        "workflow_steps": [
+          "Step 1: Send written salary demand notice to employer.",
+          "Step 2: File complaint before Labour Commissioner with evidence.",
+          "Step 3: Escalate to Labour Court if unpaid after notice period."
+        ],
+        "required_documents": [
+          "Appointment letter or offer",
+          "Attendance records",
+          "Bank statement showing non-payment"
+        ],
+        "where_to_go": [
+          "Local Labour Office",
+          "Labour Court"
+        ],
+        "disclaimer_required": false
+      },
+      "metadata": {
+        "source": "seed",
+        "tags": [
+          "wage",
+          "employment",
+          "hinglish"
+        ],
+        "created_at": "2026-03-28T00:00:00Z"
+      }
+    },
+    {
+      "id": "seed-002",
+      "language": "hi",
+      "query": "police fir nahi likh rahi hai kya karu",
+      "normalized_query": "police fir nahi likh rahi hai kya karu",
+      "intent_label": "Police FIR Refusal",
+      "intent_confidence_expected": "high",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "category": "Police Complaints and Local Crime",
+        "subcategory": "Police FIR Refusal",
+        "workflow_steps": [
+          "Step 1: Submit written complaint to SHO and keep acknowledgement.",
+          "Step 2: Send complaint to SP under applicable legal process.",
+          "Step 3: Approach Magistrate for direction to register FIR."
+        ],
+        "required_documents": [
+          "Written complaint copy",
+          "ID proof",
+          "Supporting evidence"
+        ],
+        "where_to_go": [
+          "Police Station",
+          "SP Office",
+          "Magistrate Court"
+        ],
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "seed",
+        "tags": [
+          "fir",
+          "police",
+          "hindi"
+        ],
+        "created_at": "2026-03-28T00:00:00Z"
+      }
+    },
+    {
+      "id": "seed-003",
+      "language": "mr",
+      "query": "majha landlord deposit parat det nahi",
+      "normalized_query": "majha landlord deposit parat det nahi",
+      "intent_label": "Tenant-Landlord Deposit Dispute",
+      "intent_confidence_expected": "medium",
+      "expected_output": {
+        "decision": "answer_with_disclaimer",
+        "category": "Tenant-Landlord Disputes",
+        "subcategory": "Tenant-Landlord Deposit Dispute",
+        "workflow_steps": [
+          "Step 1: Send written demand for refund of deposit.",
+          "Step 2: Preserve rent agreement and payment evidence.",
+          "Step 3: File complaint before rent authority or civil court."
+        ],
+        "required_documents": [
+          "Rent agreement",
+          "Deposit payment proof",
+          "Notice copy"
+        ],
+        "where_to_go": [
+          "Rent Authority",
+          "Civil Court"
+        ],
+        "disclaimer_required": true
+      },
+      "metadata": {
+        "source": "seed",
+        "tags": [
+          "tenant",
+          "deposit",
+          "marathi"
+        ],
+        "created_at": "2026-03-28T00:00:00Z"
+      }
+    }
+  ]
+}

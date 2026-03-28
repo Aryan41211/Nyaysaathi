@@ -7,3 +7,7 @@ from rest_framework.throttling import ScopedRateThrottle
 
 class ClassifyRateThrottle(ScopedRateThrottle):
     scope = "classify"
+
+
+class SearchRateThrottle(ScopedRateThrottle):
+    scope = "search"

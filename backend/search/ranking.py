@@ -31,9 +31,12 @@ def title_similarity(query_text: str, title_text: str) -> float:
     return fuzz.token_set_ratio(query_text, title_text) / 100.0
 
 
-def hybrid_score(semantic: float, overlap: float, title: float) -> float:
-    """Weighted score: semantic 70%, keyword overlap 20%, title similarity 10%."""
-    return (0.7 * semantic) + (0.2 * overlap) + (0.1 * title)
+def hybrid_score(semantic: float, overlap: float, title: float, intent: float = 0.0) -> float:
+    """Weighted score with intent signal.
+
+    Final = 0.58*semantic + 0.17*keyword + 0.10*title + 0.15*intent
+    """
+    return (0.58 * semantic) + (0.17 * overlap) + (0.10 * title) + (0.15 * intent)
 
 
 def confidence_bucket(score: float) -> str:

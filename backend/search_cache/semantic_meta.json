@@ -1,6 +1,6 @@
 {
-  "fingerprint": "bd4c395648637fa6a2c59b43c31d4a2a40dcd7bdc000a83c6f3bba96b8ae2990",
+  "fingerprint": "e170c9210918a02ba6e2cf41526b18f83c7349f111ec04efe08061e23ace41c1",
   "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
-  "count": 20,
+  "count": 468,
   "vector_dim": 384
 }
