@@ -1,12 +1,16 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
+from importlib import import_module
 
-# 🔥 Import your pipeline (make sure this exists)
-try:
-    from backend.query_processor import process_query
-except ImportError:
-    process_query = None
+
+def _get_process_query():
+    """Dynamically resolve the optional pipeline function if present."""
+    try:
+        module = import_module("backend.query_processor")
+        return getattr(module, "process_query", None)
+    except Exception:
+        return None
 
 
 def health_check(request):
@@ -35,7 +39,8 @@ def search(request):
                 "message": "Query cannot be empty"
             }, status=400)
 
-        # 🚨 If pipeline not connected yet
+        process_query = _get_process_query()
+
         if process_query is None:
             return JsonResponse({
                 "status": "success",
@@ -44,15 +49,23 @@ def search(request):
                 "confidence": 0.0
             })
 
-        # 🔥 Call your real system
         result = process_query(query)
+
+        if isinstance(result, dict):
+            response_text = result.get("response", "")
+            confidence = result.get("confidence", 0.0)
+            data = result
+        else:
+            response_text = str(result)
+            confidence = 0.0
+            data = {"raw": result}
 
         return JsonResponse({
             "status": "success",
             "query": query,
-            "response": result.get("response", ""),
-            "confidence": result.get("confidence", 0.0),
-            "data": result
+            "response": response_text,
+            "confidence": confidence,
+            "data": data
         })
 
     except json.JSONDecodeError:
