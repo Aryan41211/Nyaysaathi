@@ -1,213 +1,78 @@
 import axios from "axios"
 
 /*
-PRODUCTION ARCHITECTURE
-
-Frontend (Vercel)
-↓
-Backend (Render Django)
-↓
-MongoDB Atlas
-
-This file ensures stable connection between frontend and backend.
+SIMPLE & STABLE API CONFIG
+(No env confusion, direct production connection)
 */
 
-const DEFAULT_PROD_API_URL = "https://nyaysaathi.onrender.com/api"
-const DEFAULT_FALLBACK_API_URL = "https://nyaysaathi.onrender.com/api"
-
-function normalizeApiBaseUrl(rawUrl) {
-  if (!rawUrl) return ""
-
-  const trimmed = rawUrl.trim().replace(/\/+$/, "")
-
-  if (trimmed.endsWith("/api")) return trimmed
-
-  return `${trimmed}/api`
-}
-
-function resolveApiBaseUrl() {
-
-  const envUrl = normalizeApiBaseUrl(
-    import.meta.env.VITE_API_URL
-  )
-
-  if (envUrl) return envUrl
-
-  return DEFAULT_PROD_API_URL
-}
-
-const BASE_URL = resolveApiBaseUrl()
-
-const FALLBACK_BASE_URL =
-  normalizeApiBaseUrl(
-    import.meta.env.VITE_FALLBACK_API_URL
-  ) || DEFAULT_FALLBACK_API_URL
-
+const BASE_URL = "https://nyaysaathi-1.onrender.com/api"
 
 /*
 Main API client
 */
 const api = axios.create({
-
   baseURL: BASE_URL,
-
-  // Long timeout for AI model cold start
-  timeout: 90000,
-
+  timeout: 60000,
   headers: {
     "Content-Type": "application/json"
   }
-
 })
 
-
 /*
-Fallback API client
-*/
-const fallbackApi = axios.create({
-
-  baseURL: FALLBACK_BASE_URL,
-
-  timeout: 90000,
-
-  headers: {
-    "Content-Type": "application/json"
-  }
-
-})
-
-
-/*
-Error handling interceptor
+Error handling
 */
 api.interceptors.response.use(
-
   response => response,
-
   error => {
-
     if (error.code === "ECONNABORTED") {
-
-      error.message =
-        "Server is waking up (cold start). Please retry once."
-
-      return Promise.reject(error)
-    }
-
-    if (!error.response) {
-
-      error.message =
-        "Cannot reach backend server. Check deployment."
-
-    }
+      error.message = "Server is waking up. Please retry."
+    } 
+    else if (!error.response) {
+      error.message = "Cannot reach backend server."
+    } 
     else if (error.response.status === 404) {
-
-      error.message =
-        "API endpoint not found. Check backend routes."
-
-    }
+      error.message = "API endpoint not found."
+    } 
     else if (error.response.status >= 500) {
-
-      error.message =
-        "Backend error. Please retry."
-
+      error.message = "Backend error."
     }
 
     return Promise.reject(error)
   }
-
 )
-
-
-/*
-Fallback retry logic
-*/
-function shouldRetryOnFallback(error){
-
-  if (!import.meta.env.PROD) return false
-
-  if (!error) return false
-
-  if (!error.response) return true
-
-  return (
-    error.response.status === 404 ||
-    error.response.status >= 500
-  )
-
-}
-
-
-/*
-Generic GET with fallback
-*/
-async function getWithFallback(
-  path,
-  config = {}
-){
-
-  try{
-
-    const response =
-      await api.get(path, config)
-
-    return response.data
-
-  }
-  catch(error){
-
-    if(!shouldRetryOnFallback(error))
-      throw error
-
-    const fallbackResponse =
-      await fallbackApi.get(path, config)
-
-    return fallbackResponse.data
-
-  }
-
-}
-
 
 /*
 API FUNCTIONS
 */
 
-export const searchCases = (query) =>
-  getWithFallback(
-    "/search/",
-    { params: { query: query } }
-  )
+// ✅ FIXED (POST request)
+export const searchCases = async (query) => {
+  const response = await api.post("/search/", {
+    query: query
+  })
+  return response.data
+}
 
+// Optional APIs (can keep or remove)
+export const getCategories = async () => {
+  const response = await api.get("/categories/")
+  return response.data
+}
 
-export const getCategories = () =>
+export const getCases = async (category) => {
+  const response = await api.get("/cases/", {
+    params: category ? { category } : {}
+  })
+  return response.data
+}
 
-  getWithFallback("/categories/")
+export const getCaseDetail = async (sub) => {
+  const response = await api.get(`/case/${encodeURIComponent(sub)}`)
+  return response.data
+}
 
-
-export const getCases = (category) =>
-
-  getWithFallback(
-    "/cases/",
-    {
-      params:
-        category
-        ? { category }
-        : {}
-    }
-  )
-
-
-export const getCaseDetail = (sub) =>
-
-  getWithFallback(
-    `/case/${encodeURIComponent(sub)}`
-  )
-
-
-/*
-Health check (recommended)
-*/
-export const healthCheck = () =>
-
-  getWithFallback("/health/")
+// Health check
+export const healthCheck = async () => {
+  const response = await api.get("/health/")
+  return response.data
+}
