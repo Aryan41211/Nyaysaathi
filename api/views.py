@@ -19,63 +19,37 @@ def health_check(request):
         "message": "DEPLOY TEST SUCCESS"
     })
 
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
+
 
 @csrf_exempt
 def search(request):
-    if request.method != "POST":
-        return JsonResponse({
-            "status": "fail",
-            "message": "Use POST method"
-        }, status=405)
 
-    try:
-        data = json.loads(request.body)
-        query = data.get("query", "").strip()
+    # ✅ Allow preflight request
+    if request.method == "OPTIONS":
+        return JsonResponse({}, status=200)
 
-        # 🔍 Validate input
-        if not query:
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            query = data.get("query", "")
+
             return JsonResponse({
-                "status": "fail",
-                "message": "Query cannot be empty"
-            }, status=400)
-
-        process_query = _get_process_query()
-
-        if process_query is None:
-            return JsonResponse({
-                "status": "success",
                 "query": query,
-                "response": "Pipeline not connected yet",
-                "confidence": 0.0
+                "response": "Processing will be added soon",
+                "confidence": 0.0,
+                "status": "success"
             })
 
-        result = process_query(query)
+        except Exception as e:
+            return JsonResponse({
+                "error": str(e),
+                "status": "error"
+            })
 
-        if isinstance(result, dict):
-            response_text = result.get("response", "")
-            confidence = result.get("confidence", 0.0)
-            data = result
-        else:
-            response_text = str(result)
-            confidence = 0.0
-            data = {"raw": result}
-
-        return JsonResponse({
-            "status": "success",
-            "query": query,
-            "response": response_text,
-            "confidence": confidence,
-            "data": data
-        })
-
-    except json.JSONDecodeError:
-        return JsonResponse({
-            "status": "error",
-            "message": "Invalid JSON format"
-        }, status=400)
-
-    except Exception as e:
-        return JsonResponse({
-            "status": "error",
-            "message": str(e)
-        }, status=500)
+    return JsonResponse({
+        "message": "Use POST method",
+        "status": "fail"
+    }, status=405)
