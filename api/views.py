@@ -16,7 +16,7 @@ def _get_process_query():
 def health_check(request):
     return JsonResponse({
         "status": "ok",
-        "message": "NyayaSaathi backend is running"
+        "message": "DEPLOY TEST SUCCESS"
     })
 
 
