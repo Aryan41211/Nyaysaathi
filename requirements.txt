@@ -3,8 +3,5 @@ djangorestframework
 gunicorn
 whitenoise
 pymongo
-sentence-transformers
-faiss-cpu==1.8.0
-rapidfuzz
 python-dotenv
 django-cors-headers
