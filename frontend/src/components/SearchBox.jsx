@@ -14,7 +14,8 @@ export default function SearchBox({ defaultValue = '', autoFocus = false, large 
     navigate(`/results?query=${encodeURIComponent(q)}`)
   }
 
-  const examples = t('searchBox.examples')
+  const examplesRaw = t('searchBox.examples')
+  const examples = Array.isArray(examplesRaw) ? examplesRaw : []
 
   return (
     <div>

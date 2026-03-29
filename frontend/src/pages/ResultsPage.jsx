@@ -55,6 +55,10 @@ function NLPInsightBar({ nlp, t }) {
   )
 }
 
+function asArray(value) {
+  return Array.isArray(value) ? value : []
+}
+
 export default function ResultsPage() {
   const { t } = useLanguage()
   const [params]   = useSearchParams()
@@ -80,11 +84,11 @@ export default function ResultsPage() {
 
     searchCases(query)
       .then(r => {
-        setResults(r.data || [])
-        setNlp(r.nlp || null)
+        setResults(asArray(r?.data))
+        setNlp(r?.nlp && typeof r.nlp === 'object' ? r.nlp : null)
         setClarificationRequired(Boolean(r.clarification_required))
         setClarificationMessage(r.clarification_message || '')
-        setClarificationQuestions(r.clarification_questions || [])
+        setClarificationQuestions(asArray(r?.clarification_questions))
         setSearched(true)
       })
       .catch(e => {
@@ -143,7 +147,7 @@ export default function ResultsPage() {
         {!loading && !error && results.length > 0 && (
           <div style={S.list}>
             {results.map((c, i) => (
-              <div key={c.subcategory} style={{ animationDelay: `${i * 0.08}s` }}>
+              <div key={c?.subcategory || `case-${i}`} style={{ animationDelay: `${i * 0.08}s` }}>
                 <CaseCard caseData={c} compact />
               </div>
             ))}

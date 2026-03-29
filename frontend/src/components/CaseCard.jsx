@@ -16,8 +16,17 @@ const CATEGORY_COLORS = {
 
 export default function CaseCard({ caseData, compact = false }) {
   const { t } = useLanguage()
-  const { category, subcategory, problem_description, workflow_steps = [],
-          required_documents = [], score } = caseData
+  const safeCase = caseData && typeof caseData === 'object' ? caseData : {}
+  const category = typeof safeCase.category === 'string' ? safeCase.category : 'General Legal Issue'
+  const subcategory = typeof safeCase.subcategory === 'string' ? safeCase.subcategory : 'Legal Guidance'
+  const problemDescription = typeof safeCase.problem_description === 'string' ? safeCase.problem_description : ''
+  const workflowSteps = Array.isArray(safeCase.workflow_steps)
+    ? safeCase.workflow_steps
+    : (Array.isArray(safeCase.workflow) ? safeCase.workflow : [])
+  const requiredDocuments = Array.isArray(safeCase.required_documents)
+    ? safeCase.required_documents
+    : (Array.isArray(safeCase.documents_required) ? safeCase.documents_required : [])
+  const score = safeCase.score
 
   const colors = CATEGORY_COLORS[category] || { bg: 'var(--teal-light)', dot: 'var(--teal)' }
   const slug = encodeURIComponent(subcategory)
@@ -38,34 +47,34 @@ export default function CaseCard({ caseData, compact = false }) {
           )}
         </div>
         <h3 style={S.title}>{subcategory}</h3>
-        {problem_description && (
+        {problemDescription && (
           <p style={S.desc}>
             {compact
-              ? (problem_description.slice(0, 160) + (problem_description.length > 160 ? '…' : ''))
-              : problem_description}
+              ? (problemDescription.slice(0, 160) + (problemDescription.length > 160 ? '…' : ''))
+              : problemDescription}
           </p>
         )}
       </div>
 
       {/* Steps preview */}
-      {workflow_steps.length > 0 && (
+      {workflowSteps.length > 0 && (
         <div style={S.stepsPreview}>
           <div style={S.stepsLabel}>
-            📋 {workflow_steps.length} {t('caseCard.stepsToFollow')}
+            📋 {workflowSteps.length} {t('caseCard.stepsToFollow')}
           </div>
           <div style={S.firstStep}>
-            {workflow_steps[0]}
+            {workflowSteps[0]}
           </div>
-          {workflow_steps.length > 1 && compact && (
-            <div style={S.more}>+{workflow_steps.length - 1} {t('caseCard.moreSteps')}</div>
+          {workflowSteps.length > 1 && compact && (
+            <div style={S.more}>+{workflowSteps.length - 1} {t('caseCard.moreSteps')}</div>
           )}
         </div>
       )}
 
       {/* Docs count */}
-      {required_documents.length > 0 && (
+      {requiredDocuments.length > 0 && (
         <div style={S.meta}>
-          <span style={S.metaItem}>📄 {required_documents.length} {t('caseCard.documentsNeeded')}</span>
+          <span style={S.metaItem}>📄 {requiredDocuments.length} {t('caseCard.documentsNeeded')}</span>
         </div>
       )}
 
