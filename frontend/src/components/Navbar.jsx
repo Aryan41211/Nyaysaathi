@@ -1,10 +1,12 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useLanguage } from '../state/LanguageContext.jsx'
+import { useAuth } from '../state/AuthContext.jsx'
 
 export default function Navbar() {
   const { pathname } = useLocation()
   const { t } = useLanguage()
+  const { logout } = useAuth()
   const [open, setOpen]       = useState(false)
   const [mobile, setMobile]   = useState(window.innerWidth < 700)
 
@@ -47,9 +49,7 @@ export default function Navbar() {
                   {l.label}
                 </Link>
               ))}
-              <Link to="/signin" style={{ ...S.link, ...(pathname === '/signin' ? S.active : {}) }}>
-                {t('nav.signin')}
-              </Link>
+              <button onClick={logout} style={S.linkButton}>Logout</button>
               <Link to="/search" style={S.cta}>{t('nav.getHelp')}</Link>
             </div>
           )}
@@ -71,7 +71,7 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <Link to="/signin" style={S.drawerLink}>{t('nav.signin')}</Link>
+          <button onClick={logout} style={S.drawerButton}>Logout</button>
           <Link to="/search" style={S.drawerCta}>{t('nav.getHelpNow')}</Link>
         </div>
       )}
@@ -109,6 +109,11 @@ const S = {
     color: 'var(--ink-light)', fontWeight: 500, fontSize: '0.88rem',
     textDecoration: 'none', transition: 'all .15s',
   },
+  linkButton: {
+    padding: '6px 13px', borderRadius: 'var(--r-sm)',
+    color: 'var(--ink-light)', fontWeight: 500, fontSize: '0.88rem',
+    border: '1px solid var(--border)', background: 'var(--paper)', cursor: 'pointer',
+  },
   active: { color: 'var(--teal)', background: 'var(--teal-light)' },
   cta: {
     marginLeft: '6px', padding: '8px 16px',
@@ -132,6 +137,17 @@ const S = {
     padding: '12px 8px', color: 'var(--ink-light)', fontWeight: 500,
     textDecoration: 'none', borderBottom: '1px solid var(--border-light)',
     fontSize: '0.95rem',
+  },
+  drawerButton: {
+    padding: '12px 8px',
+    color: 'var(--ink-light)',
+    fontWeight: 500,
+    textAlign: 'left',
+    border: 'none',
+    borderBottom: '1px solid var(--border-light)',
+    background: 'transparent',
+    fontSize: '0.95rem',
+    cursor: 'pointer',
   },
   drawerCta: {
     marginTop: '10px', padding: '13px', background: 'var(--saffron)',

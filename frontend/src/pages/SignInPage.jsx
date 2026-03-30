@@ -1,19 +1,32 @@
 import { useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useLanguage } from '../state/LanguageContext.jsx'
+import { useAuth } from '../state/AuthContext.jsx'
 
 export default function SignInPage() {
   const { t } = useLanguage()
   const navigate = useNavigate()
+  const location = useLocation()
+  const { login } = useAuth()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [success, setSuccess] = useState(false)
+  const [error, setError] = useState('')
 
   const onSubmit = (e) => {
     e.preventDefault()
-    window.localStorage.setItem('nyaysaathi_demo_auth', '1')
+    setError('')
+
+    const result = login(email.trim(), password)
+    if (!result.ok) {
+      setSuccess(false)
+      setError(result.message)
+      return
+    }
+
     setSuccess(true)
-    setTimeout(() => navigate('/'), 600)
+    const redirectTo = location.state?.from?.pathname || '/'
+    setTimeout(() => navigate(redirectTo, { replace: true }), 500)
   }
 
   return (
@@ -31,14 +44,20 @@ export default function SignInPage() {
             </div>
           )}
 
+          {error && (
+            <div style={S.error} role="alert">
+              {error}
+            </div>
+          )}
+
           <form onSubmit={onSubmit} style={S.form}>
             <label style={S.label}>
               {t('signin.email')}
               <input
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                type="email"
-                placeholder="you@example.com"
+                type="text"
+                placeholder="admin"
                 style={S.input}
                 required
               />
@@ -63,9 +82,7 @@ export default function SignInPage() {
             <div style={S.note}>
               <span style={{ fontWeight: 700 }}>ℹ️</span> {t('signin.demoNote')}
               {' '}
-              <Link to="/search" style={{ fontWeight: 700 }}>
-                {t('nav.find')} →
-              </Link>
+              Use username <strong>admin</strong> and password <strong>1234</strong>.
             </div>
           </form>
         </div>
@@ -90,6 +107,16 @@ const S = {
     background: 'var(--success-bg)',
     border: '1px solid rgba(26,107,69,0.2)',
     color: 'var(--success)',
+    borderRadius: 'var(--r-md)',
+    padding: '10px 12px',
+    fontSize: '0.9rem',
+    fontWeight: 600,
+    marginBottom: '12px',
+  },
+  error: {
+    background: '#FFF1F1',
+    border: '1px solid #F5B5B5',
+    color: '#9B1C1C',
     borderRadius: 'var(--r-md)',
     padding: '10px 12px',
     fontSize: '0.9rem',

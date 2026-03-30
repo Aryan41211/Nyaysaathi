@@ -1,55 +1,45 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
-from importlib import import_module
 
-
-def _get_process_query():
-    """Dynamically resolve the optional pipeline function if present."""
-    try:
-        module = import_module("backend.query_processor")
-        return getattr(module, "process_query", None)
-    except Exception:
-        return None
+from api.nlp.query_processor import process_query
 
 
 def health_check(request):
     return JsonResponse({
         "status": "ok",
-        "message": "DEPLOY TEST SUCCESS"
+        "message": "NyayaSaathi backend is running"
     })
-
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-import json
 
 
 @csrf_exempt
 def search(request):
 
-    # ✅ Allow preflight request
     if request.method == "OPTIONS":
         return JsonResponse({}, status=200)
 
     if request.method == "POST":
         try:
             data = json.loads(request.body)
-            query = data.get("query", "")
+            query = data.get("query", "").strip()
 
-            return JsonResponse({
-                "query": query,
-                "response": "Processing will be added soon",
-                "confidence": 0.0,
-                "status": "success"
-            })
+            if not query:
+                return JsonResponse({
+                    "status": "fail",
+                    "message": "Empty query"
+                }, status=400)
+
+            response = process_query(query, top_k=5)
+            status_code = 200 if response.get("status") != "error" else 500
+            return JsonResponse(response, status=status_code)
 
         except Exception as e:
             return JsonResponse({
-                "error": str(e),
-                "status": "error"
-            })
+                "status": "error",
+                "error": str(e)
+            }, status=500)
 
     return JsonResponse({
-        "message": "Use POST method",
-        "status": "fail"
+        "status": "fail",
+        "message": "Use POST method"
     }, status=405)

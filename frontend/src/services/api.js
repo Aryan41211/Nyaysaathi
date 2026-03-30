@@ -1,11 +1,26 @@
 import axios from "axios"
 
-/*
-SIMPLE & STABLE API CONFIG
-(No env confusion, direct production connection)
-*/
+function resolveBaseUrl() {
+  // In local dev, always use Vite proxy so requests hit localhost Django backend.
+  if (typeof window !== "undefined") {
+    const host = window.location.hostname
+    if (host === "localhost" || host === "127.0.0.1") {
+      return "/api"
+    }
+  }
 
-const BASE_URL = "https://nyaysaathi-1.onrender.com/api"
+  const raw = String(import.meta.env.VITE_API_URL || "/api").trim().replace(/\/+$/, "")
+
+  // Relative paths (e.g. /api) are used as-is and can be proxied by Vite.
+  if (!/^https?:\/\//i.test(raw)) {
+    return raw || "/api"
+  }
+
+  // Absolute hosts should point at Django API prefix.
+  return raw.endsWith("/api") ? raw : `${raw}/api`
+}
+
+const BASE_URL = resolveBaseUrl()
 
 /*
 Main API client
