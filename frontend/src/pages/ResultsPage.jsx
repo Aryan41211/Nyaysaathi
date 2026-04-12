@@ -84,7 +84,10 @@ export default function ResultsPage() {
 
     searchCases(query)
       .then(r => {
-        setResults(asArray(r?.data))
+        const resultList = asArray(r?.data)
+        // Temporary debug logs to verify stable IDs passed to detail route.
+        console.log('Available IDs:', resultList.map(c => c?.id).filter(Boolean))
+        setResults(resultList)
         setNlp(r?.nlp && typeof r.nlp === 'object' ? r.nlp : null)
         setClarificationRequired(Boolean(r.clarification_required))
         setClarificationMessage(r.clarification_message || '')

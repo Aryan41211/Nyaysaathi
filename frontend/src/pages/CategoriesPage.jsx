@@ -105,9 +105,11 @@ export default function CategoriesPage() {
                 </div>
                 <div style={S.grid}>
                   {cases.map((c, i) => (
+                    // Prefer stable case ID for routing; fallback keeps legacy data usable.
+                    
                     <Link
-                      key={c.subcategory}
-                      to={`/case/${encodeURIComponent(c.subcategory)}`}
+                      key={c.id || c.subcategory}
+                      to={`/case/${encodeURIComponent(c.id || c.subcategory)}`}
                       style={S.caseCard}
                       className={`anim-fade-up d${(i % 6) + 1}`}
                     >

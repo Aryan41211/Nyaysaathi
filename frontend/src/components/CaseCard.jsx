@@ -19,6 +19,9 @@ export default function CaseCard({ caseData, compact = false }) {
   const safeCase = caseData && typeof caseData === 'object' ? caseData : {}
   const category = typeof safeCase.category === 'string' ? safeCase.category : 'General Legal Issue'
   const subcategory = typeof safeCase.subcategory === 'string' ? safeCase.subcategory : 'Legal Guidance'
+  const caseId = typeof safeCase.id === 'string' && safeCase.id.trim()
+    ? safeCase.id.trim()
+    : subcategory
   const problemDescription = typeof safeCase.problem_description === 'string' ? safeCase.problem_description : ''
   const workflowSteps = Array.isArray(safeCase.workflow_steps)
     ? safeCase.workflow_steps
@@ -29,7 +32,12 @@ export default function CaseCard({ caseData, compact = false }) {
   const score = safeCase.score
 
   const colors = CATEGORY_COLORS[category] || { bg: 'var(--teal-light)', dot: 'var(--teal)' }
-  const slug = encodeURIComponent(subcategory)
+  const slug = encodeURIComponent(caseId)
+
+  const handleClick = () => {
+    // Temporary debug logs for click-to-detail tracing.
+    console.log('Clicked case:', safeCase)
+  }
 
   return (
     <div style={S.card} className="anim-fade-up">
@@ -79,7 +87,7 @@ export default function CaseCard({ caseData, compact = false }) {
       )}
 
       {/* CTA */}
-      <Link to={`/case/${slug}`} style={S.btn}>
+      <Link to={`/case/${slug}`} style={S.btn} onClick={handleClick}>
         {t('caseCard.viewFull')}
       </Link>
     </div>

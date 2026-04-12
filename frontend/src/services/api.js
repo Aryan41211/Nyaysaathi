@@ -81,8 +81,8 @@ export const getCases = async (category) => {
   return response.data
 }
 
-export const getCaseDetail = async (sub) => {
-  const response = await api.get(`/case/${encodeURIComponent(sub)}`)
+export const getCaseDetail = async (caseId) => {
+  const response = await api.get(`/case/${encodeURIComponent(caseId)}`)
   return response.data
 }
 

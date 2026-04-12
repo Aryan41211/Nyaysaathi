@@ -1,26 +1,83 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { getCaseDetail } from '../services/api.js'
+import { getCaseDetail, getCases } from '../services/api.js'
 import { LoadingSpinner, ErrorMessage } from '../components/Feedback.jsx'
 import { useLanguage } from '../state/LanguageContext.jsx'
 
+function CaseNotFound() {
+  return (
+    <div style={{ padding: '3rem 0' }}>
+      <div className="container">
+        <div style={S.notFoundCard}>
+          <h2 style={S.notFoundTitle}>Case not found</h2>
+          <p style={S.notFoundText}>This guidance may have been removed or the link is incorrect.</p>
+          <Link to="/categories" style={S.backLink}>Browse all categories</Link>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function CaseDetailPage() {
   const { t } = useLanguage()
-  const { subcategory } = useParams()
+  const { caseId } = useParams()
   const navigate = useNavigate()
   const [data,    setData]    = useState(null)
   const [loading, setLoading] = useState(true)
   const [error,   setError]   = useState(null)
+  const [notFound, setNotFound] = useState(false)
   const [copied,  setCopied]  = useState(false)
 
   useEffect(() => {
-    setLoading(true)
-    setError(null)
-    getCaseDetail(decodeURIComponent(subcategory))
-      .then(r => setData(r.data))
-      .catch(e => setError(e?.response?.data?.error || 'Could not load case details.'))
-      .finally(() => setLoading(false))
-  }, [subcategory])
+    const slug = String(caseId || '').trim()
+    console.log('NAVIGATED SLUG:', slug)
+
+    if (!slug) {
+      setData(null)
+      setError('Invalid route parameter')
+      setNotFound(false)
+      setLoading(false)
+      return
+    }
+
+    let cancelled = false
+    const load = async () => {
+      setLoading(true)
+      setError(null)
+      setNotFound(false)
+      try {
+        const response = await getCaseDetail(slug)
+        if (!cancelled) {
+          setData(response.data)
+        }
+      } catch (e) {
+        if (cancelled) return
+        if (e?.response?.status === 404) {
+          setData(null)
+          setNotFound(true)
+          try {
+            const listResponse = await getCases()
+            const ids = Array.isArray(listResponse?.data)
+              ? listResponse.data.map(c => c?.id).filter(Boolean)
+              : []
+            console.log('AVAILABLE IDS:', ids)
+          } catch {
+            // Keep 404 UI even if debug list fetch fails.
+          }
+        } else {
+          setData(null)
+          setError(e?.response?.data?.error || 'Could not load case details.')
+        }
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      cancelled = true
+    }
+  }, [caseId])
 
   const copyTemplate = () => {
     if (!data?.complaint_template) return
@@ -31,7 +88,8 @@ export default function CaseDetailPage() {
 
   if (loading) return <div style={{ padding: '3rem 0' }}><LoadingSpinner message={t('caseDetail.loading')} /></div>
   if (error)   return <div style={{ padding: '3rem 0' }}><div className="container"><ErrorMessage message={error} onRetry={() => navigate(-1)} /></div></div>
-  if (!data)   return null
+  if (notFound) return <CaseNotFound />
+  if (!data) return <CaseNotFound />
 
   const steps    = data.workflow_steps      || []
   const docs     = data.required_documents  || []
@@ -224,4 +282,15 @@ const S = {
   aidText: { color: 'rgba(255,255,255,0.8)', fontSize: '0.81rem', lineHeight: 1.6, marginBottom: '12px' },
   aidBtn: { display: 'inline-block', padding: '8px 18px', background: 'var(--saffron)', color: '#fff', borderRadius: 'var(--r-sm)', fontWeight: 700, fontSize: '0.88rem', textDecoration: 'none' },
   disclaimer: { marginTop: '2rem', background: 'var(--saffron-light)', border: '1px solid #F5C6A0', borderRadius: 'var(--r-md)', padding: '12px 16px', fontSize: '0.83rem', color: 'var(--saffron-dark)', lineHeight: 1.6 },
+  notFoundCard: {
+    maxWidth: '680px',
+    margin: '0 auto',
+    background: 'var(--paper)',
+    border: '1px solid var(--border)',
+    borderRadius: 'var(--r-lg)',
+    padding: '1.6rem',
+  },
+  notFoundTitle: { fontSize: '1.2rem', marginBottom: '0.5rem' },
+  notFoundText: { color: 'var(--ink-light)', lineHeight: 1.6, marginBottom: '0.9rem' },
+  backLink: { color: 'var(--teal)', fontWeight: 600, textDecoration: 'none' },
 }

@@ -219,6 +219,11 @@ class SemanticSearchEngine:
         logger.info("semantic_engine: semantic_matches=%s query='%s'", len(hits), query)
         return hits
 
+    def get_cases(self) -> List[Dict]:
+        """Return loaded normalized cases without exposing mutable internal storage."""
+        self.ensure_ready()
+        return [dict(case) for case in self._cases]
+
 
 _ENGINE = SemanticSearchEngine()
 
