@@ -8,15 +8,22 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 .mypy_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
 
 # Virtual environments
 venv/
 .venv/
 env/
+ENV/
 
 # Node/Vite
 node_modules/
 dist/
+build/
+*.tsbuildinfo
 
 # Local runtime data
 .mongo/
@@ -30,13 +37,76 @@ backend/search_cache/
 frontend/dist/
 frontend/node_modules/
 
-# Environment files
+# Environment files (NEVER commit these)
 .env
+.env.local
+.env.*.local
+.env.production
+.env.staging
 backend/.env
+backend/.env.local
 frontend/.env
+frontend/.env.local
 
-# OS/editor
-.DS_Store
-Thumbs.db
+# Django
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+collectstatic/
+
+# IDE/Editor
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+.coverage
+.pytest_cache/
+.tox/
+.nox/
+htmlcov/
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Secrets (never commit)
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets/
+*.secret
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+temp/
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache

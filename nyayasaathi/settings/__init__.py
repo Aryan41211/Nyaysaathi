@@ -1,0 +1,56 @@
+import os
+
+ENVIRONMENT = os.environ.get('DJANGO_ENV', 'development').lower()
+
+if ENVIRONMENT == 'production':
+    from .production import *
+elif ENVIRONMENT == 'development':
+    from .development import *
+else:
+    from .development import *
+
+__all__ = [
+    'BASE_DIR',
+    'SECRET_KEY',
+    'DEBUG',
+    'ALLOWED_HOSTS',
+    'INSTALLED_APPS',
+    'MIDDLEWARE',
+    'ROOT_URLCONF',
+    'TEMPLATES',
+    'WSGI_APPLICATION',
+    'DATABASES',
+    'AUTH_PASSWORD_VALIDATORS',
+    'LANGUAGE_CODE',
+    'TIME_ZONE',
+    'USE_I18N',
+    'USE_TZ',
+    'STATIC_URL',
+    'STATIC_ROOT',
+    'STATICFILES_STORAGE',
+    'DEFAULT_AUTO_FIELD',
+    'REST_FRAMEWORK',
+    'CORS_ALLOW_CREDENTIALS',
+    'CORS_ALLOW_HEADERS',
+    'CORS_ALLOW_METHODS',
+    'CORS_ALLOWED_ORIGINS',
+    'CORS_ALLOW_ALL_ORIGINS',
+    'CSRF_COOKIE_SECURE',
+    'CSRF_COOKIE_HTTPONLY',
+    'CSRF_COOKIE_SAMESITE',
+    'CSRF_TRUSTED_ORIGINS',
+    'SESSION_COOKIE_SECURE',
+    'SESSION_COOKIE_HTTPONLY',
+    'SESSION_COOKIE_SAMESITE',
+    'SESSION_COOKIE_AGE',
+    'SESSION_EXPIRE_AT_BROWSER_CLOSE',
+    'SECURE_BROWSER_XSS_FILTER',
+    'SECURE_CONTENT_TYPE_NOSNIFF',
+    'X_FRAME_OPTIONS',
+    'SECURE_REFERRER_POLICY',
+    'OPENAI_API_KEY',
+    'MODEL_MODE',
+    'MONGODB_URI',
+    'MONGODB_DB',
+    'LOGGING',
+]

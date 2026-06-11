@@ -2,42 +2,53 @@ services:
   - type: web
     name: nyaysaathi-backend
     runtime: python
-    rootDir: backend
+    rootDir: .
     buildCommand: >
       pip install -r requirements.txt &&
       python manage.py migrate &&
-      python manage.py collectstatic --noinput &&
-      python import_dataset.py --file ../nyaysaathi_part1.json &&
-      python import_dataset.py --file ../nyaysaathi_part2.json &&
-      python import_dataset.py --file ../nyaysaathi_part3.json &&
-      python import_dataset.py --file ../nyaysaathi_hindi.json &&
-      python import_dataset.py --file ../nyaysaathi_marathi.json &&
-      python generate_embeddings.py
+      python manage.py collectstatic --noinput
     startCommand: >
-      gunicorn nyaysaathi_project.wsgi:application
+      gunicorn nyayasaathi.wsgi:application
       --bind 0.0.0.0:$PORT
-      --config gunicorn_conf.py
+      --workers 2
+      --threads 4
       --timeout 120
-      --workers 1
-      --threads 2
+      --access-logfile -
+      --error-logfile -
     envVars:
       - key: DJANGO_SECRET_KEY
         generateValue: true
       - key: DJANGO_SETTINGS_MODULE
-        value: nyaysaathi_project.settings
+        value: nyayasaathi.settings
+      - key: DJANGO_ENV
+        value: production
       - key: DEBUG
         value: "False"
       - key: ALLOWED_HOSTS
-        value: ".onrender.com,.vercel.app"
-      - key: MONGODB_URI
-        sync: false
-      - key: MONGODB_DB
-        value: nyaysaathi
-      - key: SEARCH_MODE
-        value: semantic
+        value: ".onrender.com"
       - key: CORS_ALLOWED_ORIGINS
         value: "https://nyaysaathiiii.vercel.app"
       - key: CSRF_TRUSTED_ORIGINS
         value: "https://nyaysaathiiii.vercel.app"
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB
+        value: nyaysaathi
       - key: OPENAI_API_KEY
         sync: false
+      - key: MODEL_MODE
+        value: hybrid
+      - key: DATABASE_URL
+        sync: false
+      - key: EMAIL_HOST
+        sync: false
+      - key: EMAIL_PORT
+        value: "587"
+      - key: EMAIL_USE_TLS
+        value: "True"
+      - key: EMAIL_HOST_USER
+        sync: false
+      - key: EMAIL_HOST_PASSWORD
+        sync: false
+      - key: DEFAULT_FROM_EMAIL
+        value: "noreply@nyaysaathi.in"
