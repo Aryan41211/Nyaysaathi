@@ -24,7 +24,10 @@ def cases(request):
 
 
 def case_detail(request, subcategory):
-    return JsonResponse(_service().case_detail(subcategory=subcategory), status=404 if False else 200)
+    payload = _service().case_detail(subcategory=subcategory)
+    # Match legacy api/views.py behavior: 404 only when status is fail (case not found).
+    status = 404 if isinstance(payload, dict) and payload.get("status") == "fail" else 200
+    return JsonResponse(payload, status=status)
 
 
 @csrf_exempt
