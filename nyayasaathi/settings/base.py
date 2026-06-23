@@ -39,9 +39,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'nyayasaathi.middleware.SecurityHeadersMiddleware',
-    'nyayasaathi.middleware.RateLimitMiddleware',
-    'nyayasaathi.middleware.RequestValidationMiddleware',
+    'nyayasaathi.middleware.security_headers.SecurityHeadersMiddleware',
+    'nyayasaathi.middleware.rate_limit.RateLimitMiddleware',
+    'nyayasaathi.middleware.request_validation.RequestValidationMiddleware',
 ]
 
 ROOT_URLCONF = 'nyayasaathi.urls'
