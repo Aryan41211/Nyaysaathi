@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import case_detail, cases, categories, health_check, search
+from .transport.views import case_detail, cases, categories, health_check, search
 
 urlpatterns = [
     # Keep both slash and no-slash variants to avoid 301 redirects in tests/clients.
