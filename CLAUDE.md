@@ -454,4 +454,3 @@ Health checks: ✓
 ---
 
 End of CLAUDE.md
-

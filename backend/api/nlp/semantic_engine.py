@@ -13,9 +13,6 @@ from .faiss_index import FaissCaseIndex
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_FILES = [
     (BASE_DIR / "dataset" / "legal_cases.json", "en"),
-    (BASE_DIR / "nyaysaathi_with_descriptions.json", "en"),
-    (BASE_DIR / "nyaysaathi_hindi.json", "hi"),
-    (BASE_DIR / "nyaysaathi_marathi.json", "mr"),
 ]
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 

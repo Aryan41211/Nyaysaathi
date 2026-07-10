@@ -4,8 +4,7 @@ from pathlib import Path
 # Get base project directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# 🔥 IMPORTANT: your dataset file name
-DATA_FILE = BASE_DIR / "nyaysaathi_with_descriptions.json"
+DATA_FILE = BASE_DIR / "dataset" / "legal_cases.json"
 
 
 def load_cases():

@@ -110,3 +110,4 @@ temp/
 .parcel-cache/
 .eslintcache
 .stylelintcache
+.aider*

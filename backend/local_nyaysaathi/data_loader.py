@@ -55,6 +55,7 @@ def load_merged_cases() -> List[Dict]:
 
     for path, language in DATA_FILES:
         if not path.exists():
+            print(f"WARNING: dataset file not found: {path}")
             continue
         try:
             with path.open("r", encoding="utf-8") as f:
