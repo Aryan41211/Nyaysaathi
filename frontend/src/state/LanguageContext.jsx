@@ -55,20 +55,11 @@ const STRINGS = {
       badge: '⚖️ Free Legal Procedural Guidance',
       title: 'Describe Your Legal Problem',
       subtitle: 'Write in simple language — Hindi words, broken English, anything. Our system understands your problem and finds the right guidance.',
-      commonTitle: 'Common problems people ask about:',
       disclaimer: '⚠️ Disclaimer: NyaySaathi provides procedural guidance only. This is NOT legal advice. For free legal aid, call',
     },
     searchBox: {
       placeholder: 'Describe your legal problem in your own words…',
       button: 'Find Guidance →',
-      tryAsking: 'Try asking:',
-      examples: [
-        'My employer has not paid salary for 2 months',
-        'Someone scammed me through UPI payment',
-        'My neighbour is encroaching on my land',
-        'Landlord is not returning my security deposit',
-        'I received a defective product from online shopping',
-      ],
     },
     results: {
       analysing: 'Analysing your problem…',
@@ -205,20 +196,11 @@ const STRINGS = {
       badge: '⚖️ मुफ्त कानूनी प्रक्रिया मार्गदर्शन',
       title: 'अपनी कानूनी समस्या बताएं',
       subtitle: 'सरल भाषा में लिखें — हिंदी, टूटी-फूटी अंग्रेज़ी, कुछ भी। सिस्टम आपकी समस्या समझकर सही मार्गदर्शन ढूंढेगा।',
-      commonTitle: 'लोग अक्सर यह समस्याएं पूछते हैं:',
       disclaimer: '⚠️ अस्वीकरण: NyaySaathi केवल प्रक्रिया मार्गदर्शन देता है। यह कानूनी सलाह नहीं है। मुफ़्त कानूनी सहायता के लिए कॉल करें',
     },
     searchBox: {
       placeholder: 'अपनी कानूनी समस्या अपने शब्दों में लिखें…',
       button: 'मार्गदर्शन खोजें →',
-      tryAsking: 'ऐसे पूछकर देखें:',
-      examples: [
-        'मेरे नियोक्ता ने 2 महीने से वेतन नहीं दिया',
-        'UPI पेमेंट से मेरे साथ धोखाधड़ी हुई',
-        'पड़ोसी मेरी जमीन पर कब्जा कर रहा है',
-        'मकान मालिक सुरक्षा जमा वापस नहीं कर रहा',
-        'ऑनलाइन खरीदा सामान खराब निकला',
-      ],
     },
     results: {
       analysing: 'आपकी समस्या का विश्लेषण हो रहा है…',
@@ -351,24 +333,15 @@ const STRINGS = {
         threeDesc: 'स्टेप-बाय-स्टेप मार्गदर्शन, कागदपत्रे व हेल्पलाइन मिळवा.',
       },
     },
-    search: {
+search: {
       badge: '⚖️ मोफत कायदेशीर प्रक्रिया मार्गदर्शन',
       title: 'तुमची कायदेशीर समस्या लिहा',
       subtitle: 'सोप्या भाषेत लिहा — मराठी, हिंदी, इंग्रजी काहीही. सिस्टम अर्थ समजून योग्य मार्गदर्शन शोधेल.',
-      commonTitle: 'लोक वारंवार विचारतात:',
       disclaimer: '⚠️ अस्वीकरण: NyaySaathi फक्त प्रक्रिया मार्गदर्शन देते. हे कायदेशीर सल्ला नाही. मोफत कायदेशीर मदतीसाठी कॉल करा',
     },
     searchBox: {
       placeholder: 'तुमची कायदेशीर समस्या तुमच्या शब्दांत लिहा…',
       button: 'मार्गदर्शन शोधा →',
-      tryAsking: 'असे विचारून पाहा:',
-      examples: [
-        'माझ्या नियोक्त्याने 2 महिन्यांपासून पगार दिला नाही',
-        'UPI पेमेंटमधून माझी फसवणूक झाली',
-        'शेजारी माझ्या जमिनीवर अतिक्रमण करतो आहे',
-        'घरमालक सिक्युरिटी डिपॉझिट परत देत नाही',
-        'ऑनलाइन घेतलेला उत्पादन खराब निघाला',
-      ],
     },
     results: {
       analysing: 'तुमच्या समस्येचे विश्लेषण चालू आहे…',
