@@ -2,12 +2,8 @@ import { Link } from 'react-router-dom'
 import SearchBox from '../components/SearchBox.jsx'
 import { useLanguage } from '../state/LanguageContext.jsx'
 
-const COMMON_ICONS = ['💼', '📱', '🏡', '🔑', '👴']
-
 export default function SearchPage() {
   const { t } = useLanguage()
-  const examples = t('searchBox.examples')
-  const common = COMMON_ICONS.map((icon, idx) => ({ icon, text: examples[idx] || examples[0] || '' }))
   return (
     <div style={S.page}>
       <div className="container" style={S.inner}>
@@ -23,24 +19,7 @@ export default function SearchPage() {
           <SearchBox large autoFocus />
         </div>
 
-        <div style={S.common} className="anim-fade-up d3">
-          <div style={S.commonTitle}>{t('search.commonTitle')}</div>
-          <div style={S.quickHint}>Tap any example to search instantly.</div>
-          <div style={S.grid}>
-            {common.map(c => (
-              <Link
-                key={c.text}
-                to={`/results?query=${encodeURIComponent(c.text)}`}
-                style={S.chip}
-              >
-                <span>{c.icon}</span>
-                <span style={S.chipText}>{c.text}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        <div style={S.note} className="anim-fade-up d4">
+        <div style={S.note} className="anim-fade-up d3">
           <strong>{t('search.disclaimer')}</strong>{' '}
           <a href="tel:15100" style={{ color: 'var(--teal)', fontWeight: 700 }}>15100</a>.
         </div>
@@ -69,25 +48,6 @@ const S = {
     borderRadius: 'var(--r-xl)', padding: '1.8rem',
     boxShadow: 'var(--shadow-md)', marginBottom: '2rem',
   },
-  common: { marginBottom: '2rem' },
-  commonTitle: {
-    fontSize: '0.78rem', fontWeight: 700,
-    color: 'var(--ink-muted)', textTransform: 'uppercase',
-    letterSpacing: '0.5px', marginBottom: '10px',
-  },
-  quickHint: {
-    fontSize: '0.8rem',
-    color: 'var(--ink-muted)',
-    marginBottom: '10px',
-  },
-  grid: { display: 'flex', flexWrap: 'wrap', gap: '8px' },
-  chip: {
-    display: 'flex', alignItems: 'center', gap: '6px',
-    background: 'var(--paper)', border: '1px solid var(--border)',
-    borderRadius: 'var(--r-sm)', padding: '6px 12px',
-    textDecoration: 'none',
-  },
-  chipText: { fontSize: '0.82rem', color: 'var(--ink-light)' },
   note: {
     background: 'var(--saffron-light)', border: '1px solid #F5C6A0',
     borderRadius: 'var(--r-md)', padding: '12px 16px',
