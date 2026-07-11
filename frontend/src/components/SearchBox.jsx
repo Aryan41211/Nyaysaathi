@@ -44,8 +44,6 @@ export default function SearchBox({ defaultValue = '', autoFocus = false, large 
           {t('searchBox.button')}
         </button>
       </form>
-
-      }
     </div>
   )
 }
@@ -104,19 +102,5 @@ const S = {
   },
   btnLarge: {
     padding: '14px 32px', fontSize: '1rem', alignSelf: 'stretch',
-  },
-  examplesWrap: { marginTop: '14px' },
-  exLabel: {
-    display: 'block', fontSize: '0.78rem', fontWeight: 600,
-    color: 'var(--ink-muted)', textTransform: 'uppercase',
-    letterSpacing: '0.5px', marginBottom: '8px',
-  },
-  examples: { display: 'flex', flexWrap: 'wrap', gap: '8px' },
-  pill: {
-    padding: '6px 12px', background: 'var(--parchment)',
-    border: '1px solid var(--border)', borderRadius: '100px',
-    fontFamily: 'var(--font)', fontSize: '0.78rem',
-    color: 'var(--ink-light)', cursor: 'pointer',
-    transition: 'all .15s', textAlign: 'left',
   },
 }
