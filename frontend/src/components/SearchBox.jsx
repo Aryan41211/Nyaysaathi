@@ -14,9 +14,6 @@ export default function SearchBox({ defaultValue = '', autoFocus = false, large 
     navigate(`/results?query=${encodeURIComponent(q)}`)
   }
 
-  const examplesRaw = t('searchBox.examples')
-  const examples = Array.isArray(examplesRaw) ? examplesRaw : []
-
   return (
     <div>
       <form onSubmit={handleSubmit} style={S.form}>
@@ -48,19 +45,7 @@ export default function SearchBox({ defaultValue = '', autoFocus = false, large 
         </button>
       </form>
 
-      {large && (
-        <div style={S.examplesWrap}>
-          <span style={S.exLabel}>{t('searchBox.tryAsking')}</span>
-          <div style={S.examples}>
-            {examples.map((ex) => (
-              <button key={ex} type="button" style={S.pill}
-                onClick={() => setQuery(ex)}>
-                {ex}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
+      }
     </div>
   )
 }
