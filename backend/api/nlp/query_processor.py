@@ -2,15 +2,41 @@ from __future__ import annotations
 
 import logging
 import re
-from typing import Dict, List
+from typing import Any, Dict, List, Optional
 
 from api.search_engine import simple_search
 
+from .bm25_index import BM25Index
+from .cross_encoder_reranker import CrossEncoderReranker
+from .hybrid_retrieval import HybridRetriever
 from .ranker import rank_results
 from .semantic_engine import get_semantic_engine
 
 
 logger = logging.getLogger(__name__)
+
+# Hybrid retriever singleton (initialized lazily on first use).
+_HYBRID_RETRIEVER: Optional[HybridRetriever] = None
+
+
+def _get_hybrid_retriever() -> HybridRetriever:
+    """Build and cache the hybrid retriever (dense-weighted fusion)."""
+    global _HYBRID_RETRIEVER
+    if _HYBRID_RETRIEVER is None:
+        engine = get_semantic_engine()
+        engine.ensure_ready()
+        bm25_index = BM25Index(engine.get_cases())
+        _HYBRID_RETRIEVER = HybridRetriever(
+            semantic_engine=engine,
+            bm25_index=bm25_index,
+            use_tfidf=True,
+            use_bm25=True,
+            use_dense=True,
+            top_k=5,
+            fusion="weighted",
+            weights={"tfidf": 0.1, "bm25": 0.2, "dense": 0.7},
+        )
+    return _HYBRID_RETRIEVER
 
 
 HINGLISH_NORMALIZATION = {
@@ -191,13 +217,40 @@ def process_query(query: str, top_k: int = 5) -> dict:
         }
 
     engine = get_semantic_engine()
+    engine.ensure_ready()
 
-    semantic_hits = engine.search(processed["expanded_text"], top_k=max(5, top_k))
-    logger.info("semantic_hits=%s for query='%s'", len(semantic_hits), safe_query)
+    # Primary retrieval: weighted hybrid (TF-IDF + BM25 + dense).
+    hybrid = _get_hybrid_retriever()
+    hybrid_results = hybrid.search(processed["expanded_text"], top_k=max(5, top_k))
+    logger.info(
+        "hybrid_hits=%s for query='%s'", len(hybrid_results), safe_query
+    )
 
-    if not semantic_hits:
-        semantic_hits = engine.keyword_search(processed["expanded"], top_k=max(5, top_k))
-        logger.info("keyword_fallback_hits=%s for query='%s'", len(semantic_hits), safe_query)
+    if hybrid_results:
+        # Convert hybrid results to the rank_results-compatible format.
+        semantic_hits = [
+            {
+                "case": item.get("case", item),
+                "semantic_score": float(item.get("semantic_score", 0.0)),
+                "_hybrid_score": float(item.get("fused_score", 0.0)),
+                "_retrieval_source": item.get("retrieval_source", "hybrid"),
+            }
+            for item in hybrid_results
+        ]
+    else:
+        # Fallback: semantic-only search.
+        semantic_hits = engine.search(processed["expanded_text"], top_k=max(5, top_k))
+        logger.info(
+            "semantic_fallback_hits=%s for query='%s'", len(semantic_hits), safe_query
+        )
+
+        if not semantic_hits:
+            semantic_hits = engine.keyword_search(
+                processed["expanded"], top_k=max(5, top_k)
+            )
+            logger.info(
+                "keyword_fallback_hits=%s for query='%s'", len(semantic_hits), safe_query
+            )
 
     ranked = rank_results(processed, semantic_hits, top_k=max(5, top_k))
 
