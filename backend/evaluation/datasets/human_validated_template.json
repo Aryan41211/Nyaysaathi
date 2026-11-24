@@ -1,0 +1,30 @@
+[
+  {
+    "query_id": "human-template-001",
+    "query_text": "My neighbor built a fence on my land without permission",
+    "relevant_case_ids": [],
+    "relevance_grades": {},
+    "label_source": "human-validated",
+    "metadata": {
+      "annotator_id": "",
+      "annotation_date": "",
+      "query_category": "Land and Property Disputes",
+      "difficulty": "",
+      "source": ""
+    }
+  },
+  {
+    "query_id": "human-template-002",
+    "query_text": "My employer has not paid my salary for 3 months",
+    "relevant_case_ids": [],
+    "relevance_grades": {},
+    "label_source": "human-validated",
+    "metadata": {
+      "annotator_id": "",
+      "annotation_date": "",
+      "query_category": "Labour and Wage Issues",
+      "difficulty": "",
+      "source": ""
+    }
+  }
+]
