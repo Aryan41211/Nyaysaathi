@@ -1,0 +1,41 @@
+{
+  "n_queries": 500,
+  "corpus_size": 500,
+  "corpus_file": "dataset/expanded_cases.json",
+  "configs": {
+    "MiniLM (all-MiniLM-L6-v2, 384d)": {
+      "recall@1": 0.02,
+      "precision@1": 1.0,
+      "ndcg@1": 1.0,
+      "recall@3": 0.05791989547986199,
+      "precision@3": 0.9653333333333334,
+      "ndcg@3": 0.974,
+      "recall@5": 0.09149268012920131,
+      "precision@5": 0.9156,
+      "ndcg@5": 0.9376725752380021,
+      "recall@10": 0.16742532053547124,
+      "precision@10": 0.8392000000000001,
+      "ndcg@10": 0.8773651527727648,
+      "mrr": 1.0,
+      "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+      "eval_sec": 9.97
+    },
+    "MPNet (all-mpnet-base-v2, 768d)": {
+      "recall@1": 0.02,
+      "precision@1": 1.0,
+      "ndcg@1": 1.0,
+      "recall@3": 0.058333544853316016,
+      "precision@3": 0.972,
+      "ndcg@3": 0.9793072127397724,
+      "recall@5": 0.09344747896212734,
+      "precision@5": 0.9316,
+      "ndcg@5": 0.9493210904731345,
+      "recall@10": 0.1780273349226846,
+      "precision@10": 0.8884,
+      "ndcg@10": 0.9132364150859864,
+      "mrr": 1.0,
+      "model_name": "sentence-transformers/all-mpnet-base-v2",
+      "eval_sec": 18.76
+    }
+  }
+}

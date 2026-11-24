@@ -12,9 +12,9 @@ from .faiss_index import FaissCaseIndex
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_FILES = [
-    (BASE_DIR / "dataset" / "legal_cases.json", "en"),
+    (BASE_DIR / "dataset" / "expanded_cases.json", "en"),
 ]
-MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
 
 logger = logging.getLogger(__name__)
 

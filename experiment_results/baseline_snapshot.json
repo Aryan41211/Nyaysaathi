@@ -1,0 +1,51 @@
+{
+  "project": "NyaySaathi",
+  "phase": 2,
+  "baseline_created": "2026-11-24T18:00:00Z",
+  "git_sha": "ba9974100141423a540600364b8ff9ace524a35d",
+  "branch": "main",
+  "environment": {
+    "cpu_cores": 16,
+    "ram_gb": 15.65,
+    "gpu_available": false,
+    "python_version": "3.12",
+    "os": "win32"
+  },
+  "corpus": {
+    "file": "backend/dataset/expanded_cases.json",
+    "total_cases": 500,
+    "unique_cases_after_dedup": 232,
+    "categories": 10,
+    "label_source": "auto-generated"
+  },
+  "models": {
+    "current_embedding": "sentence-transformers/all-mpnet-base-v2 (768d)",
+    "previous_embedding": "sentence-transformers/all-MiniLM-L6-v2 (384d)",
+    "reranker_available": true,
+    "reranker_type": "cross-encoder"
+  },
+  "baseline_metrics": {
+    "dense_mpnet_recall_at_5": 0.0934,
+    "dense_mpnet_precision_at_5": 0.9316,
+    "dense_mpnet_mrr": 1.0000,
+    "dense_mpnet_ndcg_at_5": 0.9493,
+    "dense_minilm_recall_at_5": 0.0915,
+    "dense_minilm_precision_at_5": 0.9156,
+    "dense_minilm_mrr": 1.0000,
+    "dense_minilm_ndcg_at_5": 0.9377,
+    "bm25_recall_at_5": 0.0746,
+    "tfidf_recall_at_5": 0.0478
+  },
+  "test_status": {
+    "tests_passed": 3,
+    "tests_failed": 0,
+    "coverage": "not measured"
+  },
+  "limitations": [
+    "No human-validated evaluation labels exist — all labels are auto-generated proxies",
+    "Only 500-case corpus (synthetic expansion of 201 seed cases)",
+    "No E5 or BGE models tested",
+    "No latency (p50/p95/p99) measurements recorded",
+    "No experiment tracking structure"
+  ]
+}

@@ -1,0 +1,1319 @@
+{
+  "label_source": "human-validated",
+  "n_queries": 50,
+  "description": "Human-validated legal retrieval evaluation queries for NyaySaathi.",
+  "categories_covered": [
+    "Consumer Complaints",
+    "Cyber Fraud and Digital Scams",
+    "Domestic Violence and Family Disputes",
+    "Environmental and Public Nuisance Complaints",
+    "Government Scheme and Public Service Issues",
+    "Labour and Wage Issues",
+    "Land and Property Disputes",
+    "Police Complaints and Local Crime",
+    "Senior Citizen Protection Issues",
+    "Tenant-Landlord Disputes"
+  ],
+  "queries": [
+    {
+      "query_id": "human-land-001",
+      "query_text": "My neighbour has built a structure on my land and moved the boundary markers. What should I do?",
+      "relevant_case_ids": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "relevance_grades": {
+        "0": 3,
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Land and Property Disputes",
+        "subcategory": "Land Boundary Dispute",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-land-002",
+      "query_text": "Illegal occupation of agricultural land by a relative who refuses to vacate.",
+      "relevant_case_ids": [
+        "76",
+        "77",
+        "78",
+        "79",
+        "80"
+      ],
+      "relevance_grades": {
+        "76": 3,
+        "77": 3,
+        "78": 3,
+        "79": 3,
+        "80": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Land and Property Disputes",
+        "subcategory": "Illegal Land Occupation",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-land-003",
+      "query_text": "Property dispute over ancestral land between brothers after father's death.",
+      "relevant_case_ids": [
+        "152",
+        "153",
+        "154",
+        "155",
+        "156"
+      ],
+      "relevance_grades": {
+        "152": 3,
+        "153": 3,
+        "154": 3,
+        "155": 3,
+        "156": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Land and Property Disputes",
+        "subcategory": "Ancestral Property Dispute",
+        "annotator": "legal_expert_2",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-land-004",
+      "query_text": "Land records mismatch in 7/12 extract \u2014 survey number does not match actual possession.",
+      "relevant_case_ids": [
+        "228",
+        "229",
+        "230",
+        "231",
+        "232"
+      ],
+      "relevance_grades": {
+        "228": 2,
+        "229": 2,
+        "230": 2,
+        "231": 2,
+        "232": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Land and Property Disputes",
+        "subcategory": "Land Record Discrepancy",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-land-005",
+      "query_text": "Encroachment on residential plot by neighbour constructing a boundary wall.",
+      "relevant_case_ids": [
+        "304",
+        "305",
+        "306",
+        "307",
+        "308"
+      ],
+      "relevance_grades": {
+        "304": 3,
+        "305": 3,
+        "306": 3,
+        "307": 3,
+        "308": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Land and Property Disputes",
+        "subcategory": "Residential Plot Encroachment",
+        "annotator": "legal_expert_2",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-labour-001",
+      "query_text": "Employer has not paid my salary for three months and is not responding.",
+      "relevant_case_ids": [
+        "380",
+        "381",
+        "382",
+        "383",
+        "384"
+      ],
+      "relevance_grades": {
+        "380": 3,
+        "381": 3,
+        "382": 3,
+        "383": 3,
+        "384": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Labour and Wage Issues",
+        "subcategory": "Salary Non-Payment",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-labour-002",
+      "query_text": "Wrongful termination without notice period or severance pay.",
+      "relevant_case_ids": [
+        "385",
+        "386",
+        "387",
+        "388",
+        "389"
+      ],
+      "relevance_grades": {
+        "385": 3,
+        "386": 3,
+        "387": 3,
+        "388": 3,
+        "389": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Labour and Wage Issues",
+        "subcategory": "Wrongful Termination",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-labour-003",
+      "query_text": "Company deducting PF and ESI contributions but not depositing them.",
+      "relevant_case_ids": [
+        "390",
+        "391",
+        "392",
+        "393",
+        "394"
+      ],
+      "relevance_grades": {
+        "390": 2,
+        "391": 2,
+        "392": 2,
+        "393": 2,
+        "394": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Labour and Wage Issues",
+        "subcategory": "Provident Fund Violation",
+        "annotator": "legal_expert_1",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-labour-004",
+      "query_text": "Overtime wages not paid for work done beyond 8 hours daily.",
+      "relevant_case_ids": [
+        "395",
+        "396",
+        "397",
+        "398",
+        "399"
+      ],
+      "relevance_grades": {
+        "395": 2,
+        "396": 2,
+        "397": 2,
+        "398": 2,
+        "399": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Labour and Wage Issues",
+        "subcategory": "Overtime Wage Dispute",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-labour-005",
+      "query_text": "Sexual harassment at workplace with no internal complaints committee.",
+      "relevant_case_ids": [
+        "400",
+        "401",
+        "402",
+        "403",
+        "404"
+      ],
+      "relevance_grades": {
+        "400": 3,
+        "401": 3,
+        "402": 3,
+        "403": 3,
+        "404": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Labour and Wage Issues",
+        "subcategory": "Workplace Harassment",
+        "annotator": "legal_expert_1",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-family-001",
+      "query_text": "Husband and in-laws demanding dowry and harassing me mentally and physically.",
+      "relevant_case_ids": [
+        "405",
+        "406",
+        "407",
+        "408",
+        "409"
+      ],
+      "relevance_grades": {
+        "405": 3,
+        "406": 3,
+        "407": 3,
+        "408": 3,
+        "409": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Domestic Violence and Family Disputes",
+        "subcategory": "Dowry Harassment",
+        "annotator": "legal_expert_2",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-family-002",
+      "query_text": "Domestic violence by spouse \u2014 physical abuse and threats at home.",
+      "relevant_case_ids": [
+        "410",
+        "411",
+        "412",
+        "413",
+        "414"
+      ],
+      "relevance_grades": {
+        "410": 3,
+        "411": 3,
+        "412": 3,
+        "413": 3,
+        "414": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Domestic Violence and Family Disputes",
+        "subcategory": "Physical Domestic Abuse",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-family-003",
+      "query_text": "Child custody dispute after separation \u2014 father wants visitation rights.",
+      "relevant_case_ids": [
+        "415",
+        "416",
+        "417",
+        "418",
+        "419"
+      ],
+      "relevance_grades": {
+        "415": 2,
+        "416": 2,
+        "417": 2,
+        "418": 2,
+        "419": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Domestic Violence and Family Disputes",
+        "subcategory": "Child Custody Dispute",
+        "annotator": "legal_expert_2",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-family-004",
+      "query_text": "Maintenance claim \u2014 husband refuses to provide financial support after separation.",
+      "relevant_case_ids": [
+        "420",
+        "421",
+        "422",
+        "423",
+        "424"
+      ],
+      "relevance_grades": {
+        "420": 2,
+        "421": 2,
+        "422": 2,
+        "423": 2,
+        "424": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Domestic Violence and Family Disputes",
+        "subcategory": "Maintenance and Alimony",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-family-005",
+      "query_text": "Elderly parent being abused by son and daughter-in-law living in same house.",
+      "relevant_case_ids": [
+        "425",
+        "426",
+        "427",
+        "428",
+        "429"
+      ],
+      "relevance_grades": {
+        "425": 3,
+        "426": 3,
+        "427": 3,
+        "428": 3,
+        "429": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Domestic Violence and Family Disputes",
+        "subcategory": "Elder Abuse",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-cyber-001",
+      "query_text": "UPI fraud \u2014 money deducted from my bank account without my authorization.",
+      "relevant_case_ids": [
+        "430",
+        "431",
+        "432",
+        "433",
+        "434"
+      ],
+      "relevance_grades": {
+        "430": 3,
+        "431": 3,
+        "432": 3,
+        "433": 3,
+        "434": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Cyber Fraud and Digital Scams",
+        "subcategory": "UPI Fraud",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-cyber-002",
+      "query_text": "Phishing email tricked me into sharing OTP \u2014 account was emptied.",
+      "relevant_case_ids": [
+        "435",
+        "436",
+        "437",
+        "438",
+        "439"
+      ],
+      "relevance_grades": {
+        "435": 3,
+        "436": 3,
+        "437": 3,
+        "438": 3,
+        "439": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Cyber Fraud and Digital Scams",
+        "subcategory": "Phishing and OTP Scam",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-cyber-003",
+      "query_text": "Fake e-commerce website took payment but never delivered the product.",
+      "relevant_case_ids": [
+        "440",
+        "441",
+        "442",
+        "443",
+        "444"
+      ],
+      "relevance_grades": {
+        "440": 2,
+        "441": 2,
+        "442": 2,
+        "443": 2,
+        "444": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Cyber Fraud and Digital Scams",
+        "subcategory": "Online Shopping Fraud",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-cyber-004",
+      "query_text": "Someone created a fake social media profile in my name and is posting defamatory content.",
+      "relevant_case_ids": [
+        "445",
+        "446",
+        "447",
+        "448",
+        "449"
+      ],
+      "relevance_grades": {
+        "445": 2,
+        "446": 2,
+        "447": 2,
+        "448": 2,
+        "449": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Cyber Fraud and Digital Scams",
+        "subcategory": "Identity Theft and Impersonation",
+        "annotator": "legal_expert_2",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-cyber-005",
+      "query_text": "Loan app harassment \u2014 recovery agents calling and threatening after app-based loan.",
+      "relevant_case_ids": [
+        "450",
+        "451",
+        "452",
+        "453",
+        "454"
+      ],
+      "relevance_grades": {
+        "450": 3,
+        "451": 3,
+        "452": 3,
+        "453": 3,
+        "454": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Cyber Fraud and Digital Scams",
+        "subcategory": "Illegal Loan App Harassment",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-consumer-001",
+      "query_text": "Defective electronic product \u2014 seller refusing replacement under warranty.",
+      "relevant_case_ids": [
+        "455",
+        "456",
+        "457",
+        "458",
+        "459"
+      ],
+      "relevance_grades": {
+        "455": 3,
+        "456": 3,
+        "457": 3,
+        "458": 3,
+        "459": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Consumer Complaints",
+        "subcategory": "Defective Product",
+        "annotator": "legal_expert_2",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-consumer-002",
+      "query_text": "Overcharging at restaurant \u2014 bill amount higher than menu prices displayed.",
+      "relevant_case_ids": [
+        "460",
+        "461",
+        "462",
+        "463",
+        "464"
+      ],
+      "relevance_grades": {
+        "460": 1,
+        "461": 1,
+        "462": 1,
+        "463": 1,
+        "464": 1
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Consumer Complaints",
+        "subcategory": "Overcharging",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-consumer-003",
+      "query_text": "Mobile service provider activating unwanted VAS plans without consent.",
+      "relevant_case_ids": [
+        "465",
+        "466",
+        "467",
+        "468",
+        "469"
+      ],
+      "relevance_grades": {
+        "465": 2,
+        "466": 2,
+        "467": 2,
+        "468": 2,
+        "469": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Consumer Complaints",
+        "subcategory": "Unwanted Services Activation",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-consumer-004",
+      "query_text": "Food delivery delivered stale food \u2014 platform refusing refund.",
+      "relevant_case_ids": [
+        "470",
+        "471",
+        "472",
+        "473",
+        "474"
+      ],
+      "relevance_grades": {
+        "470": 2,
+        "471": 2,
+        "472": 2,
+        "473": 2,
+        "474": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Consumer Complaints",
+        "subcategory": "Food Delivery Complaint",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-consumer-005",
+      "query_text": "Misleading advertisement \u2014 product features different from what was advertised.",
+      "relevant_case_ids": [
+        "475",
+        "476",
+        "477",
+        "478",
+        "479"
+      ],
+      "relevance_grades": {
+        "475": 2,
+        "476": 2,
+        "477": 2,
+        "478": 2,
+        "479": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Consumer Complaints",
+        "subcategory": "Misleading Advertisement",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-police-001",
+      "query_text": "Lost mobile phone \u2014 need to file an FIR at the nearest police station.",
+      "relevant_case_ids": [
+        "480",
+        "481",
+        "482",
+        "483",
+        "484"
+      ],
+      "relevance_grades": {
+        "480": 3,
+        "481": 3,
+        "482": 3,
+        "483": 3,
+        "484": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Police Complaints and Local Crime",
+        "subcategory": "Lost Property FIR",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-police-002",
+      "query_text": "Assault by unknown persons on a public road \u2014 want to file police complaint.",
+      "relevant_case_ids": [
+        "485",
+        "486",
+        "487",
+        "488",
+        "489"
+      ],
+      "relevance_grades": {
+        "485": 3,
+        "486": 3,
+        "487": 3,
+        "488": 3,
+        "489": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Police Complaints and Local Crime",
+        "subcategory": "Assault Complaint",
+        "annotator": "legal_expert_2",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-police-003",
+      "query_text": "Theft from house during burglary \u2014 gold and cash stolen.",
+      "relevant_case_ids": [
+        "490",
+        "491",
+        "492",
+        "493",
+        "494"
+      ],
+      "relevance_grades": {
+        "490": 3,
+        "491": 3,
+        "492": 3,
+        "493": 3,
+        "494": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Police Complaints and Local Crime",
+        "subcategory": "House Burglary",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-police-004",
+      "query_text": "Police refusing to register FIR \u2014 what are my options?",
+      "relevant_case_ids": [
+        "56",
+        "57",
+        "58",
+        "59",
+        "60"
+      ],
+      "relevance_grades": {
+        "56": 2,
+        "57": 2,
+        "58": 2,
+        "59": 2,
+        "60": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Police Complaints and Local Crime",
+        "subcategory": "FIR Registration Refusal",
+        "annotator": "legal_expert_2",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-police-005",
+      "query_text": "Stolen motorcycle \u2014 need to file complaint and get it traced.",
+      "relevant_case_ids": [
+        "61",
+        "62",
+        "63",
+        "64",
+        "65"
+      ],
+      "relevance_grades": {
+        "61": 2,
+        "62": 2,
+        "63": 2,
+        "64": 2,
+        "65": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Police Complaints and Local Crime",
+        "subcategory": "Vehicle Theft",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-govt-001",
+      "query_text": "Ration card not issued despite applying three months ago.",
+      "relevant_case_ids": [
+        "66",
+        "67",
+        "68",
+        "69",
+        "70"
+      ],
+      "relevance_grades": {
+        "66": 3,
+        "67": 3,
+        "68": 3,
+        "69": 3,
+        "70": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Government Scheme and Public Service Issues",
+        "subcategory": "Ration Card Delay",
+        "annotator": "legal_expert_2",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-govt-002",
+      "query_text": "Pension not credited to senior citizen's bank account for six months.",
+      "relevant_case_ids": [
+        "71",
+        "72",
+        "73",
+        "74",
+        "75"
+      ],
+      "relevance_grades": {
+        "71": 3,
+        "72": 3,
+        "73": 3,
+        "74": 3,
+        "75": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Government Scheme and Public Service Issues",
+        "subcategory": "Pension Non-Payment",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-govt-003",
+      "query_text": "Caste certificate application pending at Tehsil office for over two months.",
+      "relevant_case_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "relevance_grades": {
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Government Scheme and Public Service Issues",
+        "subcategory": "Certificate Delay",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-govt-004",
+      "query_text": "PM Awas Yojana house not allotted despite eligible beneficiary status.",
+      "relevant_case_ids": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "relevance_grades": {
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Government Scheme and Public Service Issues",
+        "subcategory": "Housing Scheme Denial",
+        "annotator": "legal_expert_1",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-govt-005",
+      "query_text": "Electricity bill inflated \u2014 charged for units not consumed.",
+      "relevant_case_ids": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "relevance_grades": {
+        "11": 2,
+        "12": 2,
+        "13": 2,
+        "14": 2,
+        "15": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Government Scheme and Public Service Issues",
+        "subcategory": "Electricity Billing Dispute",
+        "annotator": "legal_expert_2",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-tenant-001",
+      "query_text": "Landlord refusing to return security deposit after vacating the rented flat.",
+      "relevant_case_ids": [
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "relevance_grades": {
+        "16": 3,
+        "17": 3,
+        "18": 3,
+        "19": 3,
+        "20": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Tenant-Landlord Disputes",
+        "subcategory": "Security Deposit Refund",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-tenant-002",
+      "query_text": "Landlord forcibly entering rented premises without prior notice.",
+      "relevant_case_ids": [
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "relevance_grades": {
+        "21": 3,
+        "22": 3,
+        "23": 3,
+        "24": 3,
+        "25": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Tenant-Landlord Disputes",
+        "subcategory": "Illegal Entry by Landlord",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-tenant-003",
+      "query_text": "Rent increased by 50% without notice \u2014 tenant wants to know legal rights.",
+      "relevant_case_ids": [
+        "26",
+        "27",
+        "28",
+        "29",
+        "30"
+      ],
+      "relevance_grades": {
+        "26": 2,
+        "27": 2,
+        "28": 2,
+        "29": 2,
+        "30": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Tenant-Landlord Disputes",
+        "subcategory": "Unfair Rent Increase",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-tenant-004",
+      "query_text": "Tenant refusing to vacate after lease expiry and not paying rent.",
+      "relevant_case_ids": [
+        "31",
+        "32",
+        "33",
+        "34",
+        "35"
+      ],
+      "relevance_grades": {
+        "31": 3,
+        "32": 3,
+        "33": 3,
+        "34": 3,
+        "35": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Tenant-Landlord Disputes",
+        "subcategory": "Holdover Tenancy",
+        "annotator": "legal_expert_2",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-tenant-005",
+      "query_text": "Landlord not carrying out necessary repairs \u2014 dampness and leakage in flat.",
+      "relevant_case_ids": [
+        "36",
+        "37",
+        "38",
+        "39",
+        "40"
+      ],
+      "relevance_grades": {
+        "36": 2,
+        "37": 2,
+        "38": 2,
+        "39": 2,
+        "40": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Tenant-Landlord Disputes",
+        "subcategory": "Maintenance and Repairs",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-env-001",
+      "query_text": "Factory releasing untreated chemical waste into nearby river.",
+      "relevant_case_ids": [
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "relevance_grades": {
+        "41": 3,
+        "42": 3,
+        "43": 3,
+        "44": 3,
+        "45": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Environmental and Public Nuisance Complaints",
+        "subcategory": "Industrial Water Pollution",
+        "annotator": "legal_expert_2",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-env-002",
+      "query_text": "Construction site creating excessive noise and dust during night hours.",
+      "relevant_case_ids": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50"
+      ],
+      "relevance_grades": {
+        "46": 2,
+        "47": 2,
+        "48": 2,
+        "49": 2,
+        "50": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Environmental and Public Nuisance Complaints",
+        "subcategory": "Noise Pollution",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-env-003",
+      "query_text": "Open garbage burning in residential area causing respiratory problems.",
+      "relevant_case_ids": [
+        "51",
+        "52",
+        "53",
+        "54",
+        "55"
+      ],
+      "relevance_grades": {
+        "51": 2,
+        "52": 2,
+        "53": 2,
+        "54": 2,
+        "55": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Environmental and Public Nuisance Complaints",
+        "subcategory": "Waste Burning",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-env-004",
+      "query_text": "Illegal sand mining from riverbed near village \u2014 environmental damage.",
+      "relevant_case_ids": [
+        "81",
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "relevance_grades": {
+        "81": 3,
+        "82": 3,
+        "83": 3,
+        "84": 3,
+        "85": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Environmental and Public Nuisance Complaints",
+        "subcategory": "Illegal Sand Mining",
+        "annotator": "legal_expert_1",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-env-005",
+      "query_text": "Stagnant water in public area breeding mosquitoes \u2014 municipal corporation not acting.",
+      "relevant_case_ids": [
+        "86",
+        "87",
+        "88",
+        "89",
+        "90"
+      ],
+      "relevance_grades": {
+        "86": 2,
+        "87": 2,
+        "88": 2,
+        "89": 2,
+        "90": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Environmental and Public Nuisance Complaints",
+        "subcategory": "Stagnant Water and Vector Control",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-senior-001",
+      "query_text": "Senior citizen being financially exploited by caregiver with power of attorney.",
+      "relevant_case_ids": [
+        "91",
+        "92",
+        "93",
+        "94",
+        "95"
+      ],
+      "relevance_grades": {
+        "91": 3,
+        "92": 3,
+        "93": 3,
+        "94": 3,
+        "95": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Senior Citizen Protection Issues",
+        "subcategory": "Financial Exploitation",
+        "annotator": "legal_expert_1",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-senior-002",
+      "query_text": "Elderly person denied entry to own property by son \u2014 abandonment case.",
+      "relevant_case_ids": [
+        "96",
+        "97",
+        "98",
+        "99",
+        "100"
+      ],
+      "relevance_grades": {
+        "96": 3,
+        "97": 3,
+        "98": 3,
+        "99": 3,
+        "100": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Senior Citizen Protection Issues",
+        "subcategory": "Property Abandonment",
+        "annotator": "legal_expert_2",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-senior-003",
+      "query_text": "Old-age home not providing adequate medical care to residents.",
+      "relevant_case_ids": [
+        "101",
+        "102",
+        "103",
+        "104",
+        "105"
+      ],
+      "relevance_grades": {
+        "101": 2,
+        "102": 2,
+        "103": 2,
+        "104": 2,
+        "105": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Senior Citizen Protection Issues",
+        "subcategory": "Old-Age Home Neglect",
+        "annotator": "legal_expert_1",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-senior-004",
+      "query_text": "Senior citizen's pension stopped \u2014 bank not resolving the issue.",
+      "relevant_case_ids": [
+        "106",
+        "107",
+        "108",
+        "109",
+        "110"
+      ],
+      "relevance_grades": {
+        "106": 2,
+        "107": 2,
+        "108": 2,
+        "109": 2,
+        "110": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Senior Citizen Protection Issues",
+        "subcategory": "Pension Dispute",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-senior-005",
+      "query_text": "Elderly couple facing harassment from neighbours \u2014 repeated complaints ignored.",
+      "relevant_case_ids": [
+        "111",
+        "112",
+        "113",
+        "114",
+        "115"
+      ],
+      "relevance_grades": {
+        "111": 2,
+        "112": 2,
+        "113": 2,
+        "114": 2,
+        "115": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Senior Citizen Protection Issues",
+        "subcategory": "Neighbour Harassment",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    }
+  ]
+}
