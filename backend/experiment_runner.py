@@ -23,6 +23,16 @@ from api.nlp.hybrid_retrieval import HybridRetriever
 from api.nlp.semantic_engine import get_semantic_engine
 from api.search_engine import simple_search
 
+from typing import Dict
+
+
+def _load_cases(corpus_path: str | None = None) -> List[Dict[str, Any]]:
+    if corpus_path:
+        import json
+        with open(corpus_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return CASES
+
 
 class RetrievalEvaluator:
     """Runs retrieval evaluation across multiple fusion configurations."""
@@ -203,7 +213,15 @@ class RetrievalEvaluator:
 
 
 def main() -> int:
-    cases = CASES
+    import argparse
+
+    parser = argparse.ArgumentParser(description="NyaySaathi retrieval evaluation benchmark")
+    parser.add_argument(
+        "--corpus", help="Path to corpus JSON file (default: backend/dataset/legal_cases.json)"
+    )
+    args = parser.parse_args()
+
+    cases = _load_cases(args.corpus)
     queries = build_auto_generated_dataset(cases)
     evaluator = RetrievalEvaluator(cases, queries)
     results = evaluator.run_all()
