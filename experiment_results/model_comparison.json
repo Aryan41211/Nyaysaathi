@@ -18,7 +18,7 @@
       "ndcg@10": 0.8773651527727648,
       "mrr": 1.0,
       "model_name": "sentence-transformers/all-MiniLM-L6-v2",
-      "eval_sec": 9.97
+      "eval_sec": 12.88
     },
     "MPNet (all-mpnet-base-v2, 768d)": {
       "recall@1": 0.02,
@@ -35,7 +35,41 @@
       "ndcg@10": 0.9132364150859864,
       "mrr": 1.0,
       "model_name": "sentence-transformers/all-mpnet-base-v2",
-      "eval_sec": 18.76
+      "eval_sec": 22.07
+    },
+    "E5-base (intfloat/e5-base-v2, 768d)": {
+      "recall@1": 0.02,
+      "precision@1": 1.0,
+      "ndcg@1": 1.0,
+      "recall@3": 0.058019616289388294,
+      "precision@3": 0.968,
+      "ndcg@3": 0.9762457701918179,
+      "recall@5": 0.09319347122002895,
+      "precision@5": 0.9316,
+      "ndcg@5": 0.9491585902378217,
+      "recall@10": 0.17496458705160553,
+      "precision@10": 0.8756,
+      "ndcg@10": 0.9037745746904959,
+      "mrr": 1.0,
+      "model_name": "intfloat/e5-base-v2",
+      "eval_sec": 18.8
+    },
+    "BGE-base (BAAI/bge-base-en-v1.5, 768d)": {
+      "recall@1": 0.02,
+      "precision@1": 1.0,
+      "ndcg@1": 1.0,
+      "recall@3": 0.05836123221218884,
+      "precision@3": 0.9733333333333334,
+      "ndcg@3": 0.979754229808182,
+      "recall@5": 0.09288366775519508,
+      "precision@5": 0.9284,
+      "ndcg@5": 0.9473470520279211,
+      "recall@10": 0.1746906254115999,
+      "precision@10": 0.8724,
+      "ndcg@10": 0.9013001076630398,
+      "mrr": 1.0,
+      "model_name": "BAAI/bge-base-en-v1.5",
+      "eval_sec": 18.87
     }
   }
 }

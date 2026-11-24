@@ -72,12 +72,15 @@ class EmbeddingRetriever:
         }
         print(f"  Loading {model_name} ...", flush=True)
         self.model = SentenceTransformer(model_name)
-        self.dim = int(self.model.get_sentence_embedding_dimension())
+        self.dim = int(self.model.get_embedding_dimension())
+        self._is_e5 = "e5" in model_name.lower()
         self._build_index()
         print(f"    dim={self.dim}, n_cases={len(cases)}", flush=True)
 
     def _build_index(self):
         texts = [_build_searchable_text(c) for c in self.cases]
+        if self._is_e5:
+            texts = ["passage: " + t for t in texts]
         vecs = self.model.encode(
             texts,
             convert_to_numpy=True,
@@ -90,8 +93,9 @@ class EmbeddingRetriever:
         self.index.add(self.embeddings)
 
     def search(self, query: str, top_k: int = 5) -> List[str]:
+        qtext = "query: " + query if self._is_e5 else query
         qv = self.model.encode(
-            [query], convert_to_numpy=True, normalize_embeddings=True
+            [qtext], convert_to_numpy=True, normalize_embeddings=True
         )
         qv = np.asarray(qv, dtype="float32")[0]
         k = min(top_k, len(self.cases))
@@ -315,10 +319,12 @@ def run_benchmark() -> Dict[str, Any]:
     # Build retriever objects with latency support
     retrievers = {
         "TF-IDF": TFIDFRetrieverWrapper(cases),
-        "BM25": bm25_index,  # has .search but no latency wrapper
+        "BM25": bm25_index,
         "Dense (MiniLM 384d)": systems["Dense (MiniLM 384d)"],
         "Dense (MPNet 768d)": systems["Dense (MPNet 768d)"],
-        "Hybrid (weighted fusion)": HybridRetrieverWrapper(cases),
+        "Dense (E5-base 768d)": EmbeddingRetriever("intfloat/e5-base-v2", cases),
+        "Dense (BGE-base 768d)": EmbeddingRetriever("BAAI/bge-base-en-v1.5", cases),
+        # Hybrid tested separately due to singleton dimension conflict
     }
 
     results: Dict[str, Any] = {
@@ -405,7 +411,7 @@ def run_benchmark() -> Dict[str, Any]:
     # Evaluate on human-validated labels
     if human_queries:
         print("\n--- Human-validated evaluation ---", flush=True)
-        for name in ["Dense (MPNet 768d)", "Hybrid (weighted fusion)", "BM25"]:
+        for name in ["Dense (MPNet 768d)", "Dense (E5-base 768d)", "Dense (BGE-base 768d)", "BM25"]:
             retr = retrievers[name]
             if name == "BM25":
                 def bm25_fn(query_text, top_k=5):

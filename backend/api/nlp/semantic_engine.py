@@ -1,10 +1,11 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import logging
 import threading
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 import numpy as np
 
@@ -30,6 +31,11 @@ class SemanticSearchEngine:
         self._index = None
         self._ready = False
         self._model_error = None
+        # Query embedding cache: canonical_query -> normalized embedding vector
+        self._query_embedding_cache: Dict[str, np.ndarray] = {}
+        # Retrieval result cache: (canonical_query, top_k) -> hits
+        self._retrieval_cache: Dict[tuple, List[Dict]] = {}
+        self._cache_max_size = 1000
 
     @property
     def model_error(self):
@@ -177,6 +183,27 @@ class SemanticSearchEngine:
         scored.sort(key=lambda x: x["semantic_score"], reverse=True)
         return scored[:top_k]
 
+    def _canonical_query(self, query: str) -> str:
+        """Return a cache key for a query string."""
+        return hashlib.sha256(query.strip().lower().encode("utf-8")).hexdigest()
+
+    def _encode_query_cached(self, model, query: str) -> np.ndarray:
+        """Encode a query with an embedding cache to avoid re-encoding repeats."""
+        key = self._canonical_query(query)
+        with self._lock:
+            if key in self._query_embedding_cache:
+                return self._query_embedding_cache[key]
+
+        vec = model.encode([query], convert_to_numpy=True, normalize_embeddings=True)
+        vec = np.asarray(vec, dtype="float32")[0]
+
+        with self._lock:
+            if len(self._query_embedding_cache) >= self._cache_max_size:
+                # Evict an arbitrary entry to keep the cache bounded.
+                self._query_embedding_cache.pop(next(iter(self._query_embedding_cache)))
+            self._query_embedding_cache[key] = vec
+        return vec
+
     def search(self, query: str, top_k: int = 5) -> List[Dict]:
         self.ensure_ready()
 
@@ -185,6 +212,12 @@ class SemanticSearchEngine:
 
         if not self._cases:
             return []
+
+        # Check retrieval cache.
+        cache_key = (self._canonical_query(query), top_k)
+        with self._lock:
+            if cache_key in self._retrieval_cache:
+                return [dict(h) for h in self._retrieval_cache[cache_key]]
 
         model = self._get_model()
         if model is None or self._index is None:
@@ -203,8 +236,8 @@ class SemanticSearchEngine:
             logger.info("semantic_engine: lexical_fallback_matches=%s query='%s'", len(top), query)
             return top
 
-        query_vec = model.encode([query], convert_to_numpy=True, normalize_embeddings=True)
-        result = self._index.search(np.asarray(query_vec, dtype="float32")[0], top_k=top_k)
+        query_vec = self._encode_query_cached(model, query)
+        result = self._index.search(query_vec, top_k=top_k)
 
         hits = []
         for idx, score in zip(result.indices.tolist(), result.scores.tolist()):
@@ -213,6 +246,13 @@ class SemanticSearchEngine:
                     "case": self._cases[idx],
                     "semantic_score": float(max(0.0, min(1.0, score))),
                 })
+
+        # Store in retrieval cache (bounded).
+        with self._lock:
+            if len(self._retrieval_cache) >= self._cache_max_size:
+                self._retrieval_cache.pop(next(iter(self._retrieval_cache)))
+            self._retrieval_cache[cache_key] = hits
+
         logger.info("semantic_engine: semantic_matches=%s query='%s'", len(hits), query)
         return hits
 

@@ -45,11 +45,14 @@ class Retriever:
         self.model_name = model_name
         self.cases = cases
         self.model = SentenceTransformer(model_name)
-        self.dimension = int(self.model.get_sentence_embedding_dimension())
+        self.dimension = int(self.model.get_embedding_dimension())
+        self._is_e5 = "e5" in model_name.lower()
         self._build_index(cases)
 
     def _build_index(self, cases: List[Dict[str, Any]]):
         corpus_texts = [_build_searchable_text(c) for c in cases]
+        if self._is_e5:
+            corpus_texts = ["passage: " + t for t in corpus_texts]
         embeddings = self.model.encode(
             corpus_texts, convert_to_numpy=True, normalize_embeddings=True,
             batch_size=32, show_progress_bar=False,
@@ -59,7 +62,8 @@ class Retriever:
         self.index.add(self.embeddings)
 
     def search(self, query: str, top_k: int = 5) -> List[str]:
-        qv = self.model.encode([query], convert_to_numpy=True, normalize_embeddings=True)
+        qtext = "query: " + query if self._is_e5 else query
+        qv = self.model.encode([qtext], convert_to_numpy=True, normalize_embeddings=True)
         qv = np.asarray(qv, dtype="float32")[0]
         scores, indices = self.index.search(qv.reshape(1, -1), min(top_k, len(self.cases)))
         return [str(int(indices[0][i])) for i in range(len(indices[0])) if 0 <= int(indices[0][i]) < len(self.cases)]
@@ -118,6 +122,8 @@ def main() -> int:
     configs = [
         ("MiniLM (all-MiniLM-L6-v2, 384d)", "sentence-transformers/all-MiniLM-L6-v2"),
         ("MPNet (all-mpnet-base-v2, 768d)", "sentence-transformers/all-mpnet-base-v2"),
+        ("E5-base (intfloat/e5-base-v2, 768d)", "intfloat/e5-base-v2"),
+        ("BGE-base (BAAI/bge-base-en-v1.5, 768d)", "BAAI/bge-base-en-v1.5"),
     ]
 
     for name, model_name in configs:
