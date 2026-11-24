@@ -1,0 +1,11 @@
+Model,LabelSource,Recall@1,Precision@1,Recall@3,Precision@3,Recall@5,Precision@5,Recall@10,Precision@10,MRR,MAP,nDCG@5,nDCG@10,p50_ms,p95_ms,p99_ms
+TF-IDF (baseline),auto-generated (category proxy),0.5395,0.6181,0.6747,0.2586,0.7306,0.1679,0.7306,0.0840,0.7008,0.6139,0.6626,0.6626,7.55,12.35,14.53
+BM25 (baseline),auto-generated (category proxy),0.8579,0.9905,0.9976,0.4351,1.0000,0.2621,1.0000,0.1310,0.9950,0.9947,0.9962,0.9962,0.70,1.64,2.37
+MiniLM (384d) (baseline),auto-generated (category proxy),0.7930,0.9190,0.9636,0.4178,0.9759,0.2553,0.9904,0.1297,0.9467,0.9440,0.9514,0.9566,4.96,10.11,13.71
+MiniLM (384d) + normalization,auto-generated (category proxy),0.7895,0.9147,0.9612,0.4167,0.9759,0.2550,0.9904,0.1297,0.9443,0.9413,0.9494,0.9547,5.08,10.60,14.83
+MPNet (768d) (baseline),auto-generated (category proxy),0.8073,0.9319,0.9727,0.4216,0.9839,0.2566,0.9908,0.1298,0.9559,0.9533,0.9610,0.9638,9.55,17.98,22.20
+MPNet (768d) + normalization,auto-generated (category proxy),0.8091,0.9353,0.9714,0.4213,0.9839,0.2566,0.9908,0.1298,0.9576,0.9551,0.9623,0.9651,9.69,18.85,23.57
+E5-base (768d) (baseline),auto-generated (category proxy),0.8431,0.9750,0.9909,0.4319,0.9968,0.2609,0.9983,0.1307,0.9841,0.9837,0.9871,0.9876,7.97,15.31,21.06
+E5-base (768d) + normalization,auto-generated (category proxy),0.8422,0.9741,0.9909,0.4319,0.9957,0.2602,0.9986,0.1308,0.9835,0.9830,0.9860,0.9871,7.66,16.12,22.71
+BGE-base (768d) (baseline),auto-generated (category proxy),0.8440,0.9759,0.9937,0.4333,0.9968,0.2609,0.9983,0.1307,0.9846,0.9833,0.9869,0.9875,7.89,14.89,19.65
+BGE-base (768d) + normalization,auto-generated (category proxy),0.8422,0.9741,0.9928,0.4330,0.9960,0.2607,0.9983,0.1307,0.9833,0.9821,0.9857,0.9865,8.20,16.23,20.15
