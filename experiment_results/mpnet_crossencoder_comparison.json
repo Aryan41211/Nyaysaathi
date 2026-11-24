@@ -1,0 +1,60 @@
+{
+  "n_queries": 201,
+  "label_source": "auto-generated",
+  "configs": {
+    "MiniLM (baseline)": {
+      "recall@1": 0.04975124378109452,
+      "precision@1": 1.0,
+      "ndcg@1": 1.0,
+      "recall@3": 0.13014652772243537,
+      "precision@3": 0.8739635157545605,
+      "ndcg@3": 0.8975248445432007,
+      "recall@5": 0.2018329164657022,
+      "precision@5": 0.8129353233830846,
+      "ndcg@5": 0.8483923874825923,
+      "recall@10": 0.3624474992550234,
+      "precision@10": 0.7293532338308458,
+      "ndcg@10": 0.7774029783440619,
+      "mrr": 1.0,
+      "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+      "use_reranker": false,
+      "eval_sec": 10.17
+    },
+    "MPNet": {
+      "recall@1": 0.04975124378109452,
+      "precision@1": 1.0,
+      "ndcg@1": 1.0,
+      "recall@3": 0.132146114438884,
+      "precision@3": 0.87893864013267,
+      "ndcg@3": 0.9046951364063249,
+      "recall@5": 0.21448709439134886,
+      "precision@5": 0.8587064676616916,
+      "ndcg@5": 0.8835659082124592,
+      "recall@10": 0.40753566099135163,
+      "precision@10": 0.8154228855721393,
+      "ndcg@10": 0.8454057005820586,
+      "mrr": 1.0,
+      "model_name": "sentence-transformers/all-mpnet-base-v2",
+      "use_reranker": false,
+      "eval_sec": 14.81
+    },
+    "MPNet + CrossEncoder": {
+      "recall@1": 0.04975124378109452,
+      "precision@1": 1.0,
+      "ndcg@1": 1.0,
+      "recall@3": 0.1291638972873817,
+      "precision@3": 0.8656716417910447,
+      "ndcg@3": 0.8950505719682875,
+      "recall@5": 0.20575476488346348,
+      "precision@5": 0.8238805970149254,
+      "ndcg@5": 0.8580836030184801,
+      "recall@10": 0.37466961485840206,
+      "precision@10": 0.7472636815920398,
+      "ndcg@10": 0.7929390199641784,
+      "mrr": 1.0,
+      "model_name": "sentence-transformers/all-mpnet-base-v2",
+      "use_reranker": true,
+      "eval_sec": 59.61
+    }
+  }
+}
