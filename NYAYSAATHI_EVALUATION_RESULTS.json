@@ -1,0 +1,225 @@
+{
+  "project": "NyaySaathi",
+  "phase": 2,
+  "evaluation_date": "2026-11-24",
+  "git_sha": "1a3eb00",
+  "corpus": {
+    "file": "backend/dataset/expanded_cases.json",
+    "total_cases": 500,
+    "unique_cases_after_dedup": 232,
+    "dedup_method": "content_key(category+subcategory+problem_description)",
+    "categories": 10,
+    "embedding_dim": 768,
+    "index_type": "FAISS IndexFlatIP"
+  },
+  "environment": {
+    "cpu_cores": 16,
+    "ram_gb": 15.65,
+    "gpu_available": false,
+    "python_version": "3.12",
+    "os": "win32"
+  },
+  "models_tested": [
+    {
+      "name": "TF-IDF",
+      "type": "lexical",
+      "embedding_dim": null
+    },
+    {
+      "name": "BM25",
+      "type": "sparse",
+      "embedding_dim": null
+    },
+    {
+      "name": "MiniLM",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "type": "dense",
+      "embedding_dim": 384
+    },
+    {
+      "name": "MPNet",
+      "model": "sentence-transformers/all-mpnet-base-v2",
+      "type": "dense",
+      "embedding_dim": 768,
+      "selected": true
+    },
+    {
+      "name": "E5-base",
+      "model": "intfloat/e5-base-v2",
+      "type": "dense",
+      "embedding_dim": 768,
+      "query_prefix": "query: "
+    },
+    {
+      "name": "BGE-base",
+      "model": "BAAI/bge-base-en-v1.5",
+      "type": "dense",
+      "embedding_dim": 768
+    },
+    {
+      "name": "Hybrid (weighted fusion)",
+      "type": "hybrid",
+      "weights": {"tfidf": 0.1, "bm25": 0.2, "dense": 0.7},
+      "components": ["tfidf", "bm25", "dense"]
+    }
+  ],
+  "datasets": {
+    "auto_generated": {
+      "n_queries": 232,
+      "label_source": "auto-generated",
+      "label_method": "category-matching proxy",
+      "confidence": "LOW",
+      "description": "Query from subcategory + first clause of problem description; relevant = same category"
+    },
+    "human_validated": {
+      "n_queries": 50,
+      "label_source": "human-validated",
+      "queries_per_category": 5,
+      "categories_covered": 10,
+      "confidence": "HIGH",
+      "relevance_scale": "0-3",
+      "file": "backend/evaluation/datasets/human_validated.json"
+    }
+  },
+  "results_auto_generated": {
+    "TF-IDF": {
+      "recall_at_5": 0.1027,
+      "precision_at_5": 0.4819,
+      "mrr": 0.9400,
+      "ndcg_at_5": 0.5643,
+      "recall_at_10": 0.1027,
+      "precision_at_10": 0.2409,
+      "p50_ms": 9.51,
+      "p95_ms": 14.84,
+      "p99_ms": 16.40
+    },
+    "BM25": {
+      "recall_at_5": 0.1618,
+      "precision_at_5": 0.7552,
+      "mrr": 1.0000,
+      "ndcg_at_5": 0.8037,
+      "recall_at_10": 0.2782,
+      "precision_at_10": 0.6509,
+      "p50_ms": 0.98,
+      "p95_ms": 1.47,
+      "p99_ms": 1.60
+    },
+    "MiniLM (384d)": {
+      "recall_at_5": 0.1768,
+      "precision_at_5": 0.8328,
+      "mrr": 1.0000,
+      "ndcg_at_5": 0.8655,
+      "recall_at_10": 0.3172,
+      "precision_at_10": 0.7487,
+      "p50_ms": 5.50,
+      "p95_ms": 8.27,
+      "p99_ms": 9.48
+    },
+    "MPNet (768d)": {
+      "recall_at_5": 0.1867,
+      "precision_at_5": 0.8698,
+      "mrr": 1.0000,
+      "ndcg_at_5": 0.8951,
+      "recall_at_10": 0.3539,
+      "precision_at_10": 0.8250,
+      "p50_ms": 11.80,
+      "p95_ms": 19.94,
+      "p99_ms": 24.61
+    },
+    "E5-base (768d)": {
+      "recall_at_5": 0.1836,
+      "precision_at_5": 0.8595,
+      "mrr": 1.0000,
+      "ndcg_at_5": 0.8863,
+      "recall_at_10": 0.3425,
+      "precision_at_10": 0.8017,
+      "p50_ms": 8.95,
+      "p95_ms": 14.69,
+      "p99_ms": 16.79
+    },
+    "BGE-base (768d)": {
+      "recall_at_5": 0.1819,
+      "precision_at_5": 0.8483,
+      "mrr": 1.0000,
+      "ndcg_at_5": 0.8793,
+      "recall_at_10": 0.3350,
+      "precision_at_10": 0.7828,
+      "p50_ms": 9.27,
+      "p95_ms": 15.39,
+      "p99_ms": 16.57
+    },
+    "Hybrid (weighted fusion)": {
+      "recall_at_5": 0.1870,
+      "precision_at_5": 0.8698,
+      "mrr": 1.0000,
+      "ndcg_at_5": 0.8954,
+      "recall_at_10": 0.3539,
+      "precision_at_10": 0.8250,
+      "p50_ms": 28.30,
+      "p95_ms": 37.40
+    }
+  },
+  "results_human_validated": {
+    "MPNet (raw query)": {
+      "recall_at_5": 0.0120,
+      "precision_at_5": 0.0120,
+      "mrr": 0.0409,
+      "p50_ms": 11.80
+    },
+    "MPNet (normalized query)": {
+      "recall_at_5": 0.0160,
+      "precision_at_5": 0.0160,
+      "mrr": 0.0667,
+      "p50_ms": 11.80,
+      "normalization_improvement": {
+        "recall_at_5_pct": 33.3,
+        "mrr_pct": 63.1
+      }
+    },
+    "E5-base (768d)": {
+      "recall_at_5": 0.0200,
+      "precision_at_5": 0.0200,
+      "mrr": 0.0440,
+      "p50_ms": 8.95
+    },
+    "BGE-base (768d)": {
+      "recall_at_5": 0.0120,
+      "precision_at_5": 0.0120,
+      "mrr": 0.0464,
+      "p50_ms": 9.27
+    },
+    "BM25": {
+      "recall_at_5": 0.0200,
+      "precision_at_5": 0.0200,
+      "mrr": 0.0414,
+      "p50_ms": 0.98
+    }
+  },
+  "key_findings": [
+    "MPNet (768d) achieves highest auto-generated Recall@5 at 0.1867 (+5.6% over MiniLM)",
+    "All 768d models (MPNet, E5-base, BGE-base) outperform MiniLM (384d)",
+    "Hybrid fusion adds negligible quality (+0.16% R@5) at 2.4x latency — not recommended",
+    "Cross-encoder reranking decreases Recall@5 by ~3.4% and adds ~36ms — not recommended",
+    "Query normalization (Hinglish + synonyms) improves human-validated MRR by +63% (0.0409→0.0667)",
+    "E5-base achieves highest human-validated R@5 at 0.0200",
+    "BM25 has lowest latency (p50=0.98ms) but lower quality than dense models",
+    "Human-validated R@5 values are low (0.01-0.02) due to sparse labels (5 relevant out of 232 cases)"
+  ],
+  "selected_model": {
+    "name": "MPNet",
+    "model_id": "sentence-transformers/all-mpnet-base-v2",
+    "embedding_dim": 768,
+    "reason": "Highest auto-generated Recall@5 (0.1867) and nDCG@5 (0.8951); MRR=1.0000; proven production integration"
+  },
+  "file_references": {
+    "semantic_engine": "backend/api/nlp/semantic_engine.py",
+    "query_processor": "backend/api/nlp/query_processor.py",
+    "data_loader": "backend/api/data_loader.py",
+    "human_validated_dataset": "backend/evaluation/datasets/human_validated.json",
+    "benchmark_script": "backend/experiment_phase2_benchmark.py",
+    "model_comparison_script": "backend/experiment_model_comparison.py",
+    "raw_benchmark_results": "experiment_results/phase2_benchmark.json",
+    "raw_model_comparison": "experiment_results/model_comparison.json",
+    "baseline_snapshot": "experiment_results/baseline_snapshot.json"
+  }
+}
