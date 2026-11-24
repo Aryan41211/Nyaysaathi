@@ -292,3 +292,128 @@ def process_query(query: str, top_k: int = 5) -> dict:
         "clarification_questions": [],
         "query_analysis": processed,
     }
+
+
+# ============================================================================
+# Multi-Query Expansion for Improved Retrieval Recall
+# ============================================================================
+
+ENHANCED_HINGLISH = {
+    # Property/Land
+    "kabja": "encroachment", "kabza": "encroachment", "zameen": "land",
+    "jameen": "land", "plot": "land", "khasra": "land record",
+    "khatauni": "land record", "jamabandi": "land record",
+    "satbara": "7/12 extract", "7/12": "land record extract",
+    "malmatta": "property card", "talathi": "revenue officer",
+    "tehsildar": "revenue officer", "sarpanch": "village head",
+    "panchayat": "village council",
+    # Employment/Labour
+    "salary nahi mila": "salary not paid", "job se nikal diya": "wrongful termination",
+    "pf kate nahi": "PF not deducted", "esi nahi": "ESI not available",
+    "overtime": "extra hours work", "naukri chhodi": "resignation",
+    # Family
+    "dahej": "dowry", "talaq": "divorce", "khula": "divorce",
+    "bharan poshan": "maintenance", "custody": "child custody",
+    "sasural": "in-laws house", "sasur": "father-in-law",
+    "saas": "mother-in-law", "devar": "brother-in-law",
+    # Cyber
+    "upi fraud": "upi scam", "cyber thagi": "cyber fraud",
+    "otp scam": "otp fraud", "phishing": "fraudulent email",
+    "loan app": "digital lending app", "recovery agent": "debt collector",
+    # Consumer
+    "waranty": "warranty", "guarantee": "warranty", "refund": "money back",
+    "vas": "value added service", "spam": "unsolicited message",
+    # Police
+    "fir": "first information report", "than": "police station",
+    "chori": "theft", "dacoity": "robbery", "marpeet": "assault",
+    # Government
+    "ration card": "food subsidy card", "aadhaar": "national ID",
+    "pension": "retirement benefit", "tehsil": "revenue office",
+    "pas": "housing scheme", "bijli": "electricity",
+    # Tenant
+    "security deposit": "advance rent", "lease": "rental agreement",
+    "eviction": "vacate notice", "rent agreement": "rental contract",
+    # Environment
+    "pradushan": "pollution", "kada": "waste", "nala": "drain",
+    "avakh": "illegal mining",
+    # Senior Citizen
+    "vriddha": "elderly", "pension roka": "pension stopped",
+    "ashram": "old age home",
+}
+
+ENHANCED_SYNONYMS = {
+    "encroachment": ["illegal occupation", "trespass", "land grabbing"],
+    "boundary": ["border", "demarcation", "survey line"],
+    "landlord": ["owner", "lessor", "property owner"],
+    "tenant": ["renter", "lessee"],
+    "termination": ["firing", "dismissal", "layoff", "retrenchment"],
+    "severance": ["compensation", "gratuity", "settlement"],
+    "salary": ["wages", "pay", "remuneration", "emolument"],
+    "dowry": ["dahej", "bridal gift demand"],
+    "maintenance": ["alimony", "bharan poshan", "support"],
+    "custody": ["guardianship", "child care"],
+    "fraud": ["cheating", "scam", "deception"],
+    "phishing": ["fraudulent email", "social engineering"],
+    "defective": ["faulty", "damaged", "broken"],
+    "warranty": ["guarantee", "warrantee"],
+    "assault": ["beating", "physical attack", "violence"],
+    "theft": ["stealing", "robbery", "burglary"],
+    "certificate": ["document", "proof", "license"],
+    "subsidy": ["grant", "financial aid", "benefit"],
+}
+
+
+def expand_query_variants(query: str, max_variants: int = 5) -> list[str]:
+    """Generate multiple query variants for multi-query retrieval.
+
+    Each variant is a different formulation of the same legal query:
+    - Original text
+    - Normalized text (Hinglish → English, stopwords removed)
+    - Synonym-expanded text
+    - Hinglish-mapped text (Indian legal terms → English)
+    - Combined expansion
+
+    Returns a list of unique query strings, ordered by relevance.
+    """
+    import re as _re
+
+    variants = [query.strip()]
+
+    normalized = normalize_text(query)
+    if normalized and normalized != query.lower().strip():
+        variants.append(normalized)
+
+    tokens = tokenize(normalized)
+    expanded = expand_synonyms(tokens)
+    expanded = expand_phrase_synonyms(normalized, expanded)
+    expanded_text = " ".join(expanded)
+    if expanded_text and expanded_text != normalized:
+        variants.append(expanded_text)
+
+    enhanced_tokens = []
+    for token in tokens:
+        enhanced_tokens.append(token)
+        for syn in ENHANCED_SYNONYMS.get(token, []):
+            enhanced_tokens.append(syn)
+    enhanced_text = " ".join(dict.fromkeys(enhanced_tokens))
+    if enhanced_text and enhanced_text != normalized:
+        variants.append(enhanced_text)
+
+    hinglish_text = normalized.lower()
+    for src, target in sorted(ENHANCED_HINGLISH.items(), key=lambda x: -len(x[0])):
+        hinglish_text = _re.sub(rf"\b{_re.escape(src)}\b", target, hinglish_text)
+    if hinglish_text and hinglish_text != normalized:
+        variants.append(hinglish_text)
+
+    # Deduplicate while preserving order, cap at max_variants.
+    seen = set()
+    unique = []
+    for v in variants:
+        v_clean = v.strip()
+        if v_clean and v_clean not in seen:
+            seen.add(v_clean)
+            unique.append(v_clean)
+            if len(unique) >= max_variants:
+                break
+
+    return unique

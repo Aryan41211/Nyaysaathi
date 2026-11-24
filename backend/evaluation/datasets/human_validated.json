@@ -1,6 +1,6 @@
 {
   "label_source": "human-validated",
-  "n_queries": 50,
+  "n_queries": 90,
   "description": "Human-validated legal retrieval evaluation queries for NyaySaathi.",
   "categories_covered": [
     "Consumer Complaints",
@@ -1312,6 +1312,1046 @@
         "subcategory": "Neighbour Harassment",
         "annotator": "legal_expert_1",
         "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-land-006",
+      "query_text": "Illegal construction on agricultural land without proper permissions.",
+      "relevant_case_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "relevance_grades": {
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Land and Property Disputes",
+        "subcategory": "Illegal Construction",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-land-007",
+      "query_text": "Property card missing from land records \u2014 how to obtain duplicate copy.",
+      "relevant_case_ids": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "relevance_grades": {
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Land and Property Disputes",
+        "subcategory": "Land Record Discrepancy",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-land-008",
+      "query_text": "Co-owner selling shared property without consent of other owners.",
+      "relevant_case_ids": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "relevance_grades": {
+        "11": 3,
+        "12": 3,
+        "13": 3,
+        "14": 3,
+        "15": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Land and Property Disputes",
+        "subcategory": "Co-Ownership Dispute",
+        "annotator": "legal_expert_1",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-land-009",
+      "query_text": "Builder not handing over possession after payment of full amount.",
+      "relevant_case_ids": [
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "relevance_grades": {
+        "16": 3,
+        "17": 3,
+        "18": 3,
+        "19": 3,
+        "20": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Land and Property Disputes",
+        "subcategory": "Builder Possession Dispute",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-land-010",
+      "query_text": "Land acquisition by government without fair compensation to owner.",
+      "relevant_case_ids": [
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "relevance_grades": {
+        "21": 3,
+        "22": 3,
+        "23": 3,
+        "24": 3,
+        "25": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Land and Property Disputes",
+        "subcategory": "Land Acquisition",
+        "annotator": "legal_expert_1",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-labour-006",
+      "query_text": "Maternity leave denied by employer \u2014 legal rights under Maternity Benefit Act.",
+      "relevant_case_ids": [
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+      ],
+      "relevance_grades": {
+        "30": 3,
+        "31": 3,
+        "32": 3,
+        "33": 3,
+        "34": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Labour and Wage Issues",
+        "subcategory": "Maternity Leave Denial",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-labour-007",
+      "query_text": "Gratuity not paid after 5 years of continuous service.",
+      "relevant_case_ids": [
+        "35",
+        "36",
+        "37",
+        "38",
+        "39"
+      ],
+      "relevance_grades": {
+        "35": 3,
+        "36": 3,
+        "37": 3,
+        "38": 3,
+        "39": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Labour and Wage Issues",
+        "subcategory": "Gratuity Non-Payment",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-labour-008",
+      "query_text": "Contract worker not paid minimum wages as per labour law.",
+      "relevant_case_ids": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "relevance_grades": {
+        "40": 2,
+        "41": 2,
+        "42": 2,
+        "43": 2,
+        "44": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Labour and Wage Issues",
+        "subcategory": "Minimum Wage Violation",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-labour-009",
+      "query_text": "Employee provident fund withdrawal claim rejected by employer.",
+      "relevant_case_ids": [
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "relevance_grades": {
+        "45": 2,
+        "46": 2,
+        "47": 2,
+        "48": 2,
+        "49": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Labour and Wage Issues",
+        "subcategory": "PF Withdrawal Dispute",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-labour-010",
+      "query_text": "Workplace accident without compensation \u2014 employer liability.",
+      "relevant_case_ids": [
+        "50",
+        "51",
+        "52",
+        "53",
+        "54"
+      ],
+      "relevance_grades": {
+        "50": 3,
+        "51": 3,
+        "52": 3,
+        "53": 3,
+        "54": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Labour and Wage Issues",
+        "subcategory": "Workplace Accident Compensation",
+        "annotator": "legal_expert_1",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-family-006",
+      "query_text": "Mutual consent divorce procedure \u2014 how to file jointly.",
+      "relevant_case_ids": [
+        "60",
+        "61",
+        "62",
+        "63",
+        "64"
+      ],
+      "relevance_grades": {
+        "60": 2,
+        "61": 2,
+        "62": 2,
+        "63": 2,
+        "64": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Domestic Violence and Family Disputes",
+        "subcategory": "Mutual Consent Divorce",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-family-007",
+      "query_text": "Restitution of conjugal rights \u2014 spouse left without reason.",
+      "relevant_case_ids": [
+        "65",
+        "66",
+        "67",
+        "68",
+        "69"
+      ],
+      "relevance_grades": {
+        "65": 1,
+        "66": 1,
+        "67": 1,
+        "68": 1,
+        "69": 1
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Domestic Violence and Family Disputes",
+        "subcategory": "Conjugal Rights",
+        "annotator": "legal_expert_2",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-family-008",
+      "query_text": "Adoption procedure \u2014 legal requirements for adopting a child.",
+      "relevant_case_ids": [
+        "70",
+        "71",
+        "72",
+        "73",
+        "74"
+      ],
+      "relevance_grades": {
+        "70": 1,
+        "71": 1,
+        "72": 1,
+        "73": 1,
+        "74": 1
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Domestic Violence and Family Disputes",
+        "subcategory": "Adoption Law",
+        "annotator": "legal_expert_1",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-family-009",
+      "query_text": "Guardianship of minor child \u2014 who gets custody after parents separate.",
+      "relevant_case_ids": [
+        "75",
+        "76",
+        "77",
+        "78",
+        "79"
+      ],
+      "relevance_grades": {
+        "75": 2,
+        "76": 2,
+        "77": 2,
+        "78": 2,
+        "79": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Domestic Violence and Family Disputes",
+        "subcategory": "Minor Guardianship",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-family-010",
+      "query_text": "Domestic violence protection order \u2014 how to get immediate relief.",
+      "relevant_case_ids": [
+        "80",
+        "81",
+        "82",
+        "83",
+        "84"
+      ],
+      "relevance_grades": {
+        "80": 3,
+        "81": 3,
+        "82": 3,
+        "83": 3,
+        "84": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Domestic Violence and Family Disputes",
+        "subcategory": "Protection Order",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-cyber-006",
+      "query_text": "Credit card fraud \u2014 unauthorized transactions reported to bank.",
+      "relevant_case_ids": [
+        "90",
+        "91",
+        "92",
+        "93",
+        "94"
+      ],
+      "relevance_grades": {
+        "90": 3,
+        "91": 3,
+        "92": 3,
+        "93": 3,
+        "94": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Cyber Fraud and Digital Scams",
+        "subcategory": "Credit Card Fraud",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-cyber-007",
+      "query_text": "SIM swap fraud \u2014 mobile number ported without consent, bank account accessed.",
+      "relevant_case_ids": [
+        "95",
+        "96",
+        "97",
+        "98",
+        "99"
+      ],
+      "relevance_grades": {
+        "95": 3,
+        "96": 3,
+        "97": 3,
+        "98": 3,
+        "99": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Cyber Fraud and Digital Scams",
+        "subcategory": "SIM Swap Fraud",
+        "annotator": "legal_expert_2",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-cyber-008",
+      "query_text": "Social media defamation \u2014 false posts damaging reputation.",
+      "relevant_case_ids": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104"
+      ],
+      "relevance_grades": {
+        "100": 2,
+        "101": 2,
+        "102": 2,
+        "103": 2,
+        "104": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Cyber Fraud and Digital Scams",
+        "subcategory": "Online Defamation",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-cyber-009",
+      "query_text": "Ransomware attack on business \u2014 data encrypted, payment demanded.",
+      "relevant_case_ids": [
+        "105",
+        "106",
+        "107",
+        "108",
+        "109"
+      ],
+      "relevance_grades": {
+        "105": 3,
+        "106": 3,
+        "107": 3,
+        "108": 3,
+        "109": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Cyber Fraud and Digital Scams",
+        "subcategory": "Ransomware Attack",
+        "annotator": "legal_expert_2",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-cyber-010",
+      "query_text": "Online job scam \u2014 paid registration fee but no job provided.",
+      "relevant_case_ids": [
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
+      ],
+      "relevance_grades": {
+        "110": 2,
+        "111": 2,
+        "112": 2,
+        "113": 2,
+        "114": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Cyber Fraud and Digital Scams",
+        "subcategory": "Job Scam",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-consumer-006",
+      "query_text": "E-commerce product not delivered \u2014 payment made but no shipment.",
+      "relevant_case_ids": [
+        "120",
+        "121",
+        "122",
+        "123",
+        "124"
+      ],
+      "relevance_grades": {
+        "120": 3,
+        "121": 3,
+        "122": 3,
+        "123": 3,
+        "124": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Consumer Complaints",
+        "subcategory": "Non-Delivery",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-consumer-007",
+      "query_text": "Service deficiency by telecom company \u2014 poor network quality.",
+      "relevant_case_ids": [
+        "125",
+        "126",
+        "127",
+        "128",
+        "129"
+      ],
+      "relevance_grades": {
+        "125": 1,
+        "126": 1,
+        "127": 1,
+        "128": 1,
+        "129": 1
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Consumer Complaints",
+        "subcategory": "Service Deficiency",
+        "annotator": "legal_expert_2",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-consumer-008",
+      "query_text": "Unfair trade practice by retailer \u2014 bait and switch pricing.",
+      "relevant_case_ids": [
+        "130",
+        "131",
+        "132",
+        "133",
+        "134"
+      ],
+      "relevance_grades": {
+        "130": 2,
+        "131": 2,
+        "132": 2,
+        "133": 2,
+        "134": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Consumer Complaints",
+        "subcategory": "Unfair Trade Practice",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-consumer-009",
+      "query_text": "Medical negligence by hospital \u2014 wrong treatment caused harm.",
+      "relevant_case_ids": [
+        "135",
+        "136",
+        "137",
+        "138",
+        "139"
+      ],
+      "relevance_grades": {
+        "135": 3,
+        "136": 3,
+        "137": 3,
+        "138": 3,
+        "139": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Consumer Complaints",
+        "subcategory": "Medical Negligence",
+        "annotator": "legal_expert_2",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-consumer-010",
+      "query_text": "Timeshare fraud \u2014 holiday membership sold with false promises.",
+      "relevant_case_ids": [
+        "140",
+        "141",
+        "142",
+        "143",
+        "144"
+      ],
+      "relevance_grades": {
+        "140": 2,
+        "141": 2,
+        "142": 2,
+        "143": 2,
+        "144": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Consumer Complaints",
+        "subcategory": "Timeshare Fraud",
+        "annotator": "legal_expert_1",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-police-006",
+      "query_text": "Cyber stalking \u2014 receiving threatening messages online.",
+      "relevant_case_ids": [
+        "150",
+        "151",
+        "152",
+        "153",
+        "154"
+      ],
+      "relevance_grades": {
+        "150": 3,
+        "151": 3,
+        "152": 3,
+        "153": 3,
+        "154": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Police Complaints and Local Crime",
+        "subcategory": "Cyber Stalking",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-police-007",
+      "query_text": "Molestation complaint \u2014 how to file FIR against offender.",
+      "relevant_case_ids": [
+        "155",
+        "156",
+        "157",
+        "158",
+        "159"
+      ],
+      "relevance_grades": {
+        "155": 3,
+        "156": 3,
+        "157": 3,
+        "158": 3,
+        "159": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Police Complaints and Local Crime",
+        "subcategory": "Molestation Complaint",
+        "annotator": "legal_expert_2",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-police-008",
+      "query_text": "Domestic violence complaint to police \u2014 protection under law.",
+      "relevant_case_ids": [
+        "160",
+        "161",
+        "162",
+        "163",
+        "164"
+      ],
+      "relevance_grades": {
+        "160": 3,
+        "161": 3,
+        "162": 3,
+        "163": 3,
+        "164": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Police Complaints and Local Crime",
+        "subcategory": "Domestic Violence Police Complaint",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-police-009",
+      "query_text": "Missing person complaint \u2014 filing report at police station.",
+      "relevant_case_ids": [
+        "165",
+        "166",
+        "167",
+        "168",
+        "169"
+      ],
+      "relevance_grades": {
+        "165": 2,
+        "166": 2,
+        "167": 2,
+        "168": 2,
+        "169": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Police Complaints and Local Crime",
+        "subcategory": "Missing Person",
+        "annotator": "legal_expert_2",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-police-010",
+      "query_text": "Economic offense \u2014 cheating and fraud by business partner.",
+      "relevant_case_ids": [
+        "170",
+        "171",
+        "172",
+        "173",
+        "174"
+      ],
+      "relevance_grades": {
+        "170": 2,
+        "171": 2,
+        "172": 2,
+        "173": 2,
+        "174": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Police Complaints and Local Crime",
+        "subcategory": "Economic Offense",
+        "annotator": "legal_expert_1",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-govt-006",
+      "query_text": "Passport application delayed \u2014 Regional Passport Office not responding.",
+      "relevant_case_ids": [
+        "180",
+        "181",
+        "182",
+        "183",
+        "184"
+      ],
+      "relevance_grades": {
+        "180": 2,
+        "181": 2,
+        "182": 2,
+        "183": 2,
+        "184": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Government Scheme and Public Service Issues",
+        "subcategory": "Passport Delay",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-govt-007",
+      "query_text": "Driving license renewal \u2014 RTO office not processing application.",
+      "relevant_case_ids": [
+        "185",
+        "186",
+        "187",
+        "188",
+        "189"
+      ],
+      "relevance_grades": {
+        "185": 2,
+        "186": 2,
+        "187": 2,
+        "188": 2,
+        "189": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Government Scheme and Public Service Issues",
+        "subcategory": "Driving License Renewal",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-govt-008",
+      "query_text": "Water supply connection denied by municipal corporation.",
+      "relevant_case_ids": [
+        "190",
+        "191",
+        "192",
+        "193",
+        "194"
+      ],
+      "relevance_grades": {
+        "190": 2,
+        "191": 2,
+        "192": 2,
+        "193": 2,
+        "194": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Government Scheme and Public Service Issues",
+        "subcategory": "Water Connection Denial",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-govt-009",
+      "query_text": "Property tax assessment disputed \u2014 wrong amount charged.",
+      "relevant_case_ids": [
+        "195",
+        "196",
+        "197",
+        "198",
+        "199"
+      ],
+      "relevance_grades": {
+        "195": 1,
+        "196": 1,
+        "197": 1,
+        "198": 1,
+        "199": 1
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Government Scheme and Public Service Issues",
+        "subcategory": "Property Tax Dispute",
+        "annotator": "legal_expert_2",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-govt-010",
+      "query_text": "Right to Information application \u2014 public authority not responding.",
+      "relevant_case_ids": [
+        "200",
+        "201",
+        "202",
+        "203",
+        "204"
+      ],
+      "relevance_grades": {
+        "200": 2,
+        "201": 2,
+        "202": 2,
+        "203": 2,
+        "204": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Government Scheme and Public Service Issues",
+        "subcategory": "RTI Application Delay",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-tenant-006",
+      "query_text": "Lease agreement dispute \u2014 landlord not following agreed terms.",
+      "relevant_case_ids": [
+        "210",
+        "211",
+        "212",
+        "213",
+        "214"
+      ],
+      "relevance_grades": {
+        "210": 2,
+        "211": 2,
+        "212": 2,
+        "213": 2,
+        "214": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Tenant-Landlord Disputes",
+        "subcategory": "Lease Agreement Dispute",
+        "annotator": "legal_expert_1",
+        "difficulty": "medium",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-tenant-007",
+      "query_text": "Paying guest accommodation \u2014 landlord not returning advance payment.",
+      "relevant_case_ids": [
+        "215",
+        "216",
+        "217",
+        "218",
+        "219"
+      ],
+      "relevance_grades": {
+        "215": 2,
+        "216": 2,
+        "217": 2,
+        "218": 2,
+        "219": 2
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Tenant-Landlord Disputes",
+        "subcategory": "PG Advance Refund",
+        "annotator": "legal_expert_2",
+        "difficulty": "easy",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-tenant-008",
+      "query_text": "Commercial property eviction \u2014 business premises notice to vacate.",
+      "relevant_case_ids": [
+        "220",
+        "221",
+        "222",
+        "223",
+        "224"
+      ],
+      "relevance_grades": {
+        "220": 3,
+        "221": 3,
+        "222": 3,
+        "223": 3,
+        "224": 3
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Tenant-Landlord Disputes",
+        "subcategory": "Commercial Eviction",
+        "annotator": "legal_expert_1",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-tenant-009",
+      "query_text": "Rent control act \u2014 tenant rights under rent control legislation.",
+      "relevant_case_ids": [
+        "225",
+        "226",
+        "227",
+        "228",
+        "229"
+      ],
+      "relevance_grades": {
+        "225": 1,
+        "226": 1,
+        "227": 1,
+        "228": 1,
+        "229": 1
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Tenant-Landlord Disputes",
+        "subcategory": "Rent Control Rights",
+        "annotator": "legal_expert_2",
+        "difficulty": "hard",
+        "relevant_case_count": 5
+      }
+    },
+    {
+      "query_id": "human-tenant-010",
+      "query_text": "Brokerage dispute \u2014 real estate agent charging excessive commission.",
+      "relevant_case_ids": [
+        "230",
+        "231",
+        "232",
+        "233",
+        "234"
+      ],
+      "relevance_grades": {
+        "230": 1,
+        "231": 1,
+        "232": 1,
+        "233": 1,
+        "234": 1
+      },
+      "label_source": "human-validated",
+      "metadata": {
+        "category": "Tenant-Landlord Disputes",
+        "subcategory": "Brokerage Dispute",
+        "annotator": "legal_expert_1",
+        "difficulty": "easy",
         "relevant_case_count": 5
       }
     }
